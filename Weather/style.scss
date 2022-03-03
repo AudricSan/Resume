@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto';
+
+    --border : 1em;
+    --color1 : lightgrey;
+    --color2 : lightblue;
+
+    text-align: center;
+}
+
+.container{
+    border-radius: 25px;
+    background-color: var(--color1);
+
+    max-width: 250px;
+    max-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .app-title{
+        font-weight: 800;
+        font-size: 1.5em;
+
+        border-bottom: solid 1px;
+    }
+
+    .notification{
+        display: none;
+
+        font-weight: 700;
+        font-size: 1.2em;
+
+        border-radius: 5px;
+        border: solid 2px black;
+
+
+        margin-top: var(--border);
+        margin-bottom: var(--border);
+        min-width: 100px;
+
+        background-color: var(--color2);
+    }
+
+    .weather-container{
+        margin-bottom: 1em;
+        margin-top: 1em;
+
+        .temperature-value{
+            font-weight: 700;
+            font-size: 2em; 
+
+            margin-top: -1em;
+            margin-bottom: -0.7em;
+        }
+
+        .temperature-description{
+            font-weight: 500;
+            font-size: 1.3em; 
+
+            margin-bottom: -0.8em;
+        }
+
+        .location{
+            font-weight: 300;
+            font-size: 1em; 
+        }
+    }
+}
+
