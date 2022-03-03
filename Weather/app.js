@@ -13,7 +13,6 @@ const notificationElement = document.querySelector(".notification");
 const switcher = document.querySelector(".switch");
 
 // Aplication
-
 weather.temperature = {
     unit: "celsius"
 }
@@ -37,12 +36,12 @@ function setPosition(position) {
 // Shows Error
 function showError(error) {
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = `<p> ${error.message} </p>`;
+    notificationElement.innerHTML = "<p>" + error.message + "</p>";
 }
 
 //Get Weather
 function getWeather(latitude, longitude) {
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let api = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + key;
 
     fetch(api)
 
@@ -66,10 +65,10 @@ function getWeather(latitude, longitude) {
 
 // Show Weather
 function displayWeather() {
-    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
-    tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+    iconElement.innerHTML = "<img src='icons/" + weather.iconId + ".png'/>";
+    tempElement.innerHTML = weather.temperature.value + "°<span>C</span>";
     descElement.innerHTML = weather.description;
-    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    locationElement.innerHTML = weather.city + "," + weather.country;
 }
 
 // °C to °F
@@ -84,10 +83,10 @@ function ctf() {
         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
         fahrenheit = Math.floor(fahrenheit);
 
-        tempElement.innerHTML = `${fahrenheit}°<span>F</span>`;
+        tempElement.innerHTML = fahrenheit + " °<span>F</span>";
         weather.temperature.unit = "fahrenheit";
     } else {
-        tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+        tempElement.innerHTML = weather.temperature.value + " °<span>C</span>";
         weather.temperature.unit = "celsius"
     }
 }
