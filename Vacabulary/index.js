@@ -20,6 +20,9 @@ function showResponse(jsonObj) {
     var score = document.createElement('p');
 
     var ListOFWord = document.createElement('ul');
+    var ListOFWordname = document.createElement('p');
+
+    ListOFWord.appendChild(ListOFWordname);
 
     Name.textContent = jsonObj.Name;
     Version.textContent = 'Version: ' + jsonObj.Version;
@@ -27,7 +30,7 @@ function showResponse(jsonObj) {
     Active.textContent = 'Active Statut: ' + jsonObj.Active;
     lastuse.textContent = 'last use: ' + jsonObj.lastuse;
     score.textContent = 'score: ' + jsonObj.score;
-    ListOFWord.textContent = 'List Item:';
+    ListOFWordname.textContent = 'List Item:';
 
     list = jsonObj.List;
     list.forEach(element => {
