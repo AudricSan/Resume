@@ -1,0 +1,120 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap";
+
+* {
+    font-family: "Roboto";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --color1: #275efe;
+    --color2: #275efe4d;
+    --color3: #bbc1e1;
+    --color4: #f6f8ff;
+    --color5: #e1e6f9;
+    --color6: #eb5454d7
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color1), var(--color2))
+}
+
+body .container {
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px
+}
+
+#newtask {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .3)
+}
+
+#newtask input {
+    width: 70%;
+    width: 70%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid var(--color3);
+    padding: 12px;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px
+}
+
+#newtask input:focus {
+    outline: none;
+    border-color: var(--color1)
+}
+
+#newtask button {
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--color1);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none
+}
+
+#newtask .error {
+    color: var(--color6);
+    padding-top: .5em;
+    padding-bottom: 0em;
+    margin-bottom: -1em;
+    display: none
+}
+
+#tasks {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+    width: 100%;
+    position: relative
+}
+
+.task {
+    background-color: #fff;
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color3);
+    cursor: pointer
+}
+
+.task span {
+    font-size: 15px;
+    font-weight: 400
+}
+
+.task button {
+    background-color: var(--color1);
+    color: #fff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none
+}
+
+.completed {
+    text-decoration: line-through
+}

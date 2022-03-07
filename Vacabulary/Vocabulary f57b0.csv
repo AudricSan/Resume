@@ -1,0 +1,4387 @@
+﻿[
+    {
+        "Francais": "6eme jour du mois",
+        "English": "6th day of the month",
+        "Rōmanji": "muika",
+        "Kanji": "六日",
+        "Kana": "むいか",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "A plus !",
+        "English": "See you later",
+        "Rōmanji": "ja mata, matane",
+        "Kanji": "",
+        "Kana": "じゃあ また，またね",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "acheter",
+        "English": "buy",
+        "Rōmanji": "kau",
+        "Kanji": "買う",
+        "Kana": "かう",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "acide",
+        "English": "acid",
+        "Rōmanji": "suppai",
+        "Kanji": "酸っぱい",
+        "Kana": "すっぱい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Adjectif",
+        "English": "Adjective",
+        "Rōmanji": "keiyousi",
+        "Kanji": "形容詞",
+        "Kana": "けいようし",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "aimer / preferer / Favori",
+        "English": "like / prefer / favorite",
+        "Rōmanji": "suki desu",
+        "Kanji": "好きです",
+        "Kana": "すきです",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "alcool",
+        "English": "alcohol",
+        "Rōmanji": "sake",
+        "Kanji": "酒",
+        "Kana": "さけ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "alcool de ris",
+        "English": "reef alcohol",
+        "Rōmanji": "nihonshu",
+        "Kanji": "日本酒",
+        "Kana": "にほんしゅ",
+        "Label": "Drink, alcohol",
+        "Type": ""
+    },
+    {
+        "Francais": "aller",
+        "English": "go to",
+        "Rōmanji": "iku",
+        "Kanji": "行く",
+        "Kana": "いく",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "amour",
+        "English": "Love",
+        "Rōmanji": "ai",
+        "Kanji": "愛",
+        "Kana": "あい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "appareil photo",
+        "English": "camera",
+        "Rōmanji": "Kamera",
+        "Kanji": "カメラ",
+        "Kana": "かめら",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "après-midi",
+        "English": "After noon",
+        "Rōmanji": "gogo",
+        "Kanji": "午後",
+        "Kana": "ごご",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "araignée",
+        "English": "Spider",
+        "Rōmanji": "kumo",
+        "Kanji": "蜘蛛",
+        "Kana": "くも",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "arc",
+        "English": "arc",
+        "Rōmanji": "Yumi",
+        "Kanji": "弓",
+        "Kana": "ゆみ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "arc et flèches",
+        "English": "bow and arrows",
+        "Rōmanji": "Yumiya",
+        "Kanji": "弓矢",
+        "Kana": "ゆみや",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "arrete",
+        "English": "Stop",
+        "Rōmanji": "yamete",
+        "Kanji": "止めて",
+        "Kana": "やめて",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "au-dessus, sur",
+        "English": "au-dessus, sur",
+        "Rōmanji": "Ue",
+        "Kanji": "上",
+        "Kana": "うえ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "aujourd'hui",
+        "English": "Today",
+        "Rōmanji": "kyou",
+        "Kanji": "今日",
+        "Kana": "きょう",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "automne",
+        "English": "Fall",
+        "Rōmanji": "aki",
+        "Kanji": "秋",
+        "Kana": "あき",
+        "Label": "Season",
+        "Type": ""
+    },
+    {
+        "Francais": "autrefois",
+        "English": "formerly",
+        "Rōmanji": "Mukashi  ",
+        "Kanji": "昔",
+        "Kana": "むかし",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "avoir peur",
+        "English": "be afraid",
+        "Rōmanji": "kowai desu",
+        "Kanji": "怖いです",
+        "Kana": "こわいです",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Avoir un animal de compagnie",
+        "English": "Having a pet",
+        "Rōmanji": "Petto o katte imasu",
+        "Kanji": "ペットを飼っています",
+        "Kana": "ぺっとをかっています",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "banane",
+        "English": "banana",
+        "Rōmanji": "banana",
+        "Kanji": "バナナ",
+        "Kana": "ばなな",
+        "Label": "Food, Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "bateau",
+        "English": "boat",
+        "Rōmanji": "fune",
+        "Kanji": "船",
+        "Kana": "ふね",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Beau Parents",
+        "English": "Parents-in-law",
+        "Rōmanji": "Goryooshin",
+        "Kanji": "御両親",
+        "Kana": "ごりょうしん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "beau, belle",
+        "English": "beautiful",
+        "Rōmanji": "kirei",
+        "Kanji": "綺麗",
+        "Kana": "きれい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "bento de Gare",
+        "English": "bento station",
+        "Rōmanji": "Ekiben",
+        "Kanji": "駅弁",
+        "Kana": "駅弁",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "beurre",
+        "English": "butter",
+        "Rōmanji": "bataa",
+        "Kanji": "バター",
+        "Kana": "ばたー",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Bien",
+        "English": "Good",
+        "Rōmanji": "ii",
+        "Kanji": "良い",
+        "Kana": "いい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "bien, avec attention",
+        "English": "well, with attention",
+        "Rōmanji": "yoku",
+        "Kanji": "良く",
+        "Kana": "よく",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "bienvenu",
+        "English": "welcome",
+        "Rōmanji": "yokoso",
+        "Kanji": "",
+        "Kana": "ようこそ",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "biére",
+        "English": "beer",
+        "Rōmanji": "biiru",
+        "Kanji": "ビール",
+        "Kana": "びーる",
+        "Label": "Drink, Food, alcohol",
+        "Type": ""
+    },
+    {
+        "Francais": "bleu",
+        "English": "Blue",
+        "Rōmanji": "ao",
+        "Kanji": "青",
+        "Kana": "あお",
+        "Label": "colors",
+        "Type": ""
+    },
+    {
+        "Francais": "blue / green",
+        "English": "blue / green",
+        "Rōmanji": "aoi",
+        "Kanji": "青い",
+        "Kana": "あおい",
+        "Label": "New Year, colors",
+        "Type": ""
+    },
+    {
+        "Francais": "boire",
+        "English": "Drink",
+        "Rōmanji": "nomu, nomimasu",
+        "Kanji": "飲む、飲みます",
+        "Kana": "のむ、のみます",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "bon marché / pas cher",
+        "English": "Cheap",
+        "Rōmanji": "yasui",
+        "Kanji": "安い",
+        "Kana": "やすい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Bonjour",
+        "English": "hello",
+        "Rōmanji": "konichiwa",
+        "Kanji": "",
+        "Kana": "こんにちは",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Bonjour (le premier jour de l’an)",
+        "English": "Good morning (the first day of the year)",
+        "Rōmanji": "Akemashite Omodetou (Gozaimasu)",
+        "Kanji": "明けましておめでとう(ございます)",
+        "Kana": "あけましておめでとう(ございます)",
+        "Label": "New Year",
+        "Type": ""
+    },
+    {
+        "Francais": "bonjour le matin",
+        "English": "good morning",
+        "Rōmanji": "ohayou gozaimasu",
+        "Kanji": "お早うございます",
+        "Kana": "おはようございます",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Bonne année",
+        "English": "happy new year",
+        "Rōmanji": "akemashite omedetoo",
+        "Kanji": "明けましておめでとう",
+        "Kana": "あけましておめでとう",
+        "Label": "Expression, New Year",
+        "Type": ""
+    },
+    {
+        "Francais": "Bonne Nuit",
+        "English": "Good Night",
+        "Rōmanji": "Oyasumi",
+        "Kanji": "お休み",
+        "Kana": "おやすみ",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "bonsoir",
+        "English": "good evening",
+        "Rōmanji": "konbanwa",
+        "Kanji": "今晩は",
+        "Kana": "こんばんは",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "bruyant",
+        "English": "noisy / Loud / Loudly",
+        "Rōmanji": "Urusai",
+        "Kanji": "五月蠅い",
+        "Kana": "うるさい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "bureau",
+        "English": "office",
+        "Rōmanji": "tsukue",
+        "Kanji": "机",
+        "Kana": "つくえ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "ca va bien",
+        "English": "i'm okay",
+        "Rōmanji": "Hai, genki desu",
+        "Kanji": "はい、元気です",
+        "Kana": "げんきです",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Café",
+        "English": "coffee",
+        "Rōmanji": "Koohii",
+        "Kanji": "珈琲（コーヒー）",
+        "Kana": "こーひー",
+        "Label": "Drink, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "calamar",
+        "English": "squid",
+        "Rōmanji": "ika",
+        "Kanji": "烏賊",
+        "Kana": "いか",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "calme",
+        "English": "calm / Quiet",
+        "Rōmanji": "Shizuka",
+        "Kanji": "静か",
+        "Kana": "しずか",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "canapé",
+        "English": "sofa / couch",
+        "Rōmanji": "sofa",
+        "Kanji": "ソファ",
+        "Kana": "そふぁ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "canard",
+        "English": "duck",
+        "Rōmanji": "ahiru",
+        "Kanji": "アヒル",
+        "Kana": "あひる",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "Capitale",
+        "English": "capital",
+        "Rōmanji": "Juuto",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "carotte",
+        "English": "carrot",
+        "Rōmanji": "ninjin",
+        "Kanji": "人参",
+        "Kana": "にんじん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "ceci",
+        "English": "this",
+        "Rōmanji": "kore",
+        "Kanji": "此れ",
+        "Kana": "これ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "cereale",
+        "English": "cereale",
+        "Rōmanji": "siriaru,kokumotu",
+        "Kanji": "シリアル、穀物",
+        "Kana": "しりある、こくもつ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "cerf",
+        "English": "deer",
+        "Rōmanji": "shika",
+        "Kanji": "鹿",
+        "Kana": "しか",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "Cette année",
+        "English": "this year",
+        "Rōmanji": "kotoshi",
+        "Kanji": "今年",
+        "Kana": "ことし",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Cette personne ci",
+        "English": "This person",
+        "Rōmanji": "Kochira",
+        "Kanji": "此方",
+        "Kana": "こちら",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "chaise",
+        "English": "chair",
+        "Rōmanji": "isu",
+        "Kanji": "椅子",
+        "Kana": "いす",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "chambre",
+        "English": "bed room",
+        "Rōmanji": "shinshitu",
+        "Kanji": "寝室",
+        "Kana": "しんしつ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Chance",
+        "English": "chance / Luck",
+        "Rōmanji": "Chansu",
+        "Kanji": "チャンス",
+        "Kana": "ちゃんす",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Chat",
+        "English": "Cat",
+        "Rōmanji": "neko",
+        "Kanji": "猫",
+        "Kana": "ねこ",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "chaud",
+        "English": "Hot",
+        "Rōmanji": "atsui",
+        "Kanji": "熱い",
+        "Kana": "あつい",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "cheesburger",
+        "English": "cheesburger",
+        "Rōmanji": "tiizubaagaa",
+        "Kanji": "チーズバーガー",
+        "Kana": "ちーずばーがー",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "chemise",
+        "English": "shirt",
+        "Rōmanji": "shatsu",
+        "Kanji": "シャツ",
+        "Kana": "しゃつ",
+        "Label": "Clothing, Wearable",
+        "Type": ""
+    },
+    {
+        "Francais": "cher / elever / Couteux",
+        "English": "Expensive",
+        "Rōmanji": "takai",
+        "Kanji": "高い",
+        "Kana": "たかい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "cheveux",
+        "English": "hair",
+        "Rōmanji": "kami",
+        "Kanji": "髪",
+        "Kana": "かみ",
+        "Label": "Body part",
+        "Type": ""
+    },
+    {
+        "Francais": "chien",
+        "English": "Dog",
+        "Rōmanji": "inu",
+        "Kanji": "犬",
+        "Kana": "いぬ",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "chocolat",
+        "English": "chocolate",
+        "Rōmanji": "tyokoreeto",
+        "Kanji": "チョコレート",
+        "Kana": "ちょこれーと",
+        "Label": "Candy",
+        "Type": ""
+    },
+    {
+        "Francais": "choisir",
+        "English": "choose",
+        "Rōmanji": "erabu, erande erabanai",
+        "Kanji": "選ぶ",
+        "Kana": "えらぶ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "chose",
+        "English": "a thing / a items",
+        "Rōmanji": "Mono",
+        "Kanji": "物",
+        "Kana": "もの",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "chou",
+        "English": "cabbage",
+        "Rōmanji": "kyabetu",
+        "Kanji": "キャベツ",
+        "Kana": "きゃべつ",
+        "Label": "Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "chêvre",
+        "English": "goat",
+        "Rōmanji": "yagi",
+        "Kanji": "山羊",
+        "Kana": "やぎ",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "ciel",
+        "English": "sky",
+        "Rōmanji": "sora",
+        "Kanji": "空",
+        "Kana": "そら",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Cinq Personnes",
+        "English": "Five people",
+        "Rōmanji": "go nin",
+        "Kanji": "五人",
+        "Kana": "ごにん",
+        "Label": "Counting",
+        "Type": ""
+    },
+    {
+        "Francais": "citron",
+        "English": "lemon",
+        "Rōmanji": "remon",
+        "Kanji": "檸檬（レモン）",
+        "Kana": "れもん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Citrouille",
+        "English": "Pumpkin",
+        "Rōmanji": "Kabocha",
+        "Kanji": "南瓜",
+        "Kana": "かぼちゃ",
+        "Label": "Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "clé",
+        "English": "key",
+        "Rōmanji": "kagi",
+        "Kanji": "鍵",
+        "Kana": "かぎ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "coca cola",
+        "English": "Coke",
+        "Rōmanji": "kokakoora",
+        "Kanji": "コカ コーラ",
+        "Kana": "こか こーら",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "colombe, pigeon",
+        "English": "dove / Pigeon",
+        "Rōmanji": "hato",
+        "Kanji": "鳩",
+        "Kana": "はと",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "combien de personnes",
+        "English": "how many poeple",
+        "Rōmanji": "nan nin",
+        "Kanji": "何人",
+        "Kana": "なんにん",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "comme ci, comme ca ?",
+        "English": "like this, like that?",
+        "Rōmanji": "maamaa",
+        "Kanji": "",
+        "Kana": "まあまあ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "comment ca va?",
+        "English": "how are you",
+        "Rōmanji": "o genki desu ka",
+        "Kanji": "お元気ですか",
+        "Kana": "おげんきですか",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Comment vous appelez-vous",
+        "English": "what's your name",
+        "Rōmanji": "O namae wa nan desu ka",
+        "Kanji": "お名前は何ですか",
+        "Kana": "おなまえはなんですか",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "communiquer",
+        "English": "communicate",
+        "Rōmanji": "Renraku, renrakushimasu",
+        "Kanji": "連絡、連絡します",
+        "Kana": "れんらく、れんらくします",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "comprendre",
+        "English": "understand",
+        "Rōmanji": "Wakaru",
+        "Kanji": "分かる",
+        "Kana": "わかる",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Compteur de personnes",
+        "English": "People counter",
+        "Rōmanji": "Hitori",
+        "Kanji": "一人",
+        "Kana": "ひとり",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "compteur général un",
+        "English": "general counter one",
+        "Rōmanji": "Hitotsu",
+        "Kanji": "一つ",
+        "Kana": "ひとつ",
+        "Label": "Counting",
+        "Type": ""
+    },
+    {
+        "Francais": "concombre",
+        "English": "cucumber",
+        "Rōmanji": "kyuuri",
+        "Kanji": "胡瓜（キュウリ）",
+        "Kana": "きゅうり",
+        "Label": "Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "confiture",
+        "English": "jam",
+        "Rōmanji": "jamu",
+        "Kanji": "ジャム",
+        "Kana": "じゃむ",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "continuer",
+        "English": "continue",
+        "Rōmanji": "tsuzuku",
+        "Kanji": "続く",
+        "Kana": "つづく",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "corée",
+        "English": "Korea",
+        "Rōmanji": "kankoku",
+        "Kanji": "韓国",
+        "Kana": "かんこく",
+        "Label": "country",
+        "Type": ""
+    },
+    {
+        "Francais": "couper",
+        "English": "cut",
+        "Rōmanji": "Kiru",
+        "Kanji": "切る",
+        "Kana": "きる",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Courage",
+        "English": "Courage",
+        "Rōmanji": "yuuki",
+        "Kanji": "勇気",
+        "Kana": "ゆうき",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Courir, voyager, conduire",
+        "English": "Running, traveling, driving",
+        "Rōmanji": "Hashiru, hashirimasu",
+        "Kanji": "走る、走ります",
+        "Kana": "はしる、はしります",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "crabe",
+        "English": "crab",
+        "Rōmanji": "kani",
+        "Kanji": "蟹（カニ）",
+        "Kana": "かに",
+        "Label": "Animals, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "crevette",
+        "English": "shrimp",
+        "Rōmanji": "ebi",
+        "Kanji": "海老（エビ）",
+        "Kana": "えび",
+        "Label": "fish",
+        "Type": ""
+    },
+    {
+        "Francais": "Crocodiles",
+        "English": "Crocodiles",
+        "Rōmanji": "wani",
+        "Kanji": "鰐（ワニ）",
+        "Kana": "わに",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "crème glacée",
+        "English": "ice cream",
+        "Rōmanji": "aisukurimu",
+        "Kanji": "アイスクリーム",
+        "Kana": "あいすくりーむ",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "cuisine (la piece)",
+        "English": "kitchen",
+        "Rōmanji": "Kitchin",
+        "Kanji": "キッチン",
+        "Kana": "きっちん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "cuisine (la piece, plus ancien)",
+        "English": "old word for kitchen",
+        "Rōmanji": "Daidokoro",
+        "Kanji": "台所",
+        "Kana": "だいどころ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Cuisine (nationale)",
+        "English": "Cooking (national)",
+        "Rōmanji": "Ryoori",
+        "Kanji": "料理",
+        "Kana": "りょうり",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "cuisse",
+        "English": "thigh",
+        "Rōmanji": "Momo, futomomo",
+        "Kanji": "腿、太腿",
+        "Kana": "もも、ふともも",
+        "Label": "Body part",
+        "Type": ""
+    },
+    {
+        "Francais": "célèbre",
+        "English": "famous",
+        "Rōmanji": "Yuumei",
+        "Kanji": "有名",
+        "Kana": "ゆうめい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "d'abord",
+        "English": "first of all",
+        "Rōmanji": "saisyoni,mazu",
+        "Kanji": "最初に、先ず",
+        "Kana": "さいしょに、まず",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "d'où",
+        "English": "from where",
+        "Rōmanji": "dokokara",
+        "Kanji": "何処から",
+        "Kana": "どこから",
+        "Label": "Asking Word",
+        "Type": ""
+    },
+    {
+        "Francais": "delicieux / savoureux",
+        "English": "delicious / tasty",
+        "Rōmanji": "oishii",
+        "Kanji": "美味しい",
+        "Kana": "おいしい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Dessin",
+        "English": "Draw",
+        "Rōmanji": "e",
+        "Kanji": "絵",
+        "Kana": "え",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Dessiner ",
+        "English": "Drawing",
+        "Rōmanji": "kaku",
+        "Kanji": "描く",
+        "Kana": "かく",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "deux personnes",
+        "English": "two poeple",
+        "Rōmanji": "futari",
+        "Kanji": "二人",
+        "Kana": "ふたり",
+        "Label": "Counting",
+        "Type": ""
+    },
+    {
+        "Francais": "divinité / Esprit",
+        "English": "divinity / Spirit",
+        "Rōmanji": "kami",
+        "Kanji": "神",
+        "Kana": "かみ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "douleureux",
+        "English": "painful",
+        "Rōmanji": "itai",
+        "Kanji": "痛い",
+        "Kana": "いたい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "doux",
+        "English": "sweet",
+        "Rōmanji": "amai",
+        "Kanji": "甘い",
+        "Kana": "あまい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "dromadaire ",
+        "English": "dromedary",
+        "Rōmanji": "rakuda",
+        "Kanji": "駱駝",
+        "Kana": "らくだ",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "désolé de partir avant vous",
+        "English": "sorry to go before you",
+        "Rōmanji": "osakini shitsureishimasu",
+        "Kanji": "お先に失礼します",
+        "Kana": "おさきにしつれいします",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "eau (froide, élément)",
+        "English": "water (cold, element)",
+        "Rōmanji": "mizu",
+        "Kanji": "水",
+        "Kana": "みず",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "echec",
+        "English": "failure",
+        "Rōmanji": "shippai",
+        "Kanji": "失敗",
+        "Kana": "しっぱい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Ecole",
+        "English": "School",
+        "Rōmanji": "gakkou",
+        "Kanji": "学校",
+        "Kana": "がっこう",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "elle/la",
+        "English": "she/he",
+        "Rōmanji": "kanojo",
+        "Kanji": "彼女",
+        "Kana": "かのじょ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "empirer, se déteriorer",
+        "English": "to get worse, to deteriorate",
+        "Rōmanji": "akka suru",
+        "Kanji": "悪化する",
+        "Kana": "あっかする",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Employer",
+        "English": "Employ",
+        "Rōmanji": "Kaishain",
+        "Kanji": "会社員",
+        "Kana": "かいしゃいん",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "en effet",
+        "English": "as a matter of fact",
+        "Rōmanji": "sou desu",
+        "Kanji": "",
+        "Kana": "そうです",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Enchanté",
+        "English": "Nice to meet you",
+        "Rōmanji": "Yoroshiku(Onegqishimasu)",
+        "Kanji": "よろしく(お願いします)",
+        "Kana": "よろしく(おねがいします)",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Enchanté",
+        "English": "Nice to meet you",
+        "Rōmanji": "hajime mashite",
+        "Kanji": "初めまして",
+        "Kana": "はじめまして",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Enfant",
+        "English": "Child",
+        "Rōmanji": "Okosan",
+        "Kanji": "お子さん",
+        "Kana": "おこさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Enfant",
+        "English": "Child",
+        "Rōmanji": "Kodomo",
+        "Kanji": "子供",
+        "Kana": "こども",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Ensseignant/te",
+        "English": "Teacher",
+        "Rōmanji": "Kyooshi",
+        "Kanji": "教師",
+        "Kana": "きょうし",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "entraîner",
+        "English": "train / Practice",
+        "Rōmanji": "renshuu suru",
+        "Kanji": "練習する",
+        "Kana": "れんしゅうする",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Entreprise",
+        "English": "Company",
+        "Rōmanji": "Kaisha",
+        "Kanji": "会社",
+        "Kana": "かいしゃ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "epicé  / revelé / Salé",
+        "English": "spicy / salty",
+        "Rōmanji": "karai/siokarai",
+        "Kanji": "辛い/塩辛い",
+        "Kana": "からい/しおからい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "estomac",
+        "English": "stomach",
+        "Rōmanji": "i",
+        "Kanji": "胃",
+        "Kana": "い",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "etoile",
+        "English": "star",
+        "Rōmanji": "hoshi",
+        "Kanji": "星",
+        "Kana": "ほし",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Extérieur",
+        "English": "outside",
+        "Rōmanji": "Soto",
+        "Kanji": "外",
+        "Kana": "そと",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "famille",
+        "English": "Familly",
+        "Rōmanji": "kazoku",
+        "Kanji": "家族",
+        "Kana": "かぞく",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "Femme / Epouse",
+        "English": "Wife",
+        "Rōmanji": "Kanai",
+        "Kanji": "家内",
+        "Kana": "かない",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Femme / Epouse",
+        "English": "Wife",
+        "Rōmanji": "Tsuma",
+        "Kanji": "妻",
+        "Kana": "つま",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Femme / Epouse",
+        "English": "Wife",
+        "Rōmanji": "Okusan",
+        "Kanji": "奥さん",
+        "Kana": "おくさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "femme au foyer",
+        "English": "housewife",
+        "Rōmanji": "shufu",
+        "Kanji": "主婦",
+        "Kana": "しゅふ",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "fenêtres",
+        "English": "windows",
+        "Rōmanji": "Mado",
+        "Kanji": "窓",
+        "Kana": "まど",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Fermier",
+        "English": "Farmer",
+        "Rōmanji": "nouka",
+        "Kanji": "農家",
+        "Kana": "のうか",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "Feu",
+        "English": "Fire",
+        "Rōmanji": "hi",
+        "Kanji": "火",
+        "Kana": "ひ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "feuille d'arbre",
+        "English": "tree leaf",
+        "Rōmanji": "ha",
+        "Kanji": "葉",
+        "Kana": "は",
+        "Label": "Plant",
+        "Type": ""
+    },
+    {
+        "Francais": "feuille d'automne",
+        "English": "autumn leaf",
+        "Rōmanji": "kouyou",
+        "Kanji": "紅葉",
+        "Kana": "こうよう",
+        "Label": "Plant",
+        "Type": ""
+    },
+    {
+        "Francais": "Fille",
+        "English": "Girl",
+        "Rōmanji": "Musume",
+        "Kanji": "娘",
+        "Kana": "むすめ",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Fille",
+        "English": "Girl",
+        "Rōmanji": "Musumesan",
+        "Kanji": "娘さん",
+        "Kana": "むすめさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Fils",
+        "English": "Boy",
+        "Rōmanji": "Musukosan",
+        "Kanji": "息子さん",
+        "Kana": "むすこさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Fils",
+        "English": "Boy",
+        "Rōmanji": "Musuko",
+        "Kanji": "息子",
+        "Kana": "むすこ",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "fleche",
+        "English": "arrow",
+        "Rōmanji": "ya",
+        "Kanji": "矢",
+        "Kana": "や",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Fleur",
+        "English": "flower",
+        "Rōmanji": "Hana",
+        "Kanji": "花",
+        "Kana": "はな",
+        "Label": "Plant",
+        "Type": ""
+    },
+    {
+        "Francais": "fleur de cerisier",
+        "English": "cherry blossom",
+        "Rōmanji": "sakura",
+        "Kanji": "桜",
+        "Kana": "さくら",
+        "Label": "Plant",
+        "Type": ""
+    },
+    {
+        "Francais": "Fleur, nez",
+        "English": "flower / nose",
+        "Rōmanji": "hana",
+        "Kanji": "花",
+        "Kana": "はな",
+        "Label": "Plant",
+        "Type": ""
+    },
+    {
+        "Francais": "flèche",
+        "English": "arrow",
+        "Rōmanji": "Ya",
+        "Kanji": "矢",
+        "Kana": "や",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "fonctionaire",
+        "English": "functionary",
+        "Rōmanji": "komuin",
+        "Kanji": "公務員",
+        "Kana": "こうむいん",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "Fond / Interieur",
+        "English": "Background / Interior",
+        "Rōmanji": "Oku",
+        "Kanji": "奥",
+        "Kana": "おく",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "fraise",
+        "English": "strawberry",
+        "Rōmanji": "ichigo",
+        "Kanji": "苺",
+        "Kana": "いちご",
+        "Label": "Food, Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "Frere / Soeur",
+        "English": "Brother / Sister",
+        "Rōmanji": "Kyoodai",
+        "Kanji": "兄弟姉妹",
+        "Kana": "きょうだい",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "Frere ainé",
+        "English": "Older brother",
+        "Rōmanji": "Oniisan",
+        "Kanji": "お兄さん",
+        "Kana": "おにいさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Frere ainé",
+        "English": "Older brother",
+        "Rōmanji": "ani",
+        "Kanji": "兄",
+        "Kana": "あに",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Frere cadet",
+        "English": "Older Sister",
+        "Rōmanji": "otooto",
+        "Kanji": "弟",
+        "Kana": "おとうと",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Frere cadet",
+        "English": "Older Sister",
+        "Rōmanji": "otootosan",
+        "Kanji": "弟さん",
+        "Kana": "おとうとさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "froid / Frais",
+        "English": "could / fresh",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "fromage",
+        "English": "chees",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "gare, station",
+        "English": "station",
+        "Rōmanji": "eki",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "gateau / sucrerie / confiserie",
+        "English": "cake / candy / confectionery",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Candy, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "gateau sec / biscuit",
+        "English": "biscuit",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "glacé",
+        "English": "iced",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "grand",
+        "English": "large",
+        "Rōmanji": "ooki",
+        "Kanji": "大きい",
+        "Kana": "おおきい",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "Grand Mére",
+        "English": "Grandmother",
+        "Rōmanji": "Sobo",
+        "Kanji": "祖母",
+        "Kana": "そぼ",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Grand Mére",
+        "English": "Grandmother",
+        "Rōmanji": "obaasan, obaachan",
+        "Kanji": "お婆さん(ちゃん)",
+        "Kana": "おばあさん(ちゃん)",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Grand Pére",
+        "English": "Grandfather",
+        "Rōmanji": "ojiisan, ojiichan",
+        "Kanji": "お爺さん(ちゃん)",
+        "Kana": "おじいさん(ちゃん)",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Grand Pére",
+        "English": "Grandfather",
+        "Rōmanji": "Sofu",
+        "Kanji": "祖父",
+        "Kana": "祖父",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "grenouille",
+        "English": "frog",
+        "Rōmanji": "kaeru",
+        "Kanji": "蛙",
+        "Kana": "かえる",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "Grillon",
+        "English": "Cricket",
+        "Rōmanji": "matsumushi",
+        "Kanji": "松虫",
+        "Kana": "まつむし",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Génial / Incroyable",
+        "English": "Great / Amazing",
+        "Rōmanji": "Sugoi",
+        "Kanji": "",
+        "Kana": "すごい",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "hamburger",
+        "English": "hamburger",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "haut",
+        "English": "up / hight / Top",
+        "Rōmanji": "takai",
+        "Kanji": "高い",
+        "Kana": "たかい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Herbe",
+        "English": "Grass",
+        "Rōmanji": "Kusa",
+        "Kanji": "草",
+        "Kana": "くさ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Hier",
+        "English": "yesterday",
+        "Rōmanji": "Kinou",
+        "Kanji": "昨日",
+        "Kana": "きのう",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "hiver",
+        "English": "winter",
+        "Rōmanji": "fuyu",
+        "Kanji": "冬",
+        "Kana": "ふゆ",
+        "Label": "Season",
+        "Type": ""
+    },
+    {
+        "Francais": "Homme",
+        "English": "Male",
+        "Rōmanji": "otoko",
+        "Kanji": "男",
+        "Kana": "おとこ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "hot-dog",
+        "English": "hotdog",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "ici",
+        "English": "here",
+        "Rōmanji": "koko",
+        "Kanji": "此処",
+        "Kana": "ここ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "il  ",
+        "English": "he",
+        "Rōmanji": "kare ",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "il y a",
+        "English": "there is",
+        "Rōmanji": "Aru, arimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Il était une fois",
+        "English": "one upon a time",
+        "Rōmanji": "Mukashi mukashi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Ils",
+        "English": "they",
+        "Rōmanji": "Karera",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "ingénieur",
+        "English": "engineer",
+        "Rōmanji": "enjinia",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "insecte",
+        "English": "insect",
+        "Rōmanji": "mushi",
+        "Kanji": "虫",
+        "Kana": "むし",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "Je ne sais pas",
+        "English": "i don’t know",
+        "Rōmanji": "wakarimasen",
+        "Kanji": "",
+        "Kana": "わかりません",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Je, Moi",
+        "English": "I, Me",
+        "Rōmanji": "Watashi",
+        "Kanji": "私",
+        "Kana": "わたし",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Jeune",
+        "English": "Young",
+        "Rōmanji": "Wakai",
+        "Kanji": "若い",
+        "Kana": "わかい",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "jolie",
+        "English": "nice",
+        "Rōmanji": "kirei",
+        "Kanji": "綺麗",
+        "Kana": "きれい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "journal",
+        "English": "news paper",
+        "Rōmanji": "shinbun",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "journaliste",
+        "English": "journalist",
+        "Rōmanji": "kisha",
+        "Kanji": "記者",
+        "Kana": "きしゃ",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "jumeau",
+        "English": "twin",
+        "Rōmanji": "futago",
+        "Kanji": "双子",
+        "Kana": "ふたご",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Jus",
+        "English": "juice",
+        "Rōmanji": "Juusu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "j’abite en / a  —",
+        "English": "I live in / to -",
+        "Rōmanji": "— ni sunde imasu",
+        "Kanji": "— に住んでいます",
+        "Kana": "— にすんでいます",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "l'air / Atmosphere",
+        "English": "the air / Atmosphere",
+        "Rōmanji": "kuuki",
+        "Kanji": "空気",
+        "Kana": "くうき",
+        "Label": "Earth",
+        "Type": ""
+    },
+    {
+        "Francais": "l'argent",
+        "English": "money",
+        "Rōmanji": "okane",
+        "Kanji": "お金",
+        "Kana": "おかね",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "l'eau froide",
+        "English": "could water",
+        "Rōmanji": "mizu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "L'objet",
+        "English": "The object",
+        "Rōmanji": "mono",
+        "Kanji": "物",
+        "Kana": "もの",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "l'ocasion (l'oportunité)",
+        "English": "the opportunity",
+        "Rōmanji": "kikai",
+        "Kanji": "機会",
+        "Kana": "きかい",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "l'oiseau",
+        "English": "bird",
+        "Rōmanji": "tori",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "l'orloge",
+        "English": "the clock",
+        "Rōmanji": "tokei",
+        "Kanji": "時計",
+        "Kana": "とけい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la biere",
+        "English": "beer",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink, alcohol",
+        "Type": ""
+    },
+    {
+        "Francais": "la boite repas",
+        "English": "lunch box",
+        "Rōmanji": "bento",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la carte / le menu",
+        "English": "the menu",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la chance",
+        "English": "the chance",
+        "Rōmanji": "Chansu",
+        "Kanji": "",
+        "Kana": "チャンス",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la chance (l’oportinité)",
+        "English": "opportunity",
+        "Rōmanji": "kikai",
+        "Kanji": "機会",
+        "Kana": "きかい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la cuillere",
+        "English": "spoon",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "La Cuisine (lieux - Mots Anglais)",
+        "English": "The Kitchen (locations)",
+        "Rōmanji": "Kitchin",
+        "Kanji": "",
+        "Kana": "キッチン",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "la Cuisine (lieux)",
+        "English": "The Kitchen (locations)",
+        "Rōmanji": "daidokoro",
+        "Kanji": "台所",
+        "Kana": "だいどころ",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "La cuisine (nationale)",
+        "English": "cookery",
+        "Rōmanji": "ryoori",
+        "Kanji": "料理",
+        "Kana": "りょうり",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la cuisine japonaise",
+        "English": "japanese cooking",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "La famille",
+        "English": "The family",
+        "Rōmanji": "Kazoku",
+        "Kanji": "家族",
+        "Kana": "かぞく",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "La famille",
+        "English": "The family",
+        "Rōmanji": "Gokazoku",
+        "Kanji": "御家族",
+        "Kana": "ごかぞく",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "la fourchette",
+        "English": "fork",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "La jambe",
+        "English": "The leg",
+        "Rōmanji": "ashi",
+        "Kanji": "足",
+        "Kana": "あし",
+        "Label": "Body part",
+        "Type": ""
+    },
+    {
+        "Francais": "La lune",
+        "English": "moon",
+        "Rōmanji": "Tsuki",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la mer",
+        "English": "sea",
+        "Rōmanji": "umi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "la pizza",
+        "English": "pizza",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la salade de legume",
+        "English": "the legume salad",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food, Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "la semaine dernière",
+        "English": "last week",
+        "Rōmanji": "Senshuu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "la soupe",
+        "English": "the soup",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food, Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "la soupe miso",
+        "English": "miso soup",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "la station / La gare",
+        "English": "The station",
+        "Rōmanji": "eki",
+        "Kanji": "駅",
+        "Kana": "えき",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "la vaiselle / les couvert",
+        "English": "dishes / cutlery",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "la voie",
+        "English": "The way - The Track",
+        "Rōmanji": "koe",
+        "Kanji": "声",
+        "Kana": "こえ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "lait de chevre",
+        "English": "goat's milk",
+        "Rōmanji": "yaginyu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "laitue",
+        "English": "lettuce",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "Lapin",
+        "English": "Rabbit / Bunny",
+        "Rōmanji": "Usagi",
+        "Kanji": "兎",
+        "Kana": "うさぎ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Le bois, la forèt",
+        "English": "The wood, the forest",
+        "Rōmanji": "Mori",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "le bol de ris",
+        "English": "the bowl of sweetbreads",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "le bonbon",
+        "English": "the candy",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Candy, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "le café / le salon de thé",
+        "English": "the coffee shop / tea room",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le couteau",
+        "English": "the knife",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "le cuisine d’un pays",
+        "English": "the kitchen of a country",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le curry",
+        "English": "the curry",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Dishies, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "le dejeuner",
+        "English": "the lunch",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "Le devoir",
+        "English": "Homework",
+        "Rōmanji": "shukudai",
+        "Kanji": "宿題",
+        "Kana": "しゅくだい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le diner",
+        "English": "the diner",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le fast food",
+        "English": "fast food",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Le feu",
+        "English": "fire",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le gaz",
+        "English": "gas",
+        "Rōmanji": "gasu",
+        "Kanji": "ガス",
+        "Kana": "がす",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le japonais",
+        "English": "Japanese",
+        "Rōmanji": "nihongo",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Nationality",
+        "Type": ""
+    },
+    {
+        "Francais": "le jus de fruit",
+        "English": "fruit juice",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "le lait",
+        "English": "the milk",
+        "Rōmanji": "miluku / Gyuniyu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "le magasin de",
+        "English": "the store of",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "Le matin",
+        "English": "The morning",
+        "Rōmanji": "asa",
+        "Kanji": "朝",
+        "Kana": "あさ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Le metier",
+        "English": "The job",
+        "Rōmanji": "Shigoto",
+        "Kanji": "仕事",
+        "Kana": "しごと",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "le médecin",
+        "English": "the doctor",
+        "Rōmanji": "isha",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "le métier",
+        "English": "the job",
+        "Rōmanji": "oshigoto",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "le nom",
+        "English": "the name",
+        "Rōmanji": "namae",
+        "Kanji": "名前",
+        "Kana": "なまえ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le petit dejeuner",
+        "English": "breakfast",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Le poisson",
+        "English": "The fish",
+        "Rōmanji": "Sakana",
+        "Kanji": "魚",
+        "Kana": "さかな",
+        "Label": "Animals, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "le pont",
+        "English": "the bridge",
+        "Rōmanji": "hashi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le repas",
+        "English": "the meal",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "le repos",
+        "English": "rest",
+        "Rōmanji": "yasumi",
+        "Kanji": "休み",
+        "Kana": "やすみ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le restaurant",
+        "English": "the restaurant",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "le sandwich",
+        "English": "the sandwich",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "le sucre",
+        "English": "sugar",
+        "Rōmanji": "satou",
+        "Kanji": "砂糖",
+        "Kana": "さとう",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "le thé (thé vert)",
+        "English": "tea (green tea)",
+        "Rōmanji": "ocha",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "le thé anglais",
+        "English": "English tea",
+        "Rōmanji": "koocha",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "le train",
+        "English": "the train",
+        "Rōmanji": "densha",
+        "Kanji": "電車",
+        "Kana": "でんしゃ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le verre",
+        "English": "the glass",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "le verre (gobelet)",
+        "English": "the glass (cup)",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "le vin",
+        "English": "the wine",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink, alcohol",
+        "Type": ""
+    },
+    {
+        "Francais": "le visage",
+        "English": "the face",
+        "Rōmanji": "kao",
+        "Kanji": "顔",
+        "Kana": "かお",
+        "Label": "Body part",
+        "Type": ""
+    },
+    {
+        "Francais": "Le volume sonore",
+        "English": "The sound volume",
+        "Rōmanji": "Oto",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "le wiskey",
+        "English": "the wiskey",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink, alcohol",
+        "Type": ""
+    },
+    {
+        "Francais": "legume",
+        "English": "vegetable",
+        "Rōmanji": "yasai",
+        "Kanji": "野菜",
+        "Kana": "やさい",
+        "Label": "Food, Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "lent / tard",
+        "English": "slow / late",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "lequel, laquelle ?",
+        "English": "which one?",
+        "Rōmanji": "dore",
+        "Kanji": "",
+        "Kana": "どれ",
+        "Label": "Asking Word",
+        "Type": ""
+    },
+    {
+        "Francais": "les baguette",
+        "English": "the baguette",
+        "Rōmanji": "Hashi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "les frite",
+        "English": "French fries",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "les fruit",
+        "English": "the fruit",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "les gens",
+        "English": "people",
+        "Rōmanji": "hito",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "les magasin et les restaurant",
+        "English": "stores and restaurants",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "les nouille sautté",
+        "English": "noodles",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Les Parents",
+        "English": "The Parents",
+        "Rōmanji": "Ryooshin",
+        "Kanji": "両親",
+        "Kana": "りょうしん",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "les pates",
+        "English": "pasta",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "les plat",
+        "English": "the dishes",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "les prix",
+        "English": "the prices",
+        "Rōmanji": "Bukka",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Les ski",
+        "English": "The skis",
+        "Rōmanji": "sukii",
+        "Kanji": "スキー",
+        "Kana": "すきー",
+        "Label": "sport",
+        "Type": ""
+    },
+    {
+        "Francais": "lire",
+        "English": "read",
+        "Rōmanji": "yomimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "lit",
+        "English": "bed",
+        "Rōmanji": "Beddo",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "livre",
+        "English": "Book",
+        "Rōmanji": "hon",
+        "Kanji": "本",
+        "Kana": "ほん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "l’assiette",
+        "English": "the plate",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "l’eau chaude",
+        "English": "the hot water",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "l’oignon",
+        "English": "the onion",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food, Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "L’oiseau",
+        "English": "The bird",
+        "Rōmanji": "Tori",
+        "Kanji": "鳥",
+        "Kana": "とり",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "L’or",
+        "English": "Gold",
+        "Rōmanji": "Kin",
+        "Kanji": "金",
+        "Kana": "きん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "machine",
+        "English": "machine",
+        "Rōmanji": "kikai",
+        "Kanji": "機械",
+        "Kana": "きかい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "magazine",
+        "English": "magazine",
+        "Rōmanji": "zasshi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "maison",
+        "English": "home",
+        "Rōmanji": "ie",
+        "Kanji": "家",
+        "Kana": "いえ",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "malade",
+        "English": "sick",
+        "Rōmanji": "Byooki",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "mandarine",
+        "English": "mandarin orange",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "Manga",
+        "English": "Manga",
+        "Rōmanji": "manga",
+        "Kanji": "漫画",
+        "Kana": "まんが",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "manger",
+        "English": "eat",
+        "Rōmanji": "taberu",
+        "Kanji": "食べる",
+        "Kana": "たべる",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Mari / Epoux",
+        "English": "Husband",
+        "Rōmanji": "Otto",
+        "Kanji": "夫",
+        "Kana": "おっと",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Mari / Epoux",
+        "English": "Husband",
+        "Rōmanji": "Goshujin",
+        "Kanji": "御主人",
+        "Kana": "ごしゅじん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Matin",
+        "English": "morning",
+        "Rōmanji": "asa",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "mauvais / insipide",
+        "English": "bad / tasteless",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "medecin",
+        "English": "doctor",
+        "Rōmanji": "ishya",
+        "Kanji": "医者",
+        "Kana": "いしゃ",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "merci beaucoup",
+        "English": "thank you very much",
+        "Rōmanji": "arigatou gozaimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "merci familier, de rien",
+        "English": "thank you familiar, you're welcome",
+        "Rōmanji": "doomo",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "mes petits enfants",
+        "English": "my little children",
+        "Rōmanji": "mago",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "midi (11-13h)",
+        "English": "noon (11-13h)",
+        "Rōmanji": "hiru",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "mignon",
+        "English": "cute",
+        "Rōmanji": "kawai",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Mont Fuji",
+        "English": "Mount Fuji",
+        "Rōmanji": "Fujisan",
+        "Kanji": "富士山",
+        "Kana": "ふじさん",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "Montagne",
+        "English": "Mountain",
+        "Rōmanji": "yama",
+        "Kanji": "山",
+        "Kana": "やま",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "montre bracelet",
+        "English": "watch bracelet",
+        "Rōmanji": "udedokei",
+        "Kanji": "腕時計",
+        "Kana": "うでどけい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "mot",
+        "English": "word",
+        "Rōmanji": "kotoba",
+        "Kanji": "言葉",
+        "Kana": "ことば",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "mourir",
+        "English": "die",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "しぬ",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "Mère",
+        "English": "Mother",
+        "Rōmanji": "haha",
+        "Kanji": "母",
+        "Kana": "はは",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Mère",
+        "English": "Mother",
+        "Rōmanji": "okaasan",
+        "Kanji": "お母さん",
+        "Kana": "おかあさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "natoo",
+        "English": "natoo",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "ne pas aimer / detester",
+        "English": "don't like / dislike",
+        "Rōmanji": "kirai",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Neige",
+        "English": "Snow",
+        "Rōmanji": "yuki",
+        "Kanji": "雪",
+        "Kana": "ゆき",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Nez",
+        "English": "Nose",
+        "Rōmanji": "Hana",
+        "Kanji": "鼻",
+        "Kana": "はな",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "nom de famille",
+        "English": "Familly Name",
+        "Rōmanji": "myooji",
+        "Kanji": "名字",
+        "Kana": "みょうじ",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "nombreux",
+        "English": "many",
+        "Rōmanji": "ooi",
+        "Kanji": "多い",
+        "Kana": "おおい",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "Nombreux",
+        "English": "a lot",
+        "Rōmanji": "takusan",
+        "Kanji": "沢山",
+        "Kana": "たくさん",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "nombril",
+        "English": "Navel / Umbilicus",
+        "Rōmanji": "heso",
+        "Kanji": "臍",
+        "Kana": "へそ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Non",
+        "English": "No",
+        "Rōmanji": "iya",
+        "Kanji": "",
+        "Kana": "いや",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Non",
+        "English": "No",
+        "Rōmanji": "iie",
+        "Kanji": "",
+        "Kana": "いいえ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "nori",
+        "English": "nori",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "notre clan, famille, foyer",
+        "English": "our clan, family, home",
+        "Rōmanji": "uchi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "nous",
+        "English": "us",
+        "Rōmanji": "watashitachi",
+        "Kanji": "私達",
+        "Kana": "わたしたち",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "nouveau",
+        "English": "new",
+        "Rōmanji": "atarashii",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "nuage",
+        "English": "cloud",
+        "Rōmanji": "kumo",
+        "Kanji": "雲",
+        "Kana": "くも",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "nuit",
+        "English": "night",
+        "Rōmanji": "Yoru",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "numéro de téléphone",
+        "English": "phone number",
+        "Rōmanji": "denwabankou",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Obstacle",
+        "English": "Obstacle / Obstruction",
+        "Rōmanji": "Jama",
+        "Kanji": "邪魔",
+        "Kana": "じゃま",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Occasion (seconde main)",
+        "English": "used (second hand)",
+        "Rōmanji": "tyuuko",
+        "Kanji": "中古",
+        "Kana": "ちゅうこ",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "oeuf",
+        "English": "egg",
+        "Rōmanji": "tamago",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "ombre",
+        "English": "shadow",
+        "Rōmanji": "kage",
+        "Kanji": "影",
+        "Kana": "かげ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "omnibus",
+        "English": "omnibus",
+        "Rōmanji": "futsuu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "on est de retour",
+        "English": "we are back",
+        "Rōmanji": "tadaima",
+        "Kanji": "",
+        "Kana": "ただいま",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Oncle",
+        "English": "Uncle",
+        "Rōmanji": "ojisan",
+        "Kanji": "叔父さん",
+        "Kana": "おじさん",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "onigiri",
+        "English": "onigiri",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "orange",
+        "English": "orange",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "oreille",
+        "English": "ear",
+        "Rōmanji": "mimi",
+        "Kanji": "耳",
+        "Kana": "みみ",
+        "Label": "Body part",
+        "Type": ""
+    },
+    {
+        "Francais": "osteophate",
+        "English": "osteopath",
+        "Rōmanji": "Sekkotsui",
+        "Kanji": "接骨医",
+        "Kana": "接骨医",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "ou bien",
+        "English": "orange",
+        "Rōmanji": "Toka",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "ou habiter vous?",
+        "English": "where are you living?",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Oui",
+        "English": "Yes",
+        "Rōmanji": "ee",
+        "Kanji": "",
+        "Kana": "ええ",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Oui",
+        "English": "Yes",
+        "Rōmanji": "hai",
+        "Kanji": "",
+        "Kana": "はい",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "où ?",
+        "English": "Where",
+        "Rōmanji": "doko",
+        "Kanji": "何処",
+        "Kana": "どこ",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "pain",
+        "English": "bread",
+        "Rōmanji": "Pan",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "papier",
+        "English": "Paper",
+        "Rōmanji": "kami",
+        "Kanji": "紙",
+        "Kana": "かみ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Par ici",
+        "English": "over here",
+        "Rōmanji": "Kochira",
+        "Kanji": "此方",
+        "Kana": "こちら",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "parapluie",
+        "English": "umbrella",
+        "Rōmanji": "kasa",
+        "Kanji": "傘",
+        "Kana": "かさ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "pardon, désolé, attirer l'attention",
+        "English": "sorry, sorry, draw attention",
+        "Rōmanji": "sumimasen",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "parents",
+        "English": "parents",
+        "Rōmanji": "ryooshin",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "paresseux",
+        "English": "lazy",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "paresseux",
+        "English": "sloth",
+        "Rōmanji": "namakemono",
+        "Kanji": "",
+        "Kana": "なまけもの",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "parler",
+        "English": "speak",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "あなす",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "pas  vraiment / pas beaucoup",
+        "English": "not really / not much",
+        "Rōmanji": "amari",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Pas dutout",
+        "English": "Not at all",
+        "Rōmanji": "Zenzen",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Passage (lieu)",
+        "English": "passing (Location)",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Passer",
+        "English": "spent",
+        "Rōmanji": "tooru",
+        "Kanji": "通る",
+        "Kana": "とおる",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "pasteque",
+        "English": "watermelon",
+        "Rōmanji": "suika",
+        "Kanji": "西瓜",
+        "Kana": "すいか",
+        "Label": "Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "Patience, Persévérance",
+        "English": "Patience, Perseverance",
+        "Rōmanji": "nintai",
+        "Kanji": "忍耐",
+        "Kana": "にんたい",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "penser",
+        "English": "think",
+        "Rōmanji": "omou",
+        "Kanji": "思う",
+        "Kana": "おもう",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Petit enfant",
+        "English": "Small child",
+        "Rōmanji": "Mago",
+        "Kanji": "孫",
+        "Kana": "まご",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "petit, bas",
+        "English": "small, low",
+        "Rōmanji": "Chiisai",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Peu",
+        "English": "Little",
+        "Rōmanji": "Sukoshi",
+        "Kanji": "少し",
+        "Kana": "すこし",
+        "Label": "Adjective",
+        "Type": ""
+    },
+    {
+        "Francais": "pied",
+        "English": "foot",
+        "Rōmanji": "ashi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "pigeon / Colombe",
+        "English": "pigeon / Dove",
+        "Rōmanji": "hato",
+        "Kanji": "鳩",
+        "Kana": "はと",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "pleuvoir",
+        "English": "rainning",
+        "Rōmanji": "Furimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "pluie",
+        "English": "rain",
+        "Rōmanji": "ame",
+        "Kanji": "雨",
+        "Kana": "あめ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Poisson Rouge",
+        "English": "goldfish",
+        "Rōmanji": "Kingyo",
+        "Kanji": "金魚",
+        "Kana": "きんぎょ",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "pomme",
+        "English": "apple",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food, Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "pomme de terre",
+        "English": "potato",
+        "Rōmanji": "Jagaimo",
+        "Kanji": "じゃが芋",
+        "Kana": "じゃがいも",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "Prendre",
+        "English": "Take",
+        "Rōmanji": "toru",
+        "Kanji": "取る",
+        "Kana": "とる",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "prix",
+        "English": "prix",
+        "Rōmanji": "kakaku",
+        "Kanji": "価格",
+        "Kana": "かかく",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "professeur",
+        "English": "teacher",
+        "Rōmanji": "sensei",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "professeur",
+        "English": "teacher",
+        "Rōmanji": "kyooshi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Présenté / Introduire",
+        "English": "Presented / Introduce",
+        "Rōmanji": "Shokaisuru",
+        "Kanji": "紹介する",
+        "Kana": "しょうかいする",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "Père",
+        "English": "Father",
+        "Rōmanji": "Otoosan",
+        "Kanji": "おとうさん",
+        "Kana": "おとうさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Père",
+        "English": "Father",
+        "Rōmanji": "Chichi",
+        "Kanji": "父",
+        "Kana": "ちち",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "pêche (fruit)",
+        "English": "peach (Fruit)",
+        "Rōmanji": "Momo",
+        "Kanji": "桃",
+        "Kana": "もも",
+        "Label": "Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "pêcher (activité)",
+        "English": "fishing",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "Qu'est-ce que ceci",
+        "English": "what is this ?",
+        "Rōmanji": "Kore wa nan desu ka",
+        "Kanji": "これは何ですか",
+        "Kana": "これはなんですか",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Quatre personnes",
+        "English": "four poeple",
+        "Rōmanji": "yo nin",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Counting",
+        "Type": ""
+    },
+    {
+        "Francais": "que buvez vous?",
+        "English": "what did you drink ?",
+        "Rōmanji": "nani ho nomimasuka",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Que cette année soit bienveillante",
+        "English": "May this year be a benevolent one",
+        "Rōmanji": "Kotoshimo Yoroshiku Onegai (Shimasu / Itashimasu)",
+        "Kanji": "今年もよろしくお願い(します / いたします)",
+        "Kana": "ことしもよろしくおねがい(します / いたします)",
+        "Label": "New Year",
+        "Type": "",
+        "Some Notes\r": "(En Janvier - Apres Nouvel Ans)\r"
+    },
+    {
+        "Francais": "que manger vous?",
+        "English": "what did you eat ?",
+        "Rōmanji": "nani ho tabemasuka",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Quel ages a tu ?",
+        "English": "How old are you?",
+        "Rōmanji": "ikutsu desuka ",
+        "Kanji": "",
+        "Kana": "いくつですか",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Quel ages a tu ?",
+        "English": "How old are you?",
+        "Rōmanji": "nan sai desuka ",
+        "Kanji": "何歳ですか",
+        "Kana": "なんさいですか",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "Qui ?",
+        "English": "who ?",
+        "Rōmanji": "Dare / Donata",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Asking Word",
+        "Type": ""
+    },
+    {
+        "Francais": "quoi ?",
+        "English": "What?",
+        "Rōmanji": "nani",
+        "Kanji": "何",
+        "Kana": "なに",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "raisin",
+        "English": "gapre",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Fruit",
+        "Type": ""
+    },
+    {
+        "Francais": "ramen",
+        "English": "ramen",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "rapide / vite / Tot le matin",
+        "English": "fast / quick / Tot in the morning",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "raton-laveur / Tanuki",
+        "English": "raccoon",
+        "Rōmanji": "tanuki",
+        "Kanji": "狸",
+        "Kana": "たぬき",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "ravi de faire votre connaissance",
+        "English": "pleased to meet you",
+        "Rōmanji": "Yoroshiku onegaishimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "recevoir, venir",
+        "English": "to receive, to come",
+        "Rōmanji": "Kuru, kimasen deshita",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "respirer",
+        "English": "breath",
+        "Rōmanji": "suu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "ressembler a",
+        "English": "look like",
+        "Rōmanji": "ni nite imasu ne",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "reve",
+        "English": "dream",
+        "Rōmanji": "yume",
+        "Kanji": "夢",
+        "Kana": "ゆめ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "rinocerosse",
+        "English": "rinoceros",
+        "Rōmanji": "sai",
+        "Kanji": "サイ",
+        "Kana": "さい",
+        "Label": "Animals",
+        "Type": ""
+    },
+    {
+        "Francais": "riz crû",
+        "English": "rice",
+        "Rōmanji": "kome",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "riz cuit",
+        "English": "cooked rice",
+        "Rōmanji": "gohan",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "robot",
+        "English": "robot",
+        "Rōmanji": "robotto",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "rouge",
+        "English": "red",
+        "Rōmanji": "aka",
+        "Kanji": "赤",
+        "Kana": "あか",
+        "Label": "colors",
+        "Type": ""
+    },
+    {
+        "Francais": "réponse, retour",
+        "English": "response, return",
+        "Rōmanji": "Henji",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "réveil horloge",
+        "English": "alarm clock",
+        "Rōmanji": "mezamashidokei",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "salé",
+        "English": "salty",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "sashimi",
+        "English": "sashimi",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "fish",
+        "Type": ""
+    },
+    {
+        "Francais": "sauce soja",
+        "English": "soy sauce",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "saumon",
+        "English": "salmon",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "science",
+        "English": "science",
+        "Rōmanji": "kagaku",
+        "Kanji": "科学",
+        "Kana": "かがく",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Se deteriorer",
+        "English": "Deterioration",
+        "Rōmanji": "akkasuru",
+        "Kanji": "悪化する",
+        "Kana": "あっかする",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "se reposer",
+        "English": "take a rest",
+        "Rōmanji": "yasumu",
+        "Kanji": "休む",
+        "Kana": "やすむ",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "sel",
+        "English": "salt",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "sept (7)",
+        "English": "Seven",
+        "Rōmanji": "nana",
+        "Kanji": "七",
+        "Kana": "なな",
+        "Label": "Number",
+        "Type": ""
+    },
+    {
+        "Francais": "Six personnes",
+        "English": "six poeple",
+        "Rōmanji": "roku nin",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Counting",
+        "Type": ""
+    },
+    {
+        "Francais": "Skinkansen",
+        "English": "Skinkansen",
+        "Rōmanji": "Shinkansen",
+        "Kanji": "新幹線",
+        "Kana": "しんかんせん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "soba",
+        "English": "soba",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Soeur ainée",
+        "English": "Older sister",
+        "Rōmanji": "oneesan",
+        "Kanji": "お姉さん",
+        "Kana": "おねえさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "Soeur ainée",
+        "English": "Older sister",
+        "Rōmanji": "ane",
+        "Kanji": "姉",
+        "Kana": "あね",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Soeur cadette",
+        "English": "Younger sister",
+        "Rōmanji": "imooto",
+        "Kanji": "妹",
+        "Kana": "いもうと",
+        "Label": "Familly",
+        "Type": "Familiar"
+    },
+    {
+        "Francais": "Soeur cadette",
+        "English": "Younger sister",
+        "Rōmanji": "imootosan",
+        "Kanji": "妹さん",
+        "Kana": "いもうとさん",
+        "Label": "Familly",
+        "Type": "Polite"
+    },
+    {
+        "Francais": "soi-mème",
+        "English": "oneself",
+        "Rōmanji": "jibun",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "souffler",
+        "English": "blow",
+        "Rōmanji": "Fukimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Souvent",
+        "English": "Often",
+        "Rōmanji": "Yoku",
+        "Kanji": "",
+        "Kana": "よく",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "soyez attentif",
+        "English": "be careful",
+        "Rōmanji": "ki o tsukemashou",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "spaghettis",
+        "English": "spaghetti",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "station, gare",
+        "English": "A Station",
+        "Rōmanji": "eki",
+        "Kanji": "駅",
+        "Kana": "えき",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "steak",
+        "English": "steak",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "meat",
+        "Type": ""
+    },
+    {
+        "Francais": "stop",
+        "English": "Stop",
+        "Rōmanji": "yameru",
+        "Kanji": "止める",
+        "Kana": "やめる",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "subordonné",
+        "English": "subordinate",
+        "Rōmanji": "Buka",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "sucre",
+        "English": "sugar",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "sucré / doux",
+        "English": "sweet / mild",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "suicide honorifique",
+        "English": "honorary suicide",
+        "Rōmanji": "harakiri",
+        "Kanji": "腹切り",
+        "Kana": "はらきり",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Sushi",
+        "English": "Sushi",
+        "Rōmanji": "sushi",
+        "Kanji": "寿司",
+        "Kana": "すし",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "table",
+        "English": "table",
+        "Rōmanji": "Teeburu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "Tante",
+        "English": "Aunt",
+        "Rōmanji": "obasan",
+        "Kanji": "叔母さん",
+        "Kana": "おばさん",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "tempura",
+        "English": "tempura",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "thé vert",
+        "English": "green tea",
+        "Rōmanji": "ocha",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Drink",
+        "Type": ""
+    },
+    {
+        "Francais": "tofu",
+        "English": "tofu",
+        "Rōmanji": "toufu",
+        "Kanji": "豆腐",
+        "Kana": "とうふ",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "toilettes",
+        "English": "toilet",
+        "Rōmanji": "toire",
+        "Kanji": "トイレ",
+        "Kana": "といれ",
+        "Label": "place",
+        "Type": ""
+    },
+    {
+        "Francais": "tomate",
+        "English": "tomato",
+        "Rōmanji": "tomato",
+        "Kanji": "トマト",
+        "Kana": "とまと",
+        "Label": "Food, Vegetable",
+        "Type": ""
+    },
+    {
+        "Francais": "tomber",
+        "English": "fall",
+        "Rōmanji": "Oshiru",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "toujours",
+        "English": "Always",
+        "Rōmanji": "itsumo",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "train a vapeur",
+        "English": "A Steam Train",
+        "Rōmanji": "kisha",
+        "Kanji": "汽車",
+        "Kana": "きしゃ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "trois personnes",
+        "English": "three poeple",
+        "Rōmanji": "san nin",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Counting",
+        "Type": ""
+    },
+    {
+        "Francais": "Trop / Tres",
+        "English": "Too Mush",
+        "Rōmanji": "amari",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "téléphone",
+        "English": "A Phone",
+        "Rōmanji": "denwa",
+        "Kanji": "電話",
+        "Kana": "でんわ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "télévision",
+        "English": "television",
+        "Rōmanji": "Terebi",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "udon",
+        "English": "udon",
+        "Rōmanji": "udon",
+        "Kanji": "",
+        "Kana": "うどん",
+        "Label": "Dishies",
+        "Type": ""
+    },
+    {
+        "Francais": "un arc a fleche",
+        "English": "an arrow bow",
+        "Rōmanji": "yumiya",
+        "Kanji": "弓矢",
+        "Kana": "ゆみや",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "un bonbon",
+        "English": "A candy",
+        "Rōmanji": "ame",
+        "Kanji": "飴",
+        "Kana": "あめ",
+        "Label": "Candy, Food",
+        "Type": ""
+    },
+    {
+        "Francais": "un cadeau / un souvenir",
+        "English": "a gift",
+        "Rōmanji": "omiyage",
+        "Kanji": "",
+        "Kana": "おみやげ",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "un chinois",
+        "English": "a Chinese person",
+        "Rōmanji": "chuugokujin",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Nationality",
+        "Type": ""
+    },
+    {
+        "Francais": "un Eleve",
+        "English": "A Student",
+        "Rōmanji": "seito",
+        "Kanji": "生徒",
+        "Kana": "せいと",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "Un Mots",
+        "English": "A word",
+        "Rōmanji": "kotoba",
+        "Kanji": "言葉",
+        "Kana": "ことば",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "une Bonne journée",
+        "English": "A good day",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "いい日でした",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "une chose / un objet",
+        "English": "An Items",
+        "Rōmanji": "mono",
+        "Kanji": "物",
+        "Kana": "もの",
+        "Label": "Works",
+        "Type": ""
+    },
+    {
+        "Francais": "une cuisiniere",
+        "English": "a cooker",
+        "Rōmanji": "konro",
+        "Kanji": "焜炉 / コンロ",
+        "Kana": "こんろ",
+        "Label": "kitchen utensil",
+        "Type": ""
+    },
+    {
+        "Francais": "une personne",
+        "English": "Poeple",
+        "Rōmanji": "hito",
+        "Kanji": "人",
+        "Kana": "ひと",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "une photo",
+        "English": "Picture",
+        "Rōmanji": "shashin",
+        "Kanji": "写真",
+        "Kana": "しゃしん",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "viande",
+        "English": "Meat",
+        "Rōmanji": "niku",
+        "Kanji": "肉",
+        "Kana": "にく",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "viande de boeuf",
+        "English": "beef meat",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Food, meat",
+        "Type": ""
+    },
+    {
+        "Francais": "viande de porc",
+        "English": "pork meat",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "meat",
+        "Type": ""
+    },
+    {
+        "Francais": "Vieil Homme",
+        "English": "Old man",
+        "Rōmanji": "ojiisan",
+        "Kanji": "お爺さん",
+        "Kana": "おじいさん",
+        "Label": "Familly",
+        "Type": ""
+    },
+    {
+        "Francais": "Vietnam",
+        "English": "Vietnam",
+        "Rōmanji": "Betonamu",
+        "Kanji": "ベトナム",
+        "Kana": "べとなむ",
+        "Label": "country",
+        "Type": ""
+    },
+    {
+        "Francais": "visage",
+        "English": "face",
+        "Rōmanji": "kao",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "Body part",
+        "Type": ""
+    },
+    {
+        "Francais": "Voila (s'il vous plais)",
+        "English": "You’re Welcom",
+        "Rōmanji": "Dozo",
+        "Kanji": "",
+        "Kana": "どうぞ",
+        "Label": "Expression",
+        "Type": ""
+    },
+    {
+        "Francais": "voir (verbe)",
+        "English": "See",
+        "Rōmanji": "Miru",
+        "Kanji": "見る",
+        "Kana": "みる",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "voiture",
+        "English": "Car",
+        "Rōmanji": "kuruma",
+        "Kanji": "車",
+        "Kana": "くるま",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "volaillle",
+        "English": "poultry",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "meat",
+        "Type": ""
+    },
+    {
+        "Francais": "wasabi",
+        "English": "wasabi",
+        "Rōmanji": "wasabi",
+        "Kanji": "山葵",
+        "Kana": "わさび",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "yaourt",
+        "English": "yogurt",
+        "Rōmanji": "yoguruto",
+        "Kanji": "ヨーグルト",
+        "Kana": "よーぐると",
+        "Label": "Food",
+        "Type": ""
+    },
+    {
+        "Francais": "à demain",
+        "English": "see you tomorrow",
+        "Rōmanji": "mata ashita",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "à la prochaine",
+        "English": "see you next time",
+        "Rōmanji": "mata ne",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "à la semaine prochaine",
+        "English": "see you next week",
+        "Rōmanji": "mata raishuu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "à nouveau, encore",
+        "English": "again, again",
+        "Rōmanji": "mata",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "à suivre, à continuer",
+        "English": "to follow, to continue",
+        "Rōmanji": "tsuzuku",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "écouter",
+        "English": "listen to",
+        "Rōmanji": "kiku",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "écrire",
+        "English": "write",
+        "Rōmanji": "kaku, kakimasu",
+        "Kanji": "書く、書きます",
+        "Kana": "かく、かきます",
+        "Label": "verb",
+        "Type": ""
+    },
+    {
+        "Francais": "étagère",
+        "English": "shelf",
+        "Rōmanji": "tana",
+        "Kanji": "棚",
+        "Kana": "たな",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "était",
+        "English": "was",
+        "Rōmanji": "Deshita",
+        "Kanji": "",
+        "Kana": "でした",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "étudiant",
+        "English": "student",
+        "Rōmanji": "Gakusei",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "être capable de",
+        "English": "be able to",
+        "Rōmanji": "dekimasu",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ""
+    },
+    {
+        "Francais": "",
+        "English": "",
+        "Rōmanji": "",
+        "Kanji": "",
+        "Kana": "",
+        "Label": "",
+        "Type": ",",
+        "Some Notes\r": ""
+    }
+]
