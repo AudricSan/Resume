@@ -18,8 +18,9 @@ const typeColor = {
 };
 
 const url = " https://pokeapi.co/api/v2/pokemon/";
-const card = document.getElementById("card");
+const container = document.getElementById("cardContainer");
 const btn = document.getElementById("btn");
+const btnAll = document.getElementById("btnAll");
 
 let getPokeData = () => {
   // Generate a random number between 1 and 150
@@ -32,15 +33,28 @@ let getPokeData = () => {
   fetch(finalUrl)
     .then((response) => response.json())
     .then((data) => {
-      generateCard(data);
+      generateCard(data, 0);
     });
 };
 
+let getAllPokeData = () => {
+  for (let i = 1; i <= 150; i++) {
+    const finalUrl = url + i;
+
+    fetch(finalUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        generateCard(data, i);
+      });
+  }
+};
+
 //Generate Card
-let generateCard = (data) => {
+let generateCard = (data, i) => {
   // Get necessary data and assign it to variables
   console.log(data);
   const hp = data.stats[0].base_stat;
+  const nb = data.id;
   const imgSrc = data.sprites.other.dream_world.front_default;
   const pokeName = data.name[0].toUpperCase() + data.name.slice(1);
   const statAttack = data.stats[1].base_stat;
@@ -49,15 +63,23 @@ let generateCard = (data) => {
 
   // Set themeColor based on pokemon type
   const themeColor = typeColor[data.types[0].type.name];
-  console.log(themeColor);
+
+  const card = document.createElement("div");
+
   card.innerHTML = `
-        <p class="hp">
-          <span>HP</span>
-            ${hp}
-        </p>
+        <div class="cc">
+          <p class="nb">
+            <span>ID</span>
+              ${nb}
+          </p>
+          <p class="hp">
+            <span>HP</span>
+              ${hp}
+          </p>
+        </div>
         <img src=${imgSrc} />
         <h2 class="poke-name">${pokeName}</h2>
-        <div class="types">
+        <div class="types" id="${i}">
          
         </div>
         <div class="stats">
@@ -75,24 +97,41 @@ let generateCard = (data) => {
           </div>
         </div>
   `;
-  appendTypes(data.types);
-  styleCard(themeColor);
+
+  container.appendChild(card);
+  appendTypes(data.types, i);
+  styleCard(themeColor, card, i);
+
 };
 
-let appendTypes = (types) => {
+let appendTypes = (types, n) => {
   types.forEach((item) => {
     let span = document.createElement("SPAN");
     span.textContent = item.type.name;
-    document.querySelector(".types").appendChild(span);
+    document.getElementById(n).appendChild(span);
   });
 };
 
-let styleCard = (color) => {
+let styleCard = (color, card) => {
   card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
   card.querySelectorAll(".types span").forEach((typeColor) => {
     typeColor.style.backgroundColor = color;
   });
 };
 
-btn.addEventListener("click", getPokeData);
+function oneclick() {
+  oldremover();
+  getPokeData();
+}
+
+function allclick() {
+  oldremover();
+  getAllPokeData();
+}
+
+function oldremover(){
+  child = container.lastElementChild;
+  container.removeChild(child);
+}
+
 window.addEventListener("load", getPokeData);

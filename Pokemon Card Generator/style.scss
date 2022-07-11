@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #eff3ff;
+}
+
+#container {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    #btn,
+    #btnAll {
+      min-width: 100px;
+      min-height: 40px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      padding: 10px 30px;
+      font-size: 18px;
+
+      background-color: #101010;
+      color: #ffffff;
+
+      position: relative;
+      margin: 30px 15px;
+
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+  #cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      padding: 30px 20px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+
+      margin: 2%;
+
+      div {
+        max-width: 380px;
+
+        &.cc {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          box-shadow: none;
+        }
+
+        p {
+          &.hp,
+          &.nb {
+            width: 80px;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 30px;
+            // margin-left: auto;
+            font-weight: 400;
+          }
+
+          span {
+            font-size: 12px;
+            letter-spacing: 0.4px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .stats {
+        margin: 0;
+        padding: 0px 15px;
+
+        div {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 180px;
+      max-height: 200px;
+      position: relative;
+      margin: 20px auto;
+    }
+  }
+}
+
+.poke-name {
+  text-align: center;
+  font-weight: 600;
+}
+
+.types {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 40px 0;
+
+  span {
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  p {
+    color: #404060;
+  }
+}
