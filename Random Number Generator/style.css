@@ -6,7 +6,11 @@
 }
 body {
   height: 100vh;
-  background: linear-gradient(#f0f1f4 50%, #f5a623 50%);
+  background: linear-gradient(
+    to bottom,
+    #8eb2e4 50%,
+    #6c727e 50%
+);
 }
 .container {
   background-color: #ffffff;
@@ -28,7 +32,7 @@ body {
 label {
   font-size: 1.2em;
   font-weight: 600;
-  color: #242e4c;
+  color: #8eb2e4;
 }
 input {
   display: block;
@@ -36,20 +40,20 @@ input {
   font-size: 1.3em;
   border: none;
   color: #444b5f;
-  border-bottom: 1.5px solid #242e4c;
+  border-bottom: 1.5px solid #8eb2e4;
   padding: 0.45em;
   margin-top: 0.45em;
   outline: none;
 }
 input:focus {
-  border-color: #f5a623;
+  border-color: #2f3846;
 }
 button#generate {
   display: block;
   width: 100%;
   font-size: 1.1em;
   margin: 2.7em 0 1.1em 0;
-  background-color: #f5a623;
+  background-color: #8eb2e4;
   padding: 0.8em 0;
   border: none;
   border-radius: 0.5em;
@@ -60,5 +64,5 @@ button#generate {
   text-align: center;
   font-size: 3.7em;
   font-size: 600;
-  color: #242e4c;
+  color: #2f3846;
 }
