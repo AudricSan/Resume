@@ -36,8 +36,6 @@ ul, li{
             flex-basis: 0;
             flex-grow: 0;
 
-            padding-right: 0.5em;
-
             li{
                 display: flex;
                 flex-wrap: wrap;
@@ -70,7 +68,6 @@ ul, li{
                     min-width:  fit-content;
                                         
                     padding-bottom: 0.5em;
-
                     li{
                         margin: 0.2em;
                         flex-wrap: wrap;

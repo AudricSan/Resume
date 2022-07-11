@@ -32,7 +32,7 @@ function showResponse(jsonObj) {
     score.textContent = 'score: ' + jsonObj.score;
     ListOFWordname.textContent = 'List Item:';
 
-    list = jsonObj.List;   
+    list = jsonObj.List;
     list.forEach(element => {
         var Items = document.createElement('li');
         var Name = document.createElement('p');

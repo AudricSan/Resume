@@ -1,0 +1,22 @@
+form{
+    align-items: center;
+
+    p{
+        display: flex;
+        flex-direction: column;
+
+        &:last-child{
+            flex-direction: row;
+
+        }
+
+        input[type=checkbox]{
+            margin-top: 0.8em;
+            margin-left: 1em;
+            align-self: center;
+            background-color: red;
+        }
+    }
+
+    zoom: 200%;
+}
