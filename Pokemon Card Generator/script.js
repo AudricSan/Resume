@@ -15,6 +15,8 @@ const typeColor = {
   psychic: "#a29bfe",
   rock: "#2d3436",
   water: "#0190FF",
+  dark: "#705848",
+  steel: "#B8B8D0"
 };
 
 const url = " https://pokeapi.co/api/v2/pokemon/";
@@ -23,8 +25,8 @@ const btn = document.getElementById("btn");
 const btnAll = document.getElementById("btnAll");
 
 let getPokeData = () => {
-  // Generate a random number between 1 and 150
-  let id = Math.floor(Math.random() * 905) + 1;
+  // Generate a random number between 1 and 905
+  let id = Math.floor(Math.random() * 649) + 1;
 
   // Combine the pokeapi url with pokemon id
   const finalUrl = url + id;
@@ -38,7 +40,7 @@ let getPokeData = () => {
 };
 
 let getAllPokeData = () => {
-  for (let i = 1; i <= 905; i++) {
+  for (let i = 1; i <= 649; i++) {
     const finalUrl = url + i;
 
     fetch(finalUrl)
@@ -129,9 +131,9 @@ function allclick() {
   getAllPokeData();
 }
 
-function oldremover(){
+function oldremover() {
   child = container.lastElementChild;
   container.removeChild(child);
 }
 
-window.addEventListener("load", getPokeData);
+// window.addEventListener("load", getPokeData);

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap");
+
+.loading {
+    background-image: linear-gradient(90deg, rgb(216, 215, 215), rgb(253, 243, 243), lightgrey, lightgrey);
+    background-size: 1000%;
+    animation: sweep 5s ease-in-out infinite alternate;
+
+    color: lightgrey;
+
+    span {
+        color: lightgrey;
+    }
+
+    .n {
+        color: black;
+    }
+
+    .img {
+        border: none;
+        min-height: 200px;
+        min-width: 180px;
+    }
+
+    .poke-name{
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+    }
+}
+
+.txt {
+    font-family: "Flow Circular", cursive;
+}
+
+@keyframes sweep {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}

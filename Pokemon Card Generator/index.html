@@ -8,12 +8,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="skeleton.css" />
 </head>
 
 <body>
 
   <div id="container">
-    <div id="cardContainer"></div>
+    <div id="cardContainer">
+      <div class="loading">
+
+        <div class="cc">
+          <p class="nb loading txt">
+            <span class="n">ID</span>
+            ID
+          </p>
+          <p class="hp loading txt">
+            <span class="n">HP</span>
+            HP
+          </p>
+        </div>
+
+        <div class="img"></div>
+        <h2 class="poke-name txt">pokeName</h2>
+
+        <div class="types">
+            <span class="txt">poison</span>
+        </div>
+
+        <div class="stats">
+          <div>
+            <h3 class="txt" >0</h3>
+            <p>Attack</p>
+          </div>
+          <div>
+            <h3 class="txt" >0</h3>
+            <p>Defense</p>
+          </div>
+          <div>
+            <h3 class="txt" >0</h3>
+            <p>Speed</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <div class="btn">
       <button onclick="oneclick()" id="btn">Generate</button>
       <button onclick="allclick()" id="btnAll">All Card</button>

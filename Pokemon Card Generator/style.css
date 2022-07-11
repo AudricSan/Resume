@@ -16,12 +16,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 #container .btn {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
 #container .btn #btn,
 #container .btn #btnAll {
   min-width: 100px;
@@ -40,6 +42,7 @@ body {
   border: none;
   border-radius: 5px;
 }
+
 #container #cardContainer {
   display: flex;
   flex-direction: row;
@@ -47,15 +50,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #container #cardContainer div {
   padding: 30px 20px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin: 2%;
 }
+
 #container #cardContainer div div {
   max-width: 380px;
 }
+
 #container #cardContainer div div.cc {
   display: flex;
   flex-direction: row;
@@ -63,7 +69,9 @@ body {
   justify-content: space-between;
   box-shadow: none;
 }
-#container #cardContainer div div p.hp, #container #cardContainer div div p.nb {
+
+#container #cardContainer div div p.hp,
+#container #cardContainer div div p.nb {
   width: 80px;
   background-color: #ffffff;
   text-align: center;
@@ -71,23 +79,28 @@ body {
   border-radius: 30px;
   font-weight: 400;
 }
+
 #container #cardContainer div div p span {
   font-size: 12px;
   letter-spacing: 0.4px;
   font-weight: 600;
 }
+
 #container #cardContainer div .stats {
   margin: 0;
   padding: 0px 15px;
 }
+
 #container #cardContainer div .stats div {
   margin: 0;
   box-shadow: none;
 }
+
 #container #cardContainer img {
   display: block;
   width: 180px;
   max-height: 200px;
+  min-height: 200px;
   position: relative;
   margin: 20px auto;
 }
@@ -102,6 +115,7 @@ body {
   justify-content: space-around;
   margin: 20px 0 40px 0;
 }
+
 .types span {
   padding: 5px 20px;
   border-radius: 20px;
@@ -114,6 +128,9 @@ body {
   justify-content: space-between;
   text-align: center;
 }
+
 .stats p {
   color: #404060;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
