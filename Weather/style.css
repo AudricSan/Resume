@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   --border: 1em;
   --color1: lightgrey;
   --color2: lightblue;
@@ -12,26 +12,16 @@
   background-color: var(--color1);
   max-width: 250px;
   max-height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-
 .container .app-title {
   font-weight: 800;
   font-size: 1.5em;
   border-bottom: solid 1px;
 }
-
 .container .notification {
   display: none;
   font-weight: 700;
@@ -43,27 +33,22 @@
   min-width: 100px;
   background-color: var(--color2);
 }
-
 .container .weather-container {
   margin-bottom: 1em;
   margin-top: 1em;
 }
-
 .container .weather-container .temperature-value {
   font-weight: 700;
   font-size: 2em;
   margin-top: -1em;
   margin-bottom: -0.7em;
 }
-
 .container .weather-container .temperature-description {
   font-weight: 500;
   font-size: 1.3em;
   margin-bottom: -0.8em;
 }
-
 .container .weather-container .location {
   font-weight: 300;
   font-size: 1em;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

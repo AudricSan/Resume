@@ -3,8 +3,7 @@
   font-family: "Roboto";
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   --color1: #275efe;
   --color2: #275efe4d;
   --color3: #bbc1e1;
@@ -17,13 +16,11 @@ body {
   height: 100vh;
   background: linear-gradient(135deg, var(--color1), var(--color2));
 }
-
 body .container {
   width: 40%;
   min-width: 450px;
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   padding: 30px 40px;
@@ -34,10 +31,8 @@ body .container {
   background-color: #ffffff;
   padding: 30px 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
-
 #newtask input {
   width: 70%;
   width: 70%;
@@ -50,12 +45,10 @@ body .container {
   position: relative;
   border-radius: 5px;
 }
-
 #newtask input:focus {
   outline: none;
   border-color: var(--color1);
 }
-
 #newtask button {
   position: relative;
   float: right;
@@ -70,7 +63,6 @@ body .container {
   cursor: pointer;
   outline: none;
 }
-
 #newtask .error {
   color: var(--color6);
   padding-top: 0.5em;
@@ -84,8 +76,7 @@ body .container {
   padding: 30px 20px;
   margin-top: 60px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   width: 100%;
   position: relative;
 }
@@ -95,24 +86,16 @@ body .container {
   height: 50px;
   padding: 5px 10px;
   margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 2px solid var(--color3);
   cursor: pointer;
 }
-
 .task span {
   font-size: 15px;
   font-weight: 400;
 }
-
 .task button {
   background-color: var(--color1);
   color: #ffffff;
@@ -126,5 +109,4 @@ body .container {
 
 .completed {
   text-decoration: line-through;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
