@@ -7,17 +7,7 @@
   text-align: center;
 }
 
-body{
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
 .container {
-  width: 70vmin;
-  margin-top: 5vh;
-
   border-radius: 25px;
   background-color: var(--color1);
   max-width: 250px;

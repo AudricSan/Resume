@@ -1,17 +1,22 @@
 {
   "sitemap.xml": {
+    
     "Protocol": "https",
     "DomainName": "book.audricrosier.be",
     "Root": "./",
+
     "IncludeExt": [
       ".html",
       ".php"
     ],
+
     "Exclude": [],
+
     "TagsToInclude": [
       "priority",
       "lastmod"
     ],
+    
     "DefaultChangeFrequency": "monthly",
     "TabCharacters": "\t",
     "bIncludeWWW": true,

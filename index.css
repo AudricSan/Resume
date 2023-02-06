@@ -1,30 +1,126 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
-  font-family: "roboto";
-  margin: 0em;
-  padding: 0em;
+  --color-black: black;
+  --color-grey: rgba(120, 119, 116, 1);
+  --color-brown: rgba(159, 107, 83, 1);
+  --color-orange: rgba(217, 115, 13, 1);
+  --color-yellow: rgba(203, 145, 47, 1);
+  --color-green: rgba(68, 131, 97, 1);
+  --color-blue: rgba(51, 126, 169, 1);
+  --color-purple: rgba(144, 101, 176, 1);
+  --color-pink: rgba(193, 76, 138, 1);
+  --color-red: rgba(212, 76, 71, 1);
+  --tran-grey: rgba(120, 119, 116, 0.6);
+  --tran-brown: rgba(159, 107, 83, 0.6);
+  --tran-orange: rgba(217, 115, 13, 0.6);
+  --tran-yellow: rgba(203, 145, 47, 0.6);
+  --tran-green: rgba(68, 131, 97, 0.6);
+  --tran-blue: rgba(51, 126, 169, 0.6);
+  --tran-purple: rgba(144, 101, 176, 0.6);
+  --tran-pink: rgba(193, 76, 138, 0.6);
+  --tran-red: rgba(212, 76, 71, 0.6);
+  --back-grey: rgba(227, 226, 224, 1);
+  --back-brown: rgba(238, 224, 218, 1);
+  --back-orange: rgba(250, 222, 201, 1);
+  --back-yellow: rgba(253, 236, 200, 1);
+  --back-green: rgba(219, 237, 219, 1);
+  --back-blue: rgba(211, 229, 239, 1);
+  --back-purple: rgba(232, 222, 238, 1);
+  --back-pink: rgba(245, 224, 233, 1);
+  --back-red: rgba(255, 226, 221, 1);
+  --back-main-white: rgb(247, 246, 243);
+  --back-main-black: rgb(45, 45, 45);
 }
 
-h4 {
-  margin-left: 0.5em;
-  margin-top: 0.5em;
+.highlight {
+  background-color: transparent;
+  font-size: medium;
+  font-weight: bolder;
+}
+.highlight.black {
+  color: var(--color-black);
+}
+.highlight.grey {
+  color: var(--color-grey);
+}
+.highlight.brown {
+  color: var(--color-brown);
+}
+.highlight.orange {
+  color: var(--color-orange);
+}
+.highlight.yellow {
+  color: var(--color-yellow);
+}
+.highlight.green {
+  color: var(--color-green);
+}
+.highlight.blue {
+  color: var(--color-blue);
+}
+.highlight.purple {
+  color: var(--color-purple);
+}
+.highlight.pink {
+  color: var(--color-pink);
+}
+.highlight.red {
+  color: var(--color-red);
 }
 
-ul,
-li {
-  text-decoration: none;
-  list-style: none;
+.backgound.black {
+  background-color: var(--back-black);
+}
+.backgound.grey {
+  background-color: var(--back-grey);
+}
+.backgound.brown {
+  background-color: var(--back-brown);
+}
+.backgound.orange {
+  background-color: var(--back-orange);
+}
+.backgound.yellow {
+  background-color: var(--back-yellow);
+}
+.backgound.green {
+  background-color: var(--back-green);
+}
+.backgound.blue {
+  background-color: var(--back-blue);
+}
+.backgound.purple {
+  background-color: var(--back-purple);
+}
+.backgound.pink {
+  background-color: var(--back-pink);
+}
+.backgound.red {
+  background-color: var(--back-red);
 }
 
-ul {
+blockquote {
+  border-left: 3px solid var(--color-grey);
+  padding-left: 0.5em;
+}
+
+h1 {
+  margin-bottom: 0.8em;
+}
+
+h2 {
+  margin-top: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+
+section {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
-ul li {
-  margin: 1em;
-  margin-left: 0em;
-  margin-bottom: 0em;
-  padding-left: 1em;
-  font-weight: 400;
+section div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
 }/*# sourceMappingURL=index.css.map */

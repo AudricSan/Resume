@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To Do List - JS</title>
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkbox.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="newtask">
+            <form action="#" onsubmit="AddNew();">
+                <input type="text" placeholder="Task to be done..">
+                <button type="submit" id="push">Add</button>
+            </form>
+
+            <p class="error"> The task can't be empty</p>
+        </div>
+
+        <div id="tasks">            
+            <!-- <div class="task">
+                <input type="checkbox" class="check" id="2" onchange="Editor(this.id);"/>
+                
+                <span id="taskname">This is a Task</span>
+
+
+                <button id="2" class="delete" onclick="Remover(this.id);">
+                    <i class="far fa-trash-alt"></i>
+                </button> -->
+            </div>
+        </div>
+    </div>
+
+    <!--Script-->
+    <script src="app.js"></script>
+</body>
+
+</html>
