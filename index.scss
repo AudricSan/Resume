@@ -127,15 +127,19 @@ blockquote {
     padding-left: 0.5em;
 }
 
-h1{
+h1 {
     margin-bottom: 0.8em;
 }
 
-h2{
+h2 {
     margin-top: 1em;
 }
 
-h2,h3,h4,h5,h6{
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 0.5em;
 }
 
@@ -143,13 +147,30 @@ section {
     display: flex;
     flex-direction: column;
 
-    div {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5em;
-    }
+    border-bottom: 3px solid var(--back-grey);
 
-    callout{
-    
+    div {
+        gap: 0.5em;
+        display: grid;
+        margin-bottom: 1.5em;
+        grid-template-columns: repeat(2, 1fr);
+
+
+        &.callout {
+            display: flex;
+            padding: 1em;
+            background-color: var(--back-grey);
+            align-items: flex-start;
+
+            p{
+                
+            }
+        }
+    }
+}
+
+img {
+    &.icon {
+        width: 20px;
     }
 }

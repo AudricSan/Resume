@@ -111,16 +111,31 @@ h2 {
   margin-top: 1em;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0.5em;
 }
 
 section {
   display: flex;
   flex-direction: column;
+  border-bottom: 3px solid var(--back-grey);
 }
 section div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 0.5em;
+  display: grid;
+  margin-bottom: 1.5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+section div.callout {
+  display: flex;
+  padding: 1em;
+  background-color: var(--back-grey);
+  align-items: flex-start;
+}
+img.icon {
+  width: 20px;
 }/*# sourceMappingURL=index.css.map */

@@ -1,678 +1,1038 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resume - Web Master</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="7762d910-faa7-4048-8bb6-4b67716c604e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🌐</span></div><h1 class="page-title">Resume - Web Master</h1><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Creation</th><td><time>@January 22, 2023 4:27 PM</time></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesRelation"><path d="M13.1475 10.5869V3.72363C13.1475 3.25195 12.833 2.93066 12.3477 2.93066H5.48438C5.02637 2.93066 4.70508 3.27246 4.70508 3.67578C4.70508 4.07227 5.05371 4.40039 5.46387 4.40039H7.89746L10.8438 4.30469L9.59961 5.39844L3.08496 11.9199C2.92773 12.0771 2.8457 12.2686 2.8457 12.46C2.8457 12.8564 3.20801 13.2256 3.61816 13.2256C3.80957 13.2256 3.99414 13.1504 4.15137 12.9932L10.6729 6.47168L11.7803 5.22754L11.6641 8.05762V10.6074C11.6641 11.0176 11.9922 11.373 12.4023 11.373C12.8057 11.373 13.1475 11.0312 13.1475 10.5869Z"></path></svg></span>📓 Cover Letter</th><td></td></tr></tbody></table></header><div class="page-body"><blockquote id="f3fd764e-4cf8-4ed9-995d-bf9061e0df88" class="">I&#x27;m a <mark class="highlight-purple"><span style="border-bottom:0.05em solid"><strong>Web developers</strong></span></mark> and a <mark class="highlight-blue"><span style="border-bottom:0.05em solid"><strong>Graphic Designer</strong></span></mark> in <mark class="highlight-orange"><em>Belgium</em></mark>, with <mark class="highlight-blue">5 years</mark> of experience in graphic design and <mark class="highlight-purple">2 years</mark> in web development</blockquote><h1 id="1b7dd1ba-230d-489e-8d81-3810e0c53f5b" class="">☎️ Contact information</h1><div id="b542faef-3190-4c1e-a9c1-7641762c8905" class="column-list"><div id="22b1b29e-e97c-4bab-b365-d4427fae77b8" style="width:50%" class="column"><p id="8fd3f625-2a5c-41da-b877-ccb1d73c35fe" class="">📧 audricrosier@gmail.com</p><p id="a79653b0-8bc0-441d-9dee-6917d9703602" class="">🔗 <a href="https://www.linkedin.com/in/audricrosier/">Audric Rosier</a></p></div><div id="c312c569-b291-4bad-aae0-631993c89eb1" style="width:50%" class="column"><p id="525fb3c0-f44a-4ebd-87b1-1a8e8a94c765" class="">👨🏻‍💻 <a href="https://github.com/AudricSan">AudricSan</a></p><p id="76552c5b-3b9d-43a7-9927-16da210fd8a6" class="">📷 <a href="https://www.instagram.com/audric_san/">@audric_san</a></p></div></div><hr id="fcabe03c-9d62-4fa6-8672-a67b6e682be7"/><h1 id="ed4b8ee1-9f86-4f34-b88b-f6422b980710" class=""><strong>👩🏻‍💻</strong> Work experience</h1><h2 id="2c73b878-5caa-488a-8f24-eb77c85b69a7" class="">Carrefour Market</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ec419a8e-828e-414e-9db3-cd520ab2d05b"><div style="font-size:1.5em"><span class="icon">🏪</span></div><div style="width:100%">departement manager</div></figure><h2 id="b5073094-50aa-44e6-b07a-52da096e0060" class="">Pizzeria Volare</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="84a6decc-1b6d-4695-816a-d7f75bfccfe5"><div style="font-size:1.5em"><span class="icon">🍕</span></div><div style="width:100%">Barman, Server in an italian restaurant</div></figure><h2 id="0959c0fa-5245-48ca-914d-73d620e47d31" class="">CHU Saint-Pierre</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="19f924b5-e101-45bc-a27c-529c6e9768e0"><div style="font-size:1.5em"><span class="icon">🏥</span></div><div style="width:100%">Receptionist</div></figure><h2 id="00c1f2eb-7f91-4d2b-82ba-914480f3033c" class="">Epansion Partners</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9b86e28f-311f-42a2-8772-f384a124ff4e"><div style="font-size:1.5em"><span class="icon">🖥️</span></div><div style="width:100%">Junior Designer General re-design, adaptation of graphic charter.</div></figure><hr id="7929a753-a0fa-40a1-aced-2a4f70167362"/><h1 id="24cc4f80-501e-49c0-9a3a-a4c7b994ed1a" class="">🛠 Skills</h1><h2 id="dfeaceac-0319-4016-8f49-28beb05c334c" class="">💻 Technology</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="77b318f4-9999-4df3-ae4e-cb9da8bbadbc"><div style="font-size:1.5em"><img class="icon" src="002-css-3.svg"/></div><div style="width:100%">The historical language of the layout of html pages. I use it to create my web design that I make interactive afterwards in JS. </div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ff2a46c5-ae94-4b5b-9233-3d62b7f2fd9b"><div style="font-size:1.5em"><img class="icon" src="003-html-5.svg"/></div><div style="width:100%">The historical language of the creation of web pages! I realize the skeleton of my web pages with it.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d881c52c-ce76-4b0d-84c5-d344b49a6962"><div style="font-size:1.5em"><img class="icon" src="004-javascript.svg"/></div><div style="width:100%">The programming language that I use in front-end to make interactive the web pages that I realize in Html and Css.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5812865f-294e-457c-91a1-dcbf68ec4e60"><div style="font-size:1.5em"><img class="icon" src="001-php.svg"/></div><div style="width:100%">I work with it since 3 years. I use it exclusively in Back-end to realize all what I need to make a dynamic website.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f17c32d8-118b-441a-9b56-6a19e8672cc5"><div style="font-size:1.5em"><img class="icon" src="005-mysql.svg"/></div><div style="width:100%">I use it since 3 years in total symbiosis with PHP</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="49a069a6-0387-4b4e-8a1e-01ec8725a77a"><div style="font-size:1.5em"><img class="icon" src="langfr-1024px-Laravel.svg.png"/></div><div style="width:100%">I’m using the Laravel framework according to the project and the client&#x27;s request</div></figure><hr id="e52ab4c9-e279-4fc5-a4d7-e4feec644306"/><h2 id="3c034df0-d884-4c3f-adef-a4a865a82662" class="">🗣 Languages</h2><div id="08b5798b-1953-46a6-ad59-a0328b7cb23c" class="column-list"><div id="1a8526c7-3ffa-4003-a5b0-2c91470096c8" style="width:33.333333333333336%" class="column"><h3 id="638d2c72-e180-4cd2-8ae0-bcc8683aa083" class="">Frensh 🇧🇪🇫🇷</h3><p id="7aa82b41-1722-415b-a260-a9da86d42134" class="">Native</p></div><div id="eebafcd7-4e7d-4a89-b3e8-6defeee37967" style="width:33.333333333333336%" class="column"><h3 id="c0c0c942-a0fe-4176-a3ae-da2ecbe5b4b3" class="">Japanese 🇯🇵</h3><p id="b61d26fc-a90c-42dd-bc2b-786f136a7071" class="">Beginner</p></div><div id="2c9b0616-b8e2-4f5a-bffa-2bf1c85f3699" style="width:33.33333333333333%" class="column"><h3 id="0d9d5d73-d406-4865-953f-d6747a9a925a" class="">English 🇺🇸🇬🇧</h3><p id="6729c674-3acc-4c8c-b943-242d1e85cbd7" class="">Fluent</p></div></div><hr id="aaecf1d4-14c7-4451-ab86-b606900d1933"/><h1 id="4b5efcac-87a6-44b4-9539-8f8830a6da9b" class="">📚 Education</h1><h2 id="97c5df14-70f8-418e-afa9-a3ce8ddfb0ee" class="">Web Developers</h2><p id="36012faf-34aa-4a0a-a63c-31989930a8e0" class="block-color-gray">Sept 2020 - June 2022</p><p id="eb57707a-4899-489f-8fd8-6089964a96cf" class="">IFOSUP - Wavre, Belgium</p><h2 id="6495c8d6-b4b9-494d-b534-4be6659bda65" class="">Computer graphics courses (design creation)</h2><p id="a5197084-4a36-4817-862d-5b62bd9fd8e8" class="block-color-gray">Sept 2017 - June 2019</p><p id="b055f103-1db2-4eca-ac12-c2179eeb1ec5" class="">IFAPME - Perwer, Belgium</p><hr id="d6b3a4d2-710a-42cc-8d6d-c5965f803542"/><h1 id="4bfc7955-4260-4cc6-b505-0b00f361715d" class="">🎓Licence</h1><div id="88e82358-c3e7-4c73-9e27-0c31a8ff9da7" class="column-list"><div id="151f1d4e-52cb-4c5f-8977-4a1dcb514c51" style="width:50%" class="column"><p id="efc0d27c-6431-45f0-93b3-230780ea07d1" class="">BAC + 2 : Web Developer 🎓</p></div><div id="60aa8186-7c51-4e55-9a2e-d17a9ce36523" style="width:50%" class="column"><p id="68f1a90a-8ec0-4652-a582-0ce67c2fd432" class="">BES : Computer graphics designer 🎓</p></div></div><hr id="ca368e0d-cdab-4995-b993-6659ae77f30f"/><h1 id="62ef1001-b12a-4e32-a020-e3fd81a65e78" class="">💡Point of Interest</h1><div id="af100175-cbc1-406a-b034-3344356d1896" class="column-list"><div id="6ac41ef7-2fb4-465e-84d9-34493614c7d6" style="width:50%" class="column"><p id="777dc441-e2d9-47a9-b794-43ff4f5e1ec6" class="">Design 🖱️</p><p id="219bf114-ce49-4364-8f05-b3795e205528" class="">Videos 📹</p><p id="67c6fa4f-b87d-41c8-bb2b-cf40f735ae6a" class="">Japan 🇯🇵</p></div><div id="71d78fef-cff3-44f2-95ba-2fa66da16f7b" style="width:50%" class="column"><p id="1046e59a-de1e-46af-a817-13569ccec327" class="">Photographie 📸</p><p id="4b4aab6f-62f8-4dbe-81c4-040a22493ca0" class="">Scouting 🧣</p><p id="2f658df3-5fb8-4824-a806-537e2fd5818a" class="">video Games 🎮</p></div></div><hr id="e7b3d25e-8a8f-4f04-b161-5bd12cadea49"/><h1 id="351bd66d-3b7e-48bd-a096-66c03a7530c2" class="">📜 Articles and Talks</h1><div id="cbfad37e-605b-4646-bf47-02f0729161e4" class="column-list"><div id="b7e52500-59e5-45ed-a4bd-fe61956ffad7" style="width:50%" class="column"><p id="2613ea31-74ff-4d74-8552-f8ce5c794745" class="">🚧 My last Project : <mark class="highlight-orange"><strong><a href="https://kana.audricrosier.be/">KanaTraining</a></strong></mark></p></div><div id="d5fa5571-d1fa-492f-bd4f-6d6da22c3d65" style="width:50%" class="column"><p id="3f3bf4b8-e95e-4e28-a6a8-0e9006be2cba" class="">🚧 My end of study project : <mark class="highlight-orange"><strong><a href="http://photo.audricrosier.be/">Photographics</a></strong></mark></p></div></div><hr id="86dbe7c2-bbe8-418c-8665-248258550e94"/><h1 id="5bfec3f5-f84e-4956-b8a0-a529f8d4225f" class="">✉️ Cover Letter</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18671944-6fc0-4261-8dd6-220a1f99e333"><div style="font-size:1.5em"><span class="icon">📨</span></div><div style="width:100%">Cher [Nom du Responsable des Ressources Humaines],<p id="bb84e661-6d81-4d71-9652-0ccdc4e25712" class="">
-</p><p id="9f913c25-341b-44f7-8077-f9baad883072" class="">Je vous écris pour solliciter le poste de &quot;Webmaster&quot; disponible dans votre entreprise.
-En tant que diplômé en webmaster et avec une expérience en développement de sites web, je suis convaincu que je peux apporter une grande valeur à votre entreprise en aidant à créer et à maintenir des sites performants et esthétiquement plaisants.</p><p id="bb5b5cea-aac0-40d8-a47f-c8426520b95d" class="">
-</p><p id="a611aaa4-561a-4c79-acb6-ab4a1d4dffb6" class="">J&#x27;ai une solide expérience en PHP, HTML, CSS et Javascript. Je suis également compétent en utilisant des frameworks tels que Laravel et NodeJS pour développer des sites web professionnels. J&#x27;ai une bonne compréhension des meilleures pratiques en matière de référencement et de performance, ce qui me permet de créer des sites web qui sont non seulement beaux mais aussi faciles à trouver pour les utilisateurs.</p><p id="e40da254-3bee-43cd-9c2f-edeeb4d00273" class="">
-</p><p id="124a86af-28d8-43aa-ada4-771f2776a221" class="">J&#x27;aime suivre les dernières tendances en matière de design et d&#x27;expérience utilisateur pour créer des sites web qui sont non seulement fonctionnels mais également agréables à utiliser. J&#x27;ai également une forte passion pour la technologie et je suis constamment à la recherche de nouveaux outils et de nouvelles méthodes pour améliorer mes compétences en tant que webmaster.</p><p id="82c9f86d-6308-4a3f-83f5-f087ad841178" class="">
-</p><p id="b505fb7c-f956-4e90-a514-1bcf01340c02" class="">Je me réjouis de mettre mes compétences et mon expérience au service de votre entreprise et de contribuer à l&#x27;évolution de vos projets en ligne. J&#x27;ai bon espoir que ma détermination et mon expertise technique seront un atout pour votre équipe.</p><p id="37231067-df8b-497c-86ce-563c5cc13022" class="">
-</p><p id="afcc6e2c-bfdd-4e61-8d4a-c2aadfb80606" class="">Je suis disponible pour une entrevue au sujet de mon profil et de vos besoins en détail.</p><p id="f2a0c1ec-6db8-4f6f-b9fb-c3107833b0d9" class="">
-</p><p id="0225cddb-1385-43e0-9078-5431e615623e" class="">Veuillez agréer, cher [Nom du Responsable des Ressources Humaines], l&#x27;expression de mes sentiments les meilleurs.</p><p id="284c63c0-b2e4-485d-9dfa-1319c34e0afd" class="">
-</p><p id="0216209f-4beb-410c-bc7a-afb4d076540e" class="">Sincèrement,
-Audric Rosier</p></div></figure><hr id="c138248a-3f7f-4c68-9e91-382b34ac7491"/></div></article></body></html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Resume - Web Master</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			text-indent: -1.7em;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(55, 53, 47, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.highlight-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.highlight-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.highlight-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.highlight-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.highlight-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.highlight-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.highlight-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.block-color-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.block-color-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.block-color-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(245, 224, 233, 1);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(232, 222, 238, 1);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(219, 237, 219, 1);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(227, 226, 224, 1);
+		}
+
+		.select-value-color-opaquegray {
+			background-color: rgba(255, 255, 255, 0.0375);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(250, 222, 201, 1);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(238, 224, 218, 1);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(255, 226, 221, 1);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(253, 236, 200, 1);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(211, 229, 239, 1);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	</style>
+</head>
+
+<body>
+	<article id="7762d910-faa7-4048-8bb6-4b67716c604e" class="page sans">
+		<header>
+			<div class="page-header-icon undefined"><span class="icon">🌐</span></div>
+			<h1 class="page-title">Resume - Web Master</h1>
+			<table class="properties">
+				<tbody>
+					<tr class="property-row property-row-created_time">
+						<th><span class="icon property-icon"><svg viewBox="0 0 16 16"
+									style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden"
+									class="typesCreatedAt">
+									<path
+										d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z">
+									</path>
+								</svg></span>Creation</th>
+						<td><time>@January 22, 2023 4:27 PM</time></td>
+					</tr>
+					<tr class="property-row property-row-relation">
+						<th><span class="icon property-icon"><svg viewBox="0 0 16 16"
+									style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden"
+									class="typesRelation">
+									<path
+										d="M13.1475 10.5869V3.72363C13.1475 3.25195 12.833 2.93066 12.3477 2.93066H5.48438C5.02637 2.93066 4.70508 3.27246 4.70508 3.67578C4.70508 4.07227 5.05371 4.40039 5.46387 4.40039H7.89746L10.8438 4.30469L9.59961 5.39844L3.08496 11.9199C2.92773 12.0771 2.8457 12.2686 2.8457 12.46C2.8457 12.8564 3.20801 13.2256 3.61816 13.2256C3.80957 13.2256 3.99414 13.1504 4.15137 12.9932L10.6729 6.47168L11.7803 5.22754L11.6641 8.05762V10.6074C11.6641 11.0176 11.9922 11.373 12.4023 11.373C12.8057 11.373 13.1475 11.0312 13.1475 10.5869Z">
+									</path>
+								</svg></span>📓 Cover Letter</th>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</header>
+		<div class="page-body">
+			<blockquote id="f3fd764e-4cf8-4ed9-995d-bf9061e0df88" class="">I&#x27;m a <mark
+					class="highlight-purple"><span style="border-bottom:0.05em solid"><strong>Web
+							developers</strong></span></mark> and a <mark class="highlight-blue"><span
+						style="border-bottom:0.05em solid"><strong>Graphic Designer</strong></span></mark> in <mark
+					class="highlight-orange"><em>Belgium</em></mark>, with <mark class="highlight-blue">5 years</mark>
+				of experience in graphic design and <mark class="highlight-purple">2 years</mark> in web development
+			</blockquote>
+			<h1 id="1b7dd1ba-230d-489e-8d81-3810e0c53f5b" class="">☎️ Contact information</h1>
+			<div id="b542faef-3190-4c1e-a9c1-7641762c8905" class="column-list">
+				<div id="22b1b29e-e97c-4bab-b365-d4427fae77b8" style="width:50%" class="column">
+					<p id="8fd3f625-2a5c-41da-b877-ccb1d73c35fe" class="">📧 audricrosier@gmail.com</p>
+					<p id="a79653b0-8bc0-441d-9dee-6917d9703602" class="">🔗 <a
+							href="https://www.linkedin.com/in/audricrosier/">Audric Rosier</a></p>
+				</div>
+				<div id="c312c569-b291-4bad-aae0-631993c89eb1" style="width:50%" class="column">
+					<p id="525fb3c0-f44a-4ebd-87b1-1a8e8a94c765" class="">👨🏻‍💻 <a
+							href="https://github.com/AudricSan">AudricSan</a></p>
+					<p id="76552c5b-3b9d-43a7-9927-16da210fd8a6" class="">📷 <a
+							href="https://www.instagram.com/audric_san/">@audric_san</a></p>
+				</div>
+			</div>
+			<hr id="fcabe03c-9d62-4fa6-8672-a67b6e682be7" />
+			<h1 id="ed4b8ee1-9f86-4f34-b88b-f6422b980710" class=""><strong>👩🏻‍💻</strong> Work experience</h1>
+			<h2 id="2c73b878-5caa-488a-8f24-eb77c85b69a7" class="">Carrefour Market</h2>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="ec419a8e-828e-414e-9db3-cd520ab2d05b">
+				<div style="font-size:1.5em"><span class="icon">🏪</span></div>
+				<div style="width:100%">departement manager</div>
+			</figure>
+			<h2 id="b5073094-50aa-44e6-b07a-52da096e0060" class="">Pizzeria Volare</h2>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="84a6decc-1b6d-4695-816a-d7f75bfccfe5">
+				<div style="font-size:1.5em"><span class="icon">🍕</span></div>
+				<div style="width:100%">Barman, Server in an italian restaurant</div>
+			</figure>
+			<h2 id="0959c0fa-5245-48ca-914d-73d620e47d31" class="">CHU Saint-Pierre</h2>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="19f924b5-e101-45bc-a27c-529c6e9768e0">
+				<div style="font-size:1.5em"><span class="icon">🏥</span></div>
+				<div style="width:100%">Receptionist</div>
+			</figure>
+			<h2 id="00c1f2eb-7f91-4d2b-82ba-914480f3033c" class="">Epansion Partners</h2>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="9b86e28f-311f-42a2-8772-f384a124ff4e">
+				<div style="font-size:1.5em"><span class="icon">🖥️</span></div>
+				<div style="width:100%">Junior Designer General re-design, adaptation of graphic charter.</div>
+			</figure>
+			<hr id="7929a753-a0fa-40a1-aced-2a4f70167362" />
+			<h1 id="24cc4f80-501e-49c0-9a3a-a4c7b994ed1a" class="">🛠 Skills</h1>
+			<h2 id="dfeaceac-0319-4016-8f49-28beb05c334c" class="">💻 Technology</h2>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="77b318f4-9999-4df3-ae4e-cb9da8bbadbc">
+				<div style="font-size:1.5em"><img class="icon" src="002-css-3.svg" /></div>
+				<div style="width:100%">The historical language of the layout of html pages. I use it to create my web
+					design that I make interactive afterwards in JS. </div>
+			</figure>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="ff2a46c5-ae94-4b5b-9233-3d62b7f2fd9b">
+				<div style="font-size:1.5em"><img class="icon" src="003-html-5.svg" /></div>
+				<div style="width:100%">The historical language of the creation of web pages! I realize the skeleton of
+					my web pages with it.</div>
+			</figure>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="d881c52c-ce76-4b0d-84c5-d344b49a6962">
+				<div style="font-size:1.5em"><img class="icon" src="004-javascript.svg" /></div>
+				<div style="width:100%">The programming language that I use in front-end to make interactive the web
+					pages that I realize in Html and Css.</div>
+			</figure>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="5812865f-294e-457c-91a1-dcbf68ec4e60">
+				<div style="font-size:1.5em"><img class="icon" src="001-php.svg" /></div>
+				<div style="width:100%">I work with it since 3 years. I use it exclusively in Back-end to realize all
+					what I need to make a dynamic website.</div>
+			</figure>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="f17c32d8-118b-441a-9b56-6a19e8672cc5">
+				<div style="font-size:1.5em"><img class="icon" src="005-mysql.svg" /></div>
+				<div style="width:100%">I use it since 3 years in total symbiosis with PHP</div>
+			</figure>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="49a069a6-0387-4b4e-8a1e-01ec8725a77a">
+				<div style="font-size:1.5em"><img class="icon" src="langfr-1024px-Laravel.svg.png" /></div>
+				<div style="width:100%">I’m using the Laravel framework according to the project and the client&#x27;s
+					request</div>
+			</figure>
+			<hr id="e52ab4c9-e279-4fc5-a4d7-e4feec644306" />
+			<h2 id="3c034df0-d884-4c3f-adef-a4a865a82662" class="">🗣 Languages</h2>
+			<div id="08b5798b-1953-46a6-ad59-a0328b7cb23c" class="column-list">
+				<div id="1a8526c7-3ffa-4003-a5b0-2c91470096c8" style="width:33.333333333333336%" class="column">
+					<h3 id="638d2c72-e180-4cd2-8ae0-bcc8683aa083" class="">Frensh 🇧🇪🇫🇷</h3>
+					<p id="7aa82b41-1722-415b-a260-a9da86d42134" class="">Native</p>
+				</div>
+				<div id="eebafcd7-4e7d-4a89-b3e8-6defeee37967" style="width:33.333333333333336%" class="column">
+					<h3 id="c0c0c942-a0fe-4176-a3ae-da2ecbe5b4b3" class="">Japanese 🇯🇵</h3>
+					<p id="b61d26fc-a90c-42dd-bc2b-786f136a7071" class="">Beginner</p>
+				</div>
+				<div id="2c9b0616-b8e2-4f5a-bffa-2bf1c85f3699" style="width:33.33333333333333%" class="column">
+					<h3 id="0d9d5d73-d406-4865-953f-d6747a9a925a" class="">English 🇺🇸🇬🇧</h3>
+					<p id="6729c674-3acc-4c8c-b943-242d1e85cbd7" class="">Fluent</p>
+				</div>
+			</div>
+			<hr id="aaecf1d4-14c7-4451-ab86-b606900d1933" />
+			<h1 id="4b5efcac-87a6-44b4-9539-8f8830a6da9b" class="">📚 Education</h1>
+			<h2 id="97c5df14-70f8-418e-afa9-a3ce8ddfb0ee" class="">Web Developers</h2>
+			<p id="36012faf-34aa-4a0a-a63c-31989930a8e0" class="block-color-gray">Sept 2020 - June 2022</p>
+			<p id="eb57707a-4899-489f-8fd8-6089964a96cf" class="">IFOSUP - Wavre, Belgium</p>
+			<h2 id="6495c8d6-b4b9-494d-b534-4be6659bda65" class="">Computer graphics courses (design creation)</h2>
+			<p id="a5197084-4a36-4817-862d-5b62bd9fd8e8" class="block-color-gray">Sept 2017 - June 2019</p>
+			<p id="b055f103-1db2-4eca-ac12-c2179eeb1ec5" class="">IFAPME - Perwer, Belgium</p>
+			<hr id="d6b3a4d2-710a-42cc-8d6d-c5965f803542" />
+			<h1 id="4bfc7955-4260-4cc6-b505-0b00f361715d" class="">🎓Licence</h1>
+			<div id="88e82358-c3e7-4c73-9e27-0c31a8ff9da7" class="column-list">
+				<div id="151f1d4e-52cb-4c5f-8977-4a1dcb514c51" style="width:50%" class="column">
+					<p id="efc0d27c-6431-45f0-93b3-230780ea07d1" class="">BAC + 2 : Web Developer 🎓</p>
+				</div>
+				<div id="60aa8186-7c51-4e55-9a2e-d17a9ce36523" style="width:50%" class="column">
+					<p id="68f1a90a-8ec0-4652-a582-0ce67c2fd432" class="">BES : Computer graphics designer 🎓</p>
+				</div>
+			</div>
+			<hr id="ca368e0d-cdab-4995-b993-6659ae77f30f" />
+			<h1 id="62ef1001-b12a-4e32-a020-e3fd81a65e78" class="">💡Point of Interest</h1>
+			<div id="af100175-cbc1-406a-b034-3344356d1896" class="column-list">
+				<div id="6ac41ef7-2fb4-465e-84d9-34493614c7d6" style="width:50%" class="column">
+					<p id="777dc441-e2d9-47a9-b794-43ff4f5e1ec6" class="">Design 🖱️</p>
+					<p id="219bf114-ce49-4364-8f05-b3795e205528" class="">Videos 📹</p>
+					<p id="67c6fa4f-b87d-41c8-bb2b-cf40f735ae6a" class="">Japan 🇯🇵</p>
+				</div>
+				<div id="71d78fef-cff3-44f2-95ba-2fa66da16f7b" style="width:50%" class="column">
+					<p id="1046e59a-de1e-46af-a817-13569ccec327" class="">Photographie 📸</p>
+					<p id="4b4aab6f-62f8-4dbe-81c4-040a22493ca0" class="">Scouting 🧣</p>
+					<p id="2f658df3-5fb8-4824-a806-537e2fd5818a" class="">video Games 🎮</p>
+				</div>
+			</div>
+			<hr id="e7b3d25e-8a8f-4f04-b161-5bd12cadea49" />
+			<h1 id="351bd66d-3b7e-48bd-a096-66c03a7530c2" class="">📜 Articles and Talks</h1>
+			<div id="cbfad37e-605b-4646-bf47-02f0729161e4" class="column-list">
+				<div id="b7e52500-59e5-45ed-a4bd-fe61956ffad7" style="width:50%" class="column">
+					<p id="2613ea31-74ff-4d74-8552-f8ce5c794745" class="">🚧 My last Project : <mark
+							class="highlight-orange"><strong><a
+									href="https://kana.audricrosier.be/">KanaTraining</a></strong></mark></p>
+				</div>
+				<div id="d5fa5571-d1fa-492f-bd4f-6d6da22c3d65" style="width:50%" class="column">
+					<p id="3f3bf4b8-e95e-4e28-a6a8-0e9006be2cba" class="">🚧 My end of study project : <mark
+							class="highlight-orange"><strong><a
+									href="http://photo.audricrosier.be/">Photographics</a></strong></mark></p>
+				</div>
+			</div>
+			<hr id="86dbe7c2-bbe8-418c-8665-248258550e94" />
+			<h1 id="5bfec3f5-f84e-4956-b8a0-a529f8d4225f" class="">✉️ Cover Letter</h1>
+			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+				id="18671944-6fc0-4261-8dd6-220a1f99e333">
+				<div style="font-size:1.5em"><span class="icon">📨</span></div>
+				<div style="width:100%">Cher [Nom du Responsable des Ressources Humaines],<p
+						id="bb84e661-6d81-4d71-9652-0ccdc4e25712" class="">
+					</p>
+					<p id="9f913c25-341b-44f7-8077-f9baad883072" class="">Je vous écris pour solliciter le poste de
+						&quot;Webmaster&quot; disponible dans votre entreprise.
+						En tant que diplômé en webmaster et avec une expérience en développement de sites web, je suis
+						convaincu que je peux apporter une grande valeur à votre entreprise en aidant à créer et à
+						maintenir des sites performants et esthétiquement plaisants.</p>
+					<p id="bb5b5cea-aac0-40d8-a47f-c8426520b95d" class="">
+					</p>
+					<p id="a611aaa4-561a-4c79-acb6-ab4a1d4dffb6" class="">J&#x27;ai une solide expérience en PHP, HTML,
+						CSS et Javascript. Je suis également compétent en utilisant des frameworks tels que Laravel et
+						NodeJS pour développer des sites web professionnels. J&#x27;ai une bonne compréhension des
+						meilleures pratiques en matière de référencement et de performance, ce qui me permet de créer
+						des sites web qui sont non seulement beaux mais aussi faciles à trouver pour les utilisateurs.
+					</p>
+					<p id="e40da254-3bee-43cd-9c2f-edeeb4d00273" class="">
+					</p>
+					<p id="124a86af-28d8-43aa-ada4-771f2776a221" class="">J&#x27;aime suivre les dernières tendances en
+						matière de design et d&#x27;expérience utilisateur pour créer des sites web qui sont non
+						seulement fonctionnels mais également agréables à utiliser. J&#x27;ai également une forte
+						passion pour la technologie et je suis constamment à la recherche de nouveaux outils et de
+						nouvelles méthodes pour améliorer mes compétences en tant que webmaster.</p>
+					<p id="82c9f86d-6308-4a3f-83f5-f087ad841178" class="">
+					</p>
+					<p id="b505fb7c-f956-4e90-a514-1bcf01340c02" class="">Je me réjouis de mettre mes compétences et mon
+						expérience au service de votre entreprise et de contribuer à l&#x27;évolution de vos projets en
+						ligne. J&#x27;ai bon espoir que ma détermination et mon expertise technique seront un atout pour
+						votre équipe.</p>
+					<p id="37231067-df8b-497c-86ce-563c5cc13022" class="">
+					</p>
+					<p id="afcc6e2c-bfdd-4e61-8d4a-c2aadfb80606" class="">Je suis disponible pour une entrevue au sujet
+						de mon profil et de vos besoins en détail.</p>
+					<p id="f2a0c1ec-6db8-4f6f-b9fb-c3107833b0d9" class="">
+					</p>
+					<p id="0225cddb-1385-43e0-9078-5431e615623e" class="">Veuillez agréer, cher [Nom du Responsable des
+						Ressources Humaines], l&#x27;expression de mes sentiments les meilleurs.</p>
+					<p id="284c63c0-b2e4-485d-9dfa-1319c34e0afd" class="">
+					</p>
+					<p id="0216209f-4beb-410c-bc7a-afb4d076540e" class="">Sincèrement,
+						Audric Rosier</p>
+				</div>
+			</figure>
+			<hr id="c138248a-3f7f-4c68-9e91-382b34ac7491" />
+		</div>
+	</article>
+</body>
+
+</html>

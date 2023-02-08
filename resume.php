@@ -65,68 +65,104 @@ $autor = "Audric Rosier";
 
 		<article>
 			<h3>Carrefour Market</h3>
-			<callout>
-				<p> <i class="fa-solid fa-shop"></i> departement manager</p>
-			</callout>
+			<div class="callout">
+				<i class="fa-solid fa-shop"></i>
+				<p>departement manager</p>
+			</div>
 		</article>
 
 		<article>
 			<h3>Pizzeria Volare</h3>
-			<callout>
-				<p> <i class="fa-solid fa-pizza-slice"></i> Barman, Server in an italian restaurant</p>
-			</callout>
+			<div class="callout">
+				<i class="fa-solid fa-pizza-slice"></i>
+				<p>Barman, Server in an italian restaurant</p>
+			</div>
 		</article>
 
 		<article>
 			<h3>CHU Saint-Pierre</h3>
-			<callout>
-				<p> <i class="fa-solid fa-hospital"></i> Receptionist</p>
-			</callout>
+			<div class="callout">
+				<i class="fa-solid fa-hospital"></i>
+				<p> Receptionist</p>
+			</div>
 		</article>
 
 		<article>
 			<h3>Epansion Partners</h3>
-			<callout>
-				<p> <i class="fa-solid fa-desktop"></i> Junior Designer General re-design, adaptation of graphic charter.</p>
-			</callout>
+			<div class="callout">
+				<i class="fa-solid fa-desktop"></i>
+				<p>Junior Designer General re-design, adaptation of graphic charter.</p>
+			</div>
 		</article>
 
 	</section>
-	<!-- 
+
 	<section>
-		<h2>🛠 Skills</h2>
-		<h3>💻 Technology</h3>
+		<h2><i class="fa-solid fa-flask"></i> Skills</h2>
+		<h3><i class="fa-solid fa-desktop"></i> Technology</h3>
 
-		<figure>
-			<div><img src="002-css-3.svg" /></div>
-			<div>The historical language of the layout of html pages. I use it to create my web design that I make interactive afterwards in JS. </div>
-		</figure>
+		<div class="callout">
+		<img class="icon" src="003.svg" title="mysql" />
+			<p>The historical language of the layout of html pages. I use it to create my web design that I make interactive afterwards in JS. </p>
+		</div>
 
-		<figure>
-			<div><img src="003-html-5.svg" /></div>
-			<div>The historical language of the creation of web pages! I realize the skeleton of my web pages with it.</div>
-		</figure>
+		<div class="callout">
+		<img class="icon" src="002.svg" title="mysql" />
+			<p>The historical language of the creation of web pages! I realize the skeleton of my web pages with it.</p>
+		</div>
 
-		<figure>
-			<div><img src="004-javascript.svg" /></div>
-			<div>The programming language that I use in front-end to make interactive the web pages that I realize in Html and Css.</div>
-		</figure>
+		<div class="callout">
+		<img class="icon" src="004" title="mysql" />
+			<p>The programming language that I use in front-end to make interactive the web pages that I realize in Html and Css.</p>
+		</div>
 
-		<figure>
-			<div><img src="001-php.svg" /></div>
-			<div>I work with it since 3 years. I use it exclusively in Back-end to realize all what I need to make a dynamic website.</div>
-		</figure>
+		<div class="callout">
+		<img class="icon" src="001.svg" title="mysql" />
+			<p>I work with it since 3 years. I use it exclusively in Back-end to realize all what I need to make a dynamic website.</p>
+		</div>
 
-		<figure>
-			<div><img src="005-mysql.svg" /></div>
-			<div>I use it since 3 years in total symbiosis with PHP</div>
-		</figure>
+		<div class="callout">
+			<img class="icon" src="005.svg" title="mysql" />
+			<p>I use it since 3 years in total symbiosis with PHP</p>
+		</div>
 
-		<figure>
-			<div><img src="langfr-1024px-Laravel.svg.png" /></div>
-			<div>I’m using the Laravel framework according to the project and the client's request</div>
-		</figure>
-	</section> -->
+		<div class="callout">
+		<img class="icon" src="006.png" title="mysql" />
+			<p>I’m using the Laravel framework according to the project and the client's request</p>
+		</div>
+
+		<h3><i class="fa-solid fa-satellite"></i>Projets</h3>
+
+		<div class="callout">
+		<img class="icon" src="003.svg" title="mysql" />
+			<p>The historical language of the layout of html pages. I use it to create my web design that I make interactive afterwards in JS. </p>
+		</div>
+
+		<div class="callout">
+		<img class="icon" src="002.svg" title="mysql" />
+			<p>The historical language of the creation of web pages! I realize the skeleton of my web pages with it.</p>
+		</div>
+
+		<div class="callout">
+		<img class="icon" src="004" title="mysql" />
+			<p>The programming language that I use in front-end to make interactive the web pages that I realize in Html and Css.</p>
+		</div>
+
+		<div class="callout">
+		<img class="icon" src="001.svg" title="mysql" />
+			<p>I work with it since 3 years. I use it exclusively in Back-end to realize all what I need to make a dynamic website.</p>
+		</div>
+
+		<div class="callout">
+			<img class="icon" src="005.svg" title="mysql" />
+			<p>I use it since 3 years in total symbiosis with PHP</p>
+		</div>
+
+		<div class="callout">
+		<img class="icon" src="006.png" title="mysql" />
+			<p>I’m using the Laravel framework according to the project and the client's request</p>
+		</div>
+	</section>
 
 	<!-- <section>
 		<h3 id="3c034df0-d884-4c3f-adef-a4a865a82662" class="">🗣 Languages</h3>
@@ -231,7 +267,7 @@ $autor = "Audric Rosier";
 				<p id="0216209f-4beb-410c-bc7a-afb4d076540e" class="">Sincèrement,
 					Audric Rosier</p>
 			</div>
-		</figure>
+		</div>
 		<hr id="c138248a-3f7f-4c68-9e91-382b34ac7491" />
 		</div>
 	</section> -->
