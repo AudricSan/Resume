@@ -143,41 +143,43 @@ h6 {
     margin-bottom: 0.5em;
 }
 
+
 section {
+    padding: 1em;
+    border-bottom: 3px solid var(--back-grey);
+    gap: 0.5em;
     display: flex;
     flex-direction: column;
+}
 
-    border-bottom: 3px solid var(--back-grey);
-    padding: 1em;
+article {
+    &.grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-    article {
-        &.lang {
+
+    &.flex {
+        display: flex;
+        flex-direction: column;
+
+        &.row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
-            div {
-                display: block;
-            }
-
         }
     }
+}
 
-    div {
+div {
+    margin-bottom: 1.5em;
+
+    &.callout {
         gap: 0.5em;
-        display: grid;
-        margin-bottom: 1.5em;
-        grid-template-columns: repeat(3, 1fr);
-
-
-        &.callout {
-            display: flex;
-            padding: 1em;
-            background-color: var(--back-grey);
-            align-items: flex-start;
-
-            p {}
-        }
+        display: flex;
+        padding: 1em;
+        background-color: var(--back-grey);
+        align-items: flex-start;
     }
 }
 

@@ -120,31 +120,38 @@ h6 {
 }
 
 section {
+  padding: 1em;
+  border-bottom: 3px solid var(--back-grey);
+  gap: 0.5em;
   display: flex;
   flex-direction: column;
-  border-bottom: 3px solid var(--back-grey);
-  padding: 1em;
 }
-section article.lang {
+
+article.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+article.flex {
+  display: flex;
+  flex-direction: column;
+}
+article.flex.row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-section article.lang div {
-  display: block;
-}
-section div {
-  gap: 0.5em;
-  display: grid;
+
+div {
   margin-bottom: 1.5em;
-  grid-template-columns: repeat(3, 1fr);
 }
-section div.callout {
+div.callout {
+  gap: 0.5em;
   display: flex;
   padding: 1em;
   background-color: var(--back-grey);
   align-items: flex-start;
 }
+
 img.icon {
   width: 18px;
 }/*# sourceMappingURL=index.css.map */

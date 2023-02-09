@@ -54,13 +54,13 @@ $autor = "Audric Rosier";
 		<h2> <i class="fa-solid fa-square-phone"></i> Contact information</h2>
 
 
-		<div>
-			<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com">audricrosier@gmail.com</a></p>
-			<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132">+32485836132</a></p>
-			<p> <i class="fa-solid fa-link"></i> <a href="https://www.linkedin.com/in/audricrosier/">Audric Rosier</a></p>
-			<p> <i class="fa-brands fa-github"></i> <a href="https://github.com/AudricSan">AudricSan</a></p>
-			<p> <i class="fa-solid fa-camera-retro"></i> <a href="https://www.instagram.com/audric_san/">@audric_san</a></p>
-		</div>
+		<article class="grid">
+			<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com"> audricrosier@gmail.com</a></p>
+			<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132"> +32485836132</a></p>
+			<p> <i class="fa-solid fa-link"></i> <a href="https://www.linkedin.com/in/audricrosier/"> Audric Rosier</a></p>
+			<p> <i class="fa-brands fa-github"></i> <a href="https://github.com/AudricSan"> AudricSan</a></p>
+			<p> <i class="fa-solid fa-camera-retro"></i> <a href="https://www.instagram.com/audric_san/"> @audric_san</a></p>
+		</article>
 	</section>
 
 	<section>
@@ -169,9 +169,9 @@ $autor = "Audric Rosier";
 	</section>
 
 	<section>
-		<h2><i class="fa-solid fa-comment-dots"></i>Languages</h2>
+		<h2><i class="fa-solid fa-comment-dots"></i> Languages</h2>
 
-		<article class="lang">
+		<article class="flex row">
 			<div>
 				<h4>Frensh <i class="em em-flag-be" aria-role="presentation" aria-label="Belgium Flag"></i></h4>
 				<p>Native</p>
@@ -190,33 +190,44 @@ $autor = "Audric Rosier";
 	</section>
 
 	<section>
-		<div>
-			<h2>📚 Education</h2>
-			<h3>Web Developers</h3>
-			<p>Sept 2020 - June 2022</p>
-			<p>IFOSUP - Wavre, Belgium</p>
-			<h3>Computer graphics courses (design creation)</h3>
-			<p>Sept 2017 - June 2019</p>
-			<p>IFAPME - Perwer, Belgium</p>
-		</div>
+		<h2><i class="fa-solid fa-chalkboard-user"></i> Education</h2>
+
+		<article class="flex">
+			<div>
+				<h3>Web Developers</h3>
+				<time datetime="2020-09-01">Sept 2020</time> - <time datetime="2022-06-30"> June 2022</time>
+				<p> <a href="https://ifosup.wavre.be/" target="_blank">IFOSUP - Wavre, Belgium</p>
+			</div>
+
+			<div>
+				<h3>Computer graphics courses (design creation)</h3>
+				<time datetime="2017-09-01">Sept 2017</time> - <time datetime="2019-06-30"> June 2019</time>
+				<p> <a href="https://www.ifapme.be/centre-de-formations/perwez" target="_blank"> IFAPME - Perwer, Belgium </a></p>
+			</div>
+		</article>
 	</section>
 
 	<section>
-		<h2>🎓Licence</h2>
+		<h2><i class="fa-solid fa-graduation-cap"></i> Licence</h2>
 
-		<p>BAC + 2 : Web Developer 🎓</p>
-		<p>BES : Computer graphics designer 🎓</p>
+		<article class="flex row">
+			<p>BAC + 2 : Web Developer</p>
+			<p>BES : Computer graphics designer</p>
+		</article>
 	</section>
+
 	<section>
 		<h2>💡Point of Interest</h2>
-		<div>
+
+		<article class="flex row">
 			<p>Design 🖱️</p>
 			<p>Videos 📹</p>
 			<p>Japan 🇯🇵</p>
 			<p>Photographie 📸</p>
 			<p>Scouting 🧣</p>
 			<p>video Games 🎮</p>
-		</div>
+		</article>
 	</section>
 </body>
+
 </html>
