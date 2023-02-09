@@ -148,12 +148,26 @@ section {
     flex-direction: column;
 
     border-bottom: 3px solid var(--back-grey);
+    padding: 1em;
+
+    article {
+        &.lang {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            div {
+                display: block;
+            }
+
+        }
+    }
 
     div {
         gap: 0.5em;
         display: grid;
         margin-bottom: 1.5em;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
 
 
         &.callout {
@@ -162,15 +176,13 @@ section {
             background-color: var(--back-grey);
             align-items: flex-start;
 
-            p{
-                
-            }
+            p {}
         }
     }
 }
 
 img {
     &.icon {
-        width: 20px;
+        width: 18px;
     }
 }

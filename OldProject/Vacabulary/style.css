@@ -56,10 +56,8 @@ ul, li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   padding-bottom: 0.5em;

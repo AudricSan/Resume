@@ -2,8 +2,7 @@
 .loading {
   background-image: linear-gradient(90deg, rgb(216, 215, 215), rgb(253, 243, 243), lightgrey, lightgrey);
   background-size: 1000%;
-  -webkit-animation: sweep 5s ease-in-out infinite alternate;
-          animation: sweep 5s ease-in-out infinite alternate;
+  animation: sweep 5s ease-in-out infinite alternate;
   color: lightgrey;
 }
 .loading span {
@@ -24,15 +23,6 @@
 
 .txt {
   font-family: "Flow Circular", cursive;
-}
-
-@-webkit-keyframes sweep {
-  0% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
-  }
 }
 
 @keyframes sweep {
