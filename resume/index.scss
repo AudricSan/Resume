@@ -155,9 +155,27 @@ section {
 article {
     &.grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
 
+        &._2{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &._3{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        &._4{
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &._5{
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        &._6{
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
 
     &.flex {
         display: flex;

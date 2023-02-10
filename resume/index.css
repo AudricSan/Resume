@@ -129,7 +129,21 @@ section {
 
 article.grid {
   display: grid;
+}
+article.grid._2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+article.grid._3 {
   grid-template-columns: repeat(3, 1fr);
+}
+article.grid._4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+article.grid._5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+article.grid._6 {
+  grid-template-columns: repeat(6, 1fr);
 }
 article.flex {
   display: flex;

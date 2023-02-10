@@ -54,7 +54,7 @@ $autor = "Audric Rosier";
 		<h2> <i class="fa-solid fa-square-phone"></i> Contact information</h2>
 
 
-		<article class="grid">
+		<article class="grid _3">
 			<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com"> audricrosier@gmail.com</a></p>
 			<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132"> +32485836132</a></p>
 			<p> <i class="fa-solid fa-link"></i> <a href="https://www.linkedin.com/in/audricrosier/"> Audric Rosier</a></p>
@@ -219,7 +219,7 @@ $autor = "Audric Rosier";
 	<section>
 		<h2>💡Point of Interest</h2>
 
-		<article class="flex row">
+		<article class="grid _3">
 			<p>Design 🖱️</p>
 			<p>Videos 📹</p>
 			<p>Japan 🇯🇵</p>
