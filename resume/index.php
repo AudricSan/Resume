@@ -48,8 +48,9 @@ $autor = "Audric Rosier";
 </head>
 
 <body>
-
-	<input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
+	<div class="toggleDiv">
+		<input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
+	</div>
 
 	<header>
 		<h1> 🌐 Resume - Web Master</h1>
@@ -237,8 +238,12 @@ $autor = "Audric Rosier";
 
 	<script>
 		function darkmode() {
-			var element = document.body;
-			element.classList.toggle("dark");
+			var body = document.body;
+			var toggle = document.getElementsByClassName('toggleDiv');
+			console.log(toggle)
+			
+			body.classList.toggle("dark");
+			toggle[0].classList.toggle("dark");
 		}
 	</script>
 

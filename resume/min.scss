@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
 
-    body{
+    body {
         min-width: 1px;
         margin: 0;
     }
@@ -11,6 +11,24 @@
             flex-direction: row;
             flex-wrap: wrap;
             gap: 1em;
+        }
+    }
+
+    div.toggleDiv {
+        bottom: 1em;
+        left: 1em;
+        padding: 0.5em;
+
+
+        border-radius: 50px;
+        background-color: white;
+
+        &.dark {
+            background-color: var(--back-main-black);
+        }
+
+        .toggle {
+            --size: 2em
         }
     }
 }
