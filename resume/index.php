@@ -34,8 +34,12 @@ $autor = "Audric Rosier";
 	<meta name='theme-color' content='#ffffff'>
 
 	<!-- STYLESHEET -->
+	<link rel="stylesheet" type='text/css' href="colors.css">
+
 	<link rel="stylesheet" type='text/css' href="reset.css">
+
 	<link rel="stylesheet" type='text/css' href="index.css">
+	<link rel="stylesheet" type='text/css' href="min.css">
 
 	<!-- IMPORT ICON -->
 	<script src='https://kit.fontawesome.com/eb747bd21c.js' crossorigin='anonymous'></script>
@@ -44,6 +48,9 @@ $autor = "Audric Rosier";
 </head>
 
 <body>
+
+	<input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
+
 	<header>
 		<h1> 🌐 Resume - Web Master</h1>
 		<blockquote>I'm a <mark class="highlight purple"><strong>Web developers</strong></mark> and a <mark class="highlight blue"><strong>Graphic Designer</strong></mark> in <mark class="highlight orange"><em>Belgium</em></mark>
@@ -67,7 +74,7 @@ $autor = "Audric Rosier";
 		<h2> <i class="fa-solid fa-person-digging"></i> Work experience</h2>
 
 		<article>
-			<h3>Carrefour Market</h3>
+			<h3>Carrefour Market / Intermarché - [Hamme-Mille]</h3>
 			<div class="callout">
 				<i class="fa-solid fa-shop"></i>
 				<p>departement manager</p>
@@ -75,7 +82,7 @@ $autor = "Audric Rosier";
 		</article>
 
 		<article>
-			<h3>Pizzeria Volare</h3>
+			<h3>Pizzeria Volare - [Tourinne La Grosse]</h3>
 			<div class="callout">
 				<i class="fa-solid fa-pizza-slice"></i>
 				<p>Barman, Server in an italian restaurant</p>
@@ -83,7 +90,7 @@ $autor = "Audric Rosier";
 		</article>
 
 		<article>
-			<h3>CHU Saint-Pierre</h3>
+			<h3>CHU Saint-Pierre - [Bruxelles]</h3>
 			<div class="callout">
 				<i class="fa-solid fa-hospital"></i>
 				<p> Receptionist</p>
@@ -91,7 +98,7 @@ $autor = "Audric Rosier";
 		</article>
 
 		<article>
-			<h3>Epansion Partners</h3>
+			<h3>Epansion Partners - [Namur]</h3>
 			<div class="callout">
 				<i class="fa-solid fa-desktop"></i>
 				<p>Junior Designer General re-design, adaptation of graphic charter.</p>
@@ -147,7 +154,7 @@ $autor = "Audric Rosier";
 		</article>
 
 		<article>
-			<h3><i class="fa-solid fa-satellite"></i>Projets</h3>
+			<h3><i class="fa-solid fa-satellite"></i> Projets</h3>
 		</article>
 
 		<article>
@@ -173,18 +180,18 @@ $autor = "Audric Rosier";
 
 		<article class="flex row">
 			<div>
-				<h4>Frensh <i class="em em-flag-be" aria-role="presentation" aria-label="Belgium Flag"></i></h4>
-				<p>Native</p>
+				<h3>Frensh [Francais]</h3>
+				<p class="highlight yellow">Native</p>
 			</div>
 
 			<div>
-				<h4>Japanese <i class="em em-jp" aria-role="presentation" aria-label="Japan Flag"></i></h4>
-				<p>Beginner</p>
+				<h3>English</h3>
+				<p class="highlight yellow">Fluent</p>
 			</div>
 
 			<div>
-				<h4>English <i class="em em-flag-um" aria-role="presentation" aria-label="U.S. Outlying Islands Flag"></i></h4>
-				<p>Fluent</p>
+				<h3>Japanese [日本語]</h3>
+				<p class="highlight yellow">Beginner</p>
 			</div>
 		</article>
 	</section>
@@ -192,17 +199,17 @@ $autor = "Audric Rosier";
 	<section>
 		<h2><i class="fa-solid fa-chalkboard-user"></i> Education</h2>
 
-		<article class="flex">
+		<article class="flex row">
 			<div>
 				<h3>Web Developers</h3>
 				<time datetime="2020-09-01">Sept 2020</time> - <time datetime="2022-06-30"> June 2022</time>
-				<p> <a href="https://ifosup.wavre.be/" target="_blank">IFOSUP - Wavre, Belgium</p>
+				<p><a href="https://ifosup.wavre.be/" target="_blank">IFOSUP - Wavre, Belgium </a></p>
 			</div>
 
 			<div>
 				<h3>Computer graphics courses (design creation)</h3>
 				<time datetime="2017-09-01">Sept 2017</time> - <time datetime="2019-06-30"> June 2019</time>
-				<p> <a href="https://www.ifapme.be/centre-de-formations/perwez" target="_blank"> IFAPME - Perwer, Belgium </a></p>
+				<p><a href="https://www.ifapme.be/centre-de-formations/perwez" target="_blank"> IFAPME - Perwer, Belgium </a></p>
 			</div>
 		</article>
 	</section>
@@ -220,14 +227,21 @@ $autor = "Audric Rosier";
 		<h2>💡Point of Interest</h2>
 
 		<article class="grid _3">
-			<p>Design 🖱️</p>
-			<p>Videos 📹</p>
-			<p>Japan 🇯🇵</p>
-			<p>Photographie 📸</p>
-			<p>Scouting 🧣</p>
-			<p>video Games 🎮</p>
+			<p><i class="fa-solid fa-pencil"></i> design</p>
+			<p><i class="em em-jp"></i> Japanese</p>
+			<p><i class="fa-solid fa-camera"></i> Photographie</p>
+			<p><i class="fa-solid fa-child-reaching"></i> Scouting</p>
+			<p><i class="fa-solid fa-gamepad"></i> video Games</p>
 		</article>
 	</section>
+
+	<script>
+		function darkmode() {
+			var element = document.body;
+			element.classList.toggle("dark");
+		}
+	</script>
+
 </body>
 
 </html>

@@ -1,37 +1,12 @@
-* {
-    --color-black: black;
-    --color-grey: rgba(120, 119, 116, 1);
-    --color-brown: rgba(159, 107, 83, 1);
-    --color-orange: rgba(217, 115, 13, 1);
-    --color-yellow: rgba(203, 145, 47, 1);
-    --color-green: rgba(68, 131, 97, 1);
-    --color-blue: rgba(51, 126, 169, 1);
-    --color-purple: rgba(144, 101, 176, 1);
-    --color-pink: rgba(193, 76, 138, 1);
-    --color-red: rgba(212, 76, 71, 1);
+body {
+    min-width: 500px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1em;
 
-    --tran-grey: rgba(120, 119, 116, 0.6);
-    --tran-brown: rgba(159, 107, 83, 0.6);
-    --tran-orange: rgba(217, 115, 13, 0.6);
-    --tran-yellow: rgba(203, 145, 47, 0.6);
-    --tran-green: rgba(68, 131, 97, 0.6);
-    --tran-blue: rgba(51, 126, 169, 0.6);
-    --tran-purple: rgba(144, 101, 176, 0.6);
-    --tran-pink: rgba(193, 76, 138, 0.6);
-    --tran-red: rgba(212, 76, 71, 0.6);
-
-    --back-grey: rgba(227, 226, 224, 1);
-    --back-brown: rgba(238, 224, 218, 1);
-    --back-orange: rgba(250, 222, 201, 1);
-    --back-yellow: rgba(253, 236, 200, 1);
-    --back-green: rgba(219, 237, 219, 1);
-    --back-blue: rgba(211, 229, 239, 1);
-    --back-purple: rgba(232, 222, 238, 1);
-    --back-pink: rgba(245, 224, 233, 1);
-    --back-red: rgba(255, 226, 221, 1);
-
-    --back-main-white: rgb(247, 246, 243);
-    --back-main-black: rgb(45, 45, 45);
+    &.light{
+        animation: color-dark 2s reverse;
+    }
 }
 
 .highlight {
@@ -150,29 +125,42 @@ section {
     gap: 0.5em;
     display: flex;
     flex-direction: column;
+
+    &:last-child {
+        border: none;
+    }
 }
 
 article {
     &.grid {
         display: grid;
+        gap: 1em;
 
-        &._2{
+        &._2 {
             grid-template-columns: repeat(2, 1fr);
+
         }
 
-        &._3{
+        &._3 {
             grid-template-columns: repeat(3, 1fr);
+            p:nth-child(3n+2){
+                text-align: center;
+            }
+
+            p:nth-child(3n+3){
+                text-align: end;
+            }
         }
-        
-        &._4{
+
+        &._4 {
             grid-template-columns: repeat(4, 1fr);
         }
 
-        &._5{
+        &._5 {
             grid-template-columns: repeat(5, 1fr);
         }
 
-        &._6{
+        &._6 {
             grid-template-columns: repeat(6, 1fr);
         }
     }
@@ -188,6 +176,7 @@ article {
         }
     }
 }
+
 
 div {
     margin-bottom: 1.5em;
