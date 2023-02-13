@@ -36,8 +36,6 @@
 }
 
 .dark {
-    animation: color-dark 2s;
-
     background-color: var(--back-main-black);
     color: var(--back-main-white);
 
@@ -57,22 +55,13 @@
     }
 }
 
-@keyframes color-dark {
-    0% {
-        background: var(--back-main-white);
-    }
-
-    100% {
-        background: var(--back-main-black);
-    }
-}
-
-
 div.toggleDiv {
     position: fixed;
     left: 3em;
     bottom: 3em;
     display: flex;
+    background-color: transparent;
+
 
     .toggle {
         --size: 5em;
