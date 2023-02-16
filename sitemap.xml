@@ -1,153 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.book.audricrosier.be/resume</loc>
-		<priority>0.83</priority>
-		<lastmod>2023-02-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject</loc>
-		<priority>0.83</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/resume/View</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/Public</loc>
+		<priority>0.86</priority>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/resume/Public</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View</loc>
+		<priority>0.86</priority>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Weather</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject</loc>
+		<priority>0.71</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Vacabulary</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/Model/class/Env.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Route.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Public/include/footer.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Public/include/header.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Age Calculator</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Todo</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Analog Clock</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Toast UI Design</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Automatic Pop up</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Tic Tac Toe</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Calculator</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Stopwatch</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Circular Progressbar</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Random Number Generator</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Random Hex Color Code</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Pokemon Card Generator</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Gazoline</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Flip A Coin</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Detect Capslock</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Cookie Consent Banner</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Cookie Consent Banner</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-01-12</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Circular Progressbar</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Detect Capslock</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Calculator</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Flip A Coin</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Automatic Pop up</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Analog Clock</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Pokemon Card Generator</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Age Calculator</loc>
-		<priority>0.67</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Random Hex Color Code</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Gazoline/public</loc>
-		<priority>0.50</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Random Number Generator</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/resume/Public/include/header.php</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-02-15</lastmod>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Stopwatch</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/resume/Public/include/footer.php</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-02-15</lastmod>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Tic Tac Toe</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/resume/Model/class/Route.php</loc>
-		<priority>0.33</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Toast UI Design</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Todo</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Vacabulary</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Weather</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/error/404.php</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/resume/Model/class/Env.php</loc>
-		<priority>0.33</priority>
+		<loc>https://www.book.audricrosier.be/View/error/405.php</loc>
+		<priority>0.57</priority>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Gazoline/public/submit.php</loc>
-		<priority>0.33</priority>
+		<loc>https://www.book.audricrosier.be/View/error/500.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public</loc>
+		<priority>0.43</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Gazoline/public/include/header.php</loc>
-		<priority>0.17</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/submit.php</loc>
+		<priority>0.29</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/OldProject/Gazoline/public/include/footer.html</loc>
-		<priority>0.17</priority>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/include/footer.html</loc>
+		<priority>0.14</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/include/header.php</loc>
+		<priority>0.14</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 </urlset>

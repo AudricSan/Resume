@@ -1,53 +1,3 @@
-<?php
-
-$keywords = 'HTML, CSS, JavaScript, Resume, Audric, Rosier, Audric Rosier';
-$description = 'Audric Rosier Resume Web Developeur';
-$autor = "Audric Rosier";
-
-?>
-
-<!DOCTYPE HTML>
-<html lang='en/us'>
-
-<head>
-	<!-- HTML BASIC META -->
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-
-	<!-- META AUTOR -->
-	<title>Audric Rosier - Resume</title>
-	<meta name='keywords' content='<?php echo $keywords; ?>'>
-	<meta name='description' content='<?php echo $description; ?>'>
-	<meta name='auteur' content='<?php echo $autor; ?>'>
-
-	<!-- META AND LINK FOR FAVICON -->
-	<link rel='apple-touch-icon' sizes='180x180' href='$imglink/ico/apple-touch-icon.png'>
-	<link rel='icon' type='image/png' sizes='32x32' href='$imglink/ico/favicon-32x32.png'>
-	<link rel='icon' type='image/png' sizes='16x16' href='$imglink/ico/favicon-16x16.png'>
-	<link rel='manifest' href='$imglink/ico/site.webmanifest'>
-	<link rel='mask-icon' href='$imglink/ico/safari-pinned-tab.svg' color='#5bbad5'>
-	<meta name='apple-mobile-web-app-title' content='MyBook'>
-	<meta name='application-name' content='MyBook'>
-	<meta name='msapplication-TileColor' content='#ffffff'>
-	<meta name='theme-color' content='#ffffff'>
-
-	<!-- STYLESHEET -->
-	<link rel="stylesheet" type='text/css' href="colors.css">
-
-	<link rel="stylesheet" type='text/css' href="reset.css">
-
-	<link rel="stylesheet" type='text/css' href="index.css">
-	<link rel="stylesheet" type='text/css' href="min.css">
-
-	<!-- IMPORT ICON -->
-	<script src='https://kit.fontawesome.com/eb747bd21c.js' crossorigin='anonymous'></script>
-	<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-	<link rel="stylesheet" href="myfont/style.css">
-</head>
-
-<body>
 	<div class="toggleDiv">
 		<input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
 	</div>
@@ -114,42 +64,42 @@ $autor = "Audric Rosier";
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="003.svg" title="1" />
+				<img class="icon" src="images/icon/003.svg" title="1" />
 				<p>The historical language of the layout of html pages. I use it to create my web design that I make interactive afterwards in JS. </p>
 			</div>
 		</article>
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="002.svg" title="1" />
+				<img class="icon" src="images/icon/002.svg" title="1" />
 				<p>The historical language of the creation of web pages! I realize the skeleton of my web pages with it.</p>
 			</div>
 		</article>
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="004" title="2" />
+				<img class="icon" src="images/icon/004" title="2" />
 				<p>The programming language that I use in front-end to make interactive the web pages that I realize in Html and Css.</p>
 			</div>
 		</article>
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="001.svg" title="3" />
+				<img class="icon" src="images/icon/001.svg" title="3" />
 				<p>I work with it since 3 years. I use it exclusively in Back-end to realize all what I need to make a dynamic website.</p>
 			</div>
 		</article>
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="005.svg" title="4" />
+				<img class="icon" src="images/icon/005.svg" title="4" />
 				<p>I use it since 3 years in total symbiosis with PHP</p>
 			</div>
 		</article>
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="006.png" title="5" />
+				<img class="icon" src="images/icon/006.png" title="5" />
 				<p>I’m using the Laravel framework according to the project and the client's request</p>
 			</div>
 		</article>
@@ -160,14 +110,14 @@ $autor = "Audric Rosier";
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="kanatraing.png" title="6" />
+				<img class="icon" src="images/icon/kanatraing.png" title="6" />
 				<p>A site to study Japanese Kana and share your skills.</p>
 			</div>
 		</article>
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="MyBook.png" title="7" />
+				<img class="icon" src="images/icon/photographics.png" title="7" />
 				<p>My final project, a website that any photographer can duplicate to use as a showcase site easily configurable.</p>
 			</div>
 		</article>
@@ -239,5 +189,3 @@ $autor = "Audric Rosier";
 	<script src='app.js'></script>
 
 </body>
-
-</html>

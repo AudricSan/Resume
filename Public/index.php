@@ -28,80 +28,11 @@ Route::add('/', function () {
   foot();
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ERROR
 // 404 not found route
 Route::pathNotFound(function ($path) {
   head();
   include('../view/error/404.php');
-  echo 'The requested path "' . $path . '" was not found!';
   foot();
 });
 
@@ -109,7 +40,6 @@ Route::pathNotFound(function ($path) {
 Route::methodNotAllowed(function ($path, $method) {
   head();
   include('../view/error/405.php');
-  echo 'The requested path "' . $path . '" exists. But the request method "' . $method . '" is not allowed on this path!';
   foot();
 });
 //
