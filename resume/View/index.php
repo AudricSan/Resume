@@ -28,8 +28,8 @@ $autor = "Audric Rosier";
 	<link rel='icon' type='image/png' sizes='16x16' href='$imglink/ico/favicon-16x16.png'>
 	<link rel='manifest' href='$imglink/ico/site.webmanifest'>
 	<link rel='mask-icon' href='$imglink/ico/safari-pinned-tab.svg' color='#5bbad5'>
-	<meta name='apple-mobile-web-app-title' content='Photographics'>
-	<meta name='application-name' content='Photographics'>
+	<meta name='apple-mobile-web-app-title' content='MyBook'>
+	<meta name='application-name' content='MyBook'>
 	<meta name='msapplication-TileColor' content='#ffffff'>
 	<meta name='theme-color' content='#ffffff'>
 
@@ -63,11 +63,11 @@ $autor = "Audric Rosier";
 
 
 		<article class="grid _3">
-			<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com"> audricrosier@gmail.com</a></p>
-			<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132"> +32485836132</a></p>
-			<p> <i class="fa-solid fa-link"></i> <a href="https://www.linkedin.com/in/audricrosier/"> Audric Rosier</a></p>
-			<p> <i class="fa-brands fa-github"></i> <a href="https://github.com/AudricSan"> AudricSan</a></p>
-			<p> <i class="fa-solid fa-camera-retro"></i> <a href="https://www.instagram.com/audric_san/"> @audric_san</a></p>
+			<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com" target="_blank"> audricrosier@gmail.com</a></p>
+			<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132" target="_blank"> +32485836132</a></p>
+			<p> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/audricrosier/" target="_blank"> Audric Rosier</a></p>
+			<p> <i class="fa-brands fa-github"></i> <a href="https://github.com/AudricSan" target="_blank"> AudricSan</a></p>
+			<p> <i class="fa-solid fa-camera-retro"></i> <a href="https://www.instagram.com/audric_san/" target="_blank"> @audric_san</a></p>
 		</article>
 	</section>
 
@@ -167,7 +167,7 @@ $autor = "Audric Rosier";
 
 		<article>
 			<div class="callout">
-				<img class="icon" src="photographics.png" title="7" />
+				<img class="icon" src="MyBook.png" title="7" />
 				<p>My final project, a website that any photographer can duplicate to use as a showcase site easily configurable.</p>
 			</div>
 		</article>
@@ -236,16 +236,7 @@ $autor = "Audric Rosier";
 		</article>
 	</section>
 
-	<script>
-		function darkmode() {
-			var body = document.body;
-			var toggle = document.getElementsByClassName('toggleDiv');
-			console.log(toggle)
-			
-			body.classList.toggle("dark");
-			toggle[0].classList.toggle("dark");
-		}
-	</script>
+	<script src='app.js'></script>
 
 </body>
 
