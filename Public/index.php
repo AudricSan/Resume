@@ -2,6 +2,8 @@
 
 // Use this namespace
 use MyBook\Route;
+use MyBook\Uuid;
+use Random\Randomizer;
 
 // Include class
 include '../model/class/Route.php';
@@ -53,6 +55,19 @@ Route::add('/routes', function () {
     echo '<li>' . $route['expression'] . ' (' . $route['method'] . ')</li>';
   }
   echo '</ul>';
+});
+
+Route::add('/UUID', function () {
+  include_once('../Model/class/uuid.php');
+  $uuid = new Uuid;
+
+  $myuuid['V1'] = $uuid->v1();
+  $myuuid['V2'] = $uuid->v2();
+  $myuuid['V3'] = $uuid->v3($_GET['n']);
+  $myuuid['V4'] = $uuid->v4();
+  $myuuid['V5'] = $uuid->v5($_GET['n']);
+
+  var_dump($myuuid);
 });
 //
 

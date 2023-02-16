@@ -185,7 +185,3 @@
 			<p><i class="fa-solid fa-gamepad"></i> video Games</p>
 		</article>
 	</section>
-
-	<script src='app.js'></script>
-
-</body>

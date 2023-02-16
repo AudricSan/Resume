@@ -1,269 +1,322 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=MorgDzh_some-random-id -->
 <sql>
-<datatypes db="mysql">
+    <datatypes db="mysql">
         <group label="Integer" color="rgb(238,238,170)">
-            <type label="TinyInt" length="0" sql="tinyint" re="INT" quote="" bytes="1" note="Integer data: 0 to 255"/>
-            <type label="SmallInt" length="0" sql="smallint" re="INT" quote="" bytes="2" note="Integer data: -32,768 to 32,767"/>
-            <type label="Int" length="0" sql="int" re="INT" quote="" bytes="4" note="Integer data: -2,147,483,648 to 2,147,483,647"/>
-            <type label="BigInt" length="0" sql="bigint" re="INT" quote="" bytes="8" note="Integer data: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807"/>
+            <type label="TinyInt" length="0" sql="tinyint" re="INT" quote="" bytes="1"
+                note="Integer data: 0 to 255" />
+            <type label="SmallInt" length="0" sql="smallint" re="INT" quote="" bytes="2"
+                note="Integer data: -32,768 to 32,767" />
+            <type label="Int" length="0" sql="int" re="INT" quote="" bytes="4"
+                note="Integer data: -2,147,483,648 to 2,147,483,647" />
+            <type label="BigInt" length="0" sql="bigint" re="INT" quote="" bytes="8"
+                note="Integer data: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807" />
         </group>
 
         <group label="Monetary" color="rgb(238,238,170)">
-            <type label="Money" length="0" sql="money" re="FLOAT" quote="" bytes="8" note="Integer data: -922,337,203,685,477.5808 to 922,337,203,685,477.5807"/>
-            <type label="SmallMoney" length="0" sql="smallmoney" re="FLOAT" quote="" bytes="4" note="-214,748.3648 to 214,748.3647"/>
+            <type label="Money" length="0" sql="money" re="FLOAT" quote="" bytes="8"
+                note="Integer data: -922,337,203,685,477.5808 to 922,337,203,685,477.5807" />
+            <type label="SmallMoney" length="0" sql="smallmoney" re="FLOAT" quote="" bytes="4"
+                note="-214,748.3648 to 214,748.3647" />
         </group>
 
         <group label="Numeric" color="rgb(238,238,170)">
-            <type label="Real" length="0" sql="real" re="FLOAT" quote="" bytes="4" note="Floating precision number data: -3.402823E+38 to 3.402823E+38"/>
-            <type label="Float" length="0" sql="float" re="FLOAT" quote="" bytes="8" note="Floating precision number data: -4.94E+324 to 4.94E+324"/>
-            <type label="Decimal" length="1" sql="decimal" re="DEC" quote="" bytes="n*" note="Fixed precision and scale numeric data: -10^38 +1 to 10^38 -1 (decimal and numeric are synonyms)"/>
-            <type label="Numeric" length="1" sql="numeric" re="DEC" quote="" bytes="n*" note="Fixed precision and scale numeric data: -10^38 +1 to 10^38 -1 (decimal and numeric are synonyms)"/>
+            <type label="Real" length="0" sql="real" re="FLOAT" quote="" bytes="4"
+                note="Floating precision number data: -3.402823E+38 to 3.402823E+38" />
+            <type label="Float" length="0" sql="float" re="FLOAT" quote="" bytes="8"
+                note="Floating precision number data: -4.94E+324 to 4.94E+324" />
+            <type label="Decimal" length="1" sql="decimal" re="DEC" quote="" bytes="n*"
+                note="Fixed precision and scale numeric data: -10^38 +1 to 10^38 -1 (decimal and numeric are synonyms)" />
+            <type label="Numeric" length="1" sql="numeric" re="DEC" quote="" bytes="n*"
+                note="Fixed precision and scale numeric data: -10^38 +1 to 10^38 -1 (decimal and numeric are synonyms)" />
         </group>
 
         <group label="Character" color="rgb(255,200,200)">
-            <type label="Char" length="0" sql="char" quote="'" bytes="n" note="Fixed-length character data with a maximum length of 8,000 characters"/>
-            <type label="Varchar" length="1" sql="varchar" quote="'" bytes="m &lt;= n" note="Variable-length data with a maximum of 8,000 characters"/>
-            <type label="Text" length="1" sql="text" quote="'" bytes="&lt;= 2,147,483,647" note="Variable-length data with a maximum length of 2,147,483,647 characters"/>
-            <type label="XML" length="0" sql="xml" quote="'" bytes="n" note="XML"/>
+            <type label="Char" length="0" sql="char" quote="'" bytes="n"
+                note="Fixed-length character data with a maximum length of 8,000 characters" />
+            <type label="Varchar" length="1" sql="varchar" quote="'" bytes="m &lt;= n"
+                note="Variable-length data with a maximum of 8,000 characters" />
+            <type label="Text" length="1" sql="text" quote="'" bytes="&lt;= 2,147,483,647"
+                note="Variable-length data with a maximum length of 2,147,483,647 characters" />
+            <type label="XML" length="0" sql="xml" quote="'" bytes="n" note="XML" />
         </group>
 
         <group label="Unicode Character" color="rgb(255,200,200)">
-            <type label="nChar" length="0" sql="nchar" quote="'" bytes="n" note="Fixed-length Unicode data with a maximum length of 4,000 characters"/>
-            <type label="nVarchar" length="1" sql="nvarchar" quote="'" bytes="m &lt;= n" note="Variable-length Unicode data with a maximum length of 4,000 characters"/>
-            <type label="nText" length="1" sql="ntext" quote="'" bytes="&lt;= 2,147,483,647" note="Variable-length Unicode data with a maximum length of 1,073,741,823 characters"/>
+            <type label="nChar" length="0" sql="nchar" quote="'" bytes="n"
+                note="Fixed-length Unicode data with a maximum length of 4,000 characters" />
+            <type label="nVarchar" length="1" sql="nvarchar" quote="'" bytes="m &lt;= n"
+                note="Variable-length Unicode data with a maximum length of 4,000 characters" />
+            <type label="nText" length="1" sql="ntext" quote="'" bytes="&lt;= 2,147,483,647"
+                note="Variable-length Unicode data with a maximum length of 1,073,741,823 characters" />
         </group>
 
 
         <group label="Date &amp; Time" color="rgb(200,255,200)">
-            <type label="Datetime" length="0" sql="datetime" quote="" bytes="8" note="Jan 1, 1753 to Dec 31, 9999"/>
-            <type label="SmallDateTime" length="0" sql="smalldatetime" quote="" bytes="4" note="Jan 1, 1900 to Dec 31, 2079"/>
+            <type label="Datetime" length="0" sql="datetime" quote="" bytes="8"
+                note="Jan 1, 1753 to Dec 31, 9999" />
+            <type label="SmallDateTime" length="0" sql="smalldatetime" quote="" bytes="4"
+                note="Jan 1, 1900 to Dec 31, 2079" />
         </group>
 
         <group label="Binary" color="rgb(200,200,255)">
-            <type label="Binary" length="0" sql="binary" quote="'" bytes="n" note="Fixed-length binary data with a maximum length of 8,000 bytes"/>
-            <type label="Varbinary" length="1" sql="varbinary" quote="'" bytes="m &lt;= n" note="Variable-length binary data with a maximum length of 8,000 bytes"/>
+            <type label="Binary" length="0" sql="binary" quote="'" bytes="n"
+                note="Fixed-length binary data with a maximum length of 8,000 bytes" />
+            <type label="Varbinary" length="1" sql="varbinary" quote="'" bytes="m &lt;= n"
+                note="Variable-length binary data with a maximum length of 8,000 bytes" />
         </group>
 
         <group label="Miscellaneous" color="rgb(200,220,255)">
-            <type label="Bit" length="0" sql="bit" quote="" bytes="1" note="Boolean: 1 or 0"/>
-            <type label="Image" length="1" sql="image" re="BLOB" quote="" bytes="0 to 2,147,483,647" note="Variable-length binary data with a maximum length of 2,147,483,647 bytes"/>
-            <type label="Timestamp" length="0" sql="timestamp" quote="" bytes="8" note="Locally unique binary number updated as a row gets updated"/>
-            <type label="SQL Variant" length="1" sql="sql_variant" quote="" bytes="" note="Stores any datatype except text, ntext, image, timestamp"/>
-            <type label="Uniqueidentifier" length="1" sql="uniqueidentifier" quote="" bytes="16" note="GUID"/>
+            <type label="Bit" length="0" sql="bit" quote="" bytes="1" note="Boolean: 1 or 0" />
+            <type label="Image" length="1" sql="image" re="BLOB" quote="" bytes="0 to 2,147,483,647"
+                note="Variable-length binary data with a maximum length of 2,147,483,647 bytes" />
+            <type label="Timestamp" length="0" sql="timestamp" quote="" bytes="8"
+                note="Locally unique binary number updated as a row gets updated" />
+            <type label="SQL Variant" length="1" sql="sql_variant" quote="" bytes=""
+                note="Stores any datatype except text, ntext, image, timestamp" />
+            <type label="Uniqueidentifier" length="1" sql="uniqueidentifier" quote="" bytes="16"
+                note="GUID" />
         </group>
-    </datatypes><table x="750" y="50" name="Education">
-<row name="Education_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Education_Name" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="Education_Start" null="1" autoincrement="0">
-<datatype>datetime</datatype>
-<default>NULL</default></row>
-<row name="Education_End" null="1" autoincrement="0">
-<datatype>datetime</datatype>
-<default>NULL</default></row>
-<row name="Education_School" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<relation table="School" row="School_ID" />
-</row>
-<row name="Education_Level" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<relation table="EducationLevel" row="EducationLevel_Id" />
-</row>
-<key type="PRIMARY" name="">
-<part>Education_ID</part>
-</key>
-</table>
-<table x="530" y="50" name="School">
-<row name="School_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="School_Name" null="1" autoincrement="0">
-<datatype>char(255)</datatype>
-<default>NULL</default></row>
-<row name="School_City" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<default>NULL</default><relation table="City" row="City_ID" />
-</row>
-<key type="PRIMARY" name="">
-<part>School_ID</part>
-</key>
-</table>
-<table x="340" y="50" name="City">
-<row name="City_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="City_Name" null="1" autoincrement="0">
-<datatype>varchar(190)</datatype>
-<default>NULL</default></row>
-<row name="City_Zip" null="1" autoincrement="0">
-<datatype>int(18)</datatype>
-<default>NULL</default></row>
-<row name="City_Country" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<relation table="Country" row="Country_ID" />
-</row>
-<key type="PRIMARY" name="">
-<part>City_ID</part>
-</key>
-</table>
-<table x="50" y="280" name="Language">
-<row name="Language_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Language_Name" null="1" autoincrement="0">
-<datatype>varchar(30)</datatype>
-<default>NULL</default></row>
-<row name="Language_Tag" null="1" autoincrement="0">
-<datatype>varchar(10)</datatype>
-<default>NULL</default></row>
-<row name="Language_LanguageLevel" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<relation table="LanguageLevel" row="LanguageLevel_ID" />
-</row>
-<key type="PRIMARY" name="">
-<part>Language_ID</part>
-</key>
-</table>
-<table x="970" y="50" name="EducationLevel">
-<row name="EducationLevel_Id" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="EducationLevel_Name" null="1" autoincrement="0">
-<datatype>varchar(60)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>EducationLevel_Id</part>
-</key>
-</table>
-<table x="310" y="280" name="LanguageLevel">
-<row name="LanguageLevel_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="LanguageLevel_Name" null="1" autoincrement="0">
-<datatype>varchar(20)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>LanguageLevel_ID</part>
-</key>
-</table>
-<table x="530" y="170" name="Country">
-<row name="Country_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Country_Name" null="1" autoincrement="0">
-<datatype>varchar(90)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>Country_ID</part>
-</key>
-</table>
-<table x="790" y="280" name="Admin">
-<row name="Admin_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Admin_Name" null="1" autoincrement="0">
-<datatype>varchar(60)</datatype>
-<default>NULL</default></row>
-<row name="Admin_Email" null="1" autoincrement="0">
-<datatype>varchar(254)</datatype>
-<default>NULL</default></row>
-<row name="Admin_Password" null="1" autoincrement="0">
-<datatype>varchar(80)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>Admin_ID</part>
-</key>
-</table>
-<table x="50" y="50" name="WorkExperience">
-<row name="WorkExperience_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="WorkExperience_Name" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="WorkExperience_Description" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="WorkExperience_Icon" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>'/public/image/icon/000.png'</default></row>
-<row name="WorkExperience_City" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<relation table="City" row="City_ID" />
-</row>
-<key type="PRIMARY" name="">
-<part>WorkExperience_ID</part>
-</key>
-</table>
-<table x="50" y="440" name="Technology">
-<row name="Technology_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Technology_Name" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="Technology_Description" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="Technology_Icon" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>'/public/image/icon/000.png'</default></row>
-<row name="Technology_Level" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
-<relation table="Level" row="Level_Id" />
-</row>
-<key type="PRIMARY" name="">
-<part>Technology_ID</part>
-</key>
-</table>
-<table x="550" y="280" name="Project">
-<row name="Project_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Project_Name" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="Project_Link" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="Project_Description" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>NULL</default></row>
-<row name="Project_Icon" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>'/public/image/icon/000.png'</default></row>
-<key type="PRIMARY" name="">
-<part>Project_ID</part>
-</key>
-</table>
-<table x="550" y="450" name="PointOfInterest">
-<row name="PointOfInterest_ID" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="PointOfInterest_Name" null="1" autoincrement="0">
-<datatype>varchar(60)</datatype>
-<default>NULL</default></row>
-<row name="PointOfInterest_Icon" null="1" autoincrement="0">
-<datatype>varchar(255)</datatype>
-<default>'/public/image/icon/000.png'</default></row>
-<key type="PRIMARY" name="">
-<part>PointOfInterest_ID</part>
-</key>
-</table>
-<table x="310" y="440" name="Level">
-<row name="Level_Id" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
-</row>
-<row name="Level_Name" null="1" autoincrement="0">
-<datatype>varchar(30)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>Level_Id</part>
-</key>
-</table>
+    </datatypes>
+    <table x="750" y="50" name="Education">
+        <row name="Education_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Education_Name" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="Education_Start" autoincrement="0">
+            <datatype>datetime</datatype>
+             <default></default>
+        </row>
+        <row name="Education_End" autoincrement="0">
+            <datatype>datetime</datatype>
+             <default></default>
+        </row>
+        <row name="Education_School" autoincrement="0">
+            <datatype>tinyint</datatype>
+            <relation table="School" row="School_ID" />
+        </row>
+        <row name="Education_Level" autoincrement="0">
+            <datatype>tinyint</datatype>
+            <relation table="EducationLevel" row="EducationLevel_Id" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Education_ID</part>
+        </key>
+    </table>
+    <table x="530" y="50" name="School">
+        <row name="School_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="School_Name" autoincrement="0">
+            <datatype>char(255)</datatype>
+             <default></default>
+        </row>
+        <row name="School_City" autoincrement="0">
+            <datatype>tinyint</datatype>
+             <default></default>
+            <relation table="City" row="City_ID" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>School_ID</part>
+        </key>
+    </table>
+    <table x="340" y="50" name="City">
+        <row name="City_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="City_Name" autoincrement="0">
+            <datatype>varchar(190)</datatype>
+             <default></default>
+        </row>
+        <row name="City_Zip" autoincrement="0">
+            <datatype>int(18)</datatype>
+             <default></default>
+        </row>
+        <row name="City_Country" autoincrement="0">
+            <datatype>tinyint</datatype>
+            <relation table="Country" row="Country_ID" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>City_ID</part>
+        </key>
+    </table>
+    <table x="50" y="280" name="Language">
+        <row name="Language_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Language_Name" autoincrement="0">
+            <datatype>varchar(30)</datatype>
+             <default></default>
+        </row>
+        <row name="Language_Tag" autoincrement="0">
+            <datatype>varchar(10)</datatype>
+             <default></default>
+        </row>
+        <row name="Language_LanguageLevel" autoincrement="0">
+            <datatype>tinyint</datatype>
+            <relation table="LanguageLevel" row="LanguageLevel_ID" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Language_ID</part>
+        </key>
+    </table>
+    <table x="970" y="50" name="EducationLevel">
+        <row name="EducationLevel_Id" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="EducationLevel_Name" autoincrement="0">
+            <datatype>varchar(60)</datatype>
+             <default></default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>EducationLevel_Id</part>
+        </key>
+    </table>
+    <table x="310" y="280" name="LanguageLevel">
+        <row name="LanguageLevel_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="LanguageLevel_Name" autoincrement="0">
+            <datatype>varchar(20)</datatype>
+             <default></default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>LanguageLevel_ID</part>
+        </key>
+    </table>
+    <table x="530" y="170" name="Country">
+        <row name="Country_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Country_Name" autoincrement="0">
+            <datatype>varchar(90)</datatype>
+             <default></default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Country_ID</part>
+        </key>
+    </table>
+    <table x="790" y="280" name="Admin">
+        <row name="Admin_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Admin_Name" autoincrement="0">
+            <datatype>varchar(60)</datatype>
+             <default></default>
+        </row>
+        <row name="Admin_Email" autoincrement="0">
+            <datatype>varchar(254)</datatype>
+             <default></default>
+        </row>
+        <row name="Admin_Password" autoincrement="0">
+            <datatype>varchar(80)</datatype>
+             <default></default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Admin_ID</part>
+        </key>
+    </table>
+    <table x="50" y="50" name="WorkExperience">
+        <row name="WorkExperience_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="WorkExperience_Name" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="WorkExperience_Description" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="WorkExperience_Icon" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>'/public/image/icon/000.png'</default>
+        </row>
+        <row name="WorkExperience_City" autoincrement="0">
+            <datatype>tinyint</datatype>
+            <relation table="City" row="City_ID" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>WorkExperience_ID</part>
+        </key>
+    </table>
+    <table x="50" y="440" name="Technology">
+        <row name="Technology_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Technology_Name" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="Technology_Description" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="Technology_Icon" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>'/public/image/icon/000.png'</default>
+        </row>
+        <row name="Technology_Level" autoincrement="0">
+            <datatype>tinyint</datatype>
+            <relation table="Level" row="Level_Id" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Technology_ID</part>
+        </key>
+    </table>
+    <table x="550" y="280" name="Project">
+        <row name="Project_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Project_Name" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="Project_Link" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="Project_Description" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+             <default></default>
+        </row>
+        <row name="Project_Icon" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>'/public/image/icon/000.png'</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Project_ID</part>
+        </key>
+    </table>
+    <table x="550" y="450" name="PointOfInterest">
+        <row name="PointOfInterest_ID" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="PointOfInterest_Name" autoincrement="0">
+            <datatype>varchar(60)</datatype>
+             <default></default>
+        </row>
+        <row name="PointOfInterest_Icon" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>'/public/image/icon/000.png'</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>PointOfInterest_ID</part>
+        </key>
+    </table>
+    <table x="310" y="440" name="Level">
+        <row name="Level_Id" autoincrement="1">
+            <datatype>tinyint</datatype>
+        </row>
+        <row name="Level_Name" autoincrement="0">
+            <datatype>varchar(30)</datatype>
+             <default></default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>Level_Id</part>
+        </key>
+    </table>
 </sql>

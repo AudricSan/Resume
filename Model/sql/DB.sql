@@ -7,178 +7,190 @@
 
 -- ---
 -- Table 'Education'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Education`;
 		
 CREATE TABLE `Education` (
-  `Education_ID` tinyint  AUTO_INCREMENT,
-  `Education_Name` varchar(255) ,
-  `Education_Start` datetime ,
-  `Education_End` datetime ,
-  `Education_School` tinyint ,
-  `Education_Level` tinyint ,
+  `Education_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Education_Name` varchar(255) NOT NULL,
+  `Education_Start` datetime NOT NULL,
+  `Education_End` datetime NOT NULL,
+  `Education_School` tinyint NOT NULL,
+  `Education_Level` tinyint NOT NULL,
   PRIMARY KEY (`Education_ID`)
 );
 
 -- ---
 -- Table 'School'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `School`;
 		
 CREATE TABLE `School` (
-  `School_ID` tinyint AUTO_INCREMENT,
-  `School_Name` char(255),
-  `School_City` tinyint,
+  `School_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `School_Name` char(255) NOT NULL,
+  `School_City` tinyint NOT NULL,
   PRIMARY KEY (`School_ID`)
 );
 
 -- ---
--- Table 'City'
+-- Table 'Cities'
+-- 
 -- ---
 
-DROP TABLE IF EXISTS `City`;
+DROP TABLE IF EXISTS `Cities`;
 		
-CREATE TABLE `City` (
-  `City_ID` tinyint  AUTO_INCREMENT,
-  `City_Name` varchar(190) ,
-  `City_Zip` int(18) ,
-  `City_Country` tinyint ,
-  PRIMARY KEY (`City_ID`)
+CREATE TABLE `Cities` (
+  `Cities_id` tinyint NOT NULL AUTO_INCREMENT,
+  `Cities_name` varchar(255) NULL DEFAULT NULL,
+  `Cities_Country` varchar(5) NULL DEFAULT NULL,
+  PRIMARY KEY (`Cities_id`)
 );
 
 -- ---
 -- Table 'Language'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Language`;
 		
 CREATE TABLE `Language` (
-  `Language_ID` tinyint  AUTO_INCREMENT,
-  `Language_Name` varchar(30) ,
-  `Language_Tag` varchar(10) ,
-  `Language_LanguageLevel` tinyint ,
+  `Language_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Language_Name` varchar(30) NOT NULL,
+  `Language_Tag` varchar(10) NOT NULL,
+  `Language_LanguageLevel` tinyint NOT NULL,
   PRIMARY KEY (`Language_ID`)
 );
 
 -- ---
 -- Table 'EducationLevel'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `EducationLevel`;
 		
 CREATE TABLE `EducationLevel` (
-  `EducationLevel_Id` tinyint  AUTO_INCREMENT,
-  `EducationLevel_Name` varchar(60) ,
+  `EducationLevel_Id` tinyint NOT NULL AUTO_INCREMENT,
+  `EducationLevel_Name` varchar(60) NOT NULL,
   PRIMARY KEY (`EducationLevel_Id`)
 );
 
 -- ---
 -- Table 'LanguageLevel'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `LanguageLevel`;
 		
 CREATE TABLE `LanguageLevel` (
-  `LanguageLevel_ID` tinyint  AUTO_INCREMENT,
-  `LanguageLevel_Name` varchar(20) ,
+  `LanguageLevel_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `LanguageLevel_Name` varchar(20) NOT NULL,
   PRIMARY KEY (`LanguageLevel_ID`)
 );
 
 -- ---
 -- Table 'Country'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Country`;
 		
 CREATE TABLE `Country` (
-  `Country_ID` tinyint  AUTO_INCREMENT,
-  `Country_Name` varchar(90) ,
+  `Country_ID` varchar(64) NOT NULL AUTO_INCREMENT,
+  `Country_Name` varchar(60) NULL,
   PRIMARY KEY (`Country_ID`)
 );
 
 -- ---
 -- Table 'Admin'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Admin`;
 		
 CREATE TABLE `Admin` (
-  `Admin_ID` tinyint  AUTO_INCREMENT,
-  `Admin_Name` varchar(60) ,
-  `Admin_Email` varchar(254) ,
-  `Admin_Password` varchar(80) ,
+  `Admin_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Admin_Name` varchar(60) NOT NULL,
+  `Admin_Email` varchar(254) NOT NULL,
+  `Admin_Password` varchar(80) NOT NULL,
   PRIMARY KEY (`Admin_ID`)
 );
 
 -- ---
 -- Table 'WorkExperience'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `WorkExperience`;
 		
 CREATE TABLE `WorkExperience` (
-  `WorkExperience_ID` tinyint  AUTO_INCREMENT,
-  `WorkExperience_Name` varchar(255) ,
-  `WorkExperience_Description` varchar(255) ,
-  `WorkExperience_Icon` varchar(255)  DEFAULT '/public/image/icon/000.png',
-  `WorkExperience_City` tinyint ,
+  `WorkExperience_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `WorkExperience_Name` varchar(255) NOT NULL,
+  `WorkExperience_Description` varchar(255) NOT NULL,
+  `WorkExperience_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
+  `WorkExperience_City` tinyint NOT NULL,
   PRIMARY KEY (`WorkExperience_ID`)
 );
 
 -- ---
 -- Table 'Technology'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Technology`;
 		
 CREATE TABLE `Technology` (
-  `Technology_ID` tinyint  AUTO_INCREMENT,
-  `Technology_Name` varchar(255) ,
-  `Technology_Description` varchar(255) ,
-  `Technology_Icon` varchar(255)  DEFAULT '/public/image/icon/000.png',
-  `Technology_Level` tinyint ,
+  `Technology_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Technology_Name` varchar(255) NOT NULL,
+  `Technology_Description` varchar(255) NOT NULL,
+  `Technology_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
+  `Technology_Level` tinyint NOT NULL,
   PRIMARY KEY (`Technology_ID`)
 );
 
 -- ---
 -- Table 'Project'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Project`;
 		
 CREATE TABLE `Project` (
-  `Project_ID` tinyint  AUTO_INCREMENT,
-  `Project_Name` varchar(255) ,
-  `Project_Link` varchar(255) ,
-  `Project_Description` varchar(255) ,
-  `Project_Icon` varchar(255)  DEFAULT '/public/image/icon/000.png',
+  `Project_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Project_Name` varchar(255) NOT NULL,
+  `Project_Link` varchar(255) NOT NULL,
+  `Project_Description` varchar(255) NOT NULL,
+  `Project_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   PRIMARY KEY (`Project_ID`)
 );
 
 -- ---
 -- Table 'PointOfInterest'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `PointOfInterest`;
 		
 CREATE TABLE `PointOfInterest` (
-  `PointOfInterest_ID` tinyint  AUTO_INCREMENT,
-  `PointOfInterest_Name` varchar(60) ,
-  `PointOfInterest_Icon` varchar(255)  DEFAULT '/public/image/icon/000.png',
+  `PointOfInterest_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `PointOfInterest_Name` varchar(60) NOT NULL,
+  `PointOfInterest_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   PRIMARY KEY (`PointOfInterest_ID`)
 );
 
 -- ---
 -- Table 'Level'
+-- 
 -- ---
 
 DROP TABLE IF EXISTS `Level`;
 		
 CREATE TABLE `Level` (
-  `Level_Id` tinyint  AUTO_INCREMENT,
-  `Level_Name` varchar(30) ,
+  `Level_Id` tinyint NOT NULL AUTO_INCREMENT,
+  `Level_Name` varchar(30) NOT NULL,
   PRIMARY KEY (`Level_Id`)
 );
 
@@ -188,10 +200,10 @@ CREATE TABLE `Level` (
 
 ALTER TABLE `Education` ADD FOREIGN KEY (Education_School) REFERENCES `School` (`School_ID`);
 ALTER TABLE `Education` ADD FOREIGN KEY (Education_Level) REFERENCES `EducationLevel` (`EducationLevel_Id`);
-ALTER TABLE `School` ADD FOREIGN KEY (School_City) REFERENCES `City` (`City_ID`);
-ALTER TABLE `City` ADD FOREIGN KEY (City_Country) REFERENCES `Country` (`Country_ID`);
+ALTER TABLE `School` ADD FOREIGN KEY (School_City) REFERENCES `Cities` (`Cities_id`);
+ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Country` (`Country_ID`);
 ALTER TABLE `Language` ADD FOREIGN KEY (Language_LanguageLevel) REFERENCES `LanguageLevel` (`LanguageLevel_ID`);
-ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `City` (`City_ID`);
+ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (`Level_Id`);
 
 -- ---
@@ -200,7 +212,7 @@ ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (
 
 -- ALTER TABLE `Education` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `School` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `City` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Cities` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Language` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `EducationLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `LanguageLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -220,8 +232,8 @@ ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (
 -- ('','','','','','');
 -- INSERT INTO `School` (`School_ID`,`School_Name`,`School_City`) VALUES
 -- ('','','');
--- INSERT INTO `City` (`City_ID`,`City_Name`,`City_Zip`,`City_Country`) VALUES
--- ('','','','');
+-- INSERT INTO `Cities` (`Cities_id`,`Cities_name`,`Cities_Country`) VALUES
+-- ('','','');
 -- INSERT INTO `Language` (`Language_ID`,`Language_Name`,`Language_Tag`,`Language_LanguageLevel`) VALUES
 -- ('','','','');
 -- INSERT INTO `EducationLevel` (`EducationLevel_Id`,`EducationLevel_Name`) VALUES
