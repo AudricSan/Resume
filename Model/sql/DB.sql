@@ -11,14 +11,14 @@
 -- ---
 
 DROP TABLE IF EXISTS `Education`;
-		
+
 CREATE TABLE `Education` (
-  `Education_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Education_ID` int NOT NULL AUTO_INCREMENT,
   `Education_Name` varchar(255) NOT NULL,
   `Education_Start` datetime NOT NULL,
   `Education_End` datetime NOT NULL,
-  `Education_School` tinyint NOT NULL,
-  `Education_Level` tinyint NOT NULL,
+  `Education_School` int NOT NULL,
+  `Education_Level` int NOT NULL,
   PRIMARY KEY (`Education_ID`)
 );
 
@@ -28,11 +28,11 @@ CREATE TABLE `Education` (
 -- ---
 
 DROP TABLE IF EXISTS `School`;
-		
+
 CREATE TABLE `School` (
-  `School_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `School_ID` int NOT NULL AUTO_INCREMENT,
   `School_Name` char(255) NOT NULL,
-  `School_City` tinyint NOT NULL,
+  `School_City` int NOT NULL,
   PRIMARY KEY (`School_ID`)
 );
 
@@ -42,11 +42,11 @@ CREATE TABLE `School` (
 -- ---
 
 DROP TABLE IF EXISTS `Cities`;
-		
+
 CREATE TABLE `Cities` (
-  `Cities_id` tinyint NOT NULL AUTO_INCREMENT,
+  `Cities_id` int NOT NULL AUTO_INCREMENT,
   `Cities_name` varchar(255) NULL DEFAULT NULL,
-  `Cities_Country` varchar(5) NULL DEFAULT NULL,
+  `Cities_Country` int NULL DEFAULT NULL,
   PRIMARY KEY (`Cities_id`)
 );
 
@@ -56,12 +56,12 @@ CREATE TABLE `Cities` (
 -- ---
 
 DROP TABLE IF EXISTS `Language`;
-		
+
 CREATE TABLE `Language` (
-  `Language_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Language_ID` int NOT NULL AUTO_INCREMENT,
   `Language_Name` varchar(30) NOT NULL,
   `Language_Tag` varchar(10) NOT NULL,
-  `Language_LanguageLevel` tinyint NOT NULL,
+  `Language_LanguageLevel` int NOT NULL,
   PRIMARY KEY (`Language_ID`)
 );
 
@@ -71,9 +71,9 @@ CREATE TABLE `Language` (
 -- ---
 
 DROP TABLE IF EXISTS `EducationLevel`;
-		
+
 CREATE TABLE `EducationLevel` (
-  `EducationLevel_Id` tinyint NOT NULL AUTO_INCREMENT,
+  `EducationLevel_Id` int NOT NULL AUTO_INCREMENT,
   `EducationLevel_Name` varchar(60) NOT NULL,
   PRIMARY KEY (`EducationLevel_Id`)
 );
@@ -84,24 +84,31 @@ CREATE TABLE `EducationLevel` (
 -- ---
 
 DROP TABLE IF EXISTS `LanguageLevel`;
-		
+
 CREATE TABLE `LanguageLevel` (
-  `LanguageLevel_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `LanguageLevel_ID` int NOT NULL AUTO_INCREMENT,
   `LanguageLevel_Name` varchar(20) NOT NULL,
   PRIMARY KEY (`LanguageLevel_ID`)
 );
 
 -- ---
--- Table 'Country'
+-- Table 'Countries'
 -- 
 -- ---
 
-DROP TABLE IF EXISTS `Country`;
-		
-CREATE TABLE `Country` (
-  `Country_ID` varchar(64) NOT NULL AUTO_INCREMENT,
-  `Country_Name` varchar(60) NULL DEFAULT NULL,
-  PRIMARY KEY (`Country_ID`)
+DROP TABLE IF EXISTS `Countries`;
+
+CREATE TABLE `Countries` (
+  `Countries_id` int NOT NULL AUTO_INCREMENT,
+  `Countries_Name` varchar(100) NULL DEFAULT NULL,
+  `Countries_code` varchar(2) NOT NULL,
+  `Countries_currency` varchar(255) NULL DEFAULT NULL,
+  `Countries_currency_name` varchar(255) NULL DEFAULT NULL,
+  `Countries_currency_symbol` varchar(255) NULL DEFAULT NULL,
+  `Countries_region` varchar(255) NULL DEFAULT NULL,
+  `Countries_subregion` varchar(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`Countries_id`),
+KEY (`Countries_code`)
 );
 
 -- ---
@@ -110,9 +117,9 @@ CREATE TABLE `Country` (
 -- ---
 
 DROP TABLE IF EXISTS `Admin`;
-		
+
 CREATE TABLE `Admin` (
-  `Admin_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Admin_ID` int NOT NULL AUTO_INCREMENT,
   `Admin_Name` varchar(60) NOT NULL,
   `Admin_Email` varchar(254) NOT NULL,
   `Admin_Password` varchar(80) NOT NULL,
@@ -125,13 +132,13 @@ CREATE TABLE `Admin` (
 -- ---
 
 DROP TABLE IF EXISTS `WorkExperience`;
-		
+
 CREATE TABLE `WorkExperience` (
-  `WorkExperience_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `WorkExperience_ID` int NOT NULL AUTO_INCREMENT,
   `WorkExperience_Name` varchar(255) NOT NULL,
   `WorkExperience_Description` varchar(255) NOT NULL,
   `WorkExperience_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
-  `WorkExperience_City` tinyint NOT NULL,
+  `WorkExperience_City` int NOT NULL,
   `WorkExperience_Start` datetime NOT NULL,
   `WorkExperience_End` datetime NOT NULL,
   PRIMARY KEY (`WorkExperience_ID`)
@@ -143,13 +150,13 @@ CREATE TABLE `WorkExperience` (
 -- ---
 
 DROP TABLE IF EXISTS `Technologies`;
-		
+
 CREATE TABLE `Technologies` (
-  `technologies_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `technologies_ID` int NOT NULL AUTO_INCREMENT,
   `technologies_Name` varchar(255) NOT NULL,
   `technologies_Description` varchar(255) NOT NULL,
   `technologies_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
-  `technologies_Level` tinyint NOT NULL,
+  `technologies_Level` int NOT NULL,
   PRIMARY KEY (`technologies_ID`)
 );
 
@@ -159,9 +166,9 @@ CREATE TABLE `Technologies` (
 -- ---
 
 DROP TABLE IF EXISTS `Project`;
-		
+
 CREATE TABLE `Project` (
-  `Project_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `Project_ID` int NOT NULL AUTO_INCREMENT,
   `Project_Name` varchar(255) NOT NULL,
   `Project_Link` varchar(255) NOT NULL,
   `Project_Description` varchar(255) NOT NULL,
@@ -175,9 +182,9 @@ CREATE TABLE `Project` (
 -- ---
 
 DROP TABLE IF EXISTS `PointOfInterest`;
-		
+
 CREATE TABLE `PointOfInterest` (
-  `PointOfInterest_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `PointOfInterest_ID` int NOT NULL AUTO_INCREMENT,
   `PointOfInterest_Name` varchar(60) NOT NULL,
   `PointOfInterest_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   PRIMARY KEY (`PointOfInterest_ID`)
@@ -189,9 +196,9 @@ CREATE TABLE `PointOfInterest` (
 -- ---
 
 DROP TABLE IF EXISTS `TechnologyLevel`;
-		
+
 CREATE TABLE `TechnologyLevel` (
-  `TechnologyLevel_Id` tinyint NOT NULL AUTO_INCREMENT,
+  `TechnologyLevel_Id` int NOT NULL AUTO_INCREMENT,
   `Level_Name` varchar(30) NOT NULL,
   PRIMARY KEY (`TechnologyLevel_Id`)
 );
@@ -203,7 +210,7 @@ CREATE TABLE `TechnologyLevel` (
 ALTER TABLE `Education` ADD FOREIGN KEY (Education_School) REFERENCES `School` (`School_ID`);
 ALTER TABLE `Education` ADD FOREIGN KEY (Education_Level) REFERENCES `EducationLevel` (`EducationLevel_Id`);
 ALTER TABLE `School` ADD FOREIGN KEY (School_City) REFERENCES `Cities` (`Cities_id`);
-ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Country` (`Country_ID`);
+ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Countries` (`Countries_id`);
 ALTER TABLE `Language` ADD FOREIGN KEY (Language_LanguageLevel) REFERENCES `LanguageLevel` (`LanguageLevel_ID`);
 ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `TechnologyLevel` (`TechnologyLevel_Id`);
@@ -218,7 +225,7 @@ ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `Tech
 -- ALTER TABLE `Language` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `EducationLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `LanguageLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `Country` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Countries` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Admin` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `WorkExperience` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Technologies` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -242,8 +249,8 @@ ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `Tech
 -- ('','');
 -- INSERT INTO `LanguageLevel` (`LanguageLevel_ID`,`LanguageLevel_Name`) VALUES
 -- ('','');
--- INSERT INTO `Country` (`Country_ID`,`Country_Name`) VALUES
--- ('','');
+-- INSERT INTO `Countries` (`Countries_id`,`Countries_Name`,`Countries_code`,`Countries_currency`,`Countries_currency_name`,`Countries_currency_symbol`,`Countries_region`,`Countries_subregion`) VALUES
+-- ('','','','','','','','');
 -- INSERT INTO `Admin` (`Admin_ID`,`Admin_Name`,`Admin_Email`,`Admin_Password`) VALUES
 -- ('','','','');
 -- INSERT INTO `WorkExperience` (`WorkExperience_ID`,`WorkExperience_Name`,`WorkExperience_Description`,`WorkExperience_Icon`,`WorkExperience_City`,`WorkExperience_Start`,`WorkExperience_End`) VALUES
