@@ -100,7 +100,7 @@ DROP TABLE IF EXISTS `Country`;
 		
 CREATE TABLE `Country` (
   `Country_ID` varchar(64) NOT NULL AUTO_INCREMENT,
-  `Country_Name` varchar(60) NULL,
+  `Country_Name` varchar(60) NULL DEFAULT NULL,
   PRIMARY KEY (`Country_ID`)
 );
 
@@ -132,6 +132,8 @@ CREATE TABLE `WorkExperience` (
   `WorkExperience_Description` varchar(255) NOT NULL,
   `WorkExperience_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   `WorkExperience_City` tinyint NOT NULL,
+  `WorkExperience_Start` datetime NOT NULL,
+  `WorkExperience_End` datetime NOT NULL,
   PRIMARY KEY (`WorkExperience_ID`)
 );
 
@@ -244,8 +246,8 @@ ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (
 -- ('','');
 -- INSERT INTO `Admin` (`Admin_ID`,`Admin_Name`,`Admin_Email`,`Admin_Password`) VALUES
 -- ('','','','');
--- INSERT INTO `WorkExperience` (`WorkExperience_ID`,`WorkExperience_Name`,`WorkExperience_Description`,`WorkExperience_Icon`,`WorkExperience_City`) VALUES
--- ('','','','','');
+-- INSERT INTO `WorkExperience` (`WorkExperience_ID`,`WorkExperience_Name`,`WorkExperience_Description`,`WorkExperience_Icon`,`WorkExperience_City`,`WorkExperience_Start`,`WorkExperience_End`) VALUES
+-- ('','','','','','','');
 -- INSERT INTO `Technology` (`Technology_ID`,`Technology_Name`,`Technology_Description`,`Technology_Icon`,`Technology_Level`) VALUES
 -- ('','','','','');
 -- INSERT INTO `Project` (`Project_ID`,`Project_Name`,`Project_Link`,`Project_Description`,`Project_Icon`) VALUES

@@ -1,9 +1,9 @@
 <?php
 
-use MyBook\City;
+use MyBook\PointOfInterest;
 use MyBook\Env;
 
-class CityDAO extends Env
+class PointOfInterestDAO extends Env
 {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
@@ -35,11 +35,10 @@ class CityDAO extends Env
             return false;
         }
 
-        return new City(
+        return new PointOfInterest(
             $data['id'],
             $data['name'],
-            $data['zip'],
-            $data['country']
+            $data['icon']
         );
     }
 

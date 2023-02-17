@@ -16,9 +16,29 @@
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/ProjectDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/EducationLevelDAO copy.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/LanguageDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/CityDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Technology.php</loc>
@@ -48,7 +68,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Education.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Uuid.php</loc>
@@ -219,6 +239,26 @@
 		<loc>https://www.book.audricrosier.be/Model/dao/AdminDAO.php</loc>
 		<priority>0.57</priority>
 		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/CountryDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/Education.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/EducationLevelDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/PointOfInterestDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public</loc>
