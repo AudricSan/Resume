@@ -2,7 +2,7 @@
 
 namespace MyBook;
 
-class Technology
+class Technologies
 {
 
     private int $_id;

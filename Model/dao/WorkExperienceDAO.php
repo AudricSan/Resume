@@ -1,9 +1,9 @@
 <?php
 
-use MyBook\Country;
+use MyBook\WorkExperience;
 use MyBook\Env;
 
-class CountryDAO extends Env
+class WorkExperienceDAO extends Env
 {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
@@ -23,7 +23,7 @@ class CountryDAO extends Env
         $this->host = parent::env('DB_HOST', 'localhost');
         $this->dbname = parent::env('DB_NAME');
         //
-        $this->table = "country"; // The table to attack
+        $this->table = "WorkExperience"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -35,9 +35,12 @@ class CountryDAO extends Env
             return false;
         }
 
-        return new Country(
+        return new WorkExperience(
             $data['id'],
-            $data['name']
+            $data['name'],
+            $data['desc'],
+            $data['icon'],
+            $data['city']
         );
     }
 
@@ -48,12 +51,12 @@ class CountryDAO extends Env
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            // $WorkExperiences = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($WorkExperiences, $this->create_object($result));
             }
 
-            return $admins;
+            return $WorkExperiences;
         } catch (PDOException $e) {
             var_dump($e);
         }
@@ -62,7 +65,7 @@ class CountryDAO extends Env
     public function fetch($id)
     {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE WorkExperience_ID = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

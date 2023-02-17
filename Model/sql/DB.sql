@@ -138,19 +138,19 @@ CREATE TABLE `WorkExperience` (
 );
 
 -- ---
--- Table 'Technology'
+-- Table 'Technologies'
 -- 
 -- ---
 
-DROP TABLE IF EXISTS `Technology`;
+DROP TABLE IF EXISTS `Technologies`;
 		
-CREATE TABLE `Technology` (
-  `Technology_ID` tinyint NOT NULL AUTO_INCREMENT,
-  `Technology_Name` varchar(255) NOT NULL,
-  `Technology_Description` varchar(255) NOT NULL,
-  `Technology_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
-  `Technology_Level` tinyint NOT NULL,
-  PRIMARY KEY (`Technology_ID`)
+CREATE TABLE `Technologies` (
+  `technologies_ID` tinyint NOT NULL AUTO_INCREMENT,
+  `technologies_Name` varchar(255) NOT NULL,
+  `technologies_Description` varchar(255) NOT NULL,
+  `technologies_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
+  `technologies_Level` tinyint NOT NULL,
+  PRIMARY KEY (`technologies_ID`)
 );
 
 -- ---
@@ -184,16 +184,16 @@ CREATE TABLE `PointOfInterest` (
 );
 
 -- ---
--- Table 'Level'
+-- Table 'TechnologyLevel'
 -- 
 -- ---
 
-DROP TABLE IF EXISTS `Level`;
+DROP TABLE IF EXISTS `TechnologyLevel`;
 		
-CREATE TABLE `Level` (
-  `Level_Id` tinyint NOT NULL AUTO_INCREMENT,
+CREATE TABLE `TechnologyLevel` (
+  `TechnologyLevel_Id` tinyint NOT NULL AUTO_INCREMENT,
   `Level_Name` varchar(30) NOT NULL,
-  PRIMARY KEY (`Level_Id`)
+  PRIMARY KEY (`TechnologyLevel_Id`)
 );
 
 -- ---
@@ -206,7 +206,7 @@ ALTER TABLE `School` ADD FOREIGN KEY (School_City) REFERENCES `Cities` (`Cities_
 ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Country` (`Country_ID`);
 ALTER TABLE `Language` ADD FOREIGN KEY (Language_LanguageLevel) REFERENCES `LanguageLevel` (`LanguageLevel_ID`);
 ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `Cities` (`Cities_id`);
-ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (`Level_Id`);
+ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `TechnologyLevel` (`TechnologyLevel_Id`);
 
 -- ---
 -- Table Properties
@@ -221,10 +221,10 @@ ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (
 -- ALTER TABLE `Country` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Admin` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `WorkExperience` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `Technology` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `Technologies` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Project` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `PointOfInterest` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `Level` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `TechnologyLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ---
 -- Test Data
@@ -248,11 +248,11 @@ ALTER TABLE `Technology` ADD FOREIGN KEY (Technology_Level) REFERENCES `Level` (
 -- ('','','','');
 -- INSERT INTO `WorkExperience` (`WorkExperience_ID`,`WorkExperience_Name`,`WorkExperience_Description`,`WorkExperience_Icon`,`WorkExperience_City`,`WorkExperience_Start`,`WorkExperience_End`) VALUES
 -- ('','','','','','','');
--- INSERT INTO `Technology` (`Technology_ID`,`Technology_Name`,`Technology_Description`,`Technology_Icon`,`Technology_Level`) VALUES
+-- INSERT INTO `Technologies` (`technologies_ID`,`technologies_Name`,`technologies_Description`,`technologies_Icon`,`technologies_Level`) VALUES
 -- ('','','','','');
 -- INSERT INTO `Project` (`Project_ID`,`Project_Name`,`Project_Link`,`Project_Description`,`Project_Icon`) VALUES
 -- ('','','','','');
 -- INSERT INTO `PointOfInterest` (`PointOfInterest_ID`,`PointOfInterest_Name`,`PointOfInterest_Icon`) VALUES
 -- ('','','');
--- INSERT INTO `Level` (`Level_Id`,`Level_Name`) VALUES
+-- INSERT INTO `TechnologyLevel` (`TechnologyLevel_Id`,`Level_Name`) VALUES
 -- ('','');

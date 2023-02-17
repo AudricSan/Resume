@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=MorgDzh_some-random-id -->
+<!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=default -->
 <sql>
     <datatypes db="mysql">
         <group label="Integer" color="rgb(238,238,170)">
@@ -79,26 +79,23 @@
         </group>
     </datatypes>
     <table x="750" y="50" name="Education">
-        <row name="Education_ID" autoincrement="1">
+        <row name="Education_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="Education_Name" autoincrement="0">
+        <row name="Education_Name" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="Education_Start" autoincrement="0">
+        <row name="Education_Start" null="0" autoincrement="0">
             <datatype>datetime</datatype>
-             <default></default>
         </row>
-        <row name="Education_End" autoincrement="0">
+        <row name="Education_End" null="0" autoincrement="0">
             <datatype>datetime</datatype>
-             <default></default>
         </row>
-        <row name="Education_School" autoincrement="0">
+        <row name="Education_School" null="0" autoincrement="0">
             <datatype>tinyint</datatype>
             <relation table="School" row="School_ID" />
         </row>
-        <row name="Education_Level" autoincrement="0">
+        <row name="Education_Level" null="0" autoincrement="0">
             <datatype>tinyint</datatype>
             <relation table="EducationLevel" row="EducationLevel_Id" />
         </row>
@@ -107,55 +104,48 @@
         </key>
     </table>
     <table x="530" y="50" name="School">
-        <row name="School_ID" autoincrement="1">
+        <row name="School_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="School_Name" autoincrement="0">
+        <row name="School_Name" null="0" autoincrement="0">
             <datatype>char(255)</datatype>
-             <default></default>
         </row>
-        <row name="School_City" autoincrement="0">
+        <row name="School_City" null="0" autoincrement="0">
             <datatype>tinyint</datatype>
-             <default></default>
-            <relation table="City" row="City_ID" />
+            <relation table="Cities" row="Cities_id" />
         </row>
         <key type="PRIMARY" name="">
             <part>School_ID</part>
         </key>
     </table>
-    <table x="340" y="50" name="City">
-        <row name="City_ID" autoincrement="1">
+    <table x="340" y="50" name="Cities">
+        <row name="Cities_id" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="City_Name" autoincrement="0">
-            <datatype>varchar(190)</datatype>
-             <default></default>
+        <row name="Cities_name" null="1" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>NULL</default>
         </row>
-        <row name="City_Zip" autoincrement="0">
-            <datatype>int(18)</datatype>
-             <default></default>
-        </row>
-        <row name="City_Country" autoincrement="0">
-            <datatype>tinyint</datatype>
+        <row name="Cities_Country" null="1" autoincrement="0">
+            <datatype>varchar(5)</datatype>
+            <default>NULL</default>
             <relation table="Country" row="Country_ID" />
         </row>
         <key type="PRIMARY" name="">
-            <part>City_ID</part>
+            <part>Cities_id</part>
         </key>
     </table>
     <table x="50" y="280" name="Language">
-        <row name="Language_ID" autoincrement="1">
+        <row name="Language_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="Language_Name" autoincrement="0">
+        <row name="Language_Name" null="0" autoincrement="0">
             <datatype>varchar(30)</datatype>
-             <default></default>
         </row>
-        <row name="Language_Tag" autoincrement="0">
+        <row name="Language_Tag" null="0" autoincrement="0">
             <datatype>varchar(10)</datatype>
-             <default></default>
         </row>
-        <row name="Language_LanguageLevel" autoincrement="0">
+        <row name="Language_LanguageLevel" null="0" autoincrement="0">
             <datatype>tinyint</datatype>
             <relation table="LanguageLevel" row="LanguageLevel_ID" />
         </row>
@@ -164,126 +154,120 @@
         </key>
     </table>
     <table x="970" y="50" name="EducationLevel">
-        <row name="EducationLevel_Id" autoincrement="1">
+        <row name="EducationLevel_Id" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="EducationLevel_Name" autoincrement="0">
+        <row name="EducationLevel_Name" null="0" autoincrement="0">
             <datatype>varchar(60)</datatype>
-             <default></default>
         </row>
         <key type="PRIMARY" name="">
             <part>EducationLevel_Id</part>
         </key>
     </table>
     <table x="310" y="280" name="LanguageLevel">
-        <row name="LanguageLevel_ID" autoincrement="1">
+        <row name="LanguageLevel_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="LanguageLevel_Name" autoincrement="0">
+        <row name="LanguageLevel_Name" null="0" autoincrement="0">
             <datatype>varchar(20)</datatype>
-             <default></default>
         </row>
         <key type="PRIMARY" name="">
             <part>LanguageLevel_ID</part>
         </key>
     </table>
     <table x="530" y="170" name="Country">
-        <row name="Country_ID" autoincrement="1">
-            <datatype>tinyint</datatype>
+        <row name="Country_ID" null="0" autoincrement="1">
+            <datatype>varchar(64)</datatype>
         </row>
-        <row name="Country_Name" autoincrement="0">
-            <datatype>varchar(90)</datatype>
-             <default></default>
+        <row name="Country_Name" null="1" autoincrement="0">
+            <datatype>varchar(60)</datatype>
+            <default>NULL</default>
         </row>
         <key type="PRIMARY" name="">
             <part>Country_ID</part>
         </key>
     </table>
     <table x="790" y="280" name="Admin">
-        <row name="Admin_ID" autoincrement="1">
+        <row name="Admin_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="Admin_Name" autoincrement="0">
+        <row name="Admin_Name" null="0" autoincrement="0">
             <datatype>varchar(60)</datatype>
-             <default></default>
         </row>
-        <row name="Admin_Email" autoincrement="0">
+        <row name="Admin_Email" null="0" autoincrement="0">
             <datatype>varchar(254)</datatype>
-             <default></default>
         </row>
-        <row name="Admin_Password" autoincrement="0">
+        <row name="Admin_Password" null="0" autoincrement="0">
             <datatype>varchar(80)</datatype>
-             <default></default>
         </row>
         <key type="PRIMARY" name="">
             <part>Admin_ID</part>
         </key>
     </table>
     <table x="50" y="50" name="WorkExperience">
-        <row name="WorkExperience_ID" autoincrement="1">
+        <row name="WorkExperience_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="WorkExperience_Name" autoincrement="0">
+        <row name="WorkExperience_Name" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="WorkExperience_Description" autoincrement="0">
+        <row name="WorkExperience_Description" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="WorkExperience_Icon" autoincrement="0">
+        <row name="WorkExperience_Icon" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
             <default>'/public/image/icon/000.png'</default>
         </row>
-        <row name="WorkExperience_City" autoincrement="0">
+        <row name="WorkExperience_City" null="0" autoincrement="0">
             <datatype>tinyint</datatype>
-            <relation table="City" row="City_ID" />
+            <relation table="Cities" row="Cities_id" />
+        </row>
+        <row name="WorkExperience_Start" null="0" autoincrement="0">
+            <datatype>datetime</datatype>
+        </row>
+        <row name="WorkExperience_End" null="0" autoincrement="0">
+            <datatype>datetime</datatype>
         </row>
         <key type="PRIMARY" name="">
             <part>WorkExperience_ID</part>
         </key>
     </table>
-    <table x="50" y="440" name="Technology">
-        <row name="Technology_ID" autoincrement="1">
+    <table x="50" y="440" name="Technologies">
+        <row name="technologies_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="Technology_Name" autoincrement="0">
+        <row name="technologies_Name" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="Technology_Description" autoincrement="0">
+        <row name="technologies_Description" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="Technology_Icon" autoincrement="0">
+        <row name="technologies_Icon" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
             <default>'/public/image/icon/000.png'</default>
         </row>
-        <row name="Technology_Level" autoincrement="0">
+        <row name="technologies_Level" null="0" autoincrement="0">
             <datatype>tinyint</datatype>
-            <relation table="Level" row="Level_Id" />
+            <relation table="TechnologyLevel" row="TechnologyLevel_Id" />
         </row>
         <key type="PRIMARY" name="">
-            <part>Technology_ID</part>
+            <part>technologies_ID</part>
         </key>
     </table>
     <table x="550" y="280" name="Project">
-        <row name="Project_ID" autoincrement="1">
+        <row name="Project_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="Project_Name" autoincrement="0">
+        <row name="Project_Name" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="Project_Link" autoincrement="0">
+        <row name="Project_Link" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="Project_Description" autoincrement="0">
+        <row name="Project_Description" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
-             <default></default>
         </row>
-        <row name="Project_Icon" autoincrement="0">
+        <row name="Project_Icon" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
             <default>'/public/image/icon/000.png'</default>
         </row>
@@ -292,14 +276,13 @@
         </key>
     </table>
     <table x="550" y="450" name="PointOfInterest">
-        <row name="PointOfInterest_ID" autoincrement="1">
+        <row name="PointOfInterest_ID" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="PointOfInterest_Name" autoincrement="0">
+        <row name="PointOfInterest_Name" null="0" autoincrement="0">
             <datatype>varchar(60)</datatype>
-             <default></default>
         </row>
-        <row name="PointOfInterest_Icon" autoincrement="0">
+        <row name="PointOfInterest_Icon" null="0" autoincrement="0">
             <datatype>varchar(255)</datatype>
             <default>'/public/image/icon/000.png'</default>
         </row>
@@ -307,16 +290,15 @@
             <part>PointOfInterest_ID</part>
         </key>
     </table>
-    <table x="310" y="440" name="Level">
-        <row name="Level_Id" autoincrement="1">
+    <table x="310" y="440" name="TechnologyLevel">
+        <row name="TechnologyLevel_Id" null="0" autoincrement="1">
             <datatype>tinyint</datatype>
         </row>
-        <row name="Level_Name" autoincrement="0">
+        <row name="Level_Name" null="0" autoincrement="0">
             <datatype>varchar(30)</datatype>
-             <default></default>
         </row>
         <key type="PRIMARY" name="">
-            <part>Level_Id</part>
+            <part>TechnologyLevel_Id</part>
         </key>
     </table>
 </sql>

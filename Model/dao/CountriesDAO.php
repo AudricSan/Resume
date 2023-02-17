@@ -1,9 +1,9 @@
 <?php
 
-use MyBook\LanguageLevel;
+use MyBook\Country;
 use MyBook\Env;
 
-class LanguageLevelDAO extends Env
+class CountriesDAO extends Env
 {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
@@ -35,7 +35,7 @@ class LanguageLevelDAO extends Env
             return false;
         }
 
-        return new LanguageLevel(
+        return new Country(
             $data['id'],
             $data['name']
         );

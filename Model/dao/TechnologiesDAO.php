@@ -1,9 +1,9 @@
 <?php
 
-use MyBook\City;
+use MyBook\Technologies;
 use MyBook\Env;
 
-class CityDAO extends Env
+class TechnologiesDAO extends Env
 {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
@@ -23,7 +23,7 @@ class CityDAO extends Env
         $this->host = parent::env('DB_HOST', 'localhost');
         $this->dbname = parent::env('DB_NAME');
         //
-        $this->table = "cities"; // The table to attack
+        $this->table = "technologies"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -35,11 +35,12 @@ class CityDAO extends Env
             return false;
         }
 
-        return new City(
+        return new Technologies(
             $data['id'],
             $data['name'],
-            $data['zip'],
-            $data['country']
+            $data['desc'],
+            $data['icon'],
+            $data['level']
         );
     }
 
