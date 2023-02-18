@@ -36,11 +36,30 @@ class AdminDAO extends Env
         }
 
         return new Admin(
-            $data['id'],
-            $data['name'],
-            $data['mail'],
-            $data['password']
+            $data['Admin_ID'],
+            $data['Admin_Name'],
+            $data['Admin_Email'],
+            $data['Admin_Password']
         );
+    }
+
+    public function validate($id, $uuid)
+    {
+        if (!$id) {
+            return false;
+        }
+
+        $toValidate = $this->fetch($id);
+        if (!$toValidate) {
+            return false;
+        }
+
+        $userUUID = parent::v5($toValidate->_name);
+        if ($uuid !== $userUUID) {
+            return false;
+        }
+
+        return true;
     }
 
     public function fetchAll()
@@ -72,6 +91,52 @@ class AdminDAO extends Env
         } catch (PDOException $e) {
             var_dump($e);
         }
+    }
+
+    public function login($data)
+    {
+        $error = [];
+
+        if (!isset($data)) {
+            $error[] = "No Data Set";
+        }
+
+        if (empty($data['login']) || empty($data['pass'])) {
+            $error[] = "Not Login Or Passowrd Set";
+        }
+
+        if (isset($error) && !empty($error)) {
+            goto error;
+        }
+
+        $existAdmin = $this->fetchByMail($data['login']);
+        if (!$existAdmin) {
+            $error[] = "Not Exist";
+            goto error;
+        }
+
+        $pass = $data['pass'];
+        $dbpass = $existAdmin->_password;
+
+        if (!password_verify($pass, $dbpass)) {
+            $error[] = "Not Not Good Pass Or User Not Exist";
+            goto error;
+        }
+
+        $_SESSION['logged'] = $existAdmin->_id;
+        header('location: /admin');
+        return true;
+
+        error:
+        $_SESSION['error'] = $error;
+        header('location: /admin/login');
+    }
+    
+    public function disconnect()
+    {
+        unset($_SESSION['logged']);
+        unset($_SESSION['uuid']);
+        header('location: /');
     }
 
     public function delete($id){}

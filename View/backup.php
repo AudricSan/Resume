@@ -11,6 +11,7 @@
 	<section>
 		<h2> <i class="fa-solid fa-square-phone"></i> Contact information</h2>
 
+
 		<article class="grid _3">
 			<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com" target="_blank"> audricrosier@gmail.com</a></p>
 			<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132" target="_blank"> +32485836132</a></p>
@@ -54,6 +55,7 @@
 				<p>Junior Designer General re-design, adaptation of graphic charter.</p>
 			</div>
 		</article>
+
 	</section>
 
 	<section>

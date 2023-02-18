@@ -3,17 +3,32 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Public</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-18</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/settings</loc>
+		<priority>0.71</priority>
+		<lastmod>2023-02-18</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/backup.php</loc>
+		<priority>0.71</priority>
+		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject</loc>
 		<priority>0.71</priority>
 		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/settings/login.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/CountriesDAO.php</loc>
@@ -58,7 +73,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/AdminDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/WorkExperience.php</loc>
@@ -93,7 +108,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Env.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Route.php</loc>
@@ -223,7 +238,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Uuid.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Education.php</loc>

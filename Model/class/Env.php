@@ -2,7 +2,7 @@
 
 namespace MyBook;
 
-class Env
+class Env extends Uuid
 {
     private $env = [
         //APP

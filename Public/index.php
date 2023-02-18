@@ -6,11 +6,17 @@ use MyBook\Uuid;
 use Random\Randomizer;
 
 // Include class
-include '../model/class/Route.php';
-include '../model/class/env.php';
+include_once('../model/class/Route.php');
+include_once('../model/class/Uuid.php');
+include_once('../model/class/Env.php');
+
+// Admin Class & DAO
+include_once('../model/class/Admin.php');
+include_once('../model/dao/AdminDAO.php');
 
 // Define a global basepath
 define('BASEPATH', '/');
+session_start();
 
 // This function just renders a simple header
 function head()
@@ -30,7 +36,63 @@ Route::add('/', function () {
   foot();
 });
 
-// ERROR
+Route::add('/settings', function () {
+  head();
+  include_once('../View/Settings/index.php');
+  foot();
+});
+
+Route::add('/settings/login', function () {
+  head();
+  include_once('../View/Settings/login.php');
+  foot();
+});
+
+Route::add('/settings/log', function () {
+    $adminDAO = new AdminDAO;
+    $adminDAO->login($_POST);
+}, 'post');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ERROR ROUTE
 // 404 not found route
 Route::pathNotFound(function ($path) {
   head();
