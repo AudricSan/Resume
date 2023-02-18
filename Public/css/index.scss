@@ -1,8 +1,8 @@
 body {
     transition: all 500ms;
 
-    min-width: 500px;
-    max-width: 1000px;
+    min-width: 200px;
+    max-width: 800px;
     margin: auto;
     padding: 1em;
 
@@ -120,7 +120,6 @@ h6 {
     margin-bottom: 0.5em;
 }
 
-
 section {
     padding: 1em;
     border-bottom: 3px solid var(--back-grey);
@@ -178,7 +177,6 @@ article {
         }
     }
 }
-
 
 div {
     margin-bottom: 1.5em;
