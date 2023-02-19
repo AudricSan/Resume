@@ -13,3 +13,11 @@ if (!isset($_SESSION['logged'])) {
         die;
     }
 }
+
+?>
+
+<main class="admin">
+    <div>
+
+    </div>
+</main>

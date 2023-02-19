@@ -3,8 +3,7 @@
 use MyBook\Admin;
 use MyBook\Env;
 
-class AdminDAO extends Env
-{
+class AdminDAO extends Env {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
@@ -15,13 +14,12 @@ class AdminDAO extends Env
     private string $table;
     private object $connection;
 
-    public function __construct()
-    {
+    public function __construct() {
         // Change the values according to your hosting IN ENV FILES!.
         $this->username = parent::env('DB_USERNAME', 'root');
         $this->password = parent::env('DB_PASSWORD', '');
-        $this->host = parent::env('DB_HOST', 'localhost');
-        $this->dbname = parent::env('DB_NAME');
+        $this->host     = parent::env('DB_HOST', 'localhost');
+        $this->dbname   = parent::env('DB_NAME');
         //
         $this->table = "admin"; // The table to attack
 
@@ -29,8 +27,7 @@ class AdminDAO extends Env
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function create_object($data)
-    {
+    public function create_object($data) {
         if (!$data) {
             return false;
         }
@@ -43,8 +40,7 @@ class AdminDAO extends Env
         );
     }
 
-    public function validate($id, $uuid)
-    {
+    public function validate($id, $uuid) {
         if (!$id) {
             return false;
         }
@@ -62,8 +58,7 @@ class AdminDAO extends Env
         return true;
     }
 
-    public function fetchAll()
-    {
+    public function fetchAll() {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
             $statement->execute();
@@ -80,8 +75,7 @@ class AdminDAO extends Env
         }
     }
 
-    public function fetch($id)
-    {
+    public function fetch($id) {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
             $statement->execute([$id]);
@@ -93,55 +87,54 @@ class AdminDAO extends Env
         }
     }
 
-    public function login($data)
-    {
-        $error = [];
+    public function fetchByEmail($mail) {
+        try {
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_Email = ?");
+            $statement->execute([$mail]);
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
 
-        if (!isset($data)) {
-            $error[] = "No Data Set";
+            return $this->create_object($result);
+        } catch (PDOException $e) {
+            var_dump($e);
         }
-
-        if (empty($data['login']) || empty($data['pass'])) {
-            $error[] = "Not Login Or Passowrd Set";
-        }
-
-        if (isset($error) && !empty($error)) {
-            goto error;
-        }
-
-        $existAdmin = $this->fetchByMail($data['login']);
-        if (!$existAdmin) {
-            $error[] = "Not Exist";
-            goto error;
-        }
-
-        $pass = $data['pass'];
-        $dbpass = $existAdmin->_password;
-
-        if (!password_verify($pass, $dbpass)) {
-            $error[] = "Not Not Good Pass Or User Not Exist";
-            goto error;
-        }
-
-        $_SESSION['logged'] = $existAdmin->_id;
-        header('location: /admin');
-        return true;
-
-        error:
-        $_SESSION['error'] = $error;
-        header('location: /admin/login');
     }
-    
-    public function disconnect()
-    {
+
+    public function login($data) {
+        $error = [];
+        $pass  = parent::checkInput($data['pass']);
+        $login = parent::checkInput($data['login']);
+
+        if (empty($login) || empty($pass)) {
+            $error[] = "Veuillez remplir tous les champs.";
+        }
+
+        $adminDAO = new AdminDAO;
+        $admin    = $adminDAO->fetchByEmail($login);
+
+        if ($admin && password_verify($pass, $admin->__get("_password"))) {
+            $_SESSION["logged"] = $admin->__get("_id");
+            $_SESSION["uuid"]   = parent::v5($admin->__get("_name"));
+        } else {
+            $error[] = "Adresse e-mail ou mot de passe incorrect.";
+        }
+
+        header("Location: /settings");
+        die;
+    }
+
+
+    public function disconnect() {
         unset($_SESSION['logged']);
         unset($_SESSION['uuid']);
         header('location: /');
     }
 
-    public function delete($id){}
+    public function delete($id) {
+    }
 
-    public function store($data){}
+    public function store($data) {
+    }
 
-    public function update($id, $data){}
+    public function update($id, $data) {
+    }
 }
