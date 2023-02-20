@@ -3,7 +3,7 @@
 	</div>
 
 	<header>
-		<h1> 🌐 Resume - Web Master</h1>
+		<h1><i class="fa-solid fa-globe"></i> Resume - Web Master</h1>
 		<blockquote>I'm a <mark class="highlight purple"><strong>Web developers</strong></mark> and a <mark class="highlight blue"><strong>Graphic Designer</strong></mark> in <mark class="highlight orange"><em>Belgium</em></mark>
 			</br>with <mark class="highlight blue">5 years</mark> of experience in graphic design and <mark class="highlight purple">2 years</mark> in web development</blockquote>
 	</header>
@@ -173,7 +173,7 @@
 	</section>
 
 	<section>
-		<h2>💡Point of Interest</h2>
+		<h2><i class="fa-solid fa-lightbulb"></i> Point of Interest</h2>
 
 		<article class="grid _3">
 			<p><i class="fa-solid fa-pencil"></i> design</p>

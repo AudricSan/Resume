@@ -3,12 +3,12 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/View</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-18</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Public</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-18</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject</loc>
@@ -23,12 +23,17 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/View/settings</loc>
 		<priority>0.71</priority>
-		<lastmod>2023-02-19</lastmod>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/ContatInfoDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/CitiesDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Technologies.php</loc>
@@ -93,7 +98,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Admin.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/error/500.php</loc>
@@ -248,7 +253,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/WorkExperience.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/AdminDAO.php</loc>
@@ -258,7 +263,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/Education.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/EducationLevelDAO.php</loc>
@@ -288,17 +293,22 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/WorkExperienceDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/CountriesDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/settings/login.php</loc>
 		<priority>0.57</priority>
 		<lastmod>2023-02-18</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/ContactInfo.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public</loc>

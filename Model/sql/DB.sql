@@ -11,7 +11,7 @@
 -- ---
 
 DROP TABLE IF EXISTS `Education`;
-
+		
 CREATE TABLE `Education` (
   `Education_ID` int NOT NULL AUTO_INCREMENT,
   `Education_Name` varchar(255) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `Education` (
 -- ---
 
 DROP TABLE IF EXISTS `School`;
-
+		
 CREATE TABLE `School` (
   `School_ID` int NOT NULL AUTO_INCREMENT,
   `School_Name` char(255) NOT NULL,
@@ -42,10 +42,11 @@ CREATE TABLE `School` (
 -- ---
 
 DROP TABLE IF EXISTS `Cities`;
-
+		
 CREATE TABLE `Cities` (
   `Cities_id` int NOT NULL AUTO_INCREMENT,
   `Cities_name` varchar(255) NULL DEFAULT NULL,
+  `Cities_Region` varchar(255) NOT NULL,
   `Cities_Country` int NULL DEFAULT NULL,
   PRIMARY KEY (`Cities_id`)
 );
@@ -56,7 +57,7 @@ CREATE TABLE `Cities` (
 -- ---
 
 DROP TABLE IF EXISTS `Language`;
-
+		
 CREATE TABLE `Language` (
   `Language_ID` int NOT NULL AUTO_INCREMENT,
   `Language_Name` varchar(30) NOT NULL,
@@ -71,7 +72,7 @@ CREATE TABLE `Language` (
 -- ---
 
 DROP TABLE IF EXISTS `EducationLevel`;
-
+		
 CREATE TABLE `EducationLevel` (
   `EducationLevel_Id` int NOT NULL AUTO_INCREMENT,
   `EducationLevel_Name` varchar(60) NOT NULL,
@@ -84,7 +85,7 @@ CREATE TABLE `EducationLevel` (
 -- ---
 
 DROP TABLE IF EXISTS `LanguageLevel`;
-
+		
 CREATE TABLE `LanguageLevel` (
   `LanguageLevel_ID` int NOT NULL AUTO_INCREMENT,
   `LanguageLevel_Name` varchar(20) NOT NULL,
@@ -97,7 +98,7 @@ CREATE TABLE `LanguageLevel` (
 -- ---
 
 DROP TABLE IF EXISTS `Countries`;
-
+		
 CREATE TABLE `Countries` (
   `Countries_id` int NOT NULL AUTO_INCREMENT,
   `Countries_Name` varchar(100) NULL DEFAULT NULL,
@@ -117,7 +118,7 @@ KEY (`Countries_code`)
 -- ---
 
 DROP TABLE IF EXISTS `Admin`;
-
+		
 CREATE TABLE `Admin` (
   `Admin_ID` int NOT NULL AUTO_INCREMENT,
   `Admin_Name` varchar(60) NOT NULL,
@@ -132,7 +133,7 @@ CREATE TABLE `Admin` (
 -- ---
 
 DROP TABLE IF EXISTS `WorkExperience`;
-
+		
 CREATE TABLE `WorkExperience` (
   `WorkExperience_ID` int NOT NULL AUTO_INCREMENT,
   `WorkExperience_Name` varchar(255) NOT NULL,
@@ -150,7 +151,7 @@ CREATE TABLE `WorkExperience` (
 -- ---
 
 DROP TABLE IF EXISTS `Technologies`;
-
+		
 CREATE TABLE `Technologies` (
   `technologies_ID` int NOT NULL AUTO_INCREMENT,
   `technologies_Name` varchar(255) NOT NULL,
@@ -166,7 +167,7 @@ CREATE TABLE `Technologies` (
 -- ---
 
 DROP TABLE IF EXISTS `Project`;
-
+		
 CREATE TABLE `Project` (
   `Project_ID` int NOT NULL AUTO_INCREMENT,
   `Project_Name` varchar(255) NOT NULL,
@@ -182,7 +183,7 @@ CREATE TABLE `Project` (
 -- ---
 
 DROP TABLE IF EXISTS `PointOfInterest`;
-
+		
 CREATE TABLE `PointOfInterest` (
   `PointOfInterest_ID` int NOT NULL AUTO_INCREMENT,
   `PointOfInterest_Name` varchar(60) NOT NULL,
@@ -196,11 +197,53 @@ CREATE TABLE `PointOfInterest` (
 -- ---
 
 DROP TABLE IF EXISTS `TechnologyLevel`;
-
+		
 CREATE TABLE `TechnologyLevel` (
   `TechnologyLevel_Id` int NOT NULL AUTO_INCREMENT,
   `Level_Name` varchar(30) NOT NULL,
   PRIMARY KEY (`TechnologyLevel_Id`)
+);
+
+-- ---
+-- Table 'SelectedLanguage'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `SelectedLanguage`;
+		
+CREATE TABLE `SelectedLanguage` (
+  `SelectedLanguage_id` int NOT NULL AUTO_INCREMENT,
+  `SelectedLanguage_Language` int NOT NULL,
+  PRIMARY KEY (`SelectedLanguage_id`)
+);
+
+-- ---
+-- Table 'TechnologiesUse'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `TechnologiesUse`;
+		
+CREATE TABLE `TechnologiesUse` (
+  `TechnologiesUse_id` int NOT NULL AUTO_INCREMENT,
+  `TechnologiesUse_project` int NOT NULL,
+  `TechnologiesUse_techno` int NOT NULL,
+  PRIMARY KEY (`TechnologiesUse_id`)
+);
+
+-- ---
+-- Table 'ContactInfo'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `ContactInfo`;
+		
+CREATE TABLE `ContactInfo` (
+  `ContactInfo_id` int NOT NULL AUTO_INCREMENT,
+  `ContactInfo_name` varchar(50) NULL DEFAULT NULL,
+  `ContactInfo_icon` varchar(255) NULL DEFAULT NULL,
+  `ContactInfo_link` varchar(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`ContactInfo_id`)
 );
 
 -- ---
@@ -214,6 +257,9 @@ ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Countries` (`C
 ALTER TABLE `Language` ADD FOREIGN KEY (Language_LanguageLevel) REFERENCES `LanguageLevel` (`LanguageLevel_ID`);
 ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `TechnologyLevel` (`TechnologyLevel_Id`);
+ALTER TABLE `SelectedLanguage` ADD FOREIGN KEY (SelectedLanguage_Language) REFERENCES `Language` (`Language_ID`);
+ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_project) REFERENCES `Project` (`Project_ID`);
+ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_techno) REFERENCES `Technologies` (`technologies_ID`);
 
 -- ---
 -- Table Properties
@@ -232,6 +278,9 @@ ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `Tech
 -- ALTER TABLE `Project` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `PointOfInterest` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `TechnologyLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `SelectedLanguage` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `TechnologiesUse` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `ContactInfo` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ---
 -- Test Data
@@ -241,8 +290,8 @@ ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `Tech
 -- ('','','','','','');
 -- INSERT INTO `School` (`School_ID`,`School_Name`,`School_City`) VALUES
 -- ('','','');
--- INSERT INTO `Cities` (`Cities_id`,`Cities_name`,`Cities_Country`) VALUES
--- ('','','');
+-- INSERT INTO `Cities` (`Cities_id`,`Cities_name`,`Cities_Region`,`Cities_Country`) VALUES
+-- ('','','','');
 -- INSERT INTO `Language` (`Language_ID`,`Language_Name`,`Language_Tag`,`Language_LanguageLevel`) VALUES
 -- ('','','','');
 -- INSERT INTO `EducationLevel` (`EducationLevel_Id`,`EducationLevel_Name`) VALUES
@@ -263,3 +312,9 @@ ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `Tech
 -- ('','','');
 -- INSERT INTO `TechnologyLevel` (`TechnologyLevel_Id`,`Level_Name`) VALUES
 -- ('','');
+-- INSERT INTO `SelectedLanguage` (`SelectedLanguage_id`,`SelectedLanguage_Language`) VALUES
+-- ('','');
+-- INSERT INTO `TechnologiesUse` (`TechnologiesUse_id`,`TechnologiesUse_project`,`TechnologiesUse_techno`) VALUES
+-- ('','','');
+-- INSERT INTO `ContactInfo` (`ContactInfo_id`,`ContactInfo_name`,`ContactInfo_icon`,`ContactInfo_link`) VALUES
+-- ('','','','');

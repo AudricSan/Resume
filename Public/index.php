@@ -14,18 +14,23 @@ include_once('../model/class/Env.php');
 include_once('../model/class/Admin.php');
 include_once('../model/dao/AdminDAO.php');
 
+// Admin Class & DAO
+include_once('../model/class/ContactInfo.php');
+include_once('../model/dao/ContatInfoDAO.php');
+
+include_once('../model/class/WorkExperience.php');
+include_once('../model/dao/WorkExperienceDAO.php');
+
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();
 
 // This function just renders a simple header
-function head()
-{
+function head() {
   include_once('include/header.php');
 }
 
-function foot()
-{
+function foot() {
   include_once('include/footer.php');
 }
 
@@ -49,8 +54,8 @@ Route::add('/settings/login', function () {
 });
 
 Route::add('/settings/log', function () {
-    $adminDAO = new AdminDAO;
-    $adminDAO->login($_POST);
+  $adminDAO = new AdminDAO;
+  $adminDAO->login($_POST);
 }, 'post');
 
 

@@ -6,6 +6,8 @@ body {
     margin: auto;
     padding: 1em;
 
+    background-color: var(--back-main-white);
+
     &.light{
         animation: color-dark 2s reverse;
     }

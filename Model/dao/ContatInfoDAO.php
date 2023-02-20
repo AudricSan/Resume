@@ -1,9 +1,9 @@
 <?php
 
-use MyBook\City;
+use MyBook\ContactInfo;
 use MyBook\Env;
 
-class CitiesDAO extends Env {
+class ContatInfoDAO extends Env {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
@@ -21,7 +21,7 @@ class CitiesDAO extends Env {
         $this->host     = parent::env('DB_HOST', 'localhost');
         $this->dbname   = parent::env('DB_NAME');
         //
-        $this->table = "cities"; // The table to attack
+        $this->table = "contactinfo"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -32,13 +32,15 @@ class CitiesDAO extends Env {
             return false;
         }
 
-        return new City(
-            $data['id'],
-            $data['name'],
-            $data['zip'],
-            $data['country']
+        // var_dump($data);
+        return new ContactInfo(
+            $data['ContactInfo_id'],
+            $data['ContactInfo_name'],
+            $data['ContactInfo_icon'],
+            $data['ContactInfo_link']
         );
     }
+
 
     public function fetchAll() {
         try {
@@ -46,12 +48,12 @@ class CitiesDAO extends Env {
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }

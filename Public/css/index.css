@@ -4,6 +4,7 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 1em;
+  background-color: var(--back-main-white);
 }
 body.light {
   animation: color-dark 2s reverse;

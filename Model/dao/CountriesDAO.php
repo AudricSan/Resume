@@ -3,8 +3,7 @@
 use MyBook\Country;
 use MyBook\Env;
 
-class CountriesDAO extends Env
-{
+class CountriesDAO extends Env {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
@@ -15,13 +14,12 @@ class CountriesDAO extends Env
     private string $table;
     private object $connection;
 
-    public function __construct()
-    {
+    public function __construct() {
         // Change the values according to your hosting IN ENV FILES!.
         $this->username = parent::env('DB_USERNAME', 'root');
         $this->password = parent::env('DB_PASSWORD', '');
-        $this->host = parent::env('DB_HOST', 'localhost');
-        $this->dbname = parent::env('DB_NAME');
+        $this->host     = parent::env('DB_HOST', 'localhost');
+        $this->dbname   = parent::env('DB_NAME');
         //
         $this->table = "country"; // The table to attack
 
@@ -29,8 +27,7 @@ class CountriesDAO extends Env
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function create_object($data)
-    {
+    public function create_object($data) {
         if (!$data) {
             return false;
         }
@@ -41,8 +38,7 @@ class CountriesDAO extends Env
         );
     }
 
-    public function fetchAll()
-    {
+    public function fetchAll() {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
             $statement->execute();
@@ -59,8 +55,7 @@ class CountriesDAO extends Env
         }
     }
 
-    public function fetch($id)
-    {
+    public function fetch($id) {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
             $statement->execute([$id]);
@@ -72,9 +67,12 @@ class CountriesDAO extends Env
         }
     }
 
-    public function delete($id){}
+    public function delete($id) {
+    }
 
-    public function store($data){}
+    public function store($data) {
+    }
 
-    public function update($id, $data){}
+    public function update($id, $data) {
+    }
 }

@@ -45,6 +45,9 @@
 .dark div.callout {
   background-color: var(--color-grey);
 }
+.dark div.toggleDiv {
+  background-color: var(--back-main-black);
+}
 
 div.toggleDiv {
   position: fixed;
@@ -52,6 +55,9 @@ div.toggleDiv {
   bottom: 3em;
   display: flex;
   background-color: transparent;
+  padding: 0.5em;
+  border-radius: 50px;
+  background-color: var(--back-main-white);
 }
 div.toggleDiv .toggle {
   --size: 5em;

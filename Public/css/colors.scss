@@ -53,6 +53,10 @@
             background-color: var(--color-grey);
         }
     }
+
+    div.toggleDiv {
+        background-color: var(--back-main-black);
+    }
 }
 
 div.toggleDiv {
@@ -61,6 +65,10 @@ div.toggleDiv {
     bottom: 3em;
     display: flex;
     background-color: transparent;
+
+    padding: 0.5em;
+    border-radius: 50px;
+    background-color: var(--back-main-white);
 
 
     .toggle {
