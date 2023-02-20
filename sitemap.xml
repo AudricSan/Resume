@@ -38,7 +38,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Technologies.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 4.php</loc>
@@ -58,7 +58,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/ProjectDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/LanguageDAO.php</loc>
@@ -68,7 +68,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Project.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/TechnologyLevel.php</loc>
@@ -283,7 +283,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/TechnologiesDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/TechnologyLevelDAO.php</loc>

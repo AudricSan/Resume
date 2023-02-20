@@ -21,6 +21,12 @@ include_once('../model/dao/ContatInfoDAO.php');
 include_once('../model/class/WorkExperience.php');
 include_once('../model/dao/WorkExperienceDAO.php');
 
+include_once('../model/class/technologies.php');
+include_once('../model/dao/technologiesDAO.php');
+
+include_once('../model/class/project.php');
+include_once('../model/dao/projectDAO.php');
+
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();

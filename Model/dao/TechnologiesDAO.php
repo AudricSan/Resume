@@ -36,27 +36,27 @@ class TechnologiesDAO extends Env
         }
 
         return new Technologies(
-            $data['id'],
-            $data['name'],
-            $data['desc'],
-            $data['icon'],
-            $data['level']
+            $data['technologies_ID'],
+            $data['technologies_Name'],
+            $data['technologies_Description'],
+            $data['technologies_Icon'],
+            $data['Level_Name']
         );
     }
 
     public function fetchAll()
     {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologylevel on {$this->table}_level = technologylevel_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }

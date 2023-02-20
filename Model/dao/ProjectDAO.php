@@ -3,8 +3,7 @@
 use MyBook\Project;
 use MyBook\Env;
 
-class ProjectDAO extends Env
-{
+class ProjectDAO extends Env {
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
@@ -15,13 +14,12 @@ class ProjectDAO extends Env
     private string $table;
     private object $connection;
 
-    public function __construct()
-    {
+    public function __construct() {
         // Change the values according to your hosting IN ENV FILES!.
         $this->username = parent::env('DB_USERNAME', 'root');
         $this->password = parent::env('DB_PASSWORD', '');
-        $this->host = parent::env('DB_HOST', 'localhost');
-        $this->dbname = parent::env('DB_NAME');
+        $this->host     = parent::env('DB_HOST', 'localhost');
+        $this->dbname   = parent::env('DB_NAME');
         //
         $this->table = "project"; // The table to attack
 
@@ -29,41 +27,40 @@ class ProjectDAO extends Env
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function create_object($data)
-    {
+    public function create_object($data) {
         if (!$data) {
             return false;
         }
 
         return new Project(
-            $data['id'],
-            $data['name'],
-            $data['desc'],
-            $data['link'],
-            $data['icon']
+            $data['Project_ID'],
+            $data['Project_Name'],
+            $data['Project_Description'],
+            $data['Project_Link'],
+            $data['Project_Icon']
         );
     }
 
-    public function fetchAll()
-    {
+    public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologiesuse on {$this->table}_id = technologiesuse_project INNER JOIN technologies on technologiesuse_techno = technologies_id INNER JOIN technologylevel on technologies_level = technologylevel_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            var_dump($results);
+
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }
     }
 
-    public function fetch($id)
-    {
+    public function fetch($id) {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
             $statement->execute([$id]);
@@ -75,9 +72,12 @@ class ProjectDAO extends Env
         }
     }
 
-    public function delete($id){}
+    public function delete($id) {
+    }
 
-    public function store($data){}
+    public function store($data) {
+    }
 
-    public function update($id, $data){}
+    public function update($id, $data) {
+    }
 }

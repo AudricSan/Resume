@@ -9,7 +9,7 @@ class Technologies
     private string $_name;
     private string $_desc;
     private string $_icon;
-    private int $_level;
+    private string $_level;
 
     //Manufacturer
     public function __construct($id, $name, $desc, $icon, $level)

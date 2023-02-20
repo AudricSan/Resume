@@ -42,7 +42,17 @@ if (!isset($_SESSION['logged'])) {
     <section>
         <h2><i class="fa-solid fa-flask"></i> Skills</h2>
         <h3><i class="fa-solid fa-desktop"></i> Technology</h3>
+        <?php
+        $TechDAO = new TechnologiesDAO;
+        $technologies = $TechDAO->fetchAll();
+        var_dump($technologies);
+        ?>
         <h3><i class="fa-solid fa-satellite"></i> Projets</h3>
+        <?php
+        $PRDAO = new ProjectDAO;
+        $projects = $PRDAO->fetchAll();
+        var_dump($projects);
+        ?>
     </section>
 
     <section>
