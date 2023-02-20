@@ -78,7 +78,7 @@
                 note="GUID" />
         </group>
     </datatypes>
-    <table x="810" y="50" name="Education">
+    <table x="810" y="30" name="Education">
         <row name="Education_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -103,7 +103,7 @@
             <part>Education_ID</part>
         </key>
     </table>
-    <table x="530" y="50" name="School">
+    <table x="530" y="30" name="School">
         <row name="School_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -118,13 +118,16 @@
             <part>School_ID</part>
         </key>
     </table>
-    <table x="330" y="50" name="Cities">
+    <table x="330" y="30" name="Cities">
         <row name="Cities_id" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
         <row name="Cities_name" null="1" autoincrement="0">
             <datatype>varchar(255)</datatype>
             <default>NULL</default>
+        </row>
+        <row name="Cities_Region" null="0" autoincrement="0">
+            <datatype>varchar(255)</datatype>
         </row>
         <row name="Cities_Country" null="1" autoincrement="0">
             <datatype>int</datatype>
@@ -135,7 +138,7 @@
             <part>Cities_id</part>
         </key>
     </table>
-    <table x="50" y="430" name="Language">
+    <table x="280" y="420" name="Language">
         <row name="Language_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -153,7 +156,7 @@
             <part>Language_ID</part>
         </key>
     </table>
-    <table x="1040" y="50" name="EducationLevel">
+    <table x="1040" y="30" name="EducationLevel">
         <row name="EducationLevel_Id" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -164,7 +167,7 @@
             <part>EducationLevel_Id</part>
         </key>
     </table>
-    <table x="310" y="430" name="LanguageLevel">
+    <table x="540" y="420" name="LanguageLevel">
         <row name="LanguageLevel_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -175,7 +178,7 @@
             <part>LanguageLevel_ID</part>
         </key>
     </table>
-    <table x="530" y="170" name="Countries">
+    <table x="50" y="30" name="Countries">
         <row name="Countries_id" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -213,7 +216,7 @@
             <part>Countries_code</part>
         </key>
     </table>
-    <table x="50" y="260" name="Admin">
+    <table x="50" y="270" name="Admin">
         <row name="Admin_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -230,7 +233,7 @@
             <part>Admin_ID</part>
         </key>
     </table>
-    <table x="50" y="50" name="WorkExperience">
+    <table x="530" y="150" name="WorkExperience">
         <row name="WorkExperience_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -258,7 +261,7 @@
             <part>WorkExperience_ID</part>
         </key>
     </table>
-    <table x="50" y="590" name="Technologies">
+    <table x="490" y="570" name="Technologies">
         <row name="technologies_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -280,7 +283,7 @@
             <part>technologies_ID</part>
         </key>
     </table>
-    <table x="270" y="260" name="Project">
+    <table x="50" y="570" name="Project">
         <row name="Project_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -301,7 +304,7 @@
             <part>Project_ID</part>
         </key>
     </table>
-    <table x="550" y="600" name="PointOfInterest">
+    <table x="270" y="270" name="PointOfInterest">
         <row name="PointOfInterest_ID" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -316,7 +319,7 @@
             <part>PointOfInterest_ID</part>
         </key>
     </table>
-    <table x="310" y="590" name="TechnologyLevel">
+    <table x="750" y="570" name="TechnologyLevel">
         <row name="TechnologyLevel_Id" null="0" autoincrement="1">
             <datatype>int</datatype>
         </row>
@@ -325,6 +328,54 @@
         </row>
         <key type="PRIMARY" name="">
             <part>TechnologyLevel_Id</part>
+        </key>
+    </table>
+    <table x="50" y="420" name="SelectedLanguage">
+        <row name="SelectedLanguage_id" null="0" autoincrement="1">
+            <datatype>int</datatype>
+        </row>
+        <row name="SelectedLanguage_Language" null="0" autoincrement="0">
+            <datatype>int</datatype>
+            <relation table="Language" row="Language_ID" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>SelectedLanguage_id</part>
+        </key>
+    </table>
+    <table x="280" y="570" name="TechnologiesUse">
+        <row name="TechnologiesUse_id" null="0" autoincrement="1">
+            <datatype>int</datatype>
+        </row>
+        <row name="TechnologiesUse_project" null="0" autoincrement="0">
+            <datatype>int</datatype>
+            <relation table="Project" row="Project_ID" />
+        </row>
+        <row name="TechnologiesUse_techno" null="0" autoincrement="0">
+            <datatype>int</datatype>
+            <relation table="Technologies" row="technologies_ID" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>TechnologiesUse_id</part>
+        </key>
+    </table>
+    <table x="810" y="220" name="ContactInfo">
+        <row name="ContactInfo_id" null="0" autoincrement="1">
+            <datatype>int</datatype>
+        </row>
+        <row name="ContactInfo_name" null="1" autoincrement="0">
+            <datatype>varchar(50)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="ContactInfo_icon" null="1" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="ContactInfo_link" null="1" autoincrement="0">
+            <datatype>varchar(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>ContactInfo_id</part>
         </key>
     </table>
 </sql>
