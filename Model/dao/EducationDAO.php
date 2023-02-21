@@ -33,27 +33,29 @@ class EducationDAO extends Env {
         }
 
         return new Education(
-            $data['id'],
-            $data['name'],
-            $data['start'],
-            $data['end'],
-            $data['school'],
-            $data['level']
+            $data['Education_ID'],
+            $data['Education_Name'],
+            $data['Education_Start'],
+            $data['Education_End'],
+            $data['School_Name'],
+            $data['Cities_name'],
+            $data['Countries_Name'],
+            $data['EducationLevel_Name']
         );
     }
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN School on Education_school = School_id INNER JOIN educationlevel on Education_level = EducationLevel_Id INNER JOIN cities on School_city = cities_id INNER JOIN countries on cities_country = countries_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }

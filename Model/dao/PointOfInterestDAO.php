@@ -36,9 +36,9 @@ class PointOfInterestDAO extends Env
         }
 
         return new PointOfInterest(
-            $data['id'],
-            $data['name'],
-            $data['icon']
+            $data['PointOfInterest_ID'],
+            $data['PointOfInterest_Name'],
+            $data['PointOfInterest_Icon']
         );
     }
 
@@ -49,12 +49,12 @@ class PointOfInterestDAO extends Env
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }

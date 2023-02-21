@@ -59,21 +59,34 @@ if (!isset($_SESSION['logged'])) {
     <section>
         <h2><i class="fa-solid fa-comment-dots"></i> Languages</h2>
         <?php
-        $SEL       = new SelectedLanguageDAO();
-        $languages = $SEL->fetchAll();
+        $SELDAO    = new SelectedLanguageDAO();
+        $languages = $SELDAO->fetchAll();
         var_dump($languages);
         ?>
     </section>
 
     <section>
         <h2><i class="fa-solid fa-chalkboard-user"></i> Education</h2>
+        <?php
+        $EDDAO     = new EducationDAO();
+        $education = $EDDAO->fetchAll();
+        var_dump($education);
+        ?>
     </section>
 
     <section>
         <h2><i class="fa-solid fa-graduation-cap"></i> Licence</h2>
+        <?php
+        var_dump($education);
+        ?>
     </section>
 
     <section>
         <h2><i class="fa-solid fa-lightbulb"></i> Point of Interest</h2>
+        <?php
+        $POIDAO     = new PointOfInterestDAO();
+        $pointOfInterest = $POIDAO->fetchAll();
+        var_dump($pointOfInterest);
+        ?>
     </section>
 </main>

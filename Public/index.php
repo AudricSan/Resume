@@ -30,6 +30,12 @@ include_once('../model/dao/projectDAO.php');
 include_once('../model/class/SelectedLanguage.php');
 include_once('../model/dao/SelectedLanguageDAO.php');
 
+include_once('../model/class/Education.php');
+include_once('../model/dao/EducationDAO.php');
+
+include_once('../model/class/PointOfInterest.php');
+include_once('../model/dao/PointOfInterestDAO.php');
+
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();
