@@ -8,7 +8,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Public</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-20</lastmod>
+		<lastmod>2023-02-21</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject</loc>
@@ -23,7 +23,17 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/View/settings</loc>
 		<priority>0.71</priority>
-		<lastmod>2023-02-20</lastmod>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/SelectedLanguage.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/ProjectDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/ContatInfoDAO.php</loc>
@@ -56,19 +66,14 @@
 		<lastmod>2023-02-17</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/ProjectDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/LanguageDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
+		<lastmod>2023-02-21</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Project.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
+		<lastmod>2023-02-21</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/TechnologyLevel.php</loc>
@@ -309,6 +314,11 @@
 		<loc>https://www.book.audricrosier.be/Model/class/ContactInfo.php</loc>
 		<priority>0.57</priority>
 		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SelectedLanguageDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public</loc>

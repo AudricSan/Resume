@@ -2,6 +2,7 @@
 
 use MyBook\Project;
 use MyBook\Env;
+use MyBook\Technologies;
 
 class ProjectDAO extends Env {
     //DON'T TOUCH IT, LITTLE PRICK
@@ -32,13 +33,35 @@ class ProjectDAO extends Env {
             return false;
         }
 
-        return new Project(
-            $data['Project_ID'],
-            $data['Project_Name'],
-            $data['Project_Description'],
-            $data['Project_Link'],
-            $data['Project_Icon']
-        );
+        $projects = array();
+        foreach ($data as $result) {
+            $projectId = $result['Project_ID'];
+
+            if (!isset($projects[$projectId])) {
+                $project = new Project(
+                    $result['Project_ID'],
+                    $result['Project_Name'],
+                    $result['Project_Description'],
+                    $result['Project_Link'],
+                    $result['Project_Icon'],
+                    array()
+                );
+
+                $projects[$projectId] = $project;
+            }
+
+            $technology = new Technologies(
+                $result['technologies_ID'],
+                $result['technologies_Name'],
+                $result['technologies_Description'],
+                $result['technologies_Icon'],
+                $result['Level_Name']
+            );
+
+            $projects[$projectId]->addTechnology($technology);
+        }
+
+        return $projects;
     }
 
     public function fetchAll() {
@@ -47,13 +70,7 @@ class ProjectDAO extends Env {
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            var_dump($results);
-
-            $res = array();
-            foreach ($results as $result) {
-                array_push($res, $this->create_object($result));
-            }
-
+            $res = $this->create_object($results);
             return $res;
         } catch (PDOException $e) {
             var_dump($e);
@@ -62,11 +79,12 @@ class ProjectDAO extends Env {
 
     public function fetch($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologiesuse on {$this->table}_id = technologiesuse_project INNER JOIN technologies on technologiesuse_techno = technologies_id INNER JOIN technologylevel on technologies_level = technologylevel_id WHERE project_id = ?");
             $statement->execute([$id]);
-            $result = $statement->fetch(PDO::FETCH_ASSOC);
+            $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            return $this->create_object($result);
+            $res = $this->create_object($results);
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }

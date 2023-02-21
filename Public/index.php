@@ -27,6 +27,9 @@ include_once('../model/dao/technologiesDAO.php');
 include_once('../model/class/project.php');
 include_once('../model/dao/projectDAO.php');
 
+include_once('../model/class/SelectedLanguage.php');
+include_once('../model/dao/SelectedLanguageDAO.php');
+
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();

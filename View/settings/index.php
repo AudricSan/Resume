@@ -24,7 +24,7 @@ if (!isset($_SESSION['logged'])) {
     <section>
         <h2><i class="fa-solid fa-square-phone"></i> Contact information</h2>
         <?php
-        $CIDAO = new ContatInfoDAO;
+        $CIDAO        = new ContatInfoDAO;
         $contactInfos = $CIDAO->fetchAll();
         var_dump($contactInfos);
         ?>
@@ -33,7 +33,7 @@ if (!isset($_SESSION['logged'])) {
     <section>
         <h2><i class="fa-solid fa-person-digging"></i> Work experience</h2>
         <?php
-        $WEDAO = new WorkExperienceDAO;
+        $WEDAO          = new WorkExperienceDAO;
         $workExperiense = $WEDAO->fetchAll();
         var_dump($workExperiense);
         ?>
@@ -43,13 +43,14 @@ if (!isset($_SESSION['logged'])) {
         <h2><i class="fa-solid fa-flask"></i> Skills</h2>
         <h3><i class="fa-solid fa-desktop"></i> Technology</h3>
         <?php
-        $TechDAO = new TechnologiesDAO;
+        $TechDAO      = new TechnologiesDAO;
         $technologies = $TechDAO->fetchAll();
         var_dump($technologies);
         ?>
+
         <h3><i class="fa-solid fa-satellite"></i> Projets</h3>
         <?php
-        $PRDAO = new ProjectDAO;
+        $PRDAO    = new ProjectDAO;
         $projects = $PRDAO->fetchAll();
         var_dump($projects);
         ?>
@@ -57,6 +58,11 @@ if (!isset($_SESSION['logged'])) {
 
     <section>
         <h2><i class="fa-solid fa-comment-dots"></i> Languages</h2>
+        <?php
+        $SEL       = new SelectedLanguageDAO();
+        $languages = $SEL->fetchAll();
+        var_dump($languages);
+        ?>
     </section>
 
     <section>
