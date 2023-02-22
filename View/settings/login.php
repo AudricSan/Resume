@@ -1,29 +1,26 @@
-<main class="admin">
-    <div class='login'>
-
-        <?php
-        if (isset($_SESSION['error']) && !empty($_SESSION['error'])) {
-            echo "
+<main>
+    <?php
+    if (isset($_SESSION['error']) && !empty($_SESSION['error'])) {
+        echo "
                 <div class='error'>";
 
-            foreach ($_SESSION['error'] as $key => $value) {
-                echo "<p> Something Wrong : <span> $value </span></p>";
-                unset($_SESSION['error']);
-            }
-
-            echo "</div>";
+        foreach ($_SESSION['error'] as $key => $value) {
+            echo "<p> Something Wrong : <span> $value </span></p>";
+            unset($_SESSION['error']);
         }
-        ?>
 
-        <h2>Connection</h2>
-        <form method='POST' action='/settings/log'>
-            <label for='login'> Email:</label>
-            <input type='text' id='login' name='login'>
+        echo "</div>";
+    }
+    ?>
 
-            <label for='pass'> password:</label>
-            <input type='password' id='pass' name='pass'>
+    <h2>Connection</h2>
+    <form method='POST' action='/settings/log'>
+        <label for='login'> Email:</label>
+        <input type='text' id='login' name='login'>
 
-            <input type='submit' value='Submit'>
-        </form>
-    </div>
+        <label for='pass'> password:</label>
+        <input type='password' id='pass' name='pass'>
+
+        <input type='submit' value='Submit'>
+    </form>
 </main>

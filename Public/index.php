@@ -69,9 +69,17 @@ Route::add('/settings/login', function () {
 });
 
 Route::add('/settings/log', function () {
+  head();
   $adminDAO = new AdminDAO;
   $adminDAO->login($_POST);
+  foot();
 }, 'post');
+
+Route::add('/settings/form', function () {
+  head();
+  include_once('../View/Settings/forms.php');
+  foot();
+});
 
 
 

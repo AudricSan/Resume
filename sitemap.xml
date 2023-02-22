@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.book.audricrosier.be/Public</loc>
-		<priority>0.86</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
 		<loc>https://www.book.audricrosier.be/View</loc>
 		<priority>0.86</priority>
 		<lastmod>2023-02-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/View/settings</loc>
-		<priority>0.71</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/backup.php</loc>
-		<priority>0.71</priority>
-		<lastmod>2023-02-18</lastmod>
+		<loc>https://www.book.audricrosier.be/Public</loc>
+		<priority>0.86</priority>
+		<lastmod>2023-02-22</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/00-OldProject</loc>
@@ -26,287 +16,17 @@
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/SelectedLanguageDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/ContactInfo.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/settings/login.php</loc>
-		<priority>0.57</priority>
+		<loc>https://www.book.audricrosier.be/View/backup.php</loc>
+		<priority>0.71</priority>
 		<lastmod>2023-02-18</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/CountriesDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
+		<loc>https://www.book.audricrosier.be/View/settings</loc>
+		<priority>0.71</priority>
+		<lastmod>2023-02-22</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/WorkExperienceDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/TechnologyLevelDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/TechnologiesDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 3.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/PointOfInterestDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/EducationLevelDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/AdminDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/WorkExperience.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/School.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/PointOfInterest.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/LanguageLevel.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Language.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/City.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Env.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Route.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Public/include/footer.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Public/include/header.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Age Calculator</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Analog Clock</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Automatic Pop up</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Calculator</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Circular Progressbar</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Cookie Consent Banner</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-01-12</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Detect Capslock</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Flip A Coin</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Pokemon Card Generator</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Random Hex Color Code</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Random Number Generator</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Stopwatch</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Tic Tac Toe</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Toast UI Design</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Todo</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Vacabulary</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Weather</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-06</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/error/404.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/error/405.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/View/error/500.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Admin.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Uuid.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-18</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Education.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Country.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/EducationLevel.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/TechnologyLevel.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Project.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/LanguageDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-21</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 2.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 4.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-17</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Technologies.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/CitiesDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/ContatInfoDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-02-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/ProjectDAO.php</loc>
+		<loc>https://www.book.audricrosier.be/Model/dao/EducationDAO.php</loc>
 		<priority>0.57</priority>
 		<lastmod>2023-02-21</lastmod>
 	</url>
@@ -316,7 +36,287 @@
 		<lastmod>2023-02-21</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/EducationDAO.php</loc>
+		<loc>https://www.book.audricrosier.be/Model/dao/ProjectDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/ContatInfoDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/CitiesDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Technologies.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 4.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 2.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/LanguageDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Project.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/TechnologyLevel.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/EducationLevel.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Country.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Education.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Uuid.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-18</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Admin.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/error/500.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/error/405.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/error/404.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Weather</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Vacabulary</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Todo</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Toast UI Design</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Tic Tac Toe</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Stopwatch</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Random Number Generator</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Random Hex Color Code</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Pokemon Card Generator</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Flip A Coin</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Detect Capslock</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Cookie Consent Banner</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-01-12</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Circular Progressbar</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Calculator</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Automatic Pop up</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Analog Clock</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Age Calculator</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Public/include/header.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Public/include/footer.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Route.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Env.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/City.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Language.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/LanguageLevel.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/PointOfInterest.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/School.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/WorkExperience.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/AdminDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/EducationLevelDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/PointOfInterestDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-21</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SchoolDAO copy 3.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/TechnologiesDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/TechnologyLevelDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-17</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/WorkExperienceDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/CountriesDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/View/settings/login.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-22</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/ContactInfo.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/SelectedLanguageDAO.php</loc>
 		<priority>0.57</priority>
 		<lastmod>2023-02-21</lastmod>
 	</url>
@@ -331,12 +331,12 @@
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/include/footer.html</loc>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/include/header.php</loc>
 		<priority>0.14</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/include/header.php</loc>
+		<loc>https://www.book.audricrosier.be/View/00-OldProject/Gazoline/public/include/footer.html</loc>
 		<priority>0.14</priority>
 		<lastmod>2023-02-06</lastmod>
 	</url>
