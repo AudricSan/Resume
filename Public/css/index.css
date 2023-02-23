@@ -108,6 +108,11 @@ section {
 section:last-child {
   border: none;
 }
+section form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
 
 article.grid {
   display: grid;
@@ -154,7 +159,42 @@ div.callout {
   background-color: var(--back-grey);
   align-items: flex-start;
 }
+div.callout:has(form) {
+  display: block;
+  position: relative;
+  z-index: 9999;
+}
+div.callout:has(.hidden) {
+  display: none;
+}
 
 img.icon {
   width: 18px;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid;
+}
+button.add {
+  background-color: var(--back-blue);
+}
+button.add:hover {
+  background-color: var(--tran-blue);
+}
+button.edit {
+  background-color: var(--back-yellow);
+}
+button.edit:hover {
+  background-color: var(--tran-yellow);
+}
+button.remove {
+  background-color: var(--back-red);
+}
+button.remove:hover {
+  background-color: var(--tran-red);
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

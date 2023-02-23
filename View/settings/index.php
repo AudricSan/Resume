@@ -44,12 +44,32 @@ if (!isset($_SESSION['logged'])) {
                             <td> $contactInfo->_name </td>
                             <td> $contactInfo->_icon </td>
                             <td> $contactInfo->_link </td>
-                            <td> EDIT / DELETE </td>
+                            <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>
                         </tr>
                     </tbody>";
             }
             ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <label for='_link'>Link</label>
+                <input type='text' id='_link' name='_link'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 
     <section>
@@ -83,12 +103,43 @@ if (!isset($_SESSION['logged'])) {
                             <td> $workExperiense->_country </td>
                             <td> $workExperiense->_start </td>
                             <td> $workExperiense->_end </td>
-                            <td> EDIT / DELETE </td>
-                        </tr>
+                            <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>                        </tr>
                     </tbody>";
             }
             ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_description'>Description</label>
+                <input type='text' id='_description' name='_description'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <label for='_city'>City</label>
+                <input type='text' id='_city' name='_city'>
+
+                <label for='_country'>Country</label>
+                <input type='text' id='_country' name='_country'>
+
+                <label for='_start'>Start</label>
+                <input type='date' id='_start' name='_start'>
+
+                <label for='_end'>End</label>
+                <input type='date' id='_end' name='_end'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 
     <section>
@@ -117,11 +168,34 @@ if (!isset($_SESSION['logged'])) {
                             <td> $technology->_desc </td>
                             <td> $technology->_icon </td>
                             <td> $technology->_level </td>
-                            <td> EDIT / DELETE </td>
+                            <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>
                         </tr>
                     </tbody>";
             } ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_description'>Description</label>
+                <input type='text' id='_description' name='_description'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <label for='_level'>Level</label>
+                <input type='text' id='_level' name='_level'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
 
         <h3><i class="fa-solid fa-satellite"></i> Projets</h3>
         <?php
@@ -152,11 +226,34 @@ if (!isset($_SESSION['logged'])) {
                 foreach ($project->_techno as $key => $value) {
                     echo "<td> $value->_name </td>";
                 }
-                echo "<td> EDIT / DELETE </td>
+                echo "      <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>
                         </tr>
                     </tbody>";
             } ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_description'>Description</label>
+                <input type='text' id='_description' name='_description'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <label for='_link'>Link</label>
+                <input type='text' id='_link' name='_link'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 
     <section>
@@ -181,11 +278,28 @@ if (!isset($_SESSION['logged'])) {
                         <tr>
                             <td> $language->_language</td>
                             <td> $language->_level </td>
-                            <td> EDIT / DELETE </td>
+                            <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>
                         </tr>
                     </tbody>";
             } ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_language'>Language</label>
+                <input type='text' id='_language' name='_language'>
+
+                <label for='_level'>Level</label>
+                <input type='text' id='_level' name='_level'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 
     <section>
@@ -220,11 +334,43 @@ if (!isset($_SESSION['logged'])) {
                             <td> $education->_city </td>
                             <td> $education->_country </td>
                             <td> $education->_level </td>
-                            <td> EDIT / DELETE </td>
+                            <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>
                         </tr>
                     </tbody>";
             } ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_school'>School</label>
+                <input type='text' id='_school' name='_school'>
+
+                <label for='_start'>Start</label>
+                <input type='text' id='_start' name='_start'>
+
+                <label for='_end'>End</label>
+                <input type='text' id='_end' name='_end'>
+
+                <label for='_city'>City</label>
+                <input type='text' id='_city' name='_city'>
+
+                <label for='_country'>Country</label>
+                <input type='text' id='_country' name='_country'>
+
+                <label for='_level'>Level</label>
+                <input type='text' id='_level' name='_level'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 
     <section>
@@ -272,10 +418,27 @@ if (!isset($_SESSION['logged'])) {
                         <tr>
                             <td> $pointOfInterest->_name </td>
                             <td> $pointOfInterest->_icon </td>
-                            <td> EDIT / DELETE </td>
+                            <td>
+                             <button class='edit'> edit </button>
+                             <button class='remove'> remove </button>
+                            </td>
                         </tr>
                     </tbody>";
             } ?>
         </table>
+
+        <button class="add"> Add </button>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 </main>

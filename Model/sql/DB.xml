@@ -53,9 +53,9 @@
 
 
         <group label="Date &amp; Time" color="rgb(200,255,200)">
-            <type label="Datetime" length="0" sql="datetime" quote="" bytes="8"
+            <type label="date" length="0" sql="date" quote="" bytes="8"
                 note="Jan 1, 1753 to Dec 31, 9999" />
-            <type label="SmallDateTime" length="0" sql="smalldatetime" quote="" bytes="4"
+            <type label="date" length="0" sql="date" quote="" bytes="4"
                 note="Jan 1, 1900 to Dec 31, 2079" />
         </group>
 
@@ -86,10 +86,10 @@
             <datatype>varchar(255)</datatype>
         </row>
         <row name="Education_Start" null="0" autoincrement="0">
-            <datatype>datetime</datatype>
+            <datatype>date</datatype>
         </row>
         <row name="Education_End" null="0" autoincrement="0">
-            <datatype>datetime</datatype>
+            <datatype>date</datatype>
         </row>
         <row name="Education_School" null="0" autoincrement="0">
             <datatype>int</datatype>
@@ -252,10 +252,10 @@
             <relation table="Cities" row="Cities_id" />
         </row>
         <row name="WorkExperience_Start" null="0" autoincrement="0">
-            <datatype>datetime</datatype>
+            <datatype>date</datatype>
         </row>
         <row name="WorkExperience_End" null="0" autoincrement="0">
-            <datatype>datetime</datatype>
+            <datatype>date</datatype>
         </row>
         <key type="PRIMARY" name="">
             <part>WorkExperience_ID</part>

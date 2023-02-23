@@ -15,8 +15,8 @@ DROP TABLE IF EXISTS `Education`;
 CREATE TABLE `Education` (
   `Education_ID` int NOT NULL AUTO_INCREMENT,
   `Education_Name` varchar(255) NOT NULL,
-  `Education_Start` datetime NOT NULL,
-  `Education_End` datetime NOT NULL,
+  `Education_Start` date NOT NULL,
+  `Education_End` date NOT NULL,
   `Education_School` int NOT NULL,
   `Education_Level` int NOT NULL,
   PRIMARY KEY (`Education_ID`)
@@ -140,8 +140,8 @@ CREATE TABLE `WorkExperience` (
   `WorkExperience_Description` varchar(255) NOT NULL,
   `WorkExperience_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   `WorkExperience_City` int NOT NULL,
-  `WorkExperience_Start` datetime NOT NULL,
-  `WorkExperience_End` datetime NOT NULL,
+  `WorkExperience_Start` date NOT NULL,
+  `WorkExperience_End` date NOT NULL,
   PRIMARY KEY (`WorkExperience_ID`)
 );
 

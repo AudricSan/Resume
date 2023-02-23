@@ -8,7 +8,7 @@ body {
 
     background-color: var(--back-main-white);
 
-    &.light{
+    &.light {
         animation: color-dark 2s reverse;
     }
 }
@@ -132,6 +132,12 @@ section {
     &:last-child {
         border: none;
     }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
 }
 
 article {
@@ -146,11 +152,12 @@ article {
 
         &._3 {
             grid-template-columns: repeat(3, 1fr);
-            p:nth-child(3n+2){
+
+            p:nth-child(3n+2) {
                 text-align: center;
             }
 
-            p:nth-child(3n+3){
+            p:nth-child(3n+3) {
                 text-align: end;
             }
         }
@@ -189,6 +196,16 @@ div {
         padding: 1em;
         background-color: var(--back-grey);
         align-items: flex-start;
+
+        &:has(form) {
+            display: block;
+            position: relative;
+            z-index: 9999;
+        }
+
+        &:has(.hidden) {
+            display: none;
+        }
     }
 }
 
@@ -196,4 +213,37 @@ img {
     &.icon {
         width: 18px;
     }
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid;
+
+    &.add {
+        background-color: var(--back-blue);
+
+        &:hover {
+            background-color: var(--tran-blue);
+        }
+    }
+
+    &.edit {
+        background-color: var(--back-yellow);
+
+        &:hover {
+            background-color: var(--tran-yellow);
+        }
+    }
+
+    &.remove {
+        background-color: var(--back-red);
+
+        &:hover {
+            background-color: var(--tran-red);
+        }
+    }
+}
+
+.hidden {
+    display: none;
 }
