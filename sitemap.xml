@@ -8,7 +8,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/View</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-20</lastmod>
+		<lastmod>2023-02-25</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/View/settings</loc>
@@ -123,7 +123,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Public/include/footer.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-16</lastmod>
+		<lastmod>2023-02-25</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Public/include/header.php</loc>

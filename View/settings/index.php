@@ -25,7 +25,24 @@ if (!isset($_SESSION['logged'])) {
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-square-phone"></i> Contact information <button class="add"> Add </button> </h2>
+        <h2><i class="fa-solid fa-square-phone"></i> Contact information <button onclick="addfomrs(this)" class="add">
+                Add </button>
+        </h2>
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <label for='_link'>Link</label>
+                <input type='text' id='_link' name='_link'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
+
         <?php
         $CIDAO        = new ContatInfoDAO;
         $contactInfos = $CIDAO->fetchAll(); ?>
@@ -56,25 +73,39 @@ if (!isset($_SESSION['logged'])) {
                 ?>
             </tbody>
         </table>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-person-digging"></i> Work experience <button onclick="addfomrs(this)" class="add"> Add
+            </button> </h2>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 
+                <label for='_description'>Description</label>
+                <input type='text' id='_description' name='_description'>
+
                 <label for='_icon'>Icon</label>
                 <input type='text' id='_icon' name='_icon'>
 
-                <label for='_link'>Link</label>
-                <input type='text' id='_link' name='_link'>
+                <label for='_city'>City</label>
+                <input type='text' id='_city' name='_city'>
+
+                <label for='_country'>Country</label>
+                <input type='text' id='_country' name='_country'>
+
+                <label for='_start'>Start</label>
+                <input type='date' id='_start' name='_start'>
+
+                <label for='_end'>End</label>
+                <input type='date' id='_end' name='_end'>
 
                 <input type='submit' value='Submit'>
             </form>
         </div>
-    </section>
 
-    <section>
-        <h2><i class="fa-solid fa-person-digging"></i> Work experience <button class="add"> Add </button> </h2>
         <?php
         $WEDAO           = new WorkExperienceDAO;
         $workExperienses = $WEDAO->fetchAll(); ?>
@@ -113,6 +144,11 @@ if (!isset($_SESSION['logged'])) {
                 ?>
             </tbody>
         </table>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-desktop"></i> Technology <button onclick="addfomrs(this)" class="add"> Add </button>
+        </h2>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -125,26 +161,13 @@ if (!isset($_SESSION['logged'])) {
                 <label for='_icon'>Icon</label>
                 <input type='text' id='_icon' name='_icon'>
 
-                <label for='_city'>City</label>
-                <input type='text' id='_city' name='_city'>
-
-                <label for='_country'>Country</label>
-                <input type='text' id='_country' name='_country'>
-
-                <label for='_start'>Start</label>
-                <input type='date' id='_start' name='_start'>
-
-                <label for='_end'>End</label>
-                <input type='date' id='_end' name='_end'>
+                <label for='_level'>Level</label>
+                <input type='text' id='_level' name='_level'>
 
                 <input type='submit' value='Submit'>
             </form>
         </div>
-    </section>
 
-    <section>
-        <h2><i class="fa-solid fa-flask"></i> Skills</h2>
-        <h3><i class="fa-solid fa-desktop"></i> Technology <button class="add"> Add </button> </h3>
         <?php
         $TechDAO      = new TechnologiesDAO;
         $technologies = $TechDAO->fetchAll(); ?>
@@ -175,6 +198,12 @@ if (!isset($_SESSION['logged'])) {
                 } ?>
             </tbody>
         </table>
+    </section>
+
+    <section>
+
+        <h2><i class="fa-solid fa-satellite"></i> Projets <button onclick="addfomrs(this)" class="add"> Add </button>
+        </h2>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -187,14 +216,13 @@ if (!isset($_SESSION['logged'])) {
                 <label for='_icon'>Icon</label>
                 <input type='text' id='_icon' name='_icon'>
 
-                <label for='_level'>Level</label>
-                <input type='text' id='_level' name='_level'>
+                <label for='_link'>Link</label>
+                <input type='text' id='_link' name='_link'>
 
                 <input type='submit' value='Submit'>
             </form>
         </div>
 
-        <h3><i class="fa-solid fa-satellite"></i> Projets <button class="add"> Add </button> </h3>
         <?php
         $PRDAO    = new ProjectDAO;
         $projects = $PRDAO->fetchAll(); ?>
@@ -233,28 +261,24 @@ if (!isset($_SESSION['logged'])) {
                 } ?>
             </tbody>
         </table>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-comment-dots"></i> Languages <button onclick="addfomrs(this)" class="add"> Add
+            </button> </h2>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
-                <label for='_name'>Name</label>
-                <input type='text' id='_name' name='_name'>
+                <label for='_language'>Language</label>
+                <input type='text' id='_language' name='_language'>
 
-                <label for='_description'>Description</label>
-                <input type='text' id='_description' name='_description'>
-
-                <label for='_icon'>Icon</label>
-                <input type='text' id='_icon' name='_icon'>
-
-                <label for='_link'>Link</label>
-                <input type='text' id='_link' name='_link'>
+                <label for='_level'>Level</label>
+                <input type='text' id='_level' name='_level'>
 
                 <input type='submit' value='Submit'>
             </form>
         </div>
-    </section>
 
-    <section>
-        <h2><i class="fa-solid fa-comment-dots"></i> Languages <button class="add"> Add </button> </h2>
         <?php
         $SELDAO    = new SelectedLanguageDAO();
         $languages = $SELDAO->fetchAll(); ?>
@@ -282,11 +306,31 @@ if (!isset($_SESSION['logged'])) {
                 } ?>
             </tbody>
         </table>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-chalkboard-user"></i> Education <button onclick="addfomrs(this)" class="add"> Add
+            </button> </h2>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
-                <label for='_language'>Language</label>
-                <input type='text' id='_language' name='_language'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_school'>School</label>
+                <input type='text' id='_school' name='_school'>
+
+                <label for='_start'>Start</label>
+                <input type='text' id='_start' name='_start'>
+
+                <label for='_end'>End</label>
+                <input type='text' id='_end' name='_end'>
+
+                <label for='_city'>City</label>
+                <input type='text' id='_city' name='_city'>
+
+                <label for='_country'>Country</label>
+                <input type='text' id='_country' name='_country'>
 
                 <label for='_level'>Level</label>
                 <input type='text' id='_level' name='_level'>
@@ -294,10 +338,7 @@ if (!isset($_SESSION['logged'])) {
                 <input type='submit' value='Submit'>
             </form>
         </div>
-    </section>
 
-    <section>
-        <h2><i class="fa-solid fa-chalkboard-user"></i> Education <button class="add"> Add </button> </h2>
         <?php
         $EDDAO      = new EducationDAO();
         $educations = $EDDAO->fetchAll(); ?>
@@ -336,33 +377,6 @@ if (!isset($_SESSION['logged'])) {
                 } ?>
             </tbody>
         </table>
-
-        <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
-                <label for='_name'>Name</label>
-                <input type='text' id='_name' name='_name'>
-
-                <label for='_school'>School</label>
-                <input type='text' id='_school' name='_school'>
-
-                <label for='_start'>Start</label>
-                <input type='text' id='_start' name='_start'>
-
-                <label for='_end'>End</label>
-                <input type='text' id='_end' name='_end'>
-
-                <label for='_city'>City</label>
-                <input type='text' id='_city' name='_city'>
-
-                <label for='_country'>Country</label>
-                <input type='text' id='_country' name='_country'>
-
-                <label for='_level'>Level</label>
-                <input type='text' id='_level' name='_level'>
-
-                <input type='submit' value='Submit'>
-            </form>
-        </div>
     </section>
 
     <section>
@@ -388,7 +402,21 @@ if (!isset($_SESSION['logged'])) {
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-lightbulb"></i> Point of Interest <button class="add"> Add </button> </h2>
+        <h2><i class="fa-solid fa-lightbulb"></i> Point of Interest <button onclick="addfomrs(this)" class="add">
+                Add</button> </h2>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_name'>Name</label>
+                <input type='text' id='_name' name='_name'>
+
+                <label for='_icon'>Icon</label>
+                <input type='text' id='_icon' name='_icon'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
+
         <?php
         $POIDAO           = new PointOfInterestDAO();
         $pointOfInterests = $POIDAO->fetchAll(); ?>
@@ -416,17 +444,5 @@ if (!isset($_SESSION['logged'])) {
                 } ?>
             </tbody>
         </table>
-
-        <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
-                <label for='_name'>Name</label>
-                <input type='text' id='_name' name='_name'>
-
-                <label for='_icon'>Icon</label>
-                <input type='text' id='_icon' name='_icon'>
-
-                <input type='submit' value='Submit'>
-            </form>
-        </div>
     </section>
 </main>
