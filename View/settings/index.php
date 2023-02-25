@@ -13,6 +13,9 @@ if (!isset($_SESSION['logged'])) {
     }
 }
 ?>
+<div class="toggleDiv">
+    <input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
+</div>
 
 <main>
     <h1>Books settings</h1>
@@ -22,7 +25,7 @@ if (!isset($_SESSION['logged'])) {
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-square-phone"></i> Contact information</h2>
+        <h2><i class="fa-solid fa-square-phone"></i> Contact information <button class="add"> Add </button> </h2>
         <?php
         $CIDAO        = new ContatInfoDAO;
         $contactInfos = $CIDAO->fetchAll(); ?>
@@ -35,11 +38,11 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
+            <tbody>
 
-            <?php
-            foreach ($contactInfos as $contactInfo) {
-                echo "
-                    <tbody>
+                <?php
+                foreach ($contactInfos as $contactInfo) {
+                    echo "
                         <tr>
                             <td> $contactInfo->_name </td>
                             <td> $contactInfo->_icon </td>
@@ -48,13 +51,11 @@ if (!isset($_SESSION['logged'])) {
                              <button class='edit'> edit </button>
                              <button class='remove'> remove </button>
                             </td>
-                        </tr>
-                    </tbody>";
-            }
-            ?>
+                        </tr>";
+                }
+                ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -73,7 +74,7 @@ if (!isset($_SESSION['logged'])) {
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-person-digging"></i> Work experience</h2>
+        <h2><i class="fa-solid fa-person-digging"></i> Work experience <button class="add"> Add </button> </h2>
         <?php
         $WEDAO           = new WorkExperienceDAO;
         $workExperienses = $WEDAO->fetchAll(); ?>
@@ -90,29 +91,28 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
+            <tbody>
 
-            <?php
-            foreach ($workExperienses as $workExperiense) {
-                echo "
-                    <tbody>
-                        <tr>
-                            <td> $workExperiense->_name </td>
-                            <td> $workExperiense->_description </td>
-                            <td> $workExperiense->_icon </td>
-                            <td> $workExperiense->_city </td>
-                            <td> $workExperiense->_country </td>
-                            <td> $workExperiense->_start </td>
-                            <td> $workExperiense->_end </td>
-                            <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
-                            </td>                        </tr>
-                    </tbody>";
-            }
-            ?>
+                <?php
+                foreach ($workExperienses as $workExperiense) {
+                    echo "
+                    <tr>
+                        <td> $workExperiense->_name </td>
+                        <td> $workExperiense->_description </td>
+                        <td> $workExperiense->_icon </td>
+                        <td> $workExperiense->_city </td>
+                        <td> $workExperiense->_country </td>
+                        <td> $workExperiense->_start </td>
+                        <td> $workExperiense->_end </td>
+                        <td>
+                            <button class='edit'> edit </button>
+                            <button class='remove'> remove </button>
+                        </td>
+                    </tr>";
+                }
+                ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -144,7 +144,7 @@ if (!isset($_SESSION['logged'])) {
 
     <section>
         <h2><i class="fa-solid fa-flask"></i> Skills</h2>
-        <h3><i class="fa-solid fa-desktop"></i> Technology</h3>
+        <h3><i class="fa-solid fa-desktop"></i> Technology <button class="add"> Add </button> </h3>
         <?php
         $TechDAO      = new TechnologiesDAO;
         $technologies = $TechDAO->fetchAll(); ?>
@@ -158,11 +158,10 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
-
-            <?php
-            foreach ($technologies as $technology) {
-                echo "
-                    <tbody>
+            <tbody>
+                <?php
+                foreach ($technologies as $technology) {
+                    echo "
                         <tr>
                             <td> $technology->_name </td>
                             <td> $technology->_desc </td>
@@ -172,12 +171,10 @@ if (!isset($_SESSION['logged'])) {
                              <button class='edit'> edit </button>
                              <button class='remove'> remove </button>
                             </td>
-                        </tr>
-                    </tbody>";
-            } ?>
+                        </tr>";
+                } ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -197,7 +194,7 @@ if (!isset($_SESSION['logged'])) {
             </form>
         </div>
 
-        <h3><i class="fa-solid fa-satellite"></i> Projets</h3>
+        <h3><i class="fa-solid fa-satellite"></i> Projets <button class="add"> Add </button> </h3>
         <?php
         $PRDAO    = new ProjectDAO;
         $projects = $PRDAO->fetchAll(); ?>
@@ -212,30 +209,30 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
-
-            <?php
-            foreach ($projects as $project) {
-                echo "
-                    <tbody>
+            <tbody>
+                <?php
+                foreach ($projects as $project) {
+                    echo "
                         <tr>
                             <td> $project->_name </td>
                             <td> $project->_desc </td>
                             <td> $project->_icon </td>
-                            <td> $project->_link </td>";
+                            <td> $project->_link </td>
+                            <td>";
 
-                foreach ($project->_techno as $key => $value) {
-                    echo "<td> $value->_name </td>";
-                }
-                echo "      <td>
+                    foreach ($project->_techno as $key => $value) {
+                        echo $value->_name . ',';
+                    }
+                    echo " 
+                            </td>
+                            <td>
                              <button class='edit'> edit </button>
                              <button class='remove'> remove </button>
                             </td>
-                        </tr>
-                    </tbody>";
-            } ?>
+                        </tr>";
+                } ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -257,7 +254,7 @@ if (!isset($_SESSION['logged'])) {
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-comment-dots"></i> Languages</h2>
+        <h2><i class="fa-solid fa-comment-dots"></i> Languages <button class="add"> Add </button> </h2>
         <?php
         $SELDAO    = new SelectedLanguageDAO();
         $languages = $SELDAO->fetchAll(); ?>
@@ -270,11 +267,10 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
-
-            <?php
-            foreach ($languages as $language) {
-                echo "
-                    <tbody>
+            <tbody>
+                <?php
+                foreach ($languages as $language) {
+                    echo "
                         <tr>
                             <td> $language->_language</td>
                             <td> $language->_level </td>
@@ -282,12 +278,10 @@ if (!isset($_SESSION['logged'])) {
                              <button class='edit'> edit </button>
                              <button class='remove'> remove </button>
                             </td>
-                        </tr>
-                    </tbody>";
-            } ?>
+                        </tr>";
+                } ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -303,7 +297,7 @@ if (!isset($_SESSION['logged'])) {
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-chalkboard-user"></i> Education</h2>
+        <h2><i class="fa-solid fa-chalkboard-user"></i> Education <button class="add"> Add </button> </h2>
         <?php
         $EDDAO      = new EducationDAO();
         $educations = $EDDAO->fetchAll(); ?>
@@ -321,11 +315,11 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
+            <tbody>
 
-            <?php
-            foreach ($educations as $education) {
-                echo "
-                    <tbody>
+                <?php
+                foreach ($educations as $education) {
+                    echo "
                         <tr>
                             <td> $education->_name </td>
                             <td> $education->_school </td>
@@ -338,12 +332,10 @@ if (!isset($_SESSION['logged'])) {
                              <button class='edit'> edit </button>
                              <button class='remove'> remove </button>
                             </td>
-                        </tr>
-                    </tbody>";
-            } ?>
+                        </tr>";
+                } ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
@@ -382,22 +374,21 @@ if (!isset($_SESSION['logged'])) {
                     <th>Name</th>
                 </tr>
             </thead>
-
-            <?php
-            foreach ($educations as $education) {
-                echo "
-                    <tbody>
+            <tbody>
+                <?php
+                foreach ($educations as $education) {
+                    echo "
                         <tr>
                             <td> $education->_level </td>
                             <td> $education->_name </td>
-                        </tr>
-                    </tbody>";
-            } ?>
+                        </tr>";
+                } ?>
+            </tbody>
         </table>
     </section>
 
     <section>
-        <h2><i class="fa-solid fa-lightbulb"></i> Point of Interest</h2>
+        <h2><i class="fa-solid fa-lightbulb"></i> Point of Interest <button class="add"> Add </button> </h2>
         <?php
         $POIDAO           = new PointOfInterestDAO();
         $pointOfInterests = $POIDAO->fetchAll(); ?>
@@ -410,11 +401,10 @@ if (!isset($_SESSION['logged'])) {
                     <th>EDIT</th>
                 </tr>
             </thead>
-
-            <?php
-            foreach ($pointOfInterests as $pointOfInterest) {
-                echo "
-                    <tbody>
+            <tbody>
+                <?php
+                foreach ($pointOfInterests as $pointOfInterest) {
+                    echo "
                         <tr>
                             <td> $pointOfInterest->_name </td>
                             <td> $pointOfInterest->_icon </td>
@@ -422,12 +412,10 @@ if (!isset($_SESSION['logged'])) {
                              <button class='edit'> edit </button>
                              <button class='remove'> remove </button>
                             </td>
-                        </tr>
-                    </tbody>";
-            } ?>
+                        </tr>";
+                } ?>
+            </tbody>
         </table>
-
-        <button class="add"> Add </button>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
