@@ -48,36 +48,30 @@
 .dark div.toggleDiv {
   background-color: var(--back-main-black);
 }
-
-div.toggleDiv {
-  position: fixed;
-  left: 3em;
-  bottom: 3em;
-  display: flex;
-  background-color: transparent;
-  padding: 0.5em;
-  border-radius: 50px;
-  background-color: var(--back-main-white);
+.dark table th {
+  background-color: var(--color-grey);
 }
-div.toggleDiv .toggle {
-  --size: 5em;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
-  cursor: pointer;
-  width: var(--size);
-  height: var(--size);
-  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
-  border-radius: 999px;
-  color: hsl(240deg, 100%, 95%);
-  transition: all 500ms;
+.dark table tr {
+  background-color: var(--color-green);
 }
-div.toggleDiv .toggle:checked {
-  --ray-size: calc(var(--size) * -0.4);
-  --offset-orthogonal: calc(var(--size) * 0.65);
-  --offset-diagonal: calc(var(--size) * 0.45);
-  transform: scale(0.75);
-  color: hsl(40deg, 100%, 50%);
-  box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+.dark table tr:nth-child(n+2) {
+  background-color: var(--color-blue);
+}
+.dark button.add {
+  background-color: var(--color-blue);
+}
+.dark button.add:hover {
+  background-color: var(--tran-blue);
+}
+.dark button.edit {
+  background-color: var(--color-yellow);
+}
+.dark button.edit:hover {
+  background-color: var(--tran-yellow);
+}
+.dark button.remove {
+  background-color: var(--color-red);
+}
+.dark button.remove:hover {
+  background-color: var(--tran-red);
 }/*# sourceMappingURL=colors.css.map */
