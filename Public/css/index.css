@@ -162,7 +162,6 @@ div.callout {
 div.callout:has(form) {
   display: block;
   position: relative;
-  z-index: 9999;
 }
 div.callout:has(.hidden) {
   display: none;

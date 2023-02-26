@@ -5,16 +5,15 @@ use MyBook\Route;
 use MyBook\Uuid;
 use Random\Randomizer;
 
-// Include class
+// Include ENV class
 include_once('../model/class/Route.php');
 include_once('../model/class/Uuid.php');
 include_once('../model/class/Env.php');
 
-// Admin Class & DAO
+// Class & DAO
 include_once('../model/class/Admin.php');
 include_once('../model/dao/AdminDAO.php');
 
-// Admin Class & DAO
 include_once('../model/class/ContactInfo.php');
 include_once('../model/dao/ContatInfoDAO.php');
 
@@ -35,6 +34,12 @@ include_once('../model/dao/EducationDAO.php');
 
 include_once('../model/class/PointOfInterest.php');
 include_once('../model/dao/PointOfInterestDAO.php');
+
+include_once('../model/class/city.php');
+include_once('../model/dao/citiesDAO.php');
+
+include_once('../model/class/TechnologyLevel.php');
+include_once('../model/dao/TechnologyLevelDAO.php');
 
 // Define a global basepath
 define('BASEPATH', '/');
@@ -75,12 +80,63 @@ Route::add('/settings/log', function () {
   foot();
 }, 'post');
 
-Route::add('/settings/form', function () {
-  head();
-  include_once('../View/Settings/forms.php');
-  foot();
-});
+// SETTINGS ADD
+Route::add('/settings/addInfo', function () {
+  $CIDAO = new ContatInfoDAO;
+  $CIDAO->store($_POST);
+}, 'post');
 
+Route::add('/settings/addWork', function () {
+  $WEDAO = new WorkExperienceDAO;
+  $WEDAO->store($_POST);
+}, 'post');
+
+Route::add('/settings/addTech', function () {
+  $TechDAO = new TechnologiesDAO;
+  $TechDAO->store($_POST);
+}, 'post');
+
+// Settings Edit
+Route::add('/settings/editinfo', function () {
+  $CIDAO = new ContatInfoDAO;
+  $CIDAO->update(1, $_GET);
+}, 'get');
+
+// Setting Remove
+Route::add('/settings/removeinfo', function () {
+  $CIDAO = new ContatInfoDAO;
+  $CIDAO->delete($_GET);
+}, 'get');
+
+Route::add('/settings/removeWE', function () {
+  $WEDAO = new WorkExperienceDAO;
+  $WEDAO->delete($_GET);
+}, 'get');
+
+Route::add('/settings/removeTechno', function () {
+  $TechDAO = new TechnologiesDAO;
+  $TechDAO->delete($_GET);
+}, 'get');
+
+Route::add('/settings/removeProject', function () {
+  $PRDAO = new ProjectDAO;
+  $PRDAO->delete($_GET);
+}, 'get');
+
+Route::add('/settings/removelanguage', function () {
+  $SELDAO = new SelectedLanguageDAO;
+  $SELDAO->delete($_GET);
+}, 'get');
+
+Route::add('/settings/removeEducation', function () {
+  $EDDAO = new EducationDAO;
+  $EDDAO->delete($_GET);
+}, 'get');
+
+Route::add('/settings/removePOI', function () {
+  $POIDAO = new PointOfInterestDAO;
+  $POIDAO->delete($_GET);
+}, 'get');
 
 
 

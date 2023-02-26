@@ -1,8 +1,8 @@
 <?php
 
-$keywords = 'HTML, CSS, JavaScript, Resume, Audric, Rosier, Audric Rosier';
+$keywords    = 'HTML, CSS, JavaScript, Resume, Audric, Rosier, Audric Rosier';
 $description = 'Audric Rosier Resume Web Developeur';
-$autor = "Audric Rosier";
+$autor       = "Audric Rosier";
 
 ?>
 
@@ -43,6 +43,10 @@ $autor = "Audric Rosier";
 	<script src='https://kit.fontawesome.com/eb747bd21c.js' crossorigin='anonymous'></script>
 	<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
 	<link rel="stylesheet" href="myfont/style.css">
+
+	<!-- IMPORT JQUERY -->
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>

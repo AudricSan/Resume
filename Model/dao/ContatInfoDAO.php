@@ -32,7 +32,6 @@ class ContatInfoDAO extends Env {
             return false;
         }
 
-        // var_dump($data);
         return new ContactInfo(
             $data['ContactInfo_id'],
             $data['ContactInfo_name'],
@@ -61,7 +60,7 @@ class ContatInfoDAO extends Env {
 
     public function fetch($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE ContactInfo_id = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -71,12 +70,64 @@ class ContatInfoDAO extends Env {
         }
     }
 
-    public function delete($id) {
-    }
-
     public function store($data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $obj = $this->create_object([
+            'ContactInfo_id'   => 0,
+            'ContactInfo_name' => $data['_name'],
+            'ContactInfo_icon' => $data['_icon'],
+            'ContactInfo_link' => $data['_link']
+        ]);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("INSERT INTO {$this->table} (`ContactInfo_name`, `ContactInfo_icon`, `ContactInfo_link`) VALUES (?, ?, ?)");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_icon,
+                    $obj->_link
+                ]);
+
+                $obj->id = $this->connection->lastInsertId();
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
     }
 
     public function update($id, $data) {
+        var_dump($data);
+    }
+
+    public function delete($id) {
+        $adminDAO       = new AdminDAO;
+        $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
+
+        if (!$adminConnected) {
+            unset($_SESSION['logged']);
+            header('location: /');
+            die;
+        } else {
+            $id = intval($id['id']);
+
+            try {
+                $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE ContactInfo_id = ? ");
+                $statement->execute([$id]);
+            } catch (PDOException $e) {
+                var_dump($e->getMessage());
+            }
+
+            header('location: /settings');
+        }
     }
 }

@@ -200,7 +200,6 @@ div {
         &:has(form) {
             display: block;
             position: relative;
-            z-index: 9999;
         }
 
         &:has(.hidden) {

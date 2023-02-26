@@ -33,25 +33,25 @@ class CitiesDAO extends Env {
         }
 
         return new City(
-            $data['id'],
-            $data['name'],
-            $data['zip'],
-            $data['country']
+            $data['Cities_id'],
+            $data['Cities_name'],
+            $data['Cities_Region'],
+            $data['Countries_Name']
         );
     }
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN countries on cities_country = countries_id ORDER BY countries_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }
@@ -59,7 +59,7 @@ class CitiesDAO extends Env {
 
     public function fetch($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN countries on cities_country = countries_id WHERE cities_id = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

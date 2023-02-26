@@ -74,11 +74,71 @@ class WorkExperienceDAO extends Env {
     }
 
     public function delete($id) {
+        $adminDAO       = new AdminDAO;
+        $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
+
+        if (!$adminConnected) {
+            unset($_SESSION['logged']);
+            header('location: /');
+            die;
+        } else {
+            $id = intval($id['id']);
+
+            try {
+                $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE WorkExperience_ID = ? ");
+                $statement->execute([$id]);
+            } catch (PDOException $e) {
+                var_dump($e->getMessage());
+            }
+            header('location: /settings');
+        }
     }
 
     public function store($data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $citiesDAO = new CitiesDAO;
+        $city      = $citiesDAO->fetch($data['_city']);
+
+        $obj = $this->create_object([
+            'WorkExperience_ID'          => 0,
+            'WorkExperience_Name'        => $data['_name'],
+            'WorkExperience_Description' => $data['_description'],
+            'WorkExperience_Icon'        => $data['_icon'],
+            'Cities_name'                => $city->_name,
+            'Countries_Name'             => $city->_country,
+            'WorkExperience_Start'       => $data['_start'],
+            'WorkExperience_End'         => $data['_end']
+        ]);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("INSERT INTO {$this->table} (`WorkExperience_Name`, `WorkExperience_Description`, `WorkExperience_Icon`, `WorkExperience_City`, `WorkExperience_Start`, `WorkExperience_End`) VALUES (?, ?, ?, ?, ?, ?)");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_description,
+                    $obj->_icon,
+                    $city->_id,
+                    $obj->_start,
+                    $obj->_end
+                ]);
+
+                $obj->id = $this->connection->lastInsertId();
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
     }
 
-    public function update($id, $data) {
-    }
+    // public function update($id, $data) {
+    // }
 }

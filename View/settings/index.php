@@ -1,4 +1,6 @@
 <?php
+use MyBook\Country;
+
 if (!isset($_SESSION['logged'])) {
     header('location: /settings/login');
     die;
@@ -13,6 +15,7 @@ if (!isset($_SESSION['logged'])) {
     }
 }
 ?>
+
 <div class="toggleDiv">
     <input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
 </div>
@@ -21,13 +24,24 @@ if (!isset($_SESSION['logged'])) {
     <h1>Books settings</h1>
 
     <section>
-        <h2><i class="fa-solid fa-globe"></i> Resume - Title</h2>
+        <h2><i class="fa-solid fa-globe"></i> Resume - Title <button onclick="addfomrs(this)" class="add"> Add </button>
+        </h2>
+
+        <div class="callout">
+            <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label for='_title'>Title</label>
+                <input type='textarea' id='_title' name='_title'>
+
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
     </section>
 
     <section>
         <h2><i class="fa-solid fa-square-phone"></i> Contact information <button onclick="addfomrs(this)" class="add">
                 Add </button>
         </h2>
+
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
                 <label for='_name'>Name</label>
@@ -56,7 +70,6 @@ if (!isset($_SESSION['logged'])) {
                 </tr>
             </thead>
             <tbody>
-
                 <?php
                 foreach ($contactInfos as $contactInfo) {
                     echo "
@@ -65,8 +78,8 @@ if (!isset($_SESSION['logged'])) {
                             <td> $contactInfo->_icon </td>
                             <td> $contactInfo->_link </td>
                             <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removeinfo?id=$contactInfo->_id'  > <button class='remove' > remove </button></a>
                             </td>
                         </tr>";
                 }
@@ -79,8 +92,13 @@ if (!isset($_SESSION['logged'])) {
         <h2><i class="fa-solid fa-person-digging"></i> Work experience <button onclick="addfomrs(this)" class="add"> Add
             </button> </h2>
 
+        <?php
+        $citiesDAO = new CitiesDAO;
+        $cities    = $citiesDAO->fetchAll();
+        ?>
+
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
+            <form class='hidden' method='POST' action='/settings/addWork'>
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 
@@ -91,10 +109,11 @@ if (!isset($_SESSION['logged'])) {
                 <input type='text' id='_icon' name='_icon'>
 
                 <label for='_city'>City</label>
-                <input type='text' id='_city' name='_city'>
-
-                <label for='_country'>Country</label>
-                <input type='text' id='_country' name='_country'>
+                <select id="_city" name="_city">
+                    <?php foreach ($cities as $city) {
+                        echo "<option value='$city->_id'>$city->_name - $city->_country</option>";
+                    } ?>
+                </select>
 
                 <label for='_start'>Start</label>
                 <input type='date' id='_start' name='_start'>
@@ -124,8 +143,7 @@ if (!isset($_SESSION['logged'])) {
             </thead>
             <tbody>
 
-                <?php
-                foreach ($workExperienses as $workExperiense) {
+                <?php foreach ($workExperienses as $workExperiense) {
                     echo "
                     <tr>
                         <td> $workExperiense->_name </td>
@@ -136,8 +154,8 @@ if (!isset($_SESSION['logged'])) {
                         <td> $workExperiense->_start </td>
                         <td> $workExperiense->_end </td>
                         <td>
-                            <button class='edit'> edit </button>
-                            <button class='remove'> remove </button>
+                            <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                            <a href='/settings/removeWE?id=$workExperiense->_id'> <button class='remove'> remove </button></a>
                         </td>
                     </tr>";
                 }
@@ -150,8 +168,13 @@ if (!isset($_SESSION['logged'])) {
         <h2><i class="fa-solid fa-desktop"></i> Technology <button onclick="addfomrs(this)" class="add"> Add </button>
         </h2>
 
+        <?php
+        $TechLevelDAO = new TechnologyLevelDAO;
+        $TechLevels   = $TechLevelDAO->fetchAll();
+        ?>
+
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
+            <form class='hidden' method='POST' action='/settings/addTech'>
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 
@@ -162,7 +185,11 @@ if (!isset($_SESSION['logged'])) {
                 <input type='text' id='_icon' name='_icon'>
 
                 <label for='_level'>Level</label>
-                <input type='text' id='_level' name='_level'>
+                <select id="_level" name="_level">
+                    <?php foreach ($TechLevels as $TechLevel) {
+                        echo "<option value='$TechLevel->_id'>$TechLevel->_name</option>";
+                    } ?>
+                </select>
 
                 <input type='submit' value='Submit'>
             </form>
@@ -191,8 +218,8 @@ if (!isset($_SESSION['logged'])) {
                             <td> $technology->_icon </td>
                             <td> $technology->_level </td>
                             <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removeTechno?id=$technology->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
                 } ?>
@@ -254,8 +281,8 @@ if (!isset($_SESSION['logged'])) {
                     echo " 
                             </td>
                             <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removeProject?id=$project->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
                 } ?>
@@ -299,8 +326,8 @@ if (!isset($_SESSION['logged'])) {
                             <td> $language->_language</td>
                             <td> $language->_level </td>
                             <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removelanguage?id=$language->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
                 } ?>
@@ -370,8 +397,8 @@ if (!isset($_SESSION['logged'])) {
                             <td> $education->_country </td>
                             <td> $education->_level </td>
                             <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removeEducation?id=$education->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
                 } ?>
@@ -437,8 +464,8 @@ if (!isset($_SESSION['logged'])) {
                             <td> $pointOfInterest->_name </td>
                             <td> $pointOfInterest->_icon </td>
                             <td>
-                             <button class='edit'> edit </button>
-                             <button class='remove'> remove </button>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removePOI?id=$pointOfInterest->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
                 } ?>
