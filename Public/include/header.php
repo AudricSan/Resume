@@ -41,7 +41,9 @@ $autor       = "Audric Rosier";
 
 	<!-- IMPORT ICON -->
 	<script src='https://kit.fontawesome.com/eb747bd21c.js' crossorigin='anonymous'></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="myfont/style.css">
 
 	<!-- IMPORT JQUERY -->
