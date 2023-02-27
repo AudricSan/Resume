@@ -33,45 +33,45 @@ class ProjectDAO extends Env {
             return false;
         }
 
-        $projects = array();
-        foreach ($data as $result) {
-            $projectId = $result['Project_ID'];
+        $obj = new Project(
+            $data['Project_ID'],
+            $data['Project_Name'],
+            $data['Project_Description'],
+            $data['Project_Link'],
+            $data['Project_Icon'],
+            array()
+        );
 
-            if (!isset($projects[$projectId])) {
-                $project = new Project(
-                    $result['Project_ID'],
-                    $result['Project_Name'],
-                    $result['Project_Description'],
-                    $result['Project_Link'],
-                    $result['Project_Icon'],
-                    array()
-                );
-
-                $projects[$projectId] = $project;
-            }
-
-            $technology = new Technologies(
-                $result['technologies_ID'],
-                $result['technologies_Name'],
-                $result['technologies_Description'],
-                $result['technologies_Icon'],
-                $result['Level_Name']
-            );
-
-            $projects[$projectId]->addTechnology($technology);
-        }
-
-        return $projects;
+        // var_dump($obj);
+        return $obj;
     }
+
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologiesuse on {$this->table}_id = technologiesuse_project INNER JOIN technologies on technologiesuse_techno = technologies_id INNER JOIN technologylevel on technologies_level = technologylevel_id");
+            // $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologiesuse on {$this->table}_id = technologiesuse_project INNER JOIN technologies on technologiesuse_techno = technologies_id INNER JOIN technologylevel on technologies_level = technologylevel_id");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            $res = $this->create_object($results);
-            return $res;
+            foreach ($results as $result) {
+                $res[] = $this->create_object($result);
+            }
+
+            if (!empty($res)) {
+                foreach ($res as $value) {
+                    $TDAO    = new TechnologyUselDAO;
+                    $technos = $TDAO->fetchByProject($value->_id);
+
+                    foreach ($technos as $techno) {
+                        $TDAO = new TechnologiesDAO;
+                        $value->addTechnology($TDAO->fetch($techno->_techno));
+                    }
+                }
+
+                return $res;
+            }
+            return false;
         } catch (PDOException $e) {
             var_dump($e);
         }
@@ -81,21 +81,107 @@ class ProjectDAO extends Env {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologiesuse on {$this->table}_id = technologiesuse_project INNER JOIN technologies on technologiesuse_techno = technologies_id INNER JOIN technologylevel on technologies_level = technologylevel_id WHERE project_id = ?");
             $statement->execute([$id]);
-            $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            $res = $this->create_object($results);
+            $res = $this->create_object($result);
+
+            $TDAO    = new TechnologyUselDAO;
+            $technos = $TDAO->fetchByProject($res->_id);
+
+            foreach ($technos as $techno) {
+                $TDAO = new TechnologiesDAO;
+                $res->addTechnology($TDAO->fetch($techno->_techno));
+            }
+
             return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }
     }
 
-    public function delete($id) {
-    }
-
     public function store($data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+        var_dump($data);
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $regex = '/techID=[0-9]+/i';
+        $techs = [];
+        foreach ($data as $key => $value) {
+            if (preg_match($regex, $key)) {
+                $techs[] = $value;
+            }
+        }
+
+        foreach ($techs as $tech) {
+            $TDAO     = new TechnologiesDAO;
+            $techno[] = $TDAO->fetch($tech);
+        }
+
+        $obj = $this->create_object([
+            'Project_ID'          => 0,
+            'Project_Name'        => $data['_name'],
+            'Project_Description' => $data['_description'],
+            'Project_Link'        => $data['_link'],
+            'Project_Icon'        => $data['_icon'],
+        ]);
+
+        $obj->addTechnology($techno);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("INSERT INTO {$this->table} (`Project_Name`, `Project_Link`, `Project_Description`, `Project_Icon`) VALUES (?,?,?,?)");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_link,
+                    $obj->_desc,
+                    $obj->_icon,
+                ]);
+
+                $obj->_id = $this->connection->lastInsertId();
+
+                $TUDAO = new TechnologyUselDAO;
+                $TUDAO->store($obj, $techs);
+
+            } catch (PDOException $e) {
+                echo $e;
+                die;
+            }
+        }
+
+        header('location: /settings');
+        die;
     }
 
-    public function update($id, $data) {
+    public function delete($id) {
+        $adminDAO       = new AdminDAO;
+        $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
+
+        if (!$adminConnected) {
+            unset($_SESSION['logged']);
+            header('location: /');
+            die;
+        } else {
+            $id = intval($id['id']);
+
+            try {
+                $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE project_id = ? ");
+                $statement->execute([$id]);
+
+                $TUDAO = new TechnologyUselDAO;
+                $TUDAO->delete($id);
+
+            } catch (PDOException $e) {
+                var_dump($e->getMessage());
+            }
+            header('location: /settings');
+        }
     }
+
+// public function update($id, $data) {
+// }
 }

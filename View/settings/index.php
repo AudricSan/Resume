@@ -233,7 +233,7 @@ if (!isset($_SESSION['logged'])) {
         </h2>
 
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
+            <form class='hidden' method='POST' action='/settings/addProject'>
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 
@@ -246,13 +246,25 @@ if (!isset($_SESSION['logged'])) {
                 <label for='_link'>Link</label>
                 <input type='text' id='_link' name='_link'>
 
+                <?php
+                $TDAO         = new TechnologiesDAO;
+                $technologies = $TDAO->fetchAll();
+
+                foreach ($technologies as $technologie) {
+                    echo "
+                        <label for='$technologie->_id'>$technologie->_name</label>
+                        <input type='checkbox' id='$technologie->_id' name='techID=$technologie->_id' value='$technologie->_id'>";
+                }
+                ?>
+
                 <input type='submit' value='Submit'>
             </form>
         </div>
 
         <?php
         $PRDAO    = new ProjectDAO;
-        $projects = $PRDAO->fetchAll(); ?>
+        $projects = $PRDAO->fetchAll(); 
+        ?>
         <table>
             <thead>
                 <tr>
@@ -266,26 +278,30 @@ if (!isset($_SESSION['logged'])) {
             </thead>
             <tbody>
                 <?php
-                foreach ($projects as $project) {
-                    echo "
-                        <tr>
-                            <td> $project->_name </td>
-                            <td> $project->_desc </td>
-                            <td> $project->_icon </td>
-                            <td> $project->_link </td>
-                            <td>";
 
-                    foreach ($project->_techno as $key => $value) {
-                        echo $value->_name . ',';
+                if ($projects) {
+                    foreach ($projects as $project) {
+                        echo "
+                            <tr>
+                                <td> $project->_name </td>
+                                <td> $project->_desc </td>
+                                <td> $project->_icon </td>
+                                <td> $project->_link </td>
+                                <td>";
+
+                        foreach ($project->_techno as $key => $value) {
+                            echo $value->_name . ',';
+                        }
+                        echo " 
+                                </td>
+                                <td>
+                                    <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                    <a href='/settings/removeProject?id=$project->_id'> <button class='remove'> remove </button></a>
+                                </td>
+                            </tr>";
                     }
-                    echo " 
-                            </td>
-                            <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
-                                <a href='/settings/removeProject?id=$project->_id'> <button class='remove'> remove </button></a>
-                            </td>
-                        </tr>";
-                } ?>
+                }
+                ?>
             </tbody>
         </table>
     </section>

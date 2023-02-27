@@ -41,6 +41,9 @@ include_once('../model/dao/citiesDAO.php');
 include_once('../model/class/TechnologyLevel.php');
 include_once('../model/dao/TechnologyLevelDAO.php');
 
+include_once('../model/class/TechnologyUse.php');
+include_once('../model/dao/TechnologyUseDAO.php');
+
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();
@@ -95,6 +98,24 @@ Route::add('/settings/addTech', function () {
   $TechDAO = new TechnologiesDAO;
   $TechDAO->store($_POST);
 }, 'post');
+
+Route::add('/settings/addProject', function () {
+  $proDAO = new ProjectDAO;
+  $proDAO->store($_POST);
+}, 'post');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Settings Edit
 Route::add('/settings/editinfo', function () {

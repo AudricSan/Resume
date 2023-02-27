@@ -8,7 +8,7 @@ class Project {
     private string $_desc;
     private string $_link;
     private string $_icon;
-    private array $_techno;
+    private $_techno;
 
     //Manufacturer
     public function __construct($id, $name, $desc, $link, $icon, $techno) {
@@ -26,7 +26,6 @@ class Project {
             return $this->$prop = $value;
         }
     }
-
 
     //SUPER GETTER
     public function __get($prop) {
