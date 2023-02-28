@@ -41,7 +41,7 @@ class SelectedLanguageDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN Language on SelectedLanguage_Language = language_id INNER JOIN languagelevel on Language_LanguageLevel = LanguageLevel_ID");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN Language on SelectedLanguage_Language = language_id INNER JOIN languagelevel on SelectedLanguage_Level = LanguageLevel_ID");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -56,11 +56,13 @@ class SelectedLanguageDAO extends Env {
         }
     }
 
-    public function fetch($id) {
+    public function fetchByLanguage($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN Language on SelectedLanguage_Language = language_id INNER JOIN languagelevel on SelectedLanguage_Level = LanguageLevel_ID WHERE SelectedLanguage_Language = ? ");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+            var_dump($result);
 
             return $this->create_object($result);
         } catch (PDOException $e) {
@@ -68,12 +70,91 @@ class SelectedLanguageDAO extends Env {
         }
     }
 
-    // public function delete($id) {
-    // }
+    public function fetchByLevel($id) {
+        try {
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE SelectedLanguage_Level = ?");
+            $statement->execute([$id]);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-    // public function store($data) {
-    // }
+            return $this->create_object($result);
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+    }
 
-    // public function update($id, $data) {
-    // }
+    public function store($data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $levelDAO = new LanguageLevelDAO;
+        $level    = $levelDAO->fetch($data['_level']);
+
+        $language = new LanguageDAO;
+        $lang     = $language->fetch($data['_language']);
+
+        var_dump($data);
+        $obj = $this->create_object([
+            'SelectedLanguage_id' => 0,
+            'Language_Name'       => $lang->_name,
+            'LanguageLevel_Name'  => $level->_name,
+        ]);
+
+        $SLDAO = new SelectedLanguageDAO;
+        $sl = $SLDAO->fetchByLanguage($lang->_id);
+
+        if ($sl) {
+            $error = ['ALREADY EXIST'];
+            header('location: /settings');
+            die;
+        }
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("INSERT INTO {$this->table} (SelectedLanguage_Language, SelectedLanguage_Level) VALUES (?,?)");
+
+                $statement->execute([
+                    $lang->_id,
+                    $level->_id
+                ]);
+
+                $obj->id = $this->connection->lastInsertId();
+            } catch (PDOException $e) {
+                echo $e;
+                die;
+            }
+        }
+
+        header('location: /settings');
+        die;
+    }
+
+public function delete($id) {
+    $adminDAO       = new AdminDAO;
+    $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
+
+    if (!$adminConnected) {
+        unset($_SESSION['logged']);
+        header('location: /');
+        die;
+    } else {
+        $id = intval($id['id']);
+
+        try {
+            $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE SelectedLanguage_id = ? ");
+            $statement->execute([$id]);
+        } catch (PDOException $e) {
+            var_dump($e->getMessage());
+        }
+        header('location: /settings');
+        die;
+    }
+}
+
+// public function update($id, $data) {
+// }
 }

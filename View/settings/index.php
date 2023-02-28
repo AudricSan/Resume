@@ -1,5 +1,6 @@
 <?php
 use MyBook\Country;
+use MyBook\LanguageLevel;
 
 if (!isset($_SESSION['logged'])) {
     header('location: /settings/login');
@@ -263,7 +264,7 @@ if (!isset($_SESSION['logged'])) {
 
         <?php
         $PRDAO    = new ProjectDAO;
-        $projects = $PRDAO->fetchAll(); 
+        $projects = $PRDAO->fetchAll();
         ?>
         <table>
             <thead>
@@ -311,12 +312,28 @@ if (!isset($_SESSION['logged'])) {
             </button> </h2>
 
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
-                <label for='_language'>Language</label>
-                <input type='text' id='_language' name='_language'>
+            <form class='hidden' method='POST' action='/settings/addalanguage'>
+                <?php
+                $LLDAO          = new LanguageLevelDAO;
+                $languageLevels = $LLDAO->fetchAll();
+
+                $LDAO      = new LanguageDAO;
+                $languages = $LDAO->fetchAll();
+                ?>
+
+                <label for='_language'>Level</label>
+                <select id="_language" name="_language">
+                    <?php foreach ($languages as $language) {
+                        echo "<option value='$language->_id'>$language->_name</option>";
+                    } ?>
+                </select>
 
                 <label for='_level'>Level</label>
-                <input type='text' id='_level' name='_level'>
+                <select id="_level" name="_level">
+                    <?php foreach ($languageLevels as $languageLevel) {
+                        echo "<option value='$languageLevel->_id'>$languageLevel->_name</option>";
+                    } ?>
+                </select>
 
                 <input type='submit' value='Submit'>
             </form>
@@ -324,7 +341,8 @@ if (!isset($_SESSION['logged'])) {
 
         <?php
         $SELDAO    = new SelectedLanguageDAO();
-        $languages = $SELDAO->fetchAll(); ?>
+        $languages = $SELDAO->fetchAll();
+        // var_dump($languages);?>
 
         <table>
             <thead>

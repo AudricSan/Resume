@@ -91,6 +91,7 @@ class WorkExperienceDAO extends Env {
                 var_dump($e->getMessage());
             }
             header('location: /settings');
+            die;
         }
     }
 

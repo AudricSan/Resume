@@ -15,8 +15,8 @@ DROP TABLE IF EXISTS `Education`;
 CREATE TABLE `Education` (
   `Education_ID` int NOT NULL AUTO_INCREMENT,
   `Education_Name` varchar(255) NOT NULL,
-  `Education_Start` date NOT NULL,
-  `Education_End` date NOT NULL,
+  `Education_Start` datetime NOT NULL,
+  `Education_End` datetime NOT NULL,
   `Education_School` int NOT NULL,
   `Education_Level` int NOT NULL,
   PRIMARY KEY (`Education_ID`)
@@ -62,7 +62,6 @@ CREATE TABLE `Language` (
   `Language_ID` int NOT NULL AUTO_INCREMENT,
   `Language_Name` varchar(30) NOT NULL,
   `Language_Tag` varchar(10) NOT NULL,
-  `Language_LanguageLevel` int NOT NULL,
   PRIMARY KEY (`Language_ID`)
 );
 
@@ -140,8 +139,8 @@ CREATE TABLE `WorkExperience` (
   `WorkExperience_Description` varchar(255) NOT NULL,
   `WorkExperience_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   `WorkExperience_City` int NOT NULL,
-  `WorkExperience_Start` date NOT NULL,
-  `WorkExperience_End` date NOT NULL,
+  `WorkExperience_Start` datetime NOT NULL,
+  `WorkExperience_End` datetime NOT NULL,
   PRIMARY KEY (`WorkExperience_ID`)
 );
 
@@ -214,6 +213,7 @@ DROP TABLE IF EXISTS `SelectedLanguage`;
 CREATE TABLE `SelectedLanguage` (
   `SelectedLanguage_id` int NOT NULL AUTO_INCREMENT,
   `SelectedLanguage_Language` int NOT NULL,
+  `SelectedLanguage_Level` int NOT NULL,
   PRIMARY KEY (`SelectedLanguage_id`)
 );
 
@@ -254,10 +254,10 @@ ALTER TABLE `Education` ADD FOREIGN KEY (Education_School) REFERENCES `School` (
 ALTER TABLE `Education` ADD FOREIGN KEY (Education_Level) REFERENCES `EducationLevel` (`EducationLevel_Id`);
 ALTER TABLE `School` ADD FOREIGN KEY (School_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Countries` (`Countries_id`);
-ALTER TABLE `Language` ADD FOREIGN KEY (Language_LanguageLevel) REFERENCES `LanguageLevel` (`LanguageLevel_ID`);
 ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `TechnologyLevel` (`TechnologyLevel_Id`);
 ALTER TABLE `SelectedLanguage` ADD FOREIGN KEY (SelectedLanguage_Language) REFERENCES `Language` (`Language_ID`);
+ALTER TABLE `SelectedLanguage` ADD FOREIGN KEY (SelectedLanguage_Level) REFERENCES `LanguageLevel` (`LanguageLevel_ID`);
 ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_project) REFERENCES `Project` (`Project_ID`);
 ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_techno) REFERENCES `Technologies` (`technologies_ID`);
 
@@ -292,8 +292,8 @@ ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_techno) REFERENCE
 -- ('','','');
 -- INSERT INTO `Cities` (`Cities_id`,`Cities_name`,`Cities_Region`,`Cities_Country`) VALUES
 -- ('','','','');
--- INSERT INTO `Language` (`Language_ID`,`Language_Name`,`Language_Tag`,`Language_LanguageLevel`) VALUES
--- ('','','','');
+-- INSERT INTO `Language` (`Language_ID`,`Language_Name`,`Language_Tag`) VALUES
+-- ('','','');
 -- INSERT INTO `EducationLevel` (`EducationLevel_Id`,`EducationLevel_Name`) VALUES
 -- ('','');
 -- INSERT INTO `LanguageLevel` (`LanguageLevel_ID`,`LanguageLevel_Name`) VALUES
@@ -312,8 +312,8 @@ ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_techno) REFERENCE
 -- ('','','');
 -- INSERT INTO `TechnologyLevel` (`TechnologyLevel_Id`,`Level_Name`) VALUES
 -- ('','');
--- INSERT INTO `SelectedLanguage` (`SelectedLanguage_id`,`SelectedLanguage_Language`) VALUES
--- ('','');
+-- INSERT INTO `SelectedLanguage` (`SelectedLanguage_id`,`SelectedLanguage_Language`,`SelectedLanguage_Level`) VALUES
+-- ('','','');
 -- INSERT INTO `TechnologiesUse` (`TechnologiesUse_id`,`TechnologiesUse_project`,`TechnologiesUse_techno`) VALUES
 -- ('','','');
 -- INSERT INTO `ContactInfo` (`ContactInfo_id`,`ContactInfo_name`,`ContactInfo_icon`,`ContactInfo_link`) VALUES

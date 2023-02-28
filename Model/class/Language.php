@@ -2,33 +2,27 @@
 
 namespace MyBook;
 
-class Language
-{
+class Language {
     private int $_id;
     private string $_name;
     private string $_tag;
-    private string $_LanguageLevel;
 
     //Manufacturer
-    public function __construct($id, $name, $tag, $level)
-    {
-        $this->_id = intval($id);
+    public function __construct($id, $name, $tag) {
+        $this->_id   = intval($id);
         $this->_name = $name;
-        $this->_tag = $tag;
-        $this->_LanguageLevel = intval($level);
+        $this->_tag  = $tag;
     }
+
     //SUPER SETTER
-    public function __set($prop, $value)
-    {
+    public function __set($prop, $value) {
         if (property_exists($this, $prop)) {
             return $this->$prop = $value;
         }
     }
 
-
     //SUPER GETTER
-    public function __get($prop)
-    {
+    public function __get($prop) {
         if (property_exists($this, $prop)) {
             return $this->$prop;
         }
