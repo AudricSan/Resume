@@ -3,7 +3,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/View</loc>
 		<priority>0.86</priority>
-		<lastmod>2023-02-25</lastmod>
+		<lastmod>2023-03-01</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Public</loc>
@@ -26,13 +26,8 @@
 		<lastmod>2023-03-01</lastmod>
 	</url>
 	<url>
-		<loc>https://www.book.audricrosier.be/Model/dao/TitleDAO.php</loc>
-		<priority>0.57</priority>
-		<lastmod>2023-03-01</lastmod>
-	</url>
-	<url>
-		<loc>https://www.book.audricrosier.be/Model/class/Title.php</loc>
-		<priority>0.57</priority>
+		<loc>https://www.book.audricrosier.be/View/backup.html</loc>
+		<priority>0.71</priority>
 		<lastmod>2023-03-01</lastmod>
 	</url>
 	<url>
@@ -63,7 +58,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/CitiesDAO.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-28</lastmod>
+		<lastmod>2023-03-01</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Technologies.php</loc>
@@ -248,7 +243,7 @@
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/Env.php</loc>
 		<priority>0.57</priority>
-		<lastmod>2023-02-19</lastmod>
+		<lastmod>2023-03-01</lastmod>
 	</url>
 	<url>
 		<loc>https://www.book.audricrosier.be/Model/class/City.php</loc>

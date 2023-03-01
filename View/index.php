@@ -1,196 +1,218 @@
-<div class="toggleDiv">
-	<input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
+<div class='toggleDiv'>
+	<input id='toggle' class='toggle' type='checkbox' onclick=darkmode()>
 </div>
 
 <header>
-	<h1><i class="fa-solid fa-globe"></i> Resume - Web Master</h1>
-	<blockquote>I'm a <mark class="highlight purple"><strong>Web developers</strong></mark> and a <mark
-			class="highlight blue"><strong>Graphic Designer</strong></mark> in <mark
-			class="highlight orange"><em>Belgium</em></mark>
-		</br>with <mark class="highlight blue">5 years</mark> of experience in graphic design and <mark
-			class="highlight purple">2 years</mark> in web development</blockquote>
+	<h1><i class='fa-solid fa-globe'></i> Resume - Web Master</h1>
+	<blockquote>I'm a <mark class='highlight purple'><strong>Web developers</strong></mark> and a <mark
+			class='highlight blue'><strong>Graphic Designer</strong></mark> in <mark
+			class='highlight orange'><em>Belgium</em></mark>
+		</br>with <mark class='highlight blue'>5 years</mark> of experience in graphic design and <mark
+			class='highlight purple'>2 years</mark> in web development</blockquote>
 </header>
 
 <section>
-	<h2> <i class="fa-solid fa-square-phone"></i> Contact information</h2>
+	<h2> <i class='fa-solid fa-square-phone'></i> Contact information</h2>
 
-	<article class="grid _3">
-		<p> <i class="fa-regular fa-paper-plane"></i> <a href="mailto:audricrosier@gmail.com" target="_blank">
-				audricrosier@gmail.com</a></p>
-		<p> <i class="fa-solid fa-mobile"></i> <a href="tel:0032485836132" target="_blank"> +32485836132</a></p>
-		<p> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/audricrosier/" target="_blank">
-				Audric Rosier</a></p>
-		<p> <i class="fa-brands fa-github"></i> <a href="https://github.com/AudricSan" target="_blank"> AudricSan</a>
-		</p>
-		<p> <i class="fa-solid fa-camera-retro"></i> <a href="https://www.instagram.com/audric_san/" target="_blank">
-				@audric_san</a></p>
+	<?php
+
+	use MyBook\Env;
+
+	$CIDAO         = new ContatInfoDAO;
+	$Env           = new Env;
+	$contactsInfos = $CIDAO->fetchAll();
+	?>
+
+	<article class='grid _3'>
+		<?php
+		foreach ($contactsInfos as $contactInfo) {
+			$icon    = $Env->isicon($contactInfo->_icon);
+			$explode = explode(',', $contactInfo->_icon);
+			$fa      = $Env->checkInput($explode[1]);
+			$icon    = $Env->checkInput($explode[0]);
+
+			echo "<p>";
+			if ($icon) {
+				echo "<i class='fa-$fa $icon'></i>";
+			} else {
+				echo "<img class='icon' src='images/icon/$contactInfo->_icon.svg' title='icon for $contactInfo->_name' />";
+			}
+			echo "<a href='$contactInfo->_link' target='_blank'> $contactInfo->_name </a></p>";
+		}
+		?>
 	</article>
 </section>
 
 <section>
-	<h2> <i class="fa-solid fa-person-digging"></i> Work experience</h2>
+	<h2> <i class='fa-solid fa-person-digging'></i> Work experience</h2>
 
-	<article>
-		<h3>Carrefour Market / Intermarché - [Hamme-Mille]</h3>
-		<div class="callout">
-			<i class="fa-solid fa-shop"></i>
-			<p>departement manager</p>
-		</div>
-	</article>
+	<?php
+	$WEDAO           = new WorkExperienceDAO;
+	$workExperienses = $WEDAO->fetchAll();
 
-	<article>
-		<h3>Pizzeria Volare - [Tourinne La Grosse]</h3>
-		<div class="callout">
-			<i class="fa-solid fa-pizza-slice"></i>
-			<p>Barman, Server in an italian restaurant</p>
-		</div>
-	</article>
+	foreach ($workExperienses as $workExperiense) {
+		$icon    = $Env->isicon($workExperiense->_icon);
+		$explode = explode(',', $workExperiense->_icon);
+		$fa      = $Env->checkInput($explode[1]);
+		$icon    = $Env->checkInput($explode[0]);
 
-	<article>
-		<h3>CHU Saint-Pierre - [Bruxelles]</h3>
-		<div class="callout">
-			<i class="fa-solid fa-hospital"></i>
-			<p> Receptionist</p>
-		</div>
-	</article>
+		echo "<article><h3>$workExperiense->_description - $workExperiense->_city</h3><div class='callout'>";
+		if ($icon) {
+			echo "<i class='fa-$fa $icon'></i>";
+		} else {
+			echo "<img class='icon' src='images/icon/$workExperiense->_icon.svg' title='icon for $workExperiense->_name' />";
+		}
+		echo "<p> $workExperiense->_name</p></div></article>";
+	}
+	?>
+</section>
 
-	<article>
-		<h3>Epansion Partners - [Namur]</h3>
-		<div class="callout">
-			<i class="fa-solid fa-desktop"></i>
-			<p>Junior Designer General re-design, adaptation of graphic charter.</p>
-		</div>
+<section>
+	<h2><i class='fa-solid fa-desktop'></i> Technology</h2>
+	<?php
+	$TDAO         = new TechnologiesDAO;
+	$technologies = $TDAO->fetchAll();
+
+	foreach ($technologies as $technology) {
+		$icon = $Env->isicon($technology->_icon);
+		echo "<article>
+				<div class='callout'>";
+		if ($icon) {
+			$explode = explode(',', $technology->_icon);
+			$fa      = $Env->checkInput($explode[1]);
+			$icon    = $Env->checkInput($explode[0]);
+			echo "<i class='fa-$fa $icon'></i>";
+		} else {
+			echo "<img class='icon' src='images/icon/$technology->_icon.svg' title='icon for $technology->_name' />";
+		}
+		echo "
+					<p> $technology->_desc</p>
+					<!-- <p class='level'> $technology->_level</p> -->
+				</div>
+			</article>
+		";
+	}
+	?>
+</section>
+
+<section>
+	<h2><i class='fa-solid fa-satellite'></i> Projets</h2>
+
+	<?php
+	$PDAO     = new ProjectDAO;
+	$projects = $PDAO->fetchAll();
+
+	foreach ($projects as $project) {
+		$icon = $Env->isicon($project->_icon);
+		echo "<article>
+				<div class='callout'>";
+		if ($icon) {
+			$explode = explode(',', $project->_icon);
+			$fa      = $Env->checkInput($explode[1]);
+			$icon    = $Env->checkInput($explode[0]);
+			echo "<i class='fa-$fa $icon'></i>";
+		} else {
+			echo "<img class='icon' src='images/icon/$project->_icon.svg' title='icon for $project->_name' />";
+		}
+		echo "
+					<p> $project->_desc</p>
+					<!-- <p class='level'> $project->_level</p> -->
+				</div>
+			</article>
+		";
+	}
+	?>
+</section>
+
+<section>
+	<h2><i class='fa-solid fa-comment-dots'></i> Languages</h2>
+	<article class='flex row'>
+		<?php
+		$SLDAO             = new SelectedLanguageDAO;
+		$selectedLanguages = $SLDAO->fetchAll();
+
+		foreach ($selectedLanguages as $language) {
+			echo "
+				<div>
+					<h3>$language->_language</h3>
+					<p class='highlight yellow'>$language->_level</p>
+				</div>
+		";
+		}
+		?>
 	</article>
 </section>
 
 <section>
-	<h2><i class="fa-solid fa-desktop"></i> Technology</h2>
+	<h2><i class='fa-solid fa-chalkboard-user'></i> Education</h2>
 
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/003.svg" title="1" />
-			<p>The historical language of the layout of html pages. I use it to create my web design that I make
-				interactive afterwards in JS. </p>
-		</div>
-	</article>
+	<article class='flex row'>
+		<?php
+		$EDAO       = new EducationDAO;
+		$educations = $EDAO->fetchAll();
 
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/002.svg" title="1" />
-			<p>The historical language of the creation of web pages! I realize the skeleton of my web pages with it.</p>
-		</div>
-	</article>
+		foreach ($educations as $education) {
+			$time_input = strtotime($education->_start);
+			$time_input = strtotime($education->_end);
 
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/004" title="2" />
-			<p>The programming language that I use in front-end to make interactive the web pages that I realize in Html
-				and Css.</p>
-		</div>
-	</article>
+			$startDate = getDate($time_input);
+			$endDate   = getDate($time_input);
 
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/001.svg" title="3" />
-			<p>I work with it since 3 years. I use it exclusively in Back-end to realize all what I need to make a
-				dynamic website.</p>
-		</div>
-	</article>
+			$jsonStart = json_encode($startDate);
+			$jsonEnd   = json_encode($endDate);
 
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/005.svg" title="4" />
-			<p>I use it since 3 years in total symbiosis with PHP</p>
-		</div>
-	</article>
+			$startDate = json_decode($jsonStart);
+			$endDate   = json_decode($jsonEnd);
 
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/006.png" title="5" />
-			<p>I’m using the Laravel framework according to the project and the client's request</p>
-		</div>
-	</article>
-
-</section>
-
-<section>
-	<h2><i class="fa-solid fa-satellite"></i> Projets</h2>
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/kanatraing.png" title="6" />
-			<p>A site to study Japanese Kana and share your skills.</p>
-		</div>
-	</article>
-
-	<article>
-		<div class="callout">
-			<img class="icon" src="images/icon/photographics.png" title="7" />
-			<p>My final project, a website that any photographer can duplicate to use as a showcase site easily
-				configurable.</p>
-		</div>
-	</article>
-
-	<article>
-		<p class="icon 01"></p>
-</section>
-
-<section>
-	<h2><i class="fa-solid fa-comment-dots"></i> Languages</h2>
-
-	<article class="flex row">
-		<div>
-			<h3>Frensh [Francais]</h3>
-			<p class="highlight yellow">Native</p>
-		</div>
-
-		<div>
-			<h3>English</h3>
-			<p class="highlight yellow">Fluent</p>
-		</div>
-
-		<div>
-			<h3>Japanese [日本語]</h3>
-			<p class="highlight yellow">Beginner</p>
-		</div>
+			echo "
+			<div>
+				<h3>$education->_name</h3>
+				<time datetime='$education->_start'>$startDate->month - $startDate->year</time> - <time datetime='$education->_end'>$endDate->month - $endDate->year</time>
+				<p>$education->_school - $education->_city, $education->_country</p>
+			</div>
+		";
+		}
+		?>
 	</article>
 </section>
 
 <section>
-	<h2><i class="fa-solid fa-chalkboard-user"></i> Education</h2>
+	<h2><i class='fa-solid fa-graduation-cap'></i> Licence</h2>
+	<article class='flex row'>
 
-	<article class="flex row">
-		<div>
-			<h3>Web Developers</h3>
-			<time datetime="2020-09-01">Sept 2020</time> - <time datetime="2022-06-30"> June 2022</time>
-			<p><a href="https://ifosup.wavre.be/" target="_blank">IFOSUP - Wavre, Belgium </a></p>
-		</div>
-
-		<div>
-			<h3>Computer graphics courses (design creation)</h3>
-			<time datetime="2017-09-01">Sept 2017</time> - <time datetime="2019-06-30"> June 2019</time>
-			<p><a href="https://www.ifapme.be/centre-de-formations/perwez" target="_blank"> IFAPME - Perwer, Belgium
-				</a></p>
-		</div>
+		<?php
+		foreach ($educations as $education) {
+			echo "
+				<p>$education->_level : $education->_name</p>
+			";
+		}
+		?>
 	</article>
 </section>
 
 <section>
-	<h2><i class="fa-solid fa-graduation-cap"></i> Licence</h2>
+	<h2><i class='fa-solid fa-lightbulb'></i> Point of Interest</h2>
 
-	<article class="flex row">
-		<p>BAC + 2 : Web Developer</p>
-		<p>BES : Computer graphics designer</p>
-	</article>
-</section>
+	<article class='grid _3'>
+		<?php
+		$POIDAO = new PointOfInterestDAO;
+		$pois   = $POIDAO->fetchAll();
+		foreach ($pois as $poi) {
 
-<section>
-	<h2><i class="fa-solid fa-lightbulb"></i> Point of Interest</h2>
+			$icon = $Env->isicon($poi->_icon);
 
-	<article class="grid _3">
-		<p><i class="fa-solid fa-pencil"></i> design</p>
-		<p><i class="em em-jp"></i> Japanese</p>
-		<p><i class="fa-solid fa-camera"></i> Photographie</p>
-		<p><i class="fa-solid fa-child-reaching"></i> Scouting</p>
-		<p><i class="fa-solid fa-gamepad"></i> video Games</p>
+			if ($icon) {
+				$explode = explode(',', $poi->_icon);
+				$fa      = $Env->checkInput($explode[1]);
+				$icon    = $Env->checkInput($explode[0]);
+				echo "<p><i class='fa-$fa $icon'></i>";
+			} else {
+				echo "<p><img class='icon' src='images/icon/$poi->_icon.svg' title='icon for $poi->_name' />";
+			}
+			echo "
+				$poi->_name</p>
+			";
+		}
+		?>
 	</article>
 </section>

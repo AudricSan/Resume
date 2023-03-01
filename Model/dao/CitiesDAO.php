@@ -42,7 +42,7 @@ class CitiesDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN countries on cities_country = countries_id ORDER BY countries_id");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN countries on cities_country = countries_id ORDER BY Cities_Country, Cities_name;");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 

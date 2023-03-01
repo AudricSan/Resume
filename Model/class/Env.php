@@ -31,4 +31,14 @@ class Env extends Uuid {
         $data = htmlspecialchars($data);
         return $data;
     }
+    
+    public function isicon($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+
+        $exp = "/fa-/";
+        $res = preg_match($exp, $data);
+        return $res;
+    }
 }

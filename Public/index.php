@@ -53,9 +53,6 @@ include_once('../model/dao/LanguageDAO.php');
 include_once('../model/class/EducationLevel.php');
 include_once('../model/dao/EducationLevelDAO.php');
 
-include_once('../model/class/Title.php');
-include_once('../model/dao/TitleDAO.php');
-
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();
@@ -131,13 +128,6 @@ Route::add('/settings/addPOI', function () {
   $POIDAO->store($_POST);
 }, 'post');
 
-Route::add('/settings/addTitle', function () {
-  $TDAO = new TitlelDAO;
-  $TDAO->store($_POST);
-}, 'post');
-
-// Settings Edit
-
 // Setting Remove
 Route::add('/settings/removeinfo', function () {
   $CIDAO = new ContatInfoDAO;
@@ -173,49 +163,6 @@ Route::add('/settings/removePOI', function () {
   $POIDAO = new PointOfInterestDAO;
   $POIDAO->delete($_GET);
 }, 'get');
-
-Route::add('/settings/removeTitle', function () {
-  $TDAO = new TitlelDAO;
-  $TDAO->delete($_GET);
-}, 'get');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ERROR ROUTE
 // 404 not found route

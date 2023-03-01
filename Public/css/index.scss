@@ -122,6 +122,12 @@ h6 {
     margin-bottom: 0.5em;
 }
 
+p{
+    &.level{
+        font-size: x-small;
+    }
+}
+
 section {
     padding: 1em;
     border-bottom: 3px solid var(--back-grey);

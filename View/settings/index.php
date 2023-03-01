@@ -1,4 +1,8 @@
 <?php
+use MyBook\Env;
+
+$Env = new Env;
+
 if (!isset($_SESSION['logged'])) {
     header('location: /settings/login');
     die;
@@ -20,46 +24,6 @@ if (!isset($_SESSION['logged'])) {
 
 <main>
     <h1>Books settings</h1>
-
-    <section>
-        <h2><i class="fa-solid fa-globe"></i> Resume - Title <button onclick="addfomrs(this)" class="add"> Add </button>
-        </h2>
-
-        <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addTitle'>
-                <label for='_title'>Title</label>
-                <input type='textarea' id='_title' name='_title'>
-
-                <input type='submit' value='Submit'>
-            </form>
-        </div>
-
-        <?php
-        $TDAO        = new TitlelDAO;
-        $titles = $TDAO->fetchAll(); ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>Content</th>
-                    <th>EDIT</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                foreach ($titles as $title) {
-                    echo "
-                        <tr>
-                            <td> $title->_content </td>
-                            <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
-                                <a href='/settings/removetitle?id=$title->_id'  > <button class='remove' > remove </button></a>
-                            </td>
-                        </tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-    </section>
 
     <section>
         <h2><i class="fa-solid fa-square-phone"></i> Contact information <button onclick="addfomrs(this)" class="add">
@@ -96,10 +60,19 @@ if (!isset($_SESSION['logged'])) {
             <tbody>
                 <?php
                 foreach ($contactInfos as $contactInfo) {
+                    $icon = $Env->isicon($contactInfo->_icon);
                     echo "
                         <tr>
-                            <td> $contactInfo->_name </td>
-                            <td> $contactInfo->_icon </td>
+                            <td> $contactInfo->_name </td>";
+                    if ($icon) {
+                        $explode = explode(',', $contactInfo->_icon);
+                        $fa      = $Env->checkInput($explode[1]);
+                        $icon    = $Env->checkInput($explode[0]);
+                        echo "<td><i class='fa-$fa $icon'></i> $contactInfo->_icon </td>";
+                    } else {
+                        echo "<td><img class='icon' src='images/icon/$contactInfo->_icon.svg' title='icon for $contactInfo->_name' /> </td>";
+                    }
+                    echo " 
                             <td> $contactInfo->_link </td>
                             <td>
                                 <!-- <a href=''> <button class='edit'> edit </button></a> -->
@@ -168,11 +141,20 @@ if (!isset($_SESSION['logged'])) {
             <tbody>
 
                 <?php foreach ($workExperienses as $workExperiense) {
+                    $icon = $Env->isicon($workExperiense->_icon);
                     echo "
                     <tr>
                         <td> $workExperiense->_name </td>
-                        <td> $workExperiense->_description </td>
-                        <td> $workExperiense->_icon </td>
+                        <td> $workExperiense->_description </td>";
+                    if ($icon) {
+                        $explode = explode(',', $workExperiense->_icon);
+                        $fa      = $Env->checkInput($explode[1]);
+                        $icon    = $Env->checkInput($explode[0]);
+                        echo "<td><i class='fa-$fa $icon'></i> $workExperiense->_icon </td>";
+                    } else {
+                        echo "<td><img class='icon' src='images/icon/$workExperiense->_icon.svg' title='icon for $workExperiense->_name' /> </td>";
+                    }
+                    echo " 
                         <td> $workExperiense->_city </td>
                         <td> $workExperiense->_country </td>
                         <td> $workExperiense->_start </td>
@@ -235,11 +217,20 @@ if (!isset($_SESSION['logged'])) {
             <tbody>
                 <?php
                 foreach ($technologies as $technology) {
+                    $icon = $Env->isicon($technology->_icon);
                     echo "
                         <tr>
                             <td> $technology->_name </td>
-                            <td> $technology->_desc </td>
-                            <td> $technology->_icon </td>
+                            <td> $technology->_desc </td>";
+                    if ($icon) {
+                        $explode = explode(',', $technology->_icon);
+                        $fa      = $Env->checkInput($explode[1]);
+                        $icon    = $Env->checkInput($explode[0]);
+                        echo "<td><i class='fa-$fa $icon'></i> $technology->_icon </td>";
+                    } else {
+                        echo "<td><img class='icon' src='images/icon/$technology->_icon.svg' title='icon for $technology->_name' /> $technology->_icon </td>";
+                    }
+                    echo "
                             <td> $technology->_level </td>
                             <td>
                                 <!-- <a href=''> <button class='edit'> edit </button></a> -->
@@ -269,18 +260,17 @@ if (!isset($_SESSION['logged'])) {
 
                 <label for='_link'>Link</label>
                 <input type='text' id='_link' name='_link'>
-
-                <?php
-                $TDAO         = new TechnologiesDAO;
-                $technologies = $TDAO->fetchAll();
-
-                foreach ($technologies as $technologie) {
-                    echo "
+                <div>
+                    <?php
+                    $TDAO         = new TechnologiesDAO;
+                    $technologies = $TDAO->fetchAll();
+                    foreach ($technologies as $technologie) {
+                        echo "
                         <label for='$technologie->_id'>$technologie->_name</label>
                         <input type='checkbox' id='$technologie->_id' name='techID=$technologie->_id' value='$technologie->_id'>";
-                }
-                ?>
-
+                    }
+                    ?>
+                </div>
                 <input type='submit' value='Submit'>
             </form>
         </div>
@@ -301,15 +291,25 @@ if (!isset($_SESSION['logged'])) {
                 </tr>
             </thead>
             <tbody>
-                <?php
 
+                <?php
                 if ($projects) {
                     foreach ($projects as $project) {
+                        $icon = $Env->isicon($project->_icon);
+
                         echo "
                             <tr>
                                 <td> $project->_name </td>
-                                <td> $project->_desc </td>
-                                <td> $project->_icon </td>
+                                <td> $project->_desc </td>";
+                        if ($icon) {
+                            $explode = explode(',', $project->_icon);
+                            $fa      = $Env->checkInput($explode[1]);
+                            $icon    = $Env->checkInput($explode[0]);
+                            echo "<td><i class='fa-$fa $icon'></i> $project->_icon </td>";
+                        } else {
+                            echo "<td><img class='icon' src='images/icon/$project->_icon.svg' title='icon for $project->_name' /> $project->_icon.svg </td>";
+                        }
+                        echo "
                                 <td> $project->_link </td>
                                 <td>";
 
@@ -434,7 +434,7 @@ if (!isset($_SESSION['logged'])) {
 
         <?php
         $EDDAO      = new EducationDAO();
-        $educations = $EDDAO->fetchAll();?>
+        $educations = $EDDAO->fetchAll(); ?>
 
         <table>
             <thead>
@@ -525,9 +525,19 @@ if (!isset($_SESSION['logged'])) {
             <tbody>
                 <?php
                 foreach ($pointOfInterests as $pointOfInterest) {
+                    $icon = $Env->isicon($pointOfInterest->_icon);
                     echo "
                         <tr>
-                            <td> $pointOfInterest->_name </td>
+                            <td> $pointOfInterest->_name </td>";
+                    if ($icon) {
+                        $explode = explode(',', $pointOfInterest->_icon);
+                        $fa      = $Env->checkInput($explode[1]);
+                        $icon    = $Env->checkInput($explode[0]);
+                        echo "<td><i class='fa-$fa $icon'></i> $pointOfInterest->_icon </td>";
+                    } else {
+                        echo "<td><img class='icon' src='images/icon/$technology->_icon.svg' title='icon for $technology->_name' /> $technology->_icon </td>";
+                    }
+                    echo "
                             <td> $pointOfInterest->_icon </td>
                             <td>
                                 <!-- <a href=''> <button class='edit'> edit </button></a> -->
