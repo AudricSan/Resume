@@ -26,13 +26,39 @@ if (!isset($_SESSION['logged'])) {
         </h2>
 
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
+            <form class='hidden' method='POST' action='/settings/addTitle'>
                 <label for='_title'>Title</label>
                 <input type='textarea' id='_title' name='_title'>
 
                 <input type='submit' value='Submit'>
             </form>
         </div>
+
+        <?php
+        $TDAO        = new TitlelDAO;
+        $titles = $TDAO->fetchAll(); ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>Content</th>
+                    <th>EDIT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($titles as $title) {
+                    echo "
+                        <tr>
+                            <td> $title->_content </td>
+                            <td>
+                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/settings/removetitle?id=$title->_id'  > <button class='remove' > remove </button></a>
+                            </td>
+                        </tr>";
+                }
+                ?>
+            </tbody>
+        </table>
     </section>
 
     <section>
@@ -77,7 +103,7 @@ if (!isset($_SESSION['logged'])) {
                             <td> $contactInfo->_link </td>
                             <td>
                                 <!-- <a href=''> <button class='edit'> edit </button></a> -->
-                                <a href='/settings/removeinfo?id=$contactInfo->_id'  > <button class='remove' > remove </button></a>
+                                <a href='/settings/removetitle?id=$contactInfo->_id'  > <button class='remove' > remove </button></a>
                             </td>
                         </tr>";
                 }

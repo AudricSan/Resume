@@ -26,6 +26,16 @@
 		<lastmod>2023-03-01</lastmod>
 	</url>
 	<url>
+		<loc>https://www.book.audricrosier.be/Model/dao/TitleDAO.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-03-01</lastmod>
+	</url>
+	<url>
+		<loc>https://www.book.audricrosier.be/Model/class/Title.php</loc>
+		<priority>0.57</priority>
+		<lastmod>2023-03-01</lastmod>
+	</url>
+	<url>
 		<loc>https://www.book.audricrosier.be/Model/dao/LanguageLevelDAO.php</loc>
 		<priority>0.57</priority>
 		<lastmod>2023-02-28</lastmod>

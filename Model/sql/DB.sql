@@ -212,6 +212,18 @@ CREATE TABLE `ContactInfo` (
 );
 
 -- ---
+-- Table 'title' 
+-- ---
+
+DROP TABLE IF EXISTS `title`;
+		
+CREATE TABLE `title` (
+  `Title_id` int NOT NULL AUTO_INCREMENT,
+  `Title_info` varchar(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`Title_id`)
+);
+
+-- ---
 -- Foreign Keys 
 -- ---
 
