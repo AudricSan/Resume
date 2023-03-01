@@ -105,9 +105,8 @@ class ContatInfoDAO extends Env {
         die;
     }
 
-    public function update($id, $data) {
-        var_dump($data);
-    }
+    // public function update($id, $data) {
+    // }
 
     public function delete($id) {
         $adminDAO       = new AdminDAO;

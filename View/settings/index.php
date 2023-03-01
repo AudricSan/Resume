@@ -1,7 +1,4 @@
 <?php
-use MyBook\Country;
-use MyBook\LanguageLevel;
-
 if (!isset($_SESSION['logged'])) {
     header('location: /settings/login');
     die;
