@@ -538,7 +538,6 @@ if (!isset($_SESSION['logged'])) {
                         echo "<td><img class='icon' src='images/icon/$technology->_icon.svg' title='icon for $technology->_name' /> $technology->_icon </td>";
                     }
                     echo "
-                            <td> $pointOfInterest->_icon </td>
                             <td>
                                 <!-- <a href=''> <button class='edit'> edit </button></a> -->
                                 <a href='/settings/removePOI?id=$pointOfInterest->_id'> <button class='remove'> remove </button></a>

@@ -74,13 +74,13 @@ Route::add("/", function () {
 
 Route::add("/settings", function () {
   head();
-  include_once("../view/Settings/index.php");
+  include_once("../view/settings/index.php");
   foot();
 });
 
 Route::add("/settings/login", function () {
   head();
-  include_once("../view/Settings/login.php");
+  include_once("../view/settings/login.php");
   foot();
 });
 

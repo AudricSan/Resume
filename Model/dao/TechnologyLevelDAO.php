@@ -21,7 +21,7 @@ class TechnologyLevelDAO extends Env {
         $this->host     = parent::env('DB_HOST', 'localhost');
         $this->dbname   = parent::env('DB_NAME');
         //
-        $this->table = "resume_technologyLevel"; // The table to attack
+        $this->table = "resume_technologylevel"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -57,7 +57,7 @@ class TechnologyLevelDAO extends Env {
 
     public function fetch($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE TechnologyLevel_id = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Technologylevel_id = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

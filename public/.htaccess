@@ -1,10 +1,15 @@
+DirectoryIndex index.php
+
 # enable apache rewrite engine
 RewriteEngine on
 
-RewriteCond %{HTTPS} on 
-RewriteCond %{HTTP_HOST} ^photo.audricrosier.be [NC] 
-RewriteCond https://%{THE_REQUEST} /public/([^\s?]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
+# set your rewrite base
+# Edit this in your init method too if you script lives in a subfolder
+RewriteBase /
 
-RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
-DirectoryIndex index.php
+# Deliver the folder or file directly if it exists on the server
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+# Push every request to index.php
+RewriteRule ^(.*)$ index.php [QSA]
