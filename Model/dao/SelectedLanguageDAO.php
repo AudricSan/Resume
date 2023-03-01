@@ -41,7 +41,7 @@ class SelectedLanguageDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_Language on SelectedLanguage_Language = language_id INNER JOIN resume_languagelevel on SelectedLanguage_Level = LanguageLevel_ID");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_language on SelectedLanguage_Language = language_id INNER JOIN resume_languagelevel on SelectedLanguage_Level = LanguageLevel_ID");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -58,7 +58,7 @@ class SelectedLanguageDAO extends Env {
 
     public function fetchByLanguage($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_Language on SelectedLanguage_Language = language_id INNER JOIN resume_languagelevel on SelectedLanguage_Level = LanguageLevel_ID WHERE SelectedLanguage_Language = ? ");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_language on SelectedLanguage_Language = language_id INNER JOIN resume_languagelevel on SelectedLanguage_Level = LanguageLevel_ID WHERE SelectedLanguage_Language = ? ");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

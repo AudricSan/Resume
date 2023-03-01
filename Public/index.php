@@ -3,7 +3,6 @@
 // Use this namespace
 use MyBook\Route;
 use MyBook\Uuid;
-use Random\Randomizer;
 
 // Include ENV class
 include_once("../model/class/Route.php");
@@ -20,11 +19,11 @@ include_once("../model/dao/ContatInfoDAO.php");
 include_once("../model/class/WorkExperience.php");
 include_once("../model/dao/WorkExperienceDAO.php");
 
-include_once("../model/class/technologies.php");
-include_once("../model/dao/technologiesDAO.php");
+include_once("../model/class/Technologies.php");
+include_once("../model/dao/TechnologiesDAO.php");
 
-include_once("../model/class/project.php");
-include_once("../model/dao/projectDAO.php");
+include_once("../model/class/Project.php");
+include_once("../model/dao/ProjectDAO.php");
 
 include_once("../model/class/SelectedLanguage.php");
 include_once("../model/dao/SelectedLanguageDAO.php");
@@ -35,8 +34,8 @@ include_once("../model/dao/EducationDAO.php");
 include_once("../model/class/PointOfInterest.php");
 include_once("../model/dao/PointOfInterestDAO.php");
 
-include_once("../model/class/city.php");
-include_once("../model/dao/citiesDAO.php");
+include_once("../model/class/City.php");
+include_once("../model/dao/CitiesDAO.php");
 
 include_once("../model/class/TechnologyLevel.php");
 include_once("../model/dao/TechnologyLevelDAO.php");
@@ -69,19 +68,19 @@ function foot() {
 //Base Route
 Route::add("/", function () {
   head();
-  include_once("../View/index.php");
+  include_once("../view/index.php");
   foot();
 });
 
 Route::add("/settings", function () {
   head();
-  include_once("../View/Settings/index.php");
+  include_once("../view/Settings/index.php");
   foot();
 });
 
 Route::add("/settings/login", function () {
   head();
-  include_once("../View/Settings/login.php");
+  include_once("../view/Settings/login.php");
   foot();
 });
 
