@@ -21,7 +21,7 @@ class TechnologiesDAO extends Env {
         $this->host     = parent::env('DB_HOST', 'localhost');
         $this->dbname   = parent::env('DB_NAME');
         //
-        $this->table = "technologies"; // The table to attack
+        $this->table = "resume_technologies"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -43,7 +43,7 @@ class TechnologiesDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologylevel on {$this->table}_level = technologylevel_id");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_technologylevel on technologies_level = technologylevel_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -60,7 +60,7 @@ class TechnologiesDAO extends Env {
 
     public function fetch($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN technologylevel on {$this->table}_level = technologylevel_id WHERE Technologies_id = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_technologylevel on technologies_level = technologylevel_id WHERE Technologies_id = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

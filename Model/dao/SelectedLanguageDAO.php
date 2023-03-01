@@ -21,7 +21,7 @@ class SelectedLanguageDAO extends Env {
         $this->host     = parent::env('DB_HOST', 'localhost');
         $this->dbname   = parent::env('DB_NAME');
         //
-        $this->table = "selectedlanguage"; // The table to attack
+        $this->table = "resume_selectedlanguage"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -41,7 +41,7 @@ class SelectedLanguageDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN Language on SelectedLanguage_Language = language_id INNER JOIN languagelevel on SelectedLanguage_Level = LanguageLevel_ID");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_Language on SelectedLanguage_Language = language_id INNER JOIN resume_languagelevel on SelectedLanguage_Level = LanguageLevel_ID");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -58,7 +58,7 @@ class SelectedLanguageDAO extends Env {
 
     public function fetchByLanguage($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN Language on SelectedLanguage_Language = language_id INNER JOIN languagelevel on SelectedLanguage_Level = LanguageLevel_ID WHERE SelectedLanguage_Language = ? ");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_Language on SelectedLanguage_Language = language_id INNER JOIN resume_languagelevel on SelectedLanguage_Level = LanguageLevel_ID WHERE SelectedLanguage_Language = ? ");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

@@ -21,7 +21,7 @@ class PointOfInterestDAO extends Env {
         $this->host     = parent::env('DB_HOST', 'localhost');
         $this->dbname   = parent::env('DB_NAME');
         //
-        $this->table = "pointOfInterest"; // The table to attack
+        $this->table = "resume_pointOfInterest"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -56,17 +56,8 @@ class PointOfInterestDAO extends Env {
         }
     }
 
-    public function fetch($id) {
-        try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
-            $statement->execute([$id]);
-            $result = $statement->fetch(PDO::FETCH_ASSOC);
-
-            return $this->create_object($result);
-        } catch (PDOException $e) {
-            var_dump($e);
-        }
-    }
+    // public function fetch($id) {
+    // }
 
     public function store($data) {
         if (empty($data)) {

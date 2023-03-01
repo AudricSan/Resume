@@ -21,7 +21,7 @@ class EducationDAO extends Env {
         $this->host     = parent::env('DB_HOST', 'localhost');
         $this->dbname   = parent::env('DB_NAME');
         //
-        $this->table = "Education"; // The table to attack
+        $this->table = "resume_Education"; // The table to attack
 
         $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password, $this->options);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -46,7 +46,7 @@ class EducationDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN educationlevel on Education_level = EducationLevel_Id INNER JOIN cities on education_city = cities_id INNER JOIN countries on cities_country = countries_id");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_educationlevel on Education_level = EducationLevel_Id INNER JOIN resume_cities on education_city = cities_id INNER JOIN resume_countries on cities_country = countries_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -61,17 +61,8 @@ class EducationDAO extends Env {
         }
     }
 
-    public function fetch($id) {
-        try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
-            $statement->execute([$id]);
-            $result = $statement->fetch(PDO::FETCH_ASSOC);
-
-            return $this->create_object($result);
-        } catch (PDOException $e) {
-            var_dump($e);
-        }
-    }
+    // public function fetch($id) {
+    // }
 
     public function delete($id) {
         $adminDAO       = new AdminDAO;
