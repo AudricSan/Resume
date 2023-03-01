@@ -6,200 +6,200 @@ use MyBook\Uuid;
 use Random\Randomizer;
 
 // Include ENV class
-include_once('../model/class/Route.php');
-include_once('../model/class/Uuid.php');
-include_once('../model/class/Env.php');
+include_once("../model/class/Route.php");
+include_once("../model/class/Uuid.php");
+include_once("../model/class/Env.php");
 
 // Class & DAO
-include_once('../model/class/Admin.php');
-include_once('../model/dao/AdminDAO.php');
+include_once("../model/class/Admin.php");
+include_once("../model/dao/AdminDAO.php");
 
-include_once('../model/class/ContactInfo.php');
-include_once('../model/dao/ContatInfoDAO.php');
+include_once("../model/class/ContactInfo.php");
+include_once("../model/dao/ContatInfoDAO.php");
 
-include_once('../model/class/WorkExperience.php');
-include_once('../model/dao/WorkExperienceDAO.php');
+include_once("../model/class/WorkExperience.php");
+include_once("../model/dao/WorkExperienceDAO.php");
 
-include_once('../model/class/technologies.php');
-include_once('../model/dao/technologiesDAO.php');
+include_once("../model/class/technologies.php");
+include_once("../model/dao/technologiesDAO.php");
 
-include_once('../model/class/project.php');
-include_once('../model/dao/projectDAO.php');
+include_once("../model/class/project.php");
+include_once("../model/dao/projectDAO.php");
 
-include_once('../model/class/SelectedLanguage.php');
-include_once('../model/dao/SelectedLanguageDAO.php');
+include_once("../model/class/SelectedLanguage.php");
+include_once("../model/dao/SelectedLanguageDAO.php");
 
-include_once('../model/class/Education.php');
-include_once('../model/dao/EducationDAO.php');
+include_once("../model/class/Education.php");
+include_once("../model/dao/EducationDAO.php");
 
-include_once('../model/class/PointOfInterest.php');
-include_once('../model/dao/PointOfInterestDAO.php');
+include_once("../model/class/PointOfInterest.php");
+include_once("../model/dao/PointOfInterestDAO.php");
 
-include_once('../model/class/city.php');
-include_once('../model/dao/citiesDAO.php');
+include_once("../model/class/city.php");
+include_once("../model/dao/citiesDAO.php");
 
-include_once('../model/class/TechnologyLevel.php');
-include_once('../model/dao/TechnologyLevelDAO.php');
+include_once("../model/class/TechnologyLevel.php");
+include_once("../model/dao/TechnologyLevelDAO.php");
 
-include_once('../model/class/TechnologyUse.php');
-include_once('../model/dao/TechnologyUseDAO.php');
+include_once("../model/class/TechnologyUse.php");
+include_once("../model/dao/TechnologyUseDAO.php");
 
-include_once('../model/class/LanguageLevel.php');
-include_once('../model/dao/LanguageLevelDAO.php');
+include_once("../model/class/LanguageLevel.php");
+include_once("../model/dao/LanguageLevelDAO.php");
 
-include_once('../model/class/Language.php');
-include_once('../model/dao/LanguageDAO.php');
+include_once("../model/class/Language.php");
+include_once("../model/dao/LanguageDAO.php");
 
-include_once('../model/class/EducationLevel.php');
-include_once('../model/dao/EducationLevelDAO.php');
+include_once("../model/class/EducationLevel.php");
+include_once("../model/dao/EducationLevelDAO.php");
 
 // Define a global basepath
-define('BASEPATH', '/');
+define("BASEPATH", "/");
 session_start();
 
 // This function just renders a simple header
 function head() {
-  include_once('include/header.php');
+  include_once("include/header.php");
 }
 
 function foot() {
-  include_once('include/footer.php');
+  include_once("include/footer.php");
 }
 
 //Base Route
-Route::add('/', function () {
+Route::add("/", function () {
   head();
-  include_once('../View/index.php');
+  include_once("../View/index.php");
   foot();
 });
 
-Route::add('/settings', function () {
+Route::add("/settings", function () {
   head();
-  include_once('../View/Settings/index.php');
+  include_once("../View/Settings/index.php");
   foot();
 });
 
-Route::add('/settings/login', function () {
+Route::add("/settings/login", function () {
   head();
-  include_once('../View/Settings/login.php');
+  include_once("../View/Settings/login.php");
   foot();
 });
 
-Route::add('/settings/log', function () {
+Route::add("/settings/log", function () {
   head();
   $adminDAO = new AdminDAO;
   $adminDAO->login($_POST);
   foot();
-}, 'post');
+}, "post");
 
 // SETTINGS ADD
-Route::add('/settings/addInfo', function () {
+Route::add("/settings/addInfo", function () {
   $CIDAO = new ContatInfoDAO;
   $CIDAO->store($_POST);
-}, 'post');
+}, "post");
 
-Route::add('/settings/addWork', function () {
+Route::add("/settings/addWork", function () {
   $WEDAO = new WorkExperienceDAO;
   $WEDAO->store($_POST);
-}, 'post');
+}, "post");
 
-Route::add('/settings/addTech', function () {
+Route::add("/settings/addTech", function () {
   $TechDAO = new TechnologiesDAO;
   $TechDAO->store($_POST);
-}, 'post');
+}, "post");
 
-Route::add('/settings/addProject', function () {
+Route::add("/settings/addProject", function () {
   $proDAO = new ProjectDAO;
   $proDAO->store($_POST);
-}, 'post');
+}, "post");
 
-Route::add('/settings/addalanguage', function () {
+Route::add("/settings/addalanguage", function () {
   $LangDAO = new SelectedLanguageDAO;
   $LangDAO->store($_POST);
-}, 'post');
+}, "post");
 
-Route::add('/settings/addeducation', function () {
+Route::add("/settings/addeducation", function () {
   $EDAO = new EducationDAO;
   $EDAO->store($_POST);
-}, 'post');
+}, "post");
 
-Route::add('/settings/addPOI', function () {
+Route::add("/settings/addPOI", function () {
   $POIDAO = new PointOfInterestDAO;
   $POIDAO->store($_POST);
-}, 'post');
+}, "post");
 
 // Setting Remove
-Route::add('/settings/removeinfo', function () {
+Route::add("/settings/removeinfo", function () {
   $CIDAO = new ContatInfoDAO;
   $CIDAO->delete($_GET);
-}, 'get');
+}, "get");
 
-Route::add('/settings/removeWE', function () {
+Route::add("/settings/removeWE", function () {
   $WEDAO = new WorkExperienceDAO;
   $WEDAO->delete($_GET);
-}, 'get');
+}, "get");
 
-Route::add('/settings/removeTechno', function () {
+Route::add("/settings/removeTechno", function () {
   $TechDAO = new TechnologiesDAO;
   $TechDAO->delete($_GET);
-}, 'get');
+}, "get");
 
-Route::add('/settings/removeProject', function () {
+Route::add("/settings/removeProject", function () {
   $PRDAO = new ProjectDAO;
   $PRDAO->delete($_GET);
-}, 'get');
+}, "get");
 
-Route::add('/settings/removelanguage', function () {
+Route::add("/settings/removelanguage", function () {
   $SELDAO = new SelectedLanguageDAO;
   $SELDAO->delete($_GET);
-}, 'get');
+}, "get");
 
-Route::add('/settings/removeEducation', function () {
+Route::add("/settings/removeEducation", function () {
   $EDDAO = new EducationDAO;
   $EDDAO->delete($_GET);
-}, 'get');
+}, "get");
 
-Route::add('/settings/removePOI', function () {
+Route::add("/settings/removePOI", function () {
   $POIDAO = new PointOfInterestDAO;
   $POIDAO->delete($_GET);
-}, 'get');
+}, "get");
 
 // ERROR ROUTE
 // 404 not found route
 Route::pathNotFound(function ($path) {
   head();
-  include('../view/error/404.php');
+  include("../view/error/404.php");
   foot();
 });
 
 // 405 method not allowed route
 Route::methodNotAllowed(function ($path, $method) {
   head();
-  include('../view/error/405.php');
+  include("../view/error/405.php");
   foot();
 });
 //
 
 //This route is for debugging only
 // Return all known routes
-Route::add('/routes', function () {
+Route::add("/routes", function () {
   $routes = Route::getAll();
-  echo '<ul>';
+  echo "<ul>";
   foreach ($routes as $route) {
-    echo '<li>' . $route['expression'] . ' (' . $route['method'] . ')</li>';
+    echo "<li>" . $route["expression"] . " (" . $route["method"] . ")</li>";
   }
-  echo '</ul>';
+  echo "</ul>";
 });
 
-Route::add('/UUID', function () {
-  include_once('../Model/class/uuid.php');
+Route::add("/UUID", function () {
+  include_once("../Model/class/uuid.php");
   $uuid = new Uuid;
 
-  $myuuid['V1'] = $uuid->v1();
-  $myuuid['V2'] = $uuid->v2();
-  $myuuid['V3'] = $uuid->v3($_GET['n']);
-  $myuuid['V4'] = $uuid->v4();
-  $myuuid['V5'] = $uuid->v5($_GET['n']);
+  $myuuid["V1"] = $uuid->v1();
+  $myuuid["V2"] = $uuid->v2();
+  $myuuid["V3"] = $uuid->v3($_GET["n"]);
+  $myuuid["V4"] = $uuid->v4();
+  $myuuid["V5"] = $uuid->v5($_GET["n"]);
 
   var_dump($myuuid);
 });
