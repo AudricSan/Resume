@@ -36,8 +36,8 @@ class EducationLevelDAO extends Env
         }
 
         return new EducationLevel(
-            $data['id'],
-            $data['name']
+            $data['EducationLevel_Id'],
+            $data['EducationLevel_Name']
         );
     }
 
@@ -48,12 +48,12 @@ class EducationLevelDAO extends Env
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            // $admins = array();
+            $res = array();
             foreach ($results as $result) {
-                array_push($admins, $this->create_object($result));
+                array_push($res, $this->create_object($result));
             }
 
-            return $admins;
+            return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }
@@ -62,7 +62,7 @@ class EducationLevelDAO extends Env
     public function fetch($id)
     {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE Admin_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE EducationLevel_ID = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 

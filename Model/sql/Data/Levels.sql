@@ -1,3 +1,4 @@
+-- Active: 1676541047683@@127.0.0.1@3306@resumedb
 -- FR
 INSERT INTO `languagelevel` (`LanguageLevel_Name`) VALUES 
 ('Notions'),
@@ -12,6 +13,28 @@ INSERT INTO `technologylevel` (`Level_Name`) VALUES
 ('Intermédiaire'),
 ('Avancé'),
 ('Expert');
+
+INSERT INTO `educationlevel` (`EducationLevel_Name`) VALUES 
+('CAP'),
+('BEP'),
+('Caccalaureat'),
+('BTS'),
+('DUT'),
+('BES'),
+('DEUG'),
+('DEUST'),
+('Licence'),
+('Licence professionnelle'),
+('BUT'),
+('DEA'),
+('DESS'),
+('Maitrise'),
+('Master'),
+('Magistère'),
+("diplôme d'études approfondies"),
+("diplôme d'études supérieures spécialisées"),
+("diplôme d'ingénieur"),
+('Doctorat');
 
 -- EN
 INSERT INTO `languagelevel` (`LanguageLevel_Name`) VALUES 
@@ -28,6 +51,26 @@ INSERT INTO `technologylevel` (`Level_Name`) VALUES
 ('Advanced'),
 ('Expert');
 
+INSERT INTO `educationlevel` (`EducationLevel_Name`) VALUES 
+('Youth Training'),
+('BTEC First Diploma'),
+('GNVQ Foundation'),
+('GCSE’S under C grad'),
+('A levels'),
+('BTEC National Diploma'),
+('Advanced'),
+('BTEC Higher National Diploma'),
+('Diploma of Higher Education'),
+('BA'),
+('BS'),
+('BSc'),
+('MS'),
+('MSc'),
+('MA'),
+('Master’s Degree in Engineering'),
+('Master’s Degree'),
+('PhD');
+
 -- JP
 INSERT INTO `languagelevel` (`LanguageLevel_Name`) VALUES 
 ('ノーツ'),
@@ -42,3 +85,13 @@ INSERT INTO `technologylevel` (`Level_Name`) VALUES
 ('仲介業者'),
 ('アドバンスト'),
 ('専門家');
+
+INSERT INTO `educationlevel` (`EducationLevel_Name`) VALUES 
+('鉦鼓'),
+('ちゅうがっこう'),
+('卒業証明書'),
+('専門士'),
+('学士'),
+('高度専門士'),
+('修士'),
+('博士');

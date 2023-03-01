@@ -341,8 +341,7 @@ if (!isset($_SESSION['logged'])) {
 
         <?php
         $SELDAO    = new SelectedLanguageDAO();
-        $languages = $SELDAO->fetchAll();
-        // var_dump($languages);?>
+        $languages = $SELDAO->fetchAll(); ?>
 
         <table>
             <thead>
@@ -374,7 +373,7 @@ if (!isset($_SESSION['logged'])) {
             </button> </h2>
 
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
+            <form class='hidden' method='POST' action='/settings/addeducation'>
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 
@@ -382,19 +381,29 @@ if (!isset($_SESSION['logged'])) {
                 <input type='text' id='_school' name='_school'>
 
                 <label for='_start'>Start</label>
-                <input type='text' id='_start' name='_start'>
+                <input type='date' id='_start' name='_start'>
 
                 <label for='_end'>End</label>
-                <input type='text' id='_end' name='_end'>
+                <input type='date' id='_end' name='_end'>
 
                 <label for='_city'>City</label>
-                <input type='text' id='_city' name='_city'>
+                <select id="_city" name="_city">
+                    <?php foreach ($cities as $city) {
+                        echo "<option value='$city->_id'>$city->_name - $city->_country</option>";
+                    } ?>
+                </select>
 
-                <label for='_country'>Country</label>
-                <input type='text' id='_country' name='_country'>
+                <?php
+                $ELDAO  = new EducationLevelDAO;
+                $levels = $ELDAO->fetchAll();
+                ?>
 
                 <label for='_level'>Level</label>
-                <input type='text' id='_level' name='_level'>
+                <select id="_level" name="_level">
+                    <?php foreach ($levels as $level) {
+                        echo "<option value='$level->_id'>$level->_name</option>";
+                    } ?>
+                </select>
 
                 <input type='submit' value='Submit'>
             </form>
@@ -402,7 +411,7 @@ if (!isset($_SESSION['logged'])) {
 
         <?php
         $EDDAO      = new EducationDAO();
-        $educations = $EDDAO->fetchAll(); ?>
+        $educations = $EDDAO->fetchAll();?>
 
         <table>
             <thead>
@@ -467,7 +476,7 @@ if (!isset($_SESSION['logged'])) {
                 Add</button> </h2>
 
         <div class="callout">
-            <form class='hidden' method='POST' action='/settings/addInfo'>
+            <form class='hidden' method='POST' action='/settings/addPOI'>
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 

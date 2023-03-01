@@ -50,6 +50,9 @@ include_once('../model/dao/LanguageLevelDAO.php');
 include_once('../model/class/Language.php');
 include_once('../model/dao/LanguageDAO.php');
 
+include_once('../model/class/EducationLevel.php');
+include_once('../model/dao/EducationLevelDAO.php');
+
 // Define a global basepath
 define('BASEPATH', '/');
 session_start();
@@ -115,6 +118,16 @@ Route::add('/settings/addalanguage', function () {
   $LangDAO->store($_POST);
 }, 'post');
 
+Route::add('/settings/addeducation', function () {
+  $EDAO = new EducationDAO;
+  $EDAO->store($_POST);
+}, 'post');
+
+Route::add('/settings/addPOI', function () {
+  $POIDAO = new PointOfInterestDAO;
+  $POIDAO->store($_POST);
+}, 'post');
+
 // Settings Edit
 
 // Setting Remove
@@ -145,12 +158,12 @@ Route::add('/settings/removelanguage', function () {
 
 Route::add('/settings/removeEducation', function () {
   $EDDAO = new EducationDAO;
-  // $EDDAO->delete($_GET);
+  $EDDAO->delete($_GET);
 }, 'get');
 
 Route::add('/settings/removePOI', function () {
   $POIDAO = new PointOfInterestDAO;
-  // $POIDAO->delete($_GET);
+  $POIDAO->delete($_GET);
 }, 'get');
 
 

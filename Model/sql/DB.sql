@@ -1,13 +1,5 @@
 -- ---
--- Globals
--- ---
-
--- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
--- SET FOREIGN_KEY_CHECKS=0;
-
--- ---
--- Table 'Education'
--- 
+-- Table 'Education' 
 -- ---
 
 DROP TABLE IF EXISTS `Education`;
@@ -15,30 +7,16 @@ DROP TABLE IF EXISTS `Education`;
 CREATE TABLE `Education` (
   `Education_ID` int NOT NULL AUTO_INCREMENT,
   `Education_Name` varchar(255) NOT NULL,
-  `Education_Start` datetime NOT NULL,
-  `Education_End` datetime NOT NULL,
-  `Education_School` int NOT NULL,
+  `Education_Start` date NOT NULL,
+  `Education_End` date NOT NULL,
+  `Education_School` varchar(255) NOT NULL,
   `Education_Level` int NOT NULL,
+  `Education_City` int NULL DEFAULT NULL,
   PRIMARY KEY (`Education_ID`)
 );
 
 -- ---
--- Table 'School'
--- 
--- ---
-
-DROP TABLE IF EXISTS `School`;
-		
-CREATE TABLE `School` (
-  `School_ID` int NOT NULL AUTO_INCREMENT,
-  `School_Name` char(255) NOT NULL,
-  `School_City` int NOT NULL,
-  PRIMARY KEY (`School_ID`)
-);
-
--- ---
 -- Table 'Cities'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `Cities`;
@@ -53,7 +31,6 @@ CREATE TABLE `Cities` (
 
 -- ---
 -- Table 'Language'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `Language`;
@@ -67,7 +44,6 @@ CREATE TABLE `Language` (
 
 -- ---
 -- Table 'EducationLevel'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `EducationLevel`;
@@ -80,7 +56,6 @@ CREATE TABLE `EducationLevel` (
 
 -- ---
 -- Table 'LanguageLevel'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `LanguageLevel`;
@@ -93,7 +68,6 @@ CREATE TABLE `LanguageLevel` (
 
 -- ---
 -- Table 'Countries'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `Countries`;
@@ -113,7 +87,6 @@ KEY (`Countries_code`)
 
 -- ---
 -- Table 'Admin'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `Admin`;
@@ -128,7 +101,6 @@ CREATE TABLE `Admin` (
 
 -- ---
 -- Table 'WorkExperience'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `WorkExperience`;
@@ -139,14 +111,13 @@ CREATE TABLE `WorkExperience` (
   `WorkExperience_Description` varchar(255) NOT NULL,
   `WorkExperience_Icon` varchar(255) NOT NULL DEFAULT '/public/image/icon/000.png',
   `WorkExperience_City` int NOT NULL,
-  `WorkExperience_Start` datetime NOT NULL,
-  `WorkExperience_End` datetime NOT NULL,
+  `WorkExperience_Start` date NOT NULL,
+  `WorkExperience_End` date NOT NULL,
   PRIMARY KEY (`WorkExperience_ID`)
 );
 
 -- ---
 -- Table 'Technologies'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `Technologies`;
@@ -162,7 +133,6 @@ CREATE TABLE `Technologies` (
 
 -- ---
 -- Table 'Project'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `Project`;
@@ -178,7 +148,6 @@ CREATE TABLE `Project` (
 
 -- ---
 -- Table 'PointOfInterest'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `PointOfInterest`;
@@ -192,7 +161,6 @@ CREATE TABLE `PointOfInterest` (
 
 -- ---
 -- Table 'TechnologyLevel'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `TechnologyLevel`;
@@ -205,7 +173,6 @@ CREATE TABLE `TechnologyLevel` (
 
 -- ---
 -- Table 'SelectedLanguage'
--- 
 -- ---
 
 DROP TABLE IF EXISTS `SelectedLanguage`;
@@ -218,8 +185,7 @@ CREATE TABLE `SelectedLanguage` (
 );
 
 -- ---
--- Table 'TechnologiesUse'
--- 
+-- Table 'TechnologiesUse' 
 -- ---
 
 DROP TABLE IF EXISTS `TechnologiesUse`;
@@ -232,8 +198,7 @@ CREATE TABLE `TechnologiesUse` (
 );
 
 -- ---
--- Table 'ContactInfo'
--- 
+-- Table 'ContactInfo' 
 -- ---
 
 DROP TABLE IF EXISTS `ContactInfo`;
@@ -250,9 +215,8 @@ CREATE TABLE `ContactInfo` (
 -- Foreign Keys 
 -- ---
 
-ALTER TABLE `Education` ADD FOREIGN KEY (Education_School) REFERENCES `School` (`School_ID`);
 ALTER TABLE `Education` ADD FOREIGN KEY (Education_Level) REFERENCES `EducationLevel` (`EducationLevel_Id`);
-ALTER TABLE `School` ADD FOREIGN KEY (School_City) REFERENCES `Cities` (`Cities_id`);
+ALTER TABLE `Education` ADD FOREIGN KEY (Education_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Cities` ADD FOREIGN KEY (Cities_Country) REFERENCES `Countries` (`Countries_id`);
 ALTER TABLE `WorkExperience` ADD FOREIGN KEY (WorkExperience_City) REFERENCES `Cities` (`Cities_id`);
 ALTER TABLE `Technologies` ADD FOREIGN KEY (technologies_Level) REFERENCES `TechnologyLevel` (`TechnologyLevel_Id`);
@@ -266,7 +230,6 @@ ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_techno) REFERENCE
 -- ---
 
 -- ALTER TABLE `Education` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `School` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Cities` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `Language` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `EducationLevel` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -286,10 +249,8 @@ ALTER TABLE `TechnologiesUse` ADD FOREIGN KEY (TechnologiesUse_techno) REFERENCE
 -- Test Data
 -- ---
 
--- INSERT INTO `Education` (`Education_ID`,`Education_Name`,`Education_Start`,`Education_End`,`Education_School`,`Education_Level`) VALUES
--- ('','','','','','');
--- INSERT INTO `School` (`School_ID`,`School_Name`,`School_City`) VALUES
--- ('','','');
+-- INSERT INTO `Education` (`Education_ID`,`Education_Name`,`Education_Start`,`Education_End`,`Education_School`,`Education_Level`,`Education_City`) VALUES
+-- ('','','','','','','');
 -- INSERT INTO `Cities` (`Cities_id`,`Cities_name`,`Cities_Region`,`Cities_Country`) VALUES
 -- ('','','','');
 -- INSERT INTO `Language` (`Language_ID`,`Language_Name`,`Language_Tag`) VALUES

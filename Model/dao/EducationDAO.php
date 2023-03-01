@@ -37,7 +37,7 @@ class EducationDAO extends Env {
             $data['Education_Name'],
             $data['Education_Start'],
             $data['Education_End'],
-            $data['School_Name'],
+            $data['Education_School'],
             $data['Cities_name'],
             $data['Countries_Name'],
             $data['EducationLevel_Name']
@@ -46,7 +46,7 @@ class EducationDAO extends Env {
 
     public function fetchAll() {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN School on Education_school = School_id INNER JOIN educationlevel on Education_level = EducationLevel_Id INNER JOIN cities on School_city = cities_id INNER JOIN countries on cities_country = countries_id");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN educationlevel on Education_level = EducationLevel_Id INNER JOIN cities on education_city = cities_id INNER JOIN countries on cities_country = countries_id");
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -73,12 +73,76 @@ class EducationDAO extends Env {
         }
     }
 
-    // public function delete($id) {
-    // }
+    public function delete($id) {
+        $adminDAO       = new AdminDAO;
+        $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
 
-    // public function store($data) {
-    // }
+        if (!$adminConnected) {
+            unset($_SESSION['logged']);
+            header('location: /');
+            die;
+        } else {
+            $id = intval($id['id']);
 
-    // public function update($id, $data) {
-    // }
+            try {
+                $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE Education_ID = ? ");
+                $statement->execute([$id]);
+            } catch (PDOException $e) {
+                var_dump($e->getMessage());
+            }
+            header('location: /settings');
+            die;
+        }
+    }
+
+    public function store($data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $citiesDAO = new CitiesDAO;
+        $city      = $citiesDAO->fetch($data['_city']);
+
+        $LEDAO = new EducationLevelDAO;
+        $level = $LEDAO->fetch($data['_level']);
+
+        $obj = $this->create_object([
+            'Education_ID'        => 0,
+            'Education_Name'      => $data['_name'],
+            'Education_Start'     => $data['_start'],
+            'Education_End'       => $data['_end'],
+            'Education_School'    => $data['_school'],
+            'Cities_name'         => $city->_name,
+            'Countries_Name'      => $city->_country,
+            'EducationLevel_Name' => $level->_name,
+        ]);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("INSERT INTO {$this->table} (`Education_Name`, `Education_Start`, `Education_End`, `Education_School`, `Education_Level`, `Education_City`) VALUES (?, ?, ?, ?, ?, ?)");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_start,
+                    $obj->_end,
+                    $obj->_school,
+                    $level->_id,
+                    $city->_id
+                ]);
+
+                $obj->id = $this->connection->lastInsertId();
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
+    }
+
+// public function update($id, $data) {
+// }
 }

@@ -105,7 +105,7 @@ class SelectedLanguageDAO extends Env {
         ]);
 
         $SLDAO = new SelectedLanguageDAO;
-        $sl = $SLDAO->fetchByLanguage($lang->_id);
+        $sl    = $SLDAO->fetchByLanguage($lang->_id);
 
         if ($sl) {
             $error = ['ALREADY EXIST'];
@@ -133,27 +133,27 @@ class SelectedLanguageDAO extends Env {
         die;
     }
 
-public function delete($id) {
-    $adminDAO       = new AdminDAO;
-    $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
+    public function delete($id) {
+        $adminDAO       = new AdminDAO;
+        $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
 
-    if (!$adminConnected) {
-        unset($_SESSION['logged']);
-        header('location: /');
-        die;
-    } else {
-        $id = intval($id['id']);
+        if (!$adminConnected) {
+            unset($_SESSION['logged']);
+            header('location: /');
+            die;
+        } else {
+            $id = intval($id['id']);
 
-        try {
-            $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE SelectedLanguage_id = ? ");
-            $statement->execute([$id]);
-        } catch (PDOException $e) {
-            var_dump($e->getMessage());
+            try {
+                $statement = $this->connection->prepare("DELETE FROM {$this->table} WHERE SelectedLanguage_id = ? ");
+                $statement->execute([$id]);
+            } catch (PDOException $e) {
+                var_dump($e->getMessage());
+            }
+            header('location: /settings');
+            die;
         }
-        header('location: /settings');
-        die;
     }
-}
 
 // public function update($id, $data) {
 // }
