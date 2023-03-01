@@ -152,11 +152,11 @@
 		$educations = $EDAO->fetchAll();
 
 		foreach ($educations as $education) {
-			$time_input = strtotime($education->_start);
-			$time_input = strtotime($education->_end);
+			$timeStart = strtotime($education->_start);
+			$timeEnd = strtotime($education->_end);
 
-			$startDate = getDate($time_input);
-			$endDate   = getDate($time_input);
+			$startDate = getDate($timeStart);
+			$endDate   = getDate($timeEnd);
 
 			$jsonStart = json_encode($startDate);
 			$jsonEnd   = json_encode($endDate);

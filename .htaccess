@@ -2,13 +2,12 @@
 RewriteEngine On
 
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.audricrosier.be/$1 [R,L]
+# RewriteRule ^(.*)$ https://www.audricrosier.be/$1 [R,L]
 
 RewriteCond %{HTTPS} on 
-RewriteCond %{HTTP_HOST} ^photo.audricrosier.be [NC] 
+# RewriteCond %{HTTP_HOST} ^photo.audricrosier.be [NC] 
 RewriteCond https://%{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 
 RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
-
 DirectoryIndex public/index.php
