@@ -6,6 +6,7 @@ body {
   padding: 1em;
   background-color: var(--back-main-black);
   color: var(--back-main-white);
+  font-family: quicksand;
 }
 body.light {
   animation: color-dark 2s reverse;
