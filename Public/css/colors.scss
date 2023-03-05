@@ -34,46 +34,46 @@
     --back-main-black: rgb(52, 52, 52);
 }
 
-.dark {
-    background-color: var(--back-main-black);
-    color: var(--back-main-white);
+.white {
+    background-color: var(--back-main-white);
+    color: var(--back-main-black);
 
     p,
     a {
-        color: var(--back-main-white);
+        color: var(--back-main-black);
     }
 
     section {
-        border-bottom: 3px solid var(--color-grey);
+        border-bottom: 3px solid var(--back-grey);
     }
 
     div {
         &.callout {
-            background-color: var(--color-grey);
+            background-color: var(--back-grey);
         }
     }
 
     div.toggleDiv {
-        background-color: var(--back-main-black);
+        background-color: var(--back-main-white);
     }
 
     table {
         th {
-            background-color: var(--color-grey);
+            background-color: var(--back-grey);
         }
 
         tr {
-            background-color: var(--color-green);
+            background-color: var(--back-green);
 
             &:nth-child(n+2) {
-                background-color: var(--color-blue);
+                background-color: var(--back-blue);
             }
         }
     }
 
-    button {    
+    button {  
         &.add {
-            background-color: var(--color-blue);
+            background-color: var(--back-blue);
     
             &:hover {
                 background-color: var(--tran-blue);
@@ -81,7 +81,7 @@
         }
     
         &.edit {
-            background-color: var(--color-yellow);
+            background-color: var(--back-yellow);
     
             &:hover {
                 background-color: var(--tran-yellow);
@@ -89,7 +89,7 @@
         }
     
         &.remove {
-            background-color: var(--color-red);
+            background-color: var(--back-red);
     
             &:hover {
                 background-color: var(--tran-red);

@@ -1,5 +1,5 @@
 <div class='toggleDiv'>
-	<input id='toggle' class='toggle' type='checkbox' onclick=darkmode()>
+	<input id='toggle' class='toggle' type='checkbox' onclick=lightmode()>
 </div>
 
 <header>

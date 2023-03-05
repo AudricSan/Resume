@@ -31,47 +31,47 @@
   --back-main-black: rgb(52, 52, 52);
 }
 
-.dark {
-  background-color: var(--back-main-black);
-  color: var(--back-main-white);
+.white {
+  background-color: var(--back-main-white);
+  color: var(--back-main-black);
 }
-.dark p,
-.dark a {
-  color: var(--back-main-white);
+.white p,
+.white a {
+  color: var(--back-main-black);
 }
-.dark section {
-  border-bottom: 3px solid var(--color-grey);
+.white section {
+  border-bottom: 3px solid var(--back-grey);
 }
-.dark div.callout {
-  background-color: var(--color-grey);
+.white div.callout {
+  background-color: var(--back-grey);
 }
-.dark div.toggleDiv {
-  background-color: var(--back-main-black);
+.white div.toggleDiv {
+  background-color: var(--back-main-white);
 }
-.dark table th {
-  background-color: var(--color-grey);
+.white table th {
+  background-color: var(--back-grey);
 }
-.dark table tr {
-  background-color: var(--color-green);
+.white table tr {
+  background-color: var(--back-green);
 }
-.dark table tr:nth-child(n+2) {
-  background-color: var(--color-blue);
+.white table tr:nth-child(n+2) {
+  background-color: var(--back-blue);
 }
-.dark button.add {
-  background-color: var(--color-blue);
+.white button.add {
+  background-color: var(--back-blue);
 }
-.dark button.add:hover {
+.white button.add:hover {
   background-color: var(--tran-blue);
 }
-.dark button.edit {
-  background-color: var(--color-yellow);
+.white button.edit {
+  background-color: var(--back-yellow);
 }
-.dark button.edit:hover {
+.white button.edit:hover {
   background-color: var(--tran-yellow);
 }
-.dark button.remove {
-  background-color: var(--color-red);
+.white button.remove {
+  background-color: var(--back-red);
 }
-.dark button.remove:hover {
+.white button.remove:hover {
   background-color: var(--tran-red);
 }/*# sourceMappingURL=colors.css.map */

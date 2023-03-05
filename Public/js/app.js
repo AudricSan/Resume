@@ -4,14 +4,14 @@ const hours = new Date().getHours()
 
 if (hours > 7 && hours < 18) {
 	console.log("day")
+	lightmode()
 } else {
 	console.log("night")
-	darkmode()
 }
 
-function darkmode() {
-	body.classList.toggle("dark")
-	toggle[0].classList.toggle("dark")
+function lightmode() {
+	body.classList.toggle("white")
+	toggle[0].classList.toggle("white")
 }
 
 function addfomrs(elem) {

@@ -4,7 +4,8 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 1em;
-  background-color: var(--back-main-white);
+  background-color: var(--back-main-black);
+  color: var(--back-main-white);
 }
 body.light {
   animation: color-dark 2s reverse;
@@ -101,10 +102,13 @@ h6 {
 p.level {
   font-size: x-small;
 }
+p a {
+  color: var(--back-main-white);
+}
 
 section {
   padding: 1em;
-  border-bottom: 3px solid var(--back-grey);
+  border-bottom: 3px solid var(--color-grey);
   gap: 0.5em;
   display: flex;
   flex-direction: column;
@@ -151,7 +155,7 @@ article.flex.row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* gap: 1em; */
+  gap: 1em;
 }
 
 div {
@@ -161,7 +165,7 @@ div.callout {
   gap: 0.5em;
   display: flex;
   padding: 1em;
-  background-color: var(--back-grey);
+  background-color: var(--color-grey);
   align-items: flex-start;
 }
 div.callout:has(form) {
@@ -179,7 +183,7 @@ div.toggleDiv {
   background-color: transparent;
   padding: 0.5em;
   border-radius: 50px;
-  background-color: var(--back-main-white);
+  background-color: var(--back-main-black);
 }
 div.toggleDiv .toggle {
   --size: 5em;
@@ -214,19 +218,19 @@ button {
   cursor: pointer;
 }
 button.add {
-  background-color: var(--back-blue);
+  background-color: var(--color-blue);
 }
 button.add:hover {
   background-color: var(--tran-blue);
 }
 button.edit {
-  background-color: var(--back-yellow);
+  background-color: var(--color-yellow);
 }
 button.edit:hover {
   background-color: var(--tran-yellow);
 }
 button.remove {
-  background-color: var(--back-red);
+  background-color: var(--color-red);
 }
 button.remove:hover {
   background-color: var(--tran-red);
@@ -245,7 +249,7 @@ table td {
   padding: 0.5em;
 }
 table th {
-  background-color: var(--back-grey);
+  background-color: var(--color-grey);
 }
 table th:first-child {
   border-radius: 10px 0 0 0;
@@ -254,10 +258,10 @@ table th:last-child {
   border-radius: 0 10px 0 0;
 }
 table tr {
-  background-color: var(--back-green);
+  background-color: var(--color-green);
 }
 table tr:nth-child(n+2) {
-  background-color: var(--back-blue);
+  background-color: var(--color-blue);
 }
 table tr:last-of-type td:first-child {
   border-radius: 0 0 0 10px;
