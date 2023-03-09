@@ -3,12 +3,12 @@
 </div>
 
 <header>
-	<h1><i class='fa-solid fa-globe'></i> Resume - Web Master</h1>
+	<h1><i class='fa-solid fa-globe'></i> Resume - Web developers</h1>
 	<blockquote>I'm a <mark class='highlight purple'><strong>Web developers</strong></mark> and a <mark
 			class='highlight blue'><strong>Graphic Designer</strong></mark> in <mark
 			class='highlight orange'><em>Belgium</em></mark>
-		</br>with <mark class='highlight blue'>5 years</mark> of experience in graphic design and <mark
-			class='highlight purple'>2 years</mark> in web development</blockquote>
+		<!-- </br>with <mark class='highlight blue'>5 years</mark> of experience in graphic design and <mark
+			class='highlight purple'>2 years</mark> in web development</blockquote> -->
 </header>
 
 <section>
@@ -35,7 +35,7 @@
 			if ($icon) {
 				echo "<i class='fa-$fa $icon'></i>";
 			} else {
-				echo "<img class='icon' src='images/icon/$contactInfo->_icon.svg' title='icon for $contactInfo->_name' />";
+				echo "<img class='icon' src='images/icon/$contactInfo->_icon.svg' alt='icon for $contactInfo->_name' />";
 			}
 			echo "<a href='$contactInfo->_link' target='_blank'> $contactInfo->_name </a></p>";
 		}
@@ -44,11 +44,13 @@
 </section>
 
 <section>
-	<h2> <i class='fa-solid fa-person-digging'></i> Work experience</h2>
-
 	<?php
 	$WEDAO           = new WorkExperienceDAO;
 	$workExperienses = $WEDAO->fetchAll();
+
+	if (!empty($workExperienses)) {
+		echo "<h2> <i class='fa-solid fa-person-digging'></i> Work experience</h2>";
+	}
 
 	foreach ($workExperienses as $workExperiense) {
 		$icon    = $Env->isicon($workExperiense->_icon);
@@ -60,7 +62,7 @@
 		if ($icon) {
 			echo "<i class='fa-$fa $icon'></i>";
 		} else {
-			echo "<img class='icon' src='images/icon/$workExperiense->_icon.svg' title='icon for $workExperiense->_name' />";
+			echo "<img class='icon' src='images/icon/$workExperiense->_icon.svg' alt='icon for $workExperiense->_name' />";
 		}
 		echo "<p> $workExperiense->_name</p></div></article>";
 	}
@@ -83,10 +85,10 @@
 			$icon    = $Env->checkInput($explode[0]);
 			echo "<i class='fa-$fa $icon'></i>";
 		} else {
-			echo "<img class='icon' src='images/icon/$technology->_icon.svg' title='icon for $technology->_name' />";
+			echo "<img class='icon' src='images/icon/$technology->_icon.svg' alt='icon for $technology->_name' />";
 		}
 		echo "
-					<p> $technology->_desc</p>
+					<p> $technology->_name / $technology->_desc</p>
 					<!-- <p class='level'> $technology->_level</p> -->
 				</div>
 			</article>
@@ -105,19 +107,21 @@
 	foreach ($projects as $project) {
 		$icon = $Env->isicon($project->_icon);
 		echo "<article>
-				<div class='callout'>";
+				<a href='$project->_link' target='_blank'>
+					<div class='callout'>";
 		if ($icon) {
 			$explode = explode(',', $project->_icon);
 			$fa      = $Env->checkInput($explode[1]);
 			$icon    = $Env->checkInput($explode[0]);
 			echo "<i class='fa-$fa $icon'></i>";
 		} else {
-			echo "<img class='icon' src='images/icon/$project->_icon.svg' title='icon for $project->_name' />";
+			echo "<img class='icon' src='images/icon/$project->_icon.svg' alt='icon for $project->_name' />";
 		}
 		echo "
-					<p> $project->_desc</p>
-					<!-- <p class='level'> $project->_level</p> -->
-				</div>
+						<p> $project->_desc</p>
+						<!-- <p class='level'> $project->_level</p> -->
+					</div>
+				</a>
 			</article>
 		";
 	}
@@ -207,7 +211,7 @@
 				$icon    = $Env->checkInput($explode[0]);
 				echo "<p><i class='fa-$fa $icon'></i>";
 			} else {
-				echo "<p><img class='icon' src='images/icon/$poi->_icon.svg' title='icon for $poi->_name' />";
+				echo "<p><img class='icon' src='images/icon/$poi->_icon.svg' alt='icon for $poi->_name' />";
 			}
 			echo "
 				$poi->_name</p>
