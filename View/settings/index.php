@@ -18,10 +18,6 @@ if (!isset($_SESSION['logged'])) {
 }
 ?>
 
-<div class="toggleDiv">
-    <input id="toggle" class="toggle" type="checkbox" onclick=darkmode()>
-</div>
-
 <main>
     <h1>Books settings</h1>
 
