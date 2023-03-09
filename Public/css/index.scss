@@ -1,3 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700');
+
+//RESET CSS
+body {
+    font-family: Quicksand;
+}
+
+mark {
+    background-color: transparent;
+}
+
+blockquote {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+// MY CSS
+:root {
+    --color-black: black;
+    --color-grey: rgba(120, 119, 116, 1);
+    --color-brown: rgba(159, 107, 83, 1);
+    --color-orange: rgba(217, 115, 13, 1);
+    --color-yellow: rgba(203, 145, 47, 1);
+    --color-green: rgba(68, 131, 97, 1);
+    --color-blue: rgba(51, 126, 169, 1);
+    --color-purple: rgba(144, 101, 176, 1);
+    --color-pink: rgba(193, 76, 138, 1);
+    --color-red: rgba(212, 76, 71, 1);
+
+    --tran-grey: rgba(120, 119, 116, 0.6);
+    --tran-brown: rgba(159, 107, 83, 0.6);
+    --tran-orange: rgba(217, 115, 13, 0.6);
+    --tran-yellow: rgba(203, 145, 47, 0.6);
+    --tran-green: rgba(68, 131, 97, 0.6);
+    --tran-blue: rgba(51, 126, 169, 0.6);
+    --tran-purple: rgba(144, 101, 176, 0.6);
+    --tran-pink: rgba(193, 76, 138, 0.6);
+    --tran-red: rgba(212, 76, 71, 0.6);
+
+    --back-grey: rgba(227, 226, 224, 1);
+    --back-brown: rgba(238, 224, 218, 1);
+    --back-orange: rgba(250, 222, 201, 1);
+    --back-yellow: rgba(253, 236, 200, 1);
+    --back-green: rgba(219, 237, 219, 1);
+    --back-blue: rgba(211, 229, 239, 1);
+    --back-purple: rgba(232, 222, 238, 1);
+    --back-pink: rgba(245, 224, 233, 1);
+    --back-red: rgba(255, 226, 221, 1);
+
+    --back-main-white: rgb(247, 246, 243);
+    --back-main-black: rgb(52, 52, 52);
+}
+
+.white {
+    background-color: var(--back-main-white);
+    color: var(--back-main-black);
+
+    p,
+    a {
+        color: var(--back-main-black);
+    }
+
+    section {
+        border-bottom: 3px solid var(--back-grey);
+    }
+
+    div {
+        &.callout {
+            background-color: var(--back-grey);
+        }
+    }
+
+    div.toggleDiv {
+        background-color: var(--back-main-white);
+    }
+
+    table {
+        th {
+            background-color: var(--back-grey);
+        }
+
+        tr {
+            background-color: var(--back-green);
+
+            &:nth-child(n+2) {
+                background-color: var(--back-blue);
+            }
+        }
+    }
+
+    button {  
+        &.add {
+            background-color: var(--back-blue);
+    
+            &:hover {
+                background-color: var(--tran-blue);
+            }
+        }
+    
+        &.edit {
+            background-color: var(--back-yellow);
+    
+            &:hover {
+                background-color: var(--tran-yellow);
+            }
+        }
+    
+        &.remove {
+            background-color: var(--back-red);
+    
+            &:hover {
+                background-color: var(--tran-red);
+            }
+        }
+    }
+}
+
 body {
     transition: all 500ms;
 
@@ -351,6 +484,41 @@ table {
                     border-radius: 0 0 10px 0;
                 }
             }
+        }
+    }
+}
+
+// MEDIA SCREEN 
+@media only screen and (max-width: 600px) {
+
+    body {
+        min-width: 1px;
+        margin: 0;
+    }
+
+    article {
+        &.grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+    }
+
+    div.toggleDiv {
+        bottom: 1em;
+        left: 1em;
+        padding: 0.5em;
+
+        border-radius: 50px;
+        background-color: white;
+
+        &.dark {
+            background-color: var(--back-main-black);
+        }
+
+        .toggle {
+            --size: 2em
         }
     }
 }
