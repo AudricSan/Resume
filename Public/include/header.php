@@ -55,3 +55,6 @@ $autor       = "Audric Rosier";
 </head>
 
 <body>
+	<div class='toggleDiv'>
+		<input id='toggle' class='toggle' type='checkbox' onclick=lightmode()>
+	</div>

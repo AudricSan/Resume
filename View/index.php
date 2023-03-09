@@ -1,7 +1,3 @@
-<div class='toggleDiv'>
-	<input id='toggle' class='toggle' type='checkbox' onclick=lightmode()>
-</div>
-
 <header>
 	<h1><i class='fa-solid fa-globe'></i> Resume - Web developers</h1>
 	<blockquote>I'm a <mark class='highlight purple'><strong>Web developers</strong></mark> and a <mark
