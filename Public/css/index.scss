@@ -149,8 +149,8 @@ body {
 
 .highlight {
     background-color: transparent;
-    font-size: medium;
     font-weight: bolder;
+    text-decoration: underline;
 
     &.black {
         color: var(--color-black);
@@ -273,14 +273,15 @@ section {
     display: flex;
     flex-direction: column;
 
-    &:last-child {
-        border: none;
-    }
-
     form {
         display: flex;
         flex-direction: column;
         gap: 0.5em;
+    }
+
+    &:last-of-type{
+        border: none;
+        margin-bottom: 10em;
     }
 }
 
@@ -505,17 +506,19 @@ table {
         }
     }
 
+    section{
+        &:last-of-type{
+            margin-bottom: 5em;
+        }
+    }
+
     div.toggleDiv {
         bottom: 1em;
         left: 1em;
         padding: 0.5em;
 
         border-radius: 50px;
-        background-color: white;
-
-        &.dark {
-            background-color: var(--back-main-black);
-        }
+        background-color: var(--back-main-black);
 
         .toggle {
             --size: 2em
