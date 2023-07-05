@@ -121,8 +121,8 @@ body.light {
 
 .highlight {
   background-color: transparent;
-  font-size: medium;
   font-weight: bolder;
+  text-decoration: underline;
 }
 .highlight.black {
   color: var(--color-black);
@@ -221,13 +221,14 @@ section {
   display: flex;
   flex-direction: column;
 }
-section:last-child {
-  border: none;
-}
 section form {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+section:last-of-type {
+  border: none;
+  margin-bottom: 10em;
 }
 
 article.grid {
@@ -389,14 +390,14 @@ table tr:last-of-type td:last-child {
     flex-wrap: wrap;
     gap: 1em;
   }
+  section:last-of-type {
+    margin-bottom: 5em;
+  }
   div.toggleDiv {
     bottom: 1em;
     left: 1em;
     padding: 0.5em;
     border-radius: 50px;
-    background-color: white;
-  }
-  div.toggleDiv.dark {
     background-color: var(--back-main-black);
   }
   div.toggleDiv .toggle {

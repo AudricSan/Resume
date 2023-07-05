@@ -8,7 +8,7 @@
 </header>
 
 <section>
-	<h2> <i class='fa-solid fa-square-phone'></i> Contact information</h2>
+	<h2 class="highlight"> <i class='fa-solid fa-square-phone'></i> Contact information</h2>
 
 	<?php
 
@@ -45,7 +45,7 @@
 	$workExperienses = $WEDAO->fetchAll();
 
 	if (!empty($workExperienses)) {
-		echo "<h2> <i class='fa-solid fa-person-digging'></i> Work experience</h2>";
+		echo "<h2 class='highlight'> <i class='fa-solid fa-person-digging'></i> Work experience</h2>";
 	}
 
 	foreach ($workExperienses as $workExperiense) {
@@ -54,19 +54,19 @@
 		$fa      = $Env->checkInput($explode[1]);
 		$icon    = $Env->checkInput($explode[0]);
 
-		echo "<article><h3>$workExperiense->_description - $workExperiense->_city</h3><div class='callout'>";
+		echo "<article><h4> $workExperiense->_name </h4><div class='callout'>";
 		if ($icon) {
 			echo "<i class='fa-$fa $icon'></i>";
 		} else {
 			echo "<img class='icon' src='images/icon/$workExperiense->_icon.svg' alt='icon for $workExperiense->_name' />";
 		}
-		echo "<p> $workExperiense->_name</p></div></article>";
+		echo "<p>$workExperiense->_description - $workExperiense->_city</p></div></article>";
 	}
 	?>
 </section>
 
 <section>
-	<h2><i class='fa-solid fa-desktop'></i> Technology</h2>
+	<h2 class="highlight"><i class='fa-solid fa-desktop'></i> Technology</h2>
 	<?php
 	$TDAO         = new TechnologiesDAO;
 	$technologies = $TDAO->fetchAll();
@@ -94,7 +94,7 @@
 </section>
 
 <section>
-	<h2><i class='fa-solid fa-satellite'></i> Projets</h2>
+	<h2 class="highlight"><i class='fa-solid fa-satellite'></i> Projets</h2>
 
 	<?php
 	$PDAO     = new ProjectDAO;
@@ -125,7 +125,7 @@
 </section>
 
 <section>
-	<h2><i class='fa-solid fa-comment-dots'></i> Languages</h2>
+	<h2 class="highlight"><i class='fa-solid fa-comment-dots'></i> Languages</h2>
 	<article class='flex row'>
 		<?php
 		$SLDAO             = new SelectedLanguageDAO;
@@ -134,7 +134,7 @@
 		foreach ($selectedLanguages as $language) {
 			echo "
 				<div>
-					<h3>$language->_language</h3>
+					<h4>$language->_language</h4>
 					<p class='highlight yellow'>$language->_level</p>
 				</div>
 		";
@@ -144,7 +144,7 @@
 </section>
 
 <section>
-	<h2><i class='fa-solid fa-chalkboard-user'></i> Education</h2>
+	<h2 class="highlight"><i class='fa-solid fa-chalkboard-user'></i> Education</h2>
 
 	<article class='flex row'>
 		<?php
@@ -153,7 +153,7 @@
 
 		foreach ($educations as $education) {
 			$timeStart = strtotime($education->_start);
-			$timeEnd = strtotime($education->_end);
+			$timeEnd   = strtotime($education->_end);
 
 			$startDate = getDate($timeStart);
 			$endDate   = getDate($timeEnd);
@@ -166,7 +166,7 @@
 
 			echo "
 			<div>
-				<h3>$education->_name</h3>
+				<h4>$education->_name</h4>
 				<time datetime='$education->_start'>$startDate->month - $startDate->year</time> - <time datetime='$education->_end'>$endDate->month - $endDate->year</time>
 				<p>$education->_school - $education->_city, $education->_country</p>
 			</div>
@@ -177,7 +177,7 @@
 </section>
 
 <section>
-	<h2><i class='fa-solid fa-graduation-cap'></i> Licence</h2>
+	<h2 class="highlight"><i class='fa-solid fa-graduation-cap'></i> Licence</h2>
 	<article class='flex row'>
 
 		<?php
@@ -191,7 +191,7 @@
 </section>
 
 <section>
-	<h2><i class='fa-solid fa-lightbulb'></i> Point of Interest</h2>
+	<h2 class="highlight"><i class='fa-solid fa-lightbulb'></i> Point of Interest</h2>
 
 	<article class='grid _3'>
 		<?php
