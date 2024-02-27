@@ -82,10 +82,10 @@ a:visited {
   background-color: var(--back-grey);
 }
 .white table tr {
-  background-color: var(--back-green);
-}
-.white table tr:nth-child(n+2) {
   background-color: var(--back-blue);
+}
+.white table tr:nth-child(even) td {
+  background-color: var(--back-green);
 }
 .white button.add {
   background-color: var(--back-blue);
@@ -369,7 +369,7 @@ table th:last-child {
 table tr {
   background-color: var(--color-green);
 }
-table tr:nth-child(n+2) {
+table tr:nth-child(even) td {
   background-color: var(--color-blue);
 }
 table tr:last-of-type td:first-child {
@@ -401,6 +401,6 @@ table tr:last-of-type td:last-child {
     background-color: var(--back-main-black);
   }
   div.toggleDiv .toggle {
-    --size: 2em ;
+    --size: 2em;
   }
 }/*# sourceMappingURL=index.css.map */
