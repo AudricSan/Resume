@@ -129,7 +129,7 @@ Route::add("/settings/addPOI", function () {
 }, "post");
 
 // Setting Remove
-Route::add("/settings/removeinfo", function () {
+Route::add("/settings/removeCI", function () {
   $CIDAO = new ContatInfoDAO;
   $CIDAO->delete($_GET);
 }, "get");
@@ -164,6 +164,30 @@ Route::add("/settings/removePOI", function () {
   $POIDAO->delete($_GET);
 }, "get");
 
+// Setting Edit
+Route::add("/edit", function () {
+  head();
+  include_once("../view/settings/editform.php");
+  foot();
+});
+
+Route::add("/settings/editCI", function () {
+  $CIDAO = new ContatInfoDAO;
+  $CIDAO->update($_POST['_id'], $_POST);
+}, 'post');
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ERROR ROUTE
 // 404 not found route
 Route::pathNotFound(function ($path) {
@@ -189,6 +213,12 @@ Route::add("/routes", function () {
     echo "<li>" . $route["expression"] . " (" . $route["method"] . ")</li>";
   }
   echo "</ul>";
+});
+
+Route::add("/test", function () {
+  head();
+  include_once("../view/test.php");
+  foot();
 });
 
 Route::add("/UUID", function () {

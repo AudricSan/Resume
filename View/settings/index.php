@@ -1,4 +1,5 @@
 <?php
+
 use MyBook\Env;
 
 $Env = new Env;
@@ -6,7 +7,6 @@ $Env = new Env;
 if (!isset($_SESSION['logged'])) {
     header('location: /settings/login');
     die;
-
 } else {
     $adminDAO       = new AdminDAO;
     $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
@@ -22,12 +22,13 @@ if (!isset($_SESSION['logged'])) {
     <h1>Books settings</h1>
 
     <section>
-        <h2><i class="fa-solid fa-square-phone"></i> Contact information <button onclick="addfomrs(this)" class="add">
-                Add </button>
-        </h2>
+        <h2><i class="fa-solid fa-square-phone"></i> Contact information <button onclick="addfomrs(this)" class="add"> Add </button></h2>
 
         <div class="callout">
             <form class='hidden' method='POST' action='/settings/addInfo'>
+                <label style="display: none;" for='_id'>ID</label>
+                <input style="display: none;" type='int' id='_id' name='_id'>
+
                 <label for='_name'>Name</label>
                 <input type='text' id='_name' name='_name'>
 
@@ -71,8 +72,8 @@ if (!isset($_SESSION['logged'])) {
                     echo " 
                             <td> $contactInfo->_link </td>
                             <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
-                                <a href='/settings/removetitle?id=$contactInfo->_id'  > <button class='remove' > remove </button></a>
+                                <a href='/edit?id=$contactInfo->_id&elem=CI'> <button class='edit'> edit </button></a>
+                                <a href='/settings/removeCI?id=$contactInfo->_id'  > <button class='remove' > remove </button></a>
                             </td>
                         </tr>";
                 }
@@ -156,7 +157,7 @@ if (!isset($_SESSION['logged'])) {
                         <td> $workExperiense->_start </td>
                         <td> $workExperiense->_end </td>
                         <td>
-                            <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                            <a href='/edit?id=$workExperiense->_id&elem=WE'> <button class='edit'> edit </button></a>
                             <a href='/settings/removeWE?id=$workExperiense->_id'> <button class='remove'> remove </button></a>
                         </td>
                     </tr>";
@@ -229,7 +230,7 @@ if (!isset($_SESSION['logged'])) {
                     echo "
                             <td> $technology->_level </td>
                             <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/edit?id=$technology->_id&elem=TH'> <button class='edit'> edit </button></a>
                                 <a href='/settings/removeTechno?id=$technology->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
@@ -315,7 +316,7 @@ if (!isset($_SESSION['logged'])) {
                         echo " 
                                 </td>
                                 <td>
-                                    <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                    <a href='/edit?id=$project->_id&elem=PR'> <button class='edit'> edit </button></a>
                                     <a href='/settings/removeProject?id=$project->_id'> <button class='remove'> remove </button></a>
                                 </td>
                             </tr>";
@@ -378,7 +379,7 @@ if (!isset($_SESSION['logged'])) {
                             <td> $language->_language</td>
                             <td> $language->_level </td>
                             <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/edit?id=$language->_id&elem=LA'> <button class='edit'> edit </button></a>
                                 <a href='/settings/removelanguage?id=$language->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
@@ -459,7 +460,7 @@ if (!isset($_SESSION['logged'])) {
                             <td> $education->_country </td>
                             <td> $education->_level </td>
                             <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/edit?id=$education->_id&elem=ED'> <button class='edit'> edit </button></a>
                                 <a href='/settings/removeEducation?id=$education->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
@@ -535,7 +536,7 @@ if (!isset($_SESSION['logged'])) {
                     }
                     echo "
                             <td>
-                                <!-- <a href=''> <button class='edit'> edit </button></a> -->
+                                <a href='/edit?id=$pointOfInterest->_id&elem=PO'> <button class='edit'> edit </button></a>
                                 <a href='/settings/removePOI?id=$pointOfInterest->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";

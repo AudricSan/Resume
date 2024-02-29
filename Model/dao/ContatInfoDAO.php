@@ -104,8 +104,41 @@ class ContatInfoDAO extends Env {
         die;
     }
 
-    // public function update($id, $data) {
-    // }
+    public function update($id, $data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $obj = $this->create_object([
+            'ContactInfo_id'   => $id,
+            'ContactInfo_name' => $data['_name'],
+            'ContactInfo_icon' => $data['_icon'],
+            'ContactInfo_link' => $data['_link']
+        ]);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("UPDATE {$this->table} SET `ContactInfo_name` = ?, `ContactInfo_icon` = ?, `ContactInfo_link` = ? WHERE `ContactInfo_id` = ?");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_icon,
+                    $obj->_link,
+                    $id
+                ]);
+
+                $obj->id = $this->connection->lastInsertId();
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
+    }
 
     public function delete($id) {
         $adminDAO       = new AdminDAO;
