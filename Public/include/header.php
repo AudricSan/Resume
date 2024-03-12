@@ -53,6 +53,19 @@ $autor       = "Audric Rosier";
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMDVCJKSMK"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-WMDVCJKSMK');
+</script>
+
 <body>
 	<div class='toggleDiv'>
 		<input id='toggle' class='toggle' type='checkbox' onclick=lightmode()>
