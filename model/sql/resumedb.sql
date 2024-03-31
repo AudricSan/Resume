@@ -11958,11 +11958,21 @@ CREATE TABLE IF NOT EXISTS `resume_languagelevel` (
 --
 
 INSERT INTO `resume_languagelevel` (`LanguageLevel_ID`, `LanguageLevel_Name`) VALUES
-(1, 'Notions'),
-(2, 'Limited professional'),
-(3, 'Professional compete'),
-(4, 'Full professional ca'),
-(5, 'Bilingual or native ');
+('', 'Notions'),
+('', 'Limited professional'),
+('', 'Professional compete'),
+('', 'Full professional ca'),
+('', 'Bilingual or native '),
+('', 'JLPT N1'),
+('', 'JLPT N2'),
+('', 'JLPT N3'),
+('', 'JLPT N4'),
+('', 'JLPT N5'),
+('', 'TOEIC A1'),
+('', 'TOEIC A2'),
+('', 'TOEIC B1'),
+('', 'TOEIC B2'),
+('', 'TOEIC C1');
 
 -- --------------------------------------------------------
 
