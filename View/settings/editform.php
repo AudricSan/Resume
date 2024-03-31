@@ -1,6 +1,7 @@
 <?php
 
 use MyBook\Env;
+use MyBook\PhpFormBuilder;
 
 $Env = new Env;
 
@@ -24,16 +25,57 @@ switch ($elem) {
     case 'CI':
         $CIDAO = new ContatInfoDAO;
         $res = $CIDAO->fetch($id);
+
+        $new_form = new PhpFormBuilder('/settings/edit' . $elem);
+        $new_form->add_input('ID',   array('type' => 'int',  'id' => '_id', 'name' => '_id', 'value' => $id, 'wrap_style' => 'display: none'));
+        $new_form->add_input('Name', array('type' => 'text', 'id' => '_name', 'name' => '_name', 'value' => $res->_name));
+        $new_form->add_input('Icon', array('type' => 'text', 'id' => '_icon', 'name' => '_icon', 'value' => $res->_icon));
+        $new_form->add_input('Link', array('type' => 'text', 'id' => '_link', 'name' => '_link', 'value' => $res->_link));
+        $new_form->build_form();
         break;
 
     case 'WE':
         $WEDAO = new WorkExperienceDAO;
         $res = $WEDAO->fetch($id);
+
+        $citiesDAO = new CitiesDAO;
+        $cities    = $citiesDAO->fetchAll();
+
+        $options = array();
+        foreach ($cities as $city) {
+            $options[$city->_id] = $city->_name;
+        }
+
+        $new_form = new PhpFormBuilder('/settings/edit' . $elem);
+        $new_form->add_input('ID',   array('type' => 'int',  'id' => '_id', 'name' => '_id', 'value' => $id, 'wrap_style' => 'display: none'));
+        $new_form->add_input('Name', array('type' => 'text', 'id' => '_name', 'name' => '_name', 'value' => $res->_name));
+        $new_form->add_input('Description', array('type' => 'text', 'id' => '_description', 'name' => '_description', 'value' => $res->_description));
+        $new_form->add_input('Icon', array('type' => 'text', 'id' => '_icon', 'name' => '_icon', 'value' => $res->_icon));
+        $new_form->add_input('cities', array('type' => 'select', 'options' => $options, 'id' => '_cities', 'name' => '_cities'));
+        $new_form->add_input('Start', array('type' => 'date', 'id' => '_start', 'name' => '_start', 'value' => $res->_start));
+        $new_form->add_input('End', array('type' => 'date', 'id' => '_end', 'name' => '_end', 'value' => $res->_end));
+        $new_form->build_form();
         break;
 
     case 'TH':
         $THDAO = new TechnologiesDAO;
         $res = $THDAO->fetch($id);
+
+        $TechLevelDAO = new TechnologyLevelDAO;
+        $TechLevels   = $TechLevelDAO->fetchAll();
+
+        $options = array();
+        foreach ($TechLevels as $TechLevel) {
+            $options[$TechLevel->_id] = $TechLevel->_name;
+        }
+
+        $new_form = new PhpFormBuilder('/settings/edit' . $elem);
+        $new_form->add_input('ID',   array('type' => 'int',  'id' => '_id', 'name' => '_id', 'value' => $id, 'wrap_style' => 'display: none'));
+        $new_form->add_input('Name', array('type' => 'text', 'id' => '_name', 'name' => '_name', 'value' => $res->_name));
+        $new_form->add_input('Description', array('type' => 'text', 'id' => '_desc', 'name' => '_desc', 'value' => $res->_desc));
+        $new_form->add_input('Icon', array('type' => 'text', 'id' => '_icon', 'name' => '_icon', 'value' => $res->_icon));
+        $new_form->add_input('Level', array('type' => 'select', 'options' => $options, 'id' => '_Level', 'name' => '_Level'));
+        $new_form->build_form();
         break;
 
     case 'PR':
@@ -60,32 +102,3 @@ switch ($elem) {
         header('location: /settings');
         die();
 }
-
-
-var_dump($res);
-
-echo "
-
-<main>
-    <h1>Edition Forms</h1>
-
-    <section>
-        <div class='callout'>
-            <form method='POST' action='/settings/edit$elem'>
-                <label style='display: none;' for='_id'>ID</label>
-                <input style='display: none;' type='int' id='_id' name='_id' value='$res->_id'>
-
-                <label for='_name'>Name</label>
-                <input type='text' id='_name' name='_name' value='$res->_name'>
-
-                <label for='_icon'>Icon</label>
-                <input type='text' id='_icon' name='_icon' value='$res->_icon'>
-
-                <label for='_link'>Link</label>
-                <input type='text' id='_link' name='_link' value='$res->_link'>
-
-                <input type='submit' value='Submit'>
-            </form>
-        </div>
-    </section>
-</main>";
