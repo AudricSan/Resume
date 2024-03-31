@@ -2,7 +2,8 @@
 
 namespace MyBook;
 
-class Env extends Uuid {
+class Env extends Uuid
+{
     private $env = [
         //APP
         'APP_NAME'    => 'Resume',
@@ -12,12 +13,13 @@ class Env extends Uuid {
         // DATABASE
         'DB_HOST'     => 'localhost',
         'DB_USERNAME' => 'root',
-        'DB_PASSWORD' => 'root',
+        'DB_PASSWORD' => '',
         'DB_NAME'     => 'resumedb',
         'DB_PORT'     => 3306,
     ];
 
-    public function env($key, $default = null) {
+    public function env($key, $default = null)
+    {
         if ($key) {
             return $this->env[$key];
         } else {
@@ -25,14 +27,16 @@ class Env extends Uuid {
         }
     }
 
-    public function checkInput($data) {
+    public function checkInput($data)
+    {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
-    
-    public function isicon($data) {
+
+    public function isicon($data)
+    {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);

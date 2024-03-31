@@ -129,8 +129,6 @@ class ContatInfoDAO extends Env {
                     $obj->_link,
                     $id
                 ]);
-
-                $obj->id = $this->connection->lastInsertId();
             } catch (PDOException $e) {
                 echo $e;
             }

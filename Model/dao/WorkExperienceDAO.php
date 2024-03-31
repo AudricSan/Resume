@@ -63,7 +63,7 @@ class WorkExperienceDAO extends Env {
 
     public function fetch($id) {
         try {
-            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE WorkExperience_ID = ?");
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_cities on workexperience_city = cities_id INNER JOIN resume_countries on cities_country = countries_id WHERE WorkExperience_ID = ?");
             $statement->execute([$id]);
             $result = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -140,6 +140,49 @@ class WorkExperienceDAO extends Env {
         die;
     }
 
-// public function update($id, $data) {
-// }
+    public function update($id, $data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        var_dump($data);
+        
+        $citiesDAO = new CitiesDAO;
+        $city      = $citiesDAO->fetch($data['_cities']);
+
+        $obj = $this->create_object([
+            'WorkExperience_ID'          => 0,
+            'WorkExperience_Name'        => $data['_name'],
+            'WorkExperience_Description' => $data['_description'],
+            'WorkExperience_Icon'        => $data['_icon'],
+            'Cities_name'                => $city->_name,
+            'Countries_Name'             => $city->_country,
+            'WorkExperience_Start'       => $data['_start'],
+            'WorkExperience_End'         => $data['_end']
+        ]);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("UPDATE {$this->table} SET `WorkExperience_Name` = ?, `WorkExperience_Description` = ?, `WorkExperience_Icon` = ?, `WorkExperience_City` = ?, `WorkExperience_Start` = ?, `WorkExperience_End` = ? WHERE `WorkExperience_ID` = ?");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_description,
+                    $obj->_icon,
+                    $city->_id,
+                    $obj->_start,
+                    $obj->_end,
+                    $id
+                ]);
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
+    }
 }
