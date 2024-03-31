@@ -4,11 +4,13 @@
 use MyBook\Route;
 use MyBook\Uuid;
 use MyBook\Env;
+use MyBook\PhpFormBuilder;
 
 // Include ENV class
 include_once("../model/class/Route.php");
 include_once("../model/class/Uuid.php");
 include_once("../model/class/Env.php");
+include_once("../model/class/FormsBuilder.php");
 
 // Class & DAO
 include_once("../model/class/Admin.php");
@@ -174,6 +176,16 @@ Route::add("/edit", function () {
 Route::add("/settings/editCI", function () {
   $CIDAO = new ContatInfoDAO;
   $CIDAO->update($_POST['_id'], $_POST);
+}, 'post');
+
+Route::add("/settings/editWE", function () {
+  $WEDAO = new WorkExperienceDAO;
+  $WEDAO->update($_POST['_id'], $_POST);
+}, 'post');
+
+Route::add("/settings/editTH", function () {
+  $THDAO = new TechnologiesDAO;
+  $THDAO->update($_POST['_id'], $_POST);
 }, 'post');
 
 
