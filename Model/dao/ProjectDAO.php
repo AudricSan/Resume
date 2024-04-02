@@ -4,7 +4,8 @@ use MyBook\Project;
 use MyBook\Env;
 use MyBook\Technologies;
 
-class ProjectDAO extends Env {
+class ProjectDAO extends Env
+{
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
@@ -15,7 +16,8 @@ class ProjectDAO extends Env {
     private string $table;
     private object $connection;
 
-    public function __construct() {
+    public function __construct()
+    {
         // Change the values according to your hosting IN ENV FILES!.
         $this->username = parent::env('DB_USERNAME', 'root');
         $this->password = parent::env('DB_PASSWORD', '');
@@ -28,7 +30,8 @@ class ProjectDAO extends Env {
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function create_object($data) {
+    public function create_object($data)
+    {
         if (!$data) {
             return false;
         }
@@ -42,12 +45,12 @@ class ProjectDAO extends Env {
             array()
         );
 
-        // var_dump($obj);
         return $obj;
     }
 
 
-    public function fetchAll() {
+    public function fetchAll()
+    {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table}");
             $statement->execute();
@@ -76,11 +79,12 @@ class ProjectDAO extends Env {
         }
     }
 
-    public function fetch($id) {
+    public function fetch($id)
+    {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_technologiesuse on project_id = technologiesuse_project INNER JOIN resume_technologies on technologiesuse_techno = technologies_id INNER JOIN resume_technologylevel on technologies_level = technologylevel_id WHERE project_id = ?");
             $statement->execute([$id]);
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
 
             $res = $this->create_object($result);
 
@@ -92,18 +96,20 @@ class ProjectDAO extends Env {
                 $res->addTechnology($TDAO->fetch($techno->_techno));
             }
 
+            // var_dump($res);
             return $res;
         } catch (PDOException $e) {
             var_dump($e);
         }
     }
 
-    public function store($data) {
+    public function store($data)
+    {
         if (empty($data)) {
             $error[] = "No data Set";
             return false;
         }
-        var_dump($data);
+        // var_dump($data);
 
         unset($_SESSION['error']);
         $error = [];
@@ -145,7 +151,6 @@ class ProjectDAO extends Env {
 
                 $TUDAO = new TechnologyUselDAO;
                 $TUDAO->store($obj, $techs);
-
             } catch (PDOException $e) {
                 echo $e;
                 die;
@@ -156,7 +161,8 @@ class ProjectDAO extends Env {
         die;
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $adminDAO       = new AdminDAO;
         $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
 
@@ -173,7 +179,6 @@ class ProjectDAO extends Env {
 
                 $TUDAO = new TechnologyUselDAO;
                 $TUDAO->delete($id);
-
             } catch (PDOException $e) {
                 var_dump($e->getMessage());
             }
@@ -181,6 +186,60 @@ class ProjectDAO extends Env {
         }
     }
 
-// public function update($id, $data) {
-// }
+    public function update($id, $data)
+    {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $regex = '/techID+/i';
+        $techs = [];
+
+        foreach ($data as $key => $value) {
+
+            if (preg_match($regex, $key)) {
+                $techs[] = $value;
+            }
+        }
+
+        foreach ($techs[0] as $tech) {
+            $TDAO     = new TechnologiesDAO;
+            $techno[] = $TDAO->fetch($tech);
+        }
+
+        $obj = $this->create_object([
+            'Project_ID'          => 0,
+            'Project_Name'        => $data['_name'],
+            'Project_Description' => $data['_desc'],
+            'Project_Link'        => $data['_link'],
+            'Project_Icon'        => $data['_icon'],
+        ]);
+
+        $obj->addTechnology($techno);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("UPDATE {$this->table} SET `Project_Name` = ?, `Project_Link` = ?, `Project_Description` = ?, `Project_Icon` = ? WHERE `Project_id` = ?");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_link,
+                    $obj->_desc,
+                    $obj->_icon,
+                    $obj->_id
+                ]);
+
+                $TUDAO = new TechnologyUselDAO;
+                $TUDAO->store($obj, $techs);
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
+    }
 }

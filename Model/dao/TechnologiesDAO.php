@@ -3,7 +3,8 @@
 use MyBook\Technologies;
 use MyBook\Env;
 
-class TechnologiesDAO extends Env {
+class TechnologiesDAO extends Env
+{
     //DON'T TOUCH IT, LITTLE PRICK
     private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
@@ -14,7 +15,8 @@ class TechnologiesDAO extends Env {
     private string $table;
     private object $connection;
 
-    public function __construct() {
+    public function __construct()
+    {
         // Change the values according to your hosting IN ENV FILES!.
         $this->username = parent::env('DB_USERNAME', 'root');
         $this->password = parent::env('DB_PASSWORD', '');
@@ -27,7 +29,8 @@ class TechnologiesDAO extends Env {
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function create_object($data) {
+    public function create_object($data)
+    {
         if (!$data) {
             return false;
         }
@@ -41,7 +44,8 @@ class TechnologiesDAO extends Env {
         );
     }
 
-    public function fetchAll() {
+    public function fetchAll()
+    {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_technologylevel on technologies_level = technologylevel_id");
             $statement->execute();
@@ -58,7 +62,8 @@ class TechnologiesDAO extends Env {
         }
     }
 
-    public function fetch($id) {
+    public function fetch($id)
+    {
         try {
             $statement = $this->connection->prepare("SELECT * FROM {$this->table} INNER JOIN resume_technologylevel on technologies_level = technologylevel_id WHERE Technologies_id = ?");
             $statement->execute([$id]);
@@ -70,7 +75,8 @@ class TechnologiesDAO extends Env {
         }
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $adminDAO       = new AdminDAO;
         $adminConnected = $adminDAO->validate($_SESSION['logged'], $_SESSION['uuid']);
 
@@ -91,7 +97,8 @@ class TechnologiesDAO extends Env {
         }
     }
 
-    public function store($data) {
+    public function store($data)
+    {
         if (empty($data)) {
             $error[] = "No data Set";
             return false;
@@ -133,6 +140,42 @@ class TechnologiesDAO extends Env {
         die;
     }
 
-// public function update($id, $data) {
-// }
+    public function update($id, $data) {
+        if (empty($data)) {
+            $error[] = "No data Set";
+            return false;
+        }
+
+        unset($_SESSION['error']);
+        $error = [];
+
+        $TechLevelDAO = new TechnologyLevelDAO;
+        $TechLevel    = $TechLevelDAO->fetch($data['_Level']);
+
+        $obj = $this->create_object([
+            'technologies_ID'          => $id,
+            'technologies_Name'        => $data['_name'],
+            'technologies_Description' => $data['_desc'],
+            'technologies_Icon'        => $data['_icon'],
+            'Level_Name'               => $TechLevel->_name
+        ]);
+
+        if ($obj) {
+            try {
+                $statement = $this->connection->prepare("UPDATE {$this->table} SET technologies_Name = ?, technologies_Description = ?, technologies_Icon = ?, technologies_Level = ? WHERE `technologies_id` = ?");
+                $statement->execute([
+                    $obj->_name,
+                    $obj->_desc,
+                    $obj->_icon,
+                    $TechLevel->_id,
+                    $obj->_id
+                ]);
+            } catch (PDOException $e) {
+                echo $e;
+            }
+        }
+
+        header('location: /settings');
+        die;
+    }
 }
