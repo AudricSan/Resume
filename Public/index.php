@@ -188,6 +188,11 @@ Route::add("/settings/editTH", function () {
   $THDAO->update($_POST['_id'], $_POST);
 }, 'post');
 
+Route::add("/settings/editPR", function () {
+  $PRDAO    = new ProjectDAO;
+  $PRDAO->update($_POST['_id'], $_POST);
+}, 'post');
+
 
 
 
