@@ -81,6 +81,21 @@ switch ($elem) {
     case 'PR':
         $PRDAO = new ProjectDAO;
         $res = $PRDAO->fetch($id);
+
+        $TDAO         = new TechnologiesDAO;
+        $technologies = $TDAO->fetchAll();
+        foreach ($technologies as $technologie) {
+            $options[$technologie->_id] = $technologie->_name;
+        }
+
+        $new_form = new PhpFormBuilder('/settings/edit' . $elem);
+        $new_form->add_input('ID',   array('type' => 'int',  'id' => '_id', 'name' => '_id', 'value' => $id, 'wrap_style' => 'display: none'));
+        $new_form->add_input('Name', array('type' => 'text', 'id' => '_name', 'name' => '_name', 'value' => $res->_name));
+        $new_form->add_input('Description', array('type' => 'text', 'id' => '_desc', 'name' => '_desc', 'value' => $res->_desc));
+        $new_form->add_input('Icon', array('type' => 'text', 'id' => '_icon', 'name' => '_icon', 'value' => $res->_icon));
+        $new_form->add_input('Link', array('type' => 'text', 'id' => '_link', 'name' => '_link', 'value' => $res->_link));
+        $new_form->add_input('Techonlogies', array('type' => 'checkbox', 'options' => $options, 'id' => 'techID', 'name' => 'techID'));
+        $new_form->build_form();
         break;
 
     case 'LA':
