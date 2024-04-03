@@ -193,6 +193,11 @@ Route::add("/settings/editPR", function () {
   $PRDAO->update($_POST['_id'], $_POST);
 }, 'post');
 
+Route::add("/settings/editLA", function () {
+  $SLDAO    = new SelectedLanguageDAO;
+  $SLDAO->update($_POST['_id'], $_POST);
+}, 'post');
+
 
 
 

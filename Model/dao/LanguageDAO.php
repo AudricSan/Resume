@@ -69,6 +69,18 @@ class LanguageDAO extends Env {
         }
     }
 
+    public function fetchByName($id) {
+        try {
+            $statement = $this->connection->prepare("SELECT * FROM {$this->table} WHERE language_name = ?");
+            $statement->execute([$id]);
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+            return $this->create_object($result);
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+    }
+
     public function store($data) {
         if (empty($data)) {
             $error[] = "No data Set";

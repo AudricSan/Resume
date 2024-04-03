@@ -99,8 +99,24 @@ switch ($elem) {
         break;
 
     case 'LA':
-        $LADAO = new LanguageDAO;
-        $res = $LADAO->fetch($id);
+        $LDAO = new LanguageDAO;
+        $language = $LDAO->fetchByName($id);
+
+        $SLDAO = new SelectedLanguageDAO;
+        $res = $SLDAO->fetchByLanguage($language->_id);
+
+        $LLDAO          = new LanguageLevelDAO;
+        $languageLevels = $LLDAO->fetchAll();
+
+        foreach ($languageLevels as $languageLevel) {
+            $options[$languageLevel->_id] = $languageLevel->_name;
+        }
+
+        $new_form = new PhpFormBuilder('/settings/edit' . $elem);
+        $new_form->add_input('ID',   array('type' => 'int',  'id' => '_id', 'name' => '_id', 'value' => $res->_id, 'wrap_style' => 'display: none'));
+        $new_form->add_input('Language', array('type' => 'text', 'id' => '_language', 'name' => '_language', 'value' => $res->_language));
+        $new_form->add_input('Level', array('type' => 'select', 'options' => $options, 'id' => '_level', 'name' => '_level'));
+        $new_form->build_form();
         break;
 
     case 'ED':

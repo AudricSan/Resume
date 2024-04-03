@@ -341,7 +341,7 @@ if (!isset($_SESSION['logged'])) {
                 $languages = $LDAO->fetchAll();
                 ?>
 
-                <label for='_language'>Level</label>
+                <label for='_language'>Language</label>
                 <select id="_language" name="_language">
                     <?php foreach ($languages as $language) {
                         echo "<option value='$language->_id'>$language->_name</option>";
@@ -379,7 +379,7 @@ if (!isset($_SESSION['logged'])) {
                             <td> $language->_language</td>
                             <td> $language->_level </td>
                             <td>
-                                <a href='/edit?id=$language->_id&elem=LA'> <button class='edit'> edit </button></a>
+                                <a href='/edit?id=$language->_language&elem=LA'> <button class='edit'> edit </button></a>
                                 <a href='/settings/removelanguage?id=$language->_id'> <button class='remove'> remove </button></a>
                             </td>
                         </tr>";
