@@ -5,7 +5,7 @@
 body {
   font-family: Quicksand;
 
-  displaynone{
+  displaynone {
     display: none;
   }
 }
@@ -69,6 +69,13 @@ a:visited {
 
   --back-main-white: rgb(247, 246, 243);
   --back-main-black: rgb(52, 52, 52);
+}
+
+.image-ronde {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .white {
@@ -136,6 +143,18 @@ a:visited {
 }
 
 body {
+  header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+
+    blockquote{
+      grid-column: 1 / 2; /* Positionne le texte dans la première colonne */
+    }
+  }
+
   transition: all 500ms;
 
   min-width: 200px;
