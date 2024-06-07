@@ -1,10 +1,11 @@
 <header>
-	<h1><i class='fa-solid fa-globe'></i> Resume - Web developers</h1>
-	<blockquote>I'm a <mark class='highlight purple'><strong>Web developers</strong></mark> and a <mark
-			class='highlight blue'><strong>Graphic Designer</strong></mark> in <mark
-			class='highlight orange'><em>Belgium</em></mark>
-		<!-- </br>with <mark class='highlight blue'>5 years</mark> of experience in graphic design and <mark
-			class='highlight purple'>2 years</mark> in web development</blockquote> -->
+	<h1><i class='fa-solid fa-person'></i> Audric Rosier</h1>
+	<img class="image-ronde" src="/images/me.jpg" alt="une photo de moi">
+
+	<blockquote>
+		I'm a <mark class='highlight purple'><strong>Web developers</strong></mark> and a <mark class='highlight blue'><strong>Graphic Designer</strong></mark> in <mark class='highlight orange'><em>Japan</em></mark>
+		<!-- </br>with <mark class='highlight blue'>5 years</mark> of experience in graphic design and <mark class='highlight purple'>2 years</mark> in web development -->
+	</blockquote>
 </header>
 
 <section>
