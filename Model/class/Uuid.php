@@ -21,7 +21,7 @@ class Uuid
      * @return string
      * @throws Exception
      */
-    public static function v1(string $node = null): string
+    public static function v1(?string $node = null): string
     {
         $time = microtime(false);
         $time = substr($time, 11) . substr($time, 2, 7);

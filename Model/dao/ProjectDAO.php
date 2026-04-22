@@ -7,7 +7,7 @@ use MyBook\Technologies;
 class ProjectDAO extends Env
 {
     //DON'T TOUCH IT, LITTLE PRICK
-    private array $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+    private array $options = array(Pdo\Mysql::ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
     private string $username;
     private string $password;
